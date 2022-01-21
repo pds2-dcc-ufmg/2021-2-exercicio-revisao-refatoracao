@@ -6,11 +6,10 @@
 
 using namespace std;
 
-class Funcionario {
+class Funcionario: public Pessoa {
     public:
         double SalarioBase; // valor m�nimo recebido pelo funcion�rio
         string IDADE;
-        string nome;
         int rgFunc;
 
         virtual void print()=0;
