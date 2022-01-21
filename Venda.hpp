@@ -14,16 +14,19 @@ class Venda{
     double VALOR;
     string descricao;
     Especialista esp;
-    string cliente;
+    Cliente cliente;
 
+    void setCliente(string c){
+        this->cliente.nome=c;
+    }
 
     void print() {
 
         std::cout << "Especialista: ";
-        cout << esp.nome;
+        cout << esp.getNome();
 
         std::cout << " Cliente: ";
-        cout << cliente;
+        cout << cliente.nome;
 
         //std::cout << " : ";
         //cout << cliente;

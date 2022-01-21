@@ -6,16 +6,20 @@
 
 using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
-
 
 class Especialista : public Funcionario {
 
-    public:
+    private:
+    string especialidade;
+    double perc = 0.1;
+    double percWanda = 0.1;
 
     public:
-        string especialidade;
+    Especialista(){
+    }
+    Especialista(string nome, string IDADE, int rg, double SB,string especialidade):Funcionario( nome,  IDADE,  rg, SB){  
+        this->especialidade=especialidade;    
+    }
 
     double comissao(double ValorVenda) {
         double c = ValorVenda*perc;
@@ -26,7 +30,11 @@ class Especialista : public Funcionario {
     void print() {
 
         std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+               
+        std::cout << "[Funcionario]" << endl
+            << "  Idade: " << IDADE << endl
+            << "  RGFunc: " << rgFunc << endl;
+        
 
 
 

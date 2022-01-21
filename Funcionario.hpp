@@ -6,22 +6,34 @@
 
 using namespace std;
 
-class Funcionario {
-    public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
+class Funcionario: public Pessoa {
+    protected:
+        double SalarioBase; // valor mï¿½nimo recebido pelo funcionï¿½rio
         string IDADE;
-        string nome;
         int rgFunc;
-
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
+    public:
+    Funcionario(){}
+    Funcionario(string nome, string idade,int rg, double SB):Pessoa(nome){
+        this->SalarioBase=SB;
+        this->IDADE=idade;
+        this->rgFunc=rg;
         }
+    string getNome(){
+        return nome;
+    }
+    double getSB(){
+        return SalarioBase;
+    }
+    string getIdade(){
+        return IDADE;
+    }
+    int getRg(){
+        return rgFunc;
+    }
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        virtual void print()=0;
+
+
 };
 
 #endif
