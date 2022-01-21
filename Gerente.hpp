@@ -6,13 +6,16 @@
 #include "Funcionario.hpp"
 using namespace std;
 
-double ValorBONIFICACAO = 15.0;
+ 
 
 class Gerente: public Funcionario {
-    public:
+    private:
+        double ValorBONIFICACAO = 15.0;
         double bonificacao;
+    public:
+        Gerente(string nome, string IDADE, int rg,double SB):Funcionario( nome,  IDADE,  rg, SB){
 
-
+        }
         void print() {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
@@ -21,10 +24,11 @@ class Gerente: public Funcionario {
             << "  RGFunc: " << rgFunc << endl
             << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
         }
-
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
+        void setBonificacao(int numTOTALVendas){
+            this->bonificacao= numTOTALVendas*ValorBONIFICACAO;
+        }
+        double getBonificacao(){
+            return this->bonificacao;
         }
 
 };

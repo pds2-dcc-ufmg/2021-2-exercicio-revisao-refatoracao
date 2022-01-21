@@ -10,6 +10,11 @@ class Pessoa{
 
 		std::string nome;
 
+   
+        Pessoa(){}
+        Pessoa(std::string nome){
+            this->nome=nome;
+        }
 		virtual void print()=0; // imprime na tela os dados de um cliente cadastrado
 
 };
