@@ -76,7 +76,7 @@ int main()
     e03.IDADE = "32";
     e03.rgFunc = 16021989;
     e03.SalarioBase = 5000;
-    e03.setEspecialidade("Engenharia e Designeeeeer");
+    e03.setEspecialidade("Engenharia e Design");
 
 
     Gerente g01;
