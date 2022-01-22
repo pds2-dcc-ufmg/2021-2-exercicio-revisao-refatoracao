@@ -52,9 +52,9 @@ int main()
     int numAtendimentos01 = 0;
     double comissao01 = 0;
     e01.nome = "Peter Parker";
-    e01.IDADE = "46";
+    e01.idade = "46";
     e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
+    e01.salarioBase = 3000;
     e01.setEspecialidade("Fotografia");
 
 
@@ -63,9 +63,9 @@ int main()
     int numAtendimentos02 = 0;
     double comissao02 = 0;
     e02.nome = "Tony Stark";
-    e02.IDADE = "56";
+    e02.idade = "56";
     e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
+    e02.salarioBase = 1000;
     e02.setEspecialidade("Consertos de equipamentos eletronicos");
 
 
@@ -73,9 +73,9 @@ int main()
     int numAtendimentos03 = 0;
     double comissao03 = 0;
     e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
+    e03.idade = "32";
     e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
+    e03.salarioBase = 5000;
     e03.setEspecialidade("Engenharia e Design");
 
 
@@ -202,15 +202,15 @@ int main()
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
     cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
+    cout << "Salario Total: " << e01.salarioBase+comissao01<<endl;
 
     e02.print();
     cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
+    cout << "Salario Total: " << e02.salarioBase+comissao02<<endl;
 
     e03.print();
     cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
+    cout << "Salario Total: " << e03.salarioBase+comissao03<<endl;
 
 
     int NUMTOTALservicos = 0;

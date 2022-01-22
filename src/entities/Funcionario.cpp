@@ -2,8 +2,8 @@
 
 void Funcionario::print() {
   std::cout << "[Funcionario]" << std::endl
-  << "  Idade: " << IDADE << std::endl
-  << "  RGFunc: " << rgFunc << std::endl;
+  << "  Idade: " << this->idade << std::endl
+  << "  RGFunc: " << this->rgFunc << std::endl;
 }
 
 void Funcionario::print_tchau() {

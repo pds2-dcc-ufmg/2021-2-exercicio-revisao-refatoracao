@@ -13,8 +13,8 @@ void Especialista::print() {
   std::cout << "[Especialista]" << endl;
   Funcionario::print();
 
-  std::cout << "  Nome: " << nome << endl
-  << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+  std::cout << "  Nome: " << this->nome << endl
+  << "  SalarioBase: R$ " << fixed << setprecision(2) << this->salarioBase <<endl;
 }
 
 void Especialista::setEspecialidade(string especialidade) {
