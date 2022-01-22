@@ -13,7 +13,7 @@ class Funcionario {
 
         void print();
 
-        void print_oi();
+        void print_tchau();
 };
 
 #endif

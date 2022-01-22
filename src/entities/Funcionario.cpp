@@ -6,6 +6,6 @@ void Funcionario::print() {
   << "  RGFunc: " << rgFunc << std::endl;
 }
 
-void Funcionario::print_oi() {
+void Funcionario::print_tchau() {
   std::cout << "Tchau" << std::endl;
 }
