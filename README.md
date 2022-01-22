@@ -11,3 +11,23 @@ No **título** do seu Pull Request, informe o valor **MD5** obtido a partir da s
 
 Lembre-se de analisar aspectos como: nomenclatura, formatação, organização, comentários, aplicação correta dos conceitos de OO, entre outros.
 Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração (https://refactoring.com/catalog/).
+
+
+## Inicializando o projeto
+
+Para iniciar o projeto, teremos 2 passos:
+
+Primeiro, execute o seguinte comando:
+
+```bash
+  # Compila o projeto e joga todos os arquivos compilados para uma pasta ./build na raiz.
+  $ make
+```
+
+Depois, você já terá o seu executável pronto para ser usado, para usá-lo, basta executar o seguinte comando:
+
+```bash
+  $ ./build/executable
+```
+
+Prontinho, você executou o projeto. Agora é só fazer as suas próprias atlterações e repetir o processo.
