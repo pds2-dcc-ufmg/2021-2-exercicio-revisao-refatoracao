@@ -3,10 +3,8 @@
 const double PERC = 0.1;
 const double PERC_WANDA = 0.1;
 
-double Especialista::comissao(double ValorVenda) {
-  double c = ValorVenda*PERC;
-
-  return c;
+double Especialista::comissao(double valorVenda) {
+  return valorVenda*PERC;
 }
 
 void Especialista::print() {
