@@ -5,6 +5,7 @@
 #include <iomanip>
 
 class Funcionario {
+
     public:
         double SalarioBase; // valor minimo recebido pelo funcionario
         std::string IDADE;
