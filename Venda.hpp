@@ -15,8 +15,7 @@ class Venda{
         std::string cliente;
     
     void print() {
-        std::cout << "Especialista: " << esp.nome;
-        std::cout << " Cliente: " << cliente;
+        std::cout << "Especialista: " << esp.nome << " Cliente: " << cliente;
     }
 };
 #endif
