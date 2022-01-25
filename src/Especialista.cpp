@@ -31,5 +31,4 @@ unsigned Especialista::getNumAtendimentos() {
 void Especialista::printResults() {
     std::cout << "Num Atendimentos: " << this->num_atendimentos << std::endl;
     std::cout << "Salario total: " << this->getSalarioTotal() << std::endl;
-    std::cout << std::endl;
 }

@@ -1,4 +1,5 @@
 #include "Funcionario.hpp"
+#include <iomanip>
 
 Funcionario::Funcionario(std::string nome, std::string idade, std::string rgFunc, double salario_base)
 :   salario_base(salario_base), idade(idade), nome(nome), rgFunc(rgFunc) 
@@ -11,7 +12,7 @@ void Funcionario::print() {
     std::cout << "  Nome: " << this->nome << std::endl;
     std::cout << "  Idade: " << this->idade << std::endl;
     std::cout << "  RGFunc: " << this->rgFunc << std::endl;
-    std::cout << "  Salario base: " << this->salario_base << std::endl;
+    std::cout << "  Salario base: R$ " << std::fixed << std::setprecision(2) << this->salario_base << std::endl;
 
 }
 

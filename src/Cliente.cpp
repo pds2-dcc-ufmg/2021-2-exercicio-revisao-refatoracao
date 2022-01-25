@@ -11,7 +11,7 @@ std::string Cliente::getNome() {
 
 void Cliente::print(){
 	std::cout << "[Cliente]" << std::endl;
-	std::cout << "\tNome: " << this->nome << std::endl;
-	std::cout << "\tEndereco: " << this->endereco << std::endl;
-	std::cout << "\tCEP: " << this->CEP << std::endl;
+	std::cout << "  Nome: " << this->nome << std::endl;
+	std::cout << "  Endereco: " << this->endereco << std::endl;
+	std::cout << "  CEP: " << this->CEP << std::endl;
 }

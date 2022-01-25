@@ -1,10 +1,22 @@
 #include <iostream>
 
-#include "Cliente.hpp"
-#include "Funcionario.hpp"
-#include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
+
+enum CLIENTES
+{
+    JJJ,
+    DUENDE_VERDE,
+    DOUTOR_OCTOPUS,
+    HULK,
+    CAPITAO
+};
+enum ESPECIALISTAS
+{
+    MIRANHA,
+    IRONMAN,
+    WANDA
+};
 
 int main()
 {
@@ -30,24 +42,23 @@ int main()
     };
 
     Venda vendas[] = {
-        Venda(100, "Fotos do Homem Aranha", especialistas[0], clientes[0]),
-        Venda(100, "Troca da tela do telefone", especialistas[1], clientes[3]),
-        Venda(150, "Fotos do novo planador", especialistas[0], clientes[1]),
-        Venda(10, "Recarga de cartucho", especialistas[1], clientes[0]),
-        Venda(10000, "Reconstrucao de Predio", especialistas[2], clientes[3]),
-        Venda(3000, "Decoracao de Apartamento no Brooklyn", especialistas[2], clientes[4]),
-        Venda(3000, "Decoracao de Apartamento no Brooklyn", especialistas[2], clientes[4]),
-        Venda(5000, "Reforma do Clarim Diario", especialistas[2], clientes[0]),
-        Venda(80, "Formatacao do PC", especialistas[1], clientes[2])
+        Venda(100, "Fotos do Homem Aranha", especialistas[MIRANHA], clientes[JJJ]), // v01
+        Venda(100, "Troca da tela do telefone", especialistas[IRONMAN], clientes[HULK]), // v02
+        Venda(150, "Fotos do novo planador", especialistas[MIRANHA], clientes[DUENDE_VERDE]), // v03
+        Venda(10, "Recarga de cartucho", especialistas[IRONMAN], clientes[JJJ]), // v04
+        Venda(10000, "Reconstrucao de Predio", especialistas[WANDA], clientes[HULK]), // v05
+        Venda(3000, "Decoracao de Apartamento no Brooklyn", especialistas[WANDA], clientes[CAPITAO]), // v06
+        Venda(5000, "Reforma do Clarim Diario", especialistas[WANDA], clientes[JJJ]), // v07
+        Venda(80, "Formatacao do PC", especialistas[IRONMAN], clientes[DOUTOR_OCTOPUS]) // v08
     };
 
 
-    std::cout <<"\n\n\t\t\tRelatorio das Vendas\n" << endl;
+    std::cout << " \n \n           Relatorio das Vendas \n" << endl;
     for (auto& v : vendas) {
         v.print();
     }
 
-    std::cout <<"\n\n\t\t\tRelatorio dos Funcionarios\n" << endl;
+    std::cout << " \n \n           Relatorio dos Funcionarios \n" << endl;
     for (auto& e : especialistas) {
         e.print();
         e.printResults();
