@@ -11,10 +11,10 @@ using namespace std;
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+        double VALOR;
+        string descricao;
+        Especialista esp;
+        string cliente;
 
 
     void print() {
