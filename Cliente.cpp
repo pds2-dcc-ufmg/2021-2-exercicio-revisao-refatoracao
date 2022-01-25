@@ -8,6 +8,4 @@ void Cliente::print(){
         std::cout << "  Nome: " << NOME << std::endl;
 	std::cout << "  Endereco: " << endereco << std::endl;
 	std::cout << "  CEP: " << Cep << std::endl;
-
 }
-
