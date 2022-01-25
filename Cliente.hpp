@@ -1,5 +1,4 @@
-#ifndef CLIENTE_H
-#define CLIENTE_H
+#ifndef CLIENTE_H define CLIENTE_H
 
 #include <string>
 using namespace std;
