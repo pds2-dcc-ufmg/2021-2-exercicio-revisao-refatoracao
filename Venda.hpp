@@ -10,16 +10,13 @@ class Venda{
 
     public:
         double VALOR;
-        string descricao;
+        std::string descricao;
         Especialista esp;
-        string cliente;
-
-
+        std::string cliente;
+    
     void print() {
-
         std::cout << "Especialista: " << esp.nome;
         std::cout << " Cliente: " << cliente;
     }
 };
-
 #endif
