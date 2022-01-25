@@ -9,8 +9,8 @@ double ValorBONIFICACAO = 15.0;
 class Gerente {
     public:
         double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
+        std::string IDADE;
+        std::string nome;
         int rgFunc;
         double bonificacao;
 
@@ -30,6 +30,4 @@ class Gerente {
         }
 
 };
-
 #endif
-
