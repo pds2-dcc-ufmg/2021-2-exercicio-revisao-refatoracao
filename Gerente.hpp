@@ -8,7 +8,7 @@ using namespace std;
 
 double ValorBONIFICACAO = 15.0;
 
-class Gerente : public Funcionario {
+class Gerente : public Funcionario  {
     public:
         
          
