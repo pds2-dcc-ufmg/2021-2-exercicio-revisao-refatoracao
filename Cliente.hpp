@@ -2,7 +2,6 @@
 #define CLIENTE_H
 
 #include <string>
-using namespace std;
 
 class Cliente{
 
