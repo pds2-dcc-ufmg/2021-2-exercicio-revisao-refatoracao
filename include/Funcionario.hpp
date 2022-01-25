@@ -4,8 +4,6 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
-
 class Funcionario {
 protected:
     double salario_base; // valor m�nimo recebido pelo funcion�rio
@@ -24,4 +22,4 @@ public:
     std::string getRgFunc();
 };
 
-#endif
+#endif // !FUNCIONARIO_HPP

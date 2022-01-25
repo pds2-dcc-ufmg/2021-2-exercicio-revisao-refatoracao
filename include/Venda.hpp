@@ -1,8 +1,6 @@
-
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
-#include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
@@ -20,4 +18,4 @@ public:
     void print();
 };
 
-#endif
+#endif // !VENDA_HPP

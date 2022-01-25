@@ -1,10 +1,6 @@
 #ifndef GERENTE_HPP
 #define GERENTE_HPP
 
-#include <iostream>
-#include <iomanip>
-#include <assert.h>
-
 #include "Funcionario.hpp"
 
 class Gerente : public Funcionario{
