@@ -36,6 +36,7 @@ int main()
         Venda(10, "Recarga de cartucho", especialistas[1], clientes[0]),
         Venda(10000, "Reconstrucao de Predio", especialistas[2], clientes[3]),
         Venda(3000, "Decoracao de Apartamento no Brooklyn", especialistas[2], clientes[4]),
+        Venda(3000, "Decoracao de Apartamento no Brooklyn", especialistas[2], clientes[4]),
         Venda(5000, "Reforma do Clarim Diario", especialistas[2], clientes[0]),
         Venda(80, "Formatacao do PC", especialistas[1], clientes[2])
     };

@@ -17,9 +17,8 @@ std::string Especialista::getEspecialidade() {
 }
 
 void Especialista::print() {
+    std::cout << "[Especialista]" << std::endl;
     Funcionario::print();
-    std::cout << "\t[Especialista]" << std::endl;
-    std::cout << "\t\tEspecialidade: " << this->especialidade << std::endl;
 }
 
 double Especialista::getSalarioTotal() {

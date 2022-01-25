@@ -6,9 +6,8 @@ Gerente::Gerente(std::string nome, std::string idade, std::string rgFunc, double
 }
 
 void Gerente::print() {
-    Funcionario::print();
     std::cout << "[Gerente]" << std::endl;
-    std::cout << "\tBonificacao: " << this->VALOR_BONUS_POR_VENDA << std::endl;
+    Funcionario::print();
 }
 
 double Gerente::calculaBonificacaoTotal(int total_vendas) {

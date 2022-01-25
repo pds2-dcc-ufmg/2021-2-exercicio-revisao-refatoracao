@@ -10,9 +10,7 @@ Venda::Venda(double valor, std::string descricao, Especialista &especialista, Cl
 }
 
 void Venda::print() {
-    especialista.print();
-    cliente.print();
-    std::cout << "Descricaoo: " << this->descricao << std::endl;
-    std::cout << "Valor: " << this->valor << std::endl;
-    std::cout << "\n";
+    std::cout << "Especialista: " << especialista.getNome();
+    std::cout << " Cliente: " << cliente.getNome();
+    std::cout << " Descricao: " << this->descricao << std::endl;
 }
