@@ -5,7 +5,6 @@
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-using namespace std;
 
 class Venda{
 

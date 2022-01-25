@@ -11,7 +11,7 @@ using namespace std;
 class Gerente {
     public:
         double ValorBONIFICACAO = 15.0;
-        double SalarioBase; // valor minimo recebido pelo funcionario
+        double SalarioBase;
         string IDADE;
         string nome;
         int rgFunc;

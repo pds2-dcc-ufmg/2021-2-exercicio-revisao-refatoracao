@@ -4,7 +4,6 @@
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
 
 class Especialista : public Funcionario {
 
