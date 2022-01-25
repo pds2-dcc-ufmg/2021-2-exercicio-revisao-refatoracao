@@ -6,8 +6,6 @@
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-using namespace std;
-
 class Venda{
 
     public:
@@ -19,11 +17,8 @@ class Venda{
 
     void print() {
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
+        std::cout << "Especialista: " << esp.nome;
+        std::cout << " Cliente: " << cliente;
     }
 };
 
