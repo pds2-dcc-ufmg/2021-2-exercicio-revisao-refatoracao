@@ -10,31 +10,31 @@ using namespace std;
 int main()
 {
     Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
+    cliente1.Nome = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
 	cliente1.Cep = "35690000";
     cliente1.print();
 
     Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
+    cliente2.Nome = "Norman Osborn";
     cliente2.endereco ="Hartlford";
 	cliente2.Cep = "22061955";
     cliente2.print();
 
     Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
+    cliente3.Nome = "Otto Octavius";
     cliente3.endereco ="Schenectady";
 	cliente3.Cep = "24051953";
     cliente3.print();
 
     Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
+    cliente4.Nome = "Bruce Benner";
     cliente4.endereco ="Dayton";
 	cliente4.Cep = "22111967";
     cliente4.print();
 
     Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
+    cliente5.Nome = "Steve Rogers";
     cliente5.endereco ="Lower East Side";
 	cliente5.Cep = "13061981";
     cliente5.print();
@@ -45,8 +45,8 @@ int main()
     Especialista e01;
     int numAtendimentos01 = 0;
     double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
+    e01.Nome = "Peter Parker";
+    e01.Idade = "46";
     e01.rgFunc = 27061975;
     e01.SalarioBase = 3000;
     e01.especialidade = "Fotografia";
@@ -56,8 +56,8 @@ int main()
     Especialista e02;
     int numAtendimentos02 = 0;
     double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
+    e02.Nome = "Tony Stark";
+    e02.Idade = "56";
     e02.rgFunc = 4041965;
     e02.SalarioBase = 1000;
     e02.especialidade = "Consertos de equipamentos eletronicos";
@@ -66,8 +66,8 @@ int main()
     Especialista e03;
     int numAtendimentos03 = 0;
     double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
+    e03.Nome = "Wanda Maximoff";
+    e03.Idade = "32";
     e03.rgFunc = 16021989;
     e03.SalarioBase = 5000;
     e03.especialidade = "Engenharia e Designeeeeer";
@@ -75,8 +75,8 @@ int main()
 
     Gerente g01;
     double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
+    g01.Nome = "Nick Fury";
+    g01.Idade = "72";
     g01.rgFunc = 21121948;
     g01.SalarioBase = 10000;
 
@@ -209,9 +209,9 @@ int main()
 
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    g01.Bonificacao = g01.calcula_Bonificacao_Gerente(NUMTOTALservicos);
     g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    cout << "Salario Total: " << g01.SalarioBase + g01.Bonificacao<<endl;
 
     return 0;
 }
