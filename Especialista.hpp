@@ -4,8 +4,6 @@
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
-
 double perc = 0.1;
 double percWanda = 0.1;
 
@@ -23,13 +21,11 @@ class Especialista : public Funcionario {
 
     void print() {
 
-        std::cout << "[Especialista]" << endl;
+        std::cout << "[Especialista]" << std::endl;
         Funcionario::print();
 
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+        std::cout << "  Nome: " << nome << std::endl;
+        std::cout << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase << std::endl;
 
     }
 };
