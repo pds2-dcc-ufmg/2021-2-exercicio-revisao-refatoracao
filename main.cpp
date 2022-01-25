@@ -33,12 +33,6 @@ int main()
 	cliente4.Cep = "22111967";
     cliente4.print();
 
-
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
-
     Cliente cliente5;
     cliente5.NOME = "Steve Rogers";
     cliente5.endereco ="Lower East Side";
@@ -160,7 +154,7 @@ int main()
     v08.esp = e02;
     v08.descricao = "Formatacao do PC";
     v08.VALOR = 80;
-    comissao02 += e02.comissao(v07.VALOR);
+    comissao02 += e02.comissao(v08.VALOR);
     numAtendimentos02+=1;
 
 
