@@ -1,6 +1,6 @@
 #ifndef FUNCIONARIO_HPP
 #define FUNCIONARIO_HPP
-
+#include <string>
 #include <iostream>
 #include <iomanip>
 
