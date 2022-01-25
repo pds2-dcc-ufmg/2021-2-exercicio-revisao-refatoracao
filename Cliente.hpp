@@ -1,4 +1,5 @@
-#ifndef CLIENTE_H define CLIENTE_H
+#ifndef CLIENTE_H 
+#define CLIENTE_H
 
 #include <string>
 using namespace std;
@@ -10,8 +11,7 @@ class Cliente{
         string NOME;
 	string endereco;
 	string Cep;
-	void print();
+	void print();// imprime os dados do cliente.
 
 };
-
 #endif
