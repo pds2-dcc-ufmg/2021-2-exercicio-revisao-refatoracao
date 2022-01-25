@@ -18,7 +18,6 @@ class Especialista : public Funcionario {
                   return c;
     }
 
-
     void print() {
 
         std::cout << "[Especialista]" << std::endl;
