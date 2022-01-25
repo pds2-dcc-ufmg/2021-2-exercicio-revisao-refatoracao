@@ -10,7 +10,7 @@ double ValorBONIFICACAO = 15.0;
 
 class Gerente : public Funcionario {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
+        
          
         double bonificacao;
 
