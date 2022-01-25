@@ -24,9 +24,6 @@ class Venda{
 
         std::cout << " Cliente: ";
         cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
     }
 };
 
