@@ -8,7 +8,7 @@ class Cliente{
 
 	public:
 
-        string NOME;
+        string Nome;
 	string endereco;
 	string Cep;
 	void print();// imprime os dados do cliente.
