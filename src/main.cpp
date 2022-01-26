@@ -8,12 +8,14 @@
 #include "Venda.hpp"
 #include "Gerente.hpp"
 
+// Função para criação de um novo gerente
 Gerente novoGerente(std::string nome,
                     std::string idade,
                     int rgFunc,
                     double salarioMinimo,
                     double bonificacao);
 
+// Função para criação de um novo especialista
 Especialista novoEspecialista(std::string nome,
                               std::string idade,
                               int rgFunc,
@@ -22,10 +24,12 @@ Especialista novoEspecialista(std::string nome,
                               int numAtendimentos,
                               double comissao);
 
+// Função para criação de um novo cliente
 Cliente novoCliente(std::string nome,
                     std::string endereco,
                     std::string cep);
 
+// Função para criação de uma nova venda e para a respectiva atribuição de comissões/bonificações
 Venda novaVenda(Cliente &cliente,
                 Especialista &especialista,
                 Gerente &gerente,
@@ -80,14 +84,13 @@ int main()
         std::cout << "Salario Total: " << especialista.getSalarioMinimo() + especialista.getComissao() << std::endl;
     }
 
-    // Impressão do relatório de desempenho dos gerentes
+    // Impressão do relatório de desempenho do gerente
     gerente.imprimirDados();
     std::cout << "Salario Total: " << gerente.getSalarioTotal() << std::endl;
 
     return 0;
 }
 
-// Função para criação de um novo gerente
 Gerente novoGerente(std::string nome,
                     std::string idade,
                     int rgFunc,
@@ -99,7 +102,6 @@ Gerente novoGerente(std::string nome,
     return gerente;
 }
 
-// Função para criação de um novo especialista
 Especialista novoEspecialista(std::string nome,
                               std::string idade,
                               int rgFunc,
@@ -113,7 +115,6 @@ Especialista novoEspecialista(std::string nome,
     return especialista;
 }
 
-// Função para criação de um novo cliente
 Cliente novoCliente(std::string nome,
                     std::string endereco,
                     std::string cep)
@@ -125,7 +126,6 @@ Cliente novoCliente(std::string nome,
     return cliente;
 }
 
-// Função para criação de uma nova venda e para a respectiva atribuição de comissões/bonificações
 Venda novaVenda(Cliente &cliente,
                 Especialista &especialista,
                 Gerente &gerente,
