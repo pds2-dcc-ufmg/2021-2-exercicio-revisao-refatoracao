@@ -17,7 +17,7 @@ public:
 			std::string cepAux = "");
 
 	void imprimirDados();
-	
+
 	std::string getNome() { return nome; }
 };
 

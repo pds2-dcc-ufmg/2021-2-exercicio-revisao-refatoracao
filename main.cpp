@@ -82,7 +82,7 @@ int main()
 
     // Impressão do relatório de desempenho dos gerentes
     gerente.imprimirDados();
-    std::cout << "Salario Total: " << gerente.getSalarioMinimo() + gerente.getBonificacao() << std::endl;
+    std::cout << "Salario Total: " << gerente.getSalarioTotal() << std::endl;
 
     return 0;
 }
