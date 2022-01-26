@@ -10,6 +10,9 @@ SCR_DIR		= ./src
 
 all: main
 
+${BUILD_DIR}/Pessoa.o: ${INCLUDE_DIR}/Pessoa.hpp ${ENTIDADES_DIR}/Pessoa.cpp
+	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${ENTIDADES_DIR}/Pessoa.cpp -o ${BUILD_DIR}/Pessoa.o
+
 ${BUILD_DIR}/Cliente.o: ${INCLUDE_DIR}/Cliente.hpp ${ENTIDADES_DIR}/Cliente.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${ENTIDADES_DIR}/Cliente.cpp -o ${BUILD_DIR}/Cliente.o
 
@@ -25,11 +28,11 @@ ${BUILD_DIR}/Gerente.o: ${INCLUDE_DIR}/Gerente.hpp ${ENTIDADES_DIR}/Gerente.cpp
 ${BUILD_DIR}/Venda.o: ${INCLUDE_DIR}/Venda.hpp ${ENTIDADES_DIR}/Venda.cpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${ENTIDADES_DIR}/Venda.cpp -o ${BUILD_DIR}/Venda.o
 
-${BUILD_DIR}/main.o: ./src/main.cpp ${INCLUDE_DIR}/Cliente.hpp ${INCLUDE_DIR}/Especialista.hpp ${INCLUDE_DIR}/Funcionario.hpp ${INCLUDE_DIR}/Gerente.hpp ${INCLUDE_DIR}/Venda.hpp
+${BUILD_DIR}/main.o: ./src/main.cpp ${INCLUDE_DIR}/Cliente.hpp ${INCLUDE_DIR}/Especialista.hpp ${INCLUDE_DIR}/Funcionario.hpp ${INCLUDE_DIR}/Gerente.hpp ${INCLUDE_DIR}/Venda.hpp ${INCLUDE_DIR}/Pessoa.hpp
 	${CC} ${CFLAGS} -I ${INCLUDE_DIR} -c ${SCR_DIR}/main.cpp -o ${BUILD_DIR}/main.o
 
-main: ${BUILD_DIR}/main.o ${BUILD_DIR}/Cliente.o ${BUILD_DIR}/Especialista.o ${BUILD_DIR}/Funcionario.o ${BUILD_DIR}/Gerente.o ${BUILD_DIR}/Venda.o
-	${CC} ${CFLAGS} -o main ${BUILD_DIR}/main.o ${BUILD_DIR}/Cliente.o ${BUILD_DIR}/Especialista.o ${BUILD_DIR}/Funcionario.o ${BUILD_DIR}/Gerente.o ${BUILD_DIR}/Venda.o
+main: ${BUILD_DIR}/main.o ${BUILD_DIR}/Cliente.o ${BUILD_DIR}/Especialista.o ${BUILD_DIR}/Funcionario.o ${BUILD_DIR}/Gerente.o ${BUILD_DIR}/Venda.o ${BUILD_DIR}/Pessoa.o
+	${CC} ${CFLAGS} -o main ${BUILD_DIR}/main.o ${BUILD_DIR}/Cliente.o ${BUILD_DIR}/Especialista.o ${BUILD_DIR}/Funcionario.o ${BUILD_DIR}/Gerente.o ${BUILD_DIR}/Venda.o ${BUILD_DIR}/Pessoa.o
 
 
 clean:

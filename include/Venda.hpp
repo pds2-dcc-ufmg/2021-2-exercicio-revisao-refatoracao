@@ -9,11 +9,12 @@
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
-    void print();
+        Venda(Especialista esp, Cliente c, const std::string& Descricao, double Valor);
+        double Valor;
+        std::string Descricao;
+        Especialista especialista = Especialista("nome", 0, 0, 0, 0, "nada", 0);
+        Cliente cliente = Cliente("nome", "endereco", "cep");
+        void ImprimeVenda();
 };
 
 #endif

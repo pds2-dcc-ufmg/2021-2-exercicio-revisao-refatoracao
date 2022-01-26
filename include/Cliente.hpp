@@ -4,18 +4,17 @@
 #include <string>
 #include <iostream>
 #include <string>
+#include "Pessoa.hpp"
 
-using namespace std;
 
-class Cliente{
+
+class Cliente: public Pessoa{
 
 	public:
-
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
-		void print();
+		std::string Endereco;
+		std::string Cep;
+		void ImprimeDados() const override;
+		Cliente(const std::string& Nome, std::string Endereco, std::string Cep);
 
 };
 

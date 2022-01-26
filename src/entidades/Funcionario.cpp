@@ -1,11 +1,7 @@
 #include "Funcionario.hpp"
 
-void Funcionario::print() {
-    cout << "[Funcionario]" << endl
-    << "  Idade: " << IDADE << endl
-    << "  RGFunc: " << rgFunc << endl;
-}
-
-void Funcionario::print_oi(){
-    cout << "Tchau" << endl;
+void Funcionario::ImprimeDados() const {
+    std::cout << "[Funcionario]" << std::endl
+    << "  Idade: " << this->getIdade() << std::endl
+    << "  RGFunc: " << rgFunc << std::endl;
 }

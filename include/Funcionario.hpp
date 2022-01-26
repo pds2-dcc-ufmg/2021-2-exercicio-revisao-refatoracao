@@ -3,17 +3,16 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Pessoa.hpp"
 
-using namespace std;
 
-class Funcionario {
+
+class Funcionario : public Pessoa {
     public:
         double SalarioBase;
-        string IDADE;
-        string nome;
         int rgFunc;
-        void print();
-        void print_oi();
+        void ImprimeDados() const override;
+        double Comissao;
 };
 
 #endif
