@@ -8,13 +8,7 @@
 class Especialista : public Funcionario {
 
     public:
-        Especialista(const std::string& Nome,
-        int Idade,
-        int rgFunc,
-        int NumAtendimentos,
-        double SalarioBase,
-        const std::string& Especialidade, double Comissao);
-
+        Especialista(const std::string& Nome, int Idade, int rgFunc, int NumAtendimentos, double SalarioBase, const std::string& Especialidade, double Comissao);
         double perc = 0.1;
         double percWanda = 0.1;
         std::string Especialidade;

@@ -127,10 +127,9 @@ int main()
 
     }
 
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(TotalServicos);
-    g01.print();
-    std::cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao << std::endl;
-
+    g01.Comissao = g01.BonificacaoGerente(TotalServicos);
+    g01.ImprimeDados();
+    std::cout << "Salario Total: " << g01.SalarioBase + g01.Comissao << std::endl;
 
     return 0;
 }
