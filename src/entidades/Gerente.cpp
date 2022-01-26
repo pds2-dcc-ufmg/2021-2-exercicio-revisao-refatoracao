@@ -9,7 +9,7 @@ void Gerente::ImprimeDados() const {
     << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << SalarioBase << std::endl;
 }
 
-double Gerente::BonificacaoGerente(int TotalVendas){
+double Gerente::CalculaBonificacao(int TotalVendas){
     return TotalVendas*ValorBonificacao;
 }
 

@@ -9,7 +9,7 @@ class Gerente : public Funcionario{
         Gerente(const std::string& Nome, int Idade, int rgFunc, double SalarioBase);
         double ValorBonificacao = 15.0;
         void ImprimeDados() const override;
-        double BonificacaoGerente(int TotalVendas);
+        double CalculaBonificacao(int TotalVendas);
 
 };
 

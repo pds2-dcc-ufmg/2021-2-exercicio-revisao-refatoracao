@@ -12,7 +12,7 @@ class Especialista : public Funcionario {
         double perc = 0.1;
         double percWanda = 0.1;
         std::string Especialidade;
-        double comissao(double ValorVenda);
+        double CalculaComissao(double ValorVenda);
         void ImprimeDados() const override;
         int NumAtendimentos = 0;
 };

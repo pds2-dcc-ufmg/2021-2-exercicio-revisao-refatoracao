@@ -1,6 +1,6 @@
 #include "Especialista.hpp"
 
-double Especialista::comissao(double ValorVenda) {
+double Especialista::CalculaComissao(double ValorVenda) {
     return ValorVenda*perc;
 }
 

@@ -45,49 +45,49 @@ int main()
 ///////////////////////////////////// REALIZANDO VENDAS /////////////////////////////////////
 
     Venda v01 = Venda(e01, cliente1, "Fotos do Homem Aranha", 100);
-    e01.Comissao += e01.comissao(v01.Valor);
+    e01.Comissao += e01.CalculaComissao(v01.Valor);
     e01.NumAtendimentos++;
     vendas.push_back(&v01);
 
 
     Venda v02 = Venda(e02, cliente4, "Troca da tela do telefone", 100);
-    e02.Comissao += e02.comissao(v02.Valor);
+    e02.Comissao += e02.CalculaComissao(v02.Valor);
     e02.NumAtendimentos++;
     vendas.push_back(&v02);
 
 
     Venda v03 = Venda(e01, cliente2, "Fotos do novo planador", 150);
-    e01.Comissao += e01.comissao(v03.Valor);
+    e01.Comissao += e01.CalculaComissao(v03.Valor);
     e01.NumAtendimentos++;
     vendas.push_back(&v03);
 
 
     Venda v04 = Venda(e02, cliente1, "Recarga de cartucho", 10);
-    e02.Comissao += e02.comissao(v04.Valor);
+    e02.Comissao += e02.CalculaComissao(v04.Valor);
     e02.NumAtendimentos++;
     vendas.push_back(&v04);
 
 
     Venda v05 = Venda(e03, cliente4, "Reconstrucao de Predio", 10000);
-    e03.Comissao += e03.comissao(v05.Valor);
+    e03.Comissao += e03.CalculaComissao(v05.Valor);
     e03.NumAtendimentos++;
     vendas.push_back(&v05);
 
 
     Venda v06 = Venda(e03, cliente5, "Decoracao de Apartamento no Brooklyn", 3000);
-    e03.Comissao += e03.comissao(v06.Valor);
+    e03.Comissao += e03.CalculaComissao(v06.Valor);
     e03.NumAtendimentos++;
     vendas.push_back(&v06);
 
 
     Venda v07 = Venda(e03, cliente1, "Reforma do Clarim Diario", 5000);
-    e03.Comissao += e03.comissao(v07.Valor);
+    e03.Comissao += e03.CalculaComissao(v07.Valor);
     e03.NumAtendimentos++;
     vendas.push_back(&v07);
 
 
     Venda v08 = Venda(e02, cliente3, "Formatacao do PC", 80);
-    e02.Comissao += e02.comissao(v08.Valor);
+    e02.Comissao += e02.CalculaComissao(v08.Valor);
     e02.NumAtendimentos++;
     vendas.push_back(&v08);
 
@@ -127,7 +127,7 @@ int main()
 
     }
 
-    g01.Comissao = g01.BonificacaoGerente(TotalServicos);
+    g01.Comissao = g01.CalculaBonificacao(TotalServicos);
     g01.ImprimeDados();
     std::cout << "Salario Total: " << g01.SalarioBase + g01.Comissao << std::endl;
 
