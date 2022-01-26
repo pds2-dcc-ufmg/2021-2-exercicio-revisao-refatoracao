@@ -1,7 +1,5 @@
 #include "Gerente.hpp"
 
-double Gerente::valorBonificacao = 15.0;
-
 Gerente::Gerente(std::string nomeAux,
                  std::string idadeAux,
                  int rgFuncAux,
@@ -15,6 +13,11 @@ Gerente::Gerente(std::string nomeAux,
     bonificacao = bonificacaoAux;
 }
 
+void Gerente::acrescentarBonificacao()
+{
+    bonificacao += valorBonificacao;
+}
+
 void Gerente::imprimirDados()
 {
     std::cout << "[Funcionario]" << std::endl
@@ -23,9 +26,4 @@ void Gerente::imprimirDados()
               << "  Idade: " << idade << std::endl
               << "  RGFunc: " << rgFunc << std::endl
               << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salarioMinimo << std::endl;
-}
-
-void Gerente::acrescentarBonificacao()
-{
-    bonificacao += valorBonificacao;
 }

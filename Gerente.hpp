@@ -5,13 +5,11 @@
 #include <iomanip>
 #include <string>
 
-class Gerente
+#include "Funcionario.hpp"
+
+class Gerente : public Funcionario
 {
 private:
-    std::string nome;
-    std::string idade;
-    int rgFunc;
-    double salarioMinimo;
     double bonificacao;
 
 public:
@@ -20,14 +18,13 @@ public:
             int rgFuncAux = 0,
             double salarioMinimoAux = 0.0,
             double bonificacaoAux = 0.0);
-    void imprimirDados();
+
     void acrescentarBonificacao();
-    double getSalarioMinimo() { return salarioMinimo; }
+
+    void imprimirDados() override;
+
     double getBonificacao() { return bonificacao; }
     double getSalarioTotal() { return getSalarioMinimo() + getBonificacao(); }
-
-protected:
-    static double valorBonificacao;
 };
 
 #endif

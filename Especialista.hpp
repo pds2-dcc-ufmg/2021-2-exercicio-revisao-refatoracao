@@ -21,11 +21,12 @@ public:
                  std::string especialidadeAux = "",
                  int numAtendimentosAux = 0,
                  double comissaoAux = 0.0);
+
     void acrescentarNumAtendimentos();
     void acrescentarComissao(double valorVenda);
-    double calcularComissao(double valorVenda);
-    void imprimirDados();
-    std::string getNome() { return nome; }
+
+    void imprimirDados() override;
+
     int getNumAtendimentos() { return numAtendimentos; }
     double getComissao() { return comissao; }
 };

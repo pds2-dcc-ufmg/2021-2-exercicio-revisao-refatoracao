@@ -7,22 +7,20 @@
 class Funcionario
 {
 protected:
-    double salarioMinimo;
-    std::string idade;
     std::string nome;
+    std::string idade;
+    double salarioMinimo;
     int rgFunc;
 
     static double perc;
     static double percWanda;
+    static double valorBonificacao;
 
 public:
-    void imprimirDados()
-    {
-        std::cout << "[Funcionario]" << std::endl
-                  << "  Idade: " << idade << std::endl
-                  << "  RGFunc: " << rgFunc << std::endl;
-    }
-    double getSalarioMinimo() { return salarioMinimo; }
+    virtual void imprimirDados();
+
+    std::string getNome() { return nome; }
+    virtual double getSalarioMinimo() { return salarioMinimo; }
 };
 
 #endif

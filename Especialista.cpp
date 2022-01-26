@@ -24,12 +24,7 @@ void Especialista::acrescentarNumAtendimentos()
 
 void Especialista::acrescentarComissao(double valorVenda)
 {
-    comissao += calcularComissao(valorVenda);
-}
-
-double Especialista::calcularComissao(double valorVenda)
-{
-    return valorVenda * perc;
+    comissao += valorVenda * perc;
 }
 
 void Especialista::imprimirDados()

@@ -8,17 +8,19 @@
 class Venda
 {
 private:
-    double valor;
+    Cliente cliente;
     std::string descricao;
     Especialista especialista;
-    Cliente cliente;
+    double valor;
 
 public:
     Venda(Cliente clienteAux,
           Especialista especialistaAux,
           std::string descricaoAux,
           double valorAux);
+
     void imprimirDados();
+
     std::string getNomeEspecialista() { return especialista.getNome(); }
     std::string getNomeCliente() { return cliente.getNome(); }
     std::string getDescricao() { return descricao; }

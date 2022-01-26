@@ -15,7 +15,9 @@ public:
 	Cliente(std::string nomeAux = "",
 			std::string enderecoAux = "",
 			std::string cepAux = "");
+
 	void imprimirDados();
+	
 	std::string getNome() { return nome; }
 };
 
