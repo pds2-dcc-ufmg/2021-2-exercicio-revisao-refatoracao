@@ -10,33 +10,33 @@ using namespace std;
 int main()
 {
     Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
+    cliente1.setNOME("J. Jonah Jameson"); 
+    cliente1.setEndereco("Nova York"); 
+	cliente1.setCep("35690000");
     cliente1.print();
 
     Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
+    cliente2.setNOME("Norman Osborn");
+    cliente2.setEndereco("Hartlford"); 
+	cliente2.setCep("22061955");
     cliente2.print();
 
     Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
+    cliente3.setNOME("Otto Octavius"); 
+    cliente3.setEndereco("Schenectady"); 
+	cliente3.setCep("24051953");  
     cliente3.print();
 
     Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
+    cliente4.setNOME("Bruce Benner");
+    cliente4.setEndereco("Dayton") ;
+	cliente4.setCep("22111967"); 
     cliente4.print();
 
     Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
+    cliente5.setNOME("Steve Rogers");
+    cliente5.setEndereco("Lower East Side");
+	cliente5.setCep("13061981"); 
     cliente5.print();
 
 
