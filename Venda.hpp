@@ -15,8 +15,7 @@ class Venda{
     Especialista esp;
     string cliente;
 
-
-    void print() {
+void print() {
 
         std::cout << "Especialista: ";
         cout << esp.nome;

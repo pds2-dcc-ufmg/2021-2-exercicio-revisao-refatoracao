@@ -8,8 +8,8 @@ using namespace std;
 
 class Gerente {
     public:
-        double SalarioBase; // valor minimo recebido pelo funcionario
-        string idade;
+        double SalarioBase; // valor minimo recebido pelo funcionrio
+        string IDADE;
         string nome;
         double bonificacao;
         int rgFunc;

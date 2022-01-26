@@ -10,4 +10,3 @@ void Cliente::print(){
 		 << "  CEP: " << cep << endl;
 
 }
-

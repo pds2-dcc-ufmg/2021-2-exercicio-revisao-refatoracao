@@ -7,8 +7,8 @@
 #include "Gerente.hpp"
 using namespace std;
 
-int main()
-{
+int main(){
+
     Cliente cliente1;
     cliente1.nome = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
@@ -40,8 +40,6 @@ int main()
     cliente5.print();
 
 
-
-
     Especialista e01;
     int numAtendimentos01 = 0;
     double comissao01 = 0;
@@ -51,8 +49,6 @@ int main()
     e01.SalarioBase = 3000;
     e01.especialidade = "Fotografia";
 
-
-
     Especialista e02;
     int numAtendimentos02 = 0;
     double comissao02 = 0;
@@ -61,7 +57,6 @@ int main()
     e02.rgFunc = 4041965;
     e02.SalarioBase = 1000;
     e02.especialidade = "Consertos de equipamentos eletronicos";
-
 
     Especialista e03;
     int numAtendimentos03 = 0;
@@ -75,7 +70,7 @@ int main()
 
     Gerente g01;
     g01.nome = "Nick Fury";
-    g01.idade = "72";
+    g01.IDADE = "72";
     g01.rgFunc = 21121948;
     g01.SalarioBase = 10000;
 
@@ -88,7 +83,6 @@ int main()
     comissao01 += e01.comissao(v01.VALOR);
     numAtendimentos01+=1;
 
-
     Venda v02;
     v02.cliente= "Bruce Benner";
     v02.esp = e02;
@@ -96,7 +90,6 @@ int main()
     v02.VALOR = 100;
     comissao02 += e02.comissao(v02.VALOR);
     numAtendimentos02+=1;
-
 
     Venda v03;
     v03.cliente= "Norman Osborn";
@@ -106,7 +99,6 @@ int main()
     comissao01 += e01.comissao(v03.VALOR);
     numAtendimentos01+=1;
 
-
     Venda v04;
     v04.cliente= "J. Jonah Jameson";
     v04.esp = e02;
@@ -114,7 +106,6 @@ int main()
     v04.VALOR = 10;
     comissao02 += e02.comissao(v04.VALOR);
     numAtendimentos02+=1;
-
 
     Venda v05;
     v05.cliente= "Bruce Benner";
@@ -124,7 +115,6 @@ int main()
     comissao03 += e03.comissao(v05.VALOR);
     numAtendimentos03+=1;
 
-
     Venda v06;
     v06.cliente= "Steve Rogers";
     v06.esp = e03;
@@ -133,11 +123,8 @@ int main()
     comissao03 += e03.comissao(v06.VALOR);
     numAtendimentos03+=1;
 
-
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
-
-
 
     Venda v07;
     v07.cliente= "J. Jonah Jameson";
@@ -147,7 +134,6 @@ int main()
     comissao03 += e03.comissao(v07.VALOR);
     numAtendimentos03+=1;
 
-
     Venda v08;
     v08.cliente= "Otto Octavius";
     v08.esp = e02;
@@ -155,7 +141,6 @@ int main()
     v08.VALOR = 80;
     comissao02 += e02.comissao(v08.VALOR);
     numAtendimentos02+=1;
-
 
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
