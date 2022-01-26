@@ -17,38 +17,19 @@ private:
     string cliente;
 
 public:
-    void print() {
+    void print();
 
-        std::cout << "Especialista: ";
-        cout << especialista.getNome();
+    double getValor();
 
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }
+    std::string getDescricao();
 
-    double getValor() {
-        return this->VALOR;
-    }
+    void setEspecialista(Especialista especialista);
 
-    std::string getDescricao() {
-        return this->descricao;
-    }
+    void setCliente(std::string cliente);
 
-    void setEspecialista(Especialista especialista) {
-        this->especialista = especialista;
-    }
+    void setDescricao(std::string descricao);
 
-    void setCliente(std::string cliente) {
-        this->cliente = cliente;
-    }
-
-    void setDescricao(std::string descricao) {
-        this->descricao = descricao;
-    }
-
-    void setValor(double valor) {
-        this->VALOR = valor;
-    }
+    void setValor(double valor);
 };
 
 #endif

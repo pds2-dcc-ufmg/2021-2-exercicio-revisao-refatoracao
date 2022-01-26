@@ -2,45 +2,40 @@
 
 #include "Cliente.hpp"
 #include "Especialista.hpp"
-#include "Funcionario.hpp"
+// #include "Funcionario.hpp"
 #include "Gerente.hpp"
 #include "Venda.hpp"
 using namespace std;
 
 int main() {
     Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco = "Nova York";
-    cliente1.Cep = "35690000";
+    cliente1.setNome("J. Jonah Jameson");
+    cliente1.setEndereco("Nova York");
+    cliente1.setCep("35690000");
     cliente1.print();
 
     Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco = "Hartlford";
-    cliente2.Cep = "22061955";
+    cliente2.setNome("Norman Osborn");
+    cliente2.setEndereco("Hartlford");
+    cliente2.setCep("22061955");
     cliente2.print();
 
     Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco = "Schenectady";
-    cliente3.Cep = "24051953";
+    cliente3.setNome("Otto Octavius");
+    cliente3.setEndereco("Schenectady");
+    cliente3.setCep("24051953");
     cliente3.print();
 
     Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco = "Dayton";
-    cliente4.Cep = "22111967";
-    cliente4.print();
-
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco = "Dayton";
-    cliente4.Cep = "22111967";
+    cliente4.setNome("Bruce Benner");
+    cliente4.setEndereco("Dayton");
+    cliente4.setCep("22111967");
     cliente4.print();
 
     Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco = "Lower East Side";
-    cliente5.Cep = "13061981";
+    cliente5.setNome("Steve Rogers");
+    cliente5.setEndereco("Lower East Side");
+    cliente5.setCep("13061981");
     cliente5.print();
 
     Especialista especialista1;
@@ -52,7 +47,6 @@ int main() {
     especialista1.setSalarioBase(3000);
     especialista1.setEspecialidade("Fotografia");
 
-
     Especialista especialista2;
     int numAtendimentos02 = 0;
     double comissao02 = 0;
@@ -61,7 +55,6 @@ int main() {
     especialista2.setRgFunc(4041965);
     especialista2.setSalarioBase(1000);
     especialista2.setEspecialidade("Consertos de equipamentos eletronicos");
-
 
     Especialista especialista3;
     int numAtendimentos03 = 0;
@@ -77,7 +70,6 @@ int main() {
     gerente1.setIdade("72");
     gerente1.setRgFunc(21121948);
     gerente1.setSalarioBase(10000);
-
 
     Venda venda1;
     venda1.setCliente("J. Jonah Jameson");
