@@ -17,10 +17,10 @@ class Venda{
     void print() {
 
         std::cout << "Especialista: ";
-        cout << esp.nome;
+        cout << esp.getNome();
 
         std::cout << " Cliente: ";
-        cout << cliente;
+        cout << this->getCliente();
 
     }
     

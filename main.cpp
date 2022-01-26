@@ -45,10 +45,10 @@ int main()
     Especialista e01;
     int numAtendimentos01 = 0;
     double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
+    e01.setNome("Peter Parker");
+    e01.setIdade("46");
+    e01.setRgfunc(27061975);
+    e01.setSalarioBase(3000);
     e01.setEspecialidade("Fotografia"); 
 
 
@@ -56,29 +56,29 @@ int main()
     Especialista e02;
     int numAtendimentos02 = 0;
     double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
+    e02.setNome("Tony Stark");
+    e02.setIdade("56");
+    e02.setRgfunc(4041965);
+    e02.setSalarioBase(1000);
     e02.setEspecialidade("Consertos de equipamentos eletronicos");
 
 
     Especialista e03;
     int numAtendimentos03 = 0;
     double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
+    e03.setNome("Wanda Maximoff");
+    e03.setIdade("32");
+    e03.setRgfunc(16021989);
+    e03.setSalarioBase(5000);
     e03.setEspecialidade("Engenharia e Designeeeeer"); 
 
 
     Gerente g01;
     double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
+    g01.setNome("Nick Fury");
+    g01.setIdade("72");
+    g01.setRgfunc(21121948);
+    g01.setSalarioBase(10000);
 
 
     Venda v01;
@@ -190,22 +190,22 @@ int main()
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
     cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
+    cout << "Salario Total: " << e01.getSalarioBase()+comissao01<<endl;
 
     e02.print();
     cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
+    cout << "Salario Total: " << e02.getSalarioBase()+comissao02<<endl;
 
     e03.print();
     cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
+    cout << "Salario Total: " << e03.getSalarioBase()+comissao03<<endl;
 
 
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    g01.setBonificacao(g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos));
     g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    cout << "Salario Total: " << g01.getSalarioBase() + g01.getBonificacao()<<endl;
 
     return 0;
 }
