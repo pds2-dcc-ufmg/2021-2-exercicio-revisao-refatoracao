@@ -12,14 +12,18 @@ double percWanda = 0.1;
 
 class Especialista : public Funcionario {
 
-    public:
+    private:
+        string especialidade;
 
     public:
-        string especialidade;
+
+    void setEspecialidade(std::string especialidade) {
+        this->especialidade = especialidade;
+    }
 
     double comissao(double ValorVenda) {
         double c = ValorVenda*perc;
-                  return c;
+        return c;
     }
 
 
@@ -30,8 +34,8 @@ class Especialista : public Funcionario {
 
 
 
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+        std::cout << "  Nome: " << getNome() << endl
+        << "  SalarioBase: R$ " << fixed << setprecision(2) << getSalarioBase() <<endl;
 
     }
 };
