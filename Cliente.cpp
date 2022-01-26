@@ -2,12 +2,12 @@
 #include <string>
 #include "Cliente.hpp"
 
-string Cliente::getNOME(){
-	return this->NOME; 
+string Cliente::getNome(){
+	return this->nome; 
 }
 
-void Cliente::setNOME(string nome){
-	this->NOME = nome; 
+void Cliente::setNome(string nome){
+	this->nome = nome; 
 }
 
 string Cliente::getEndereco(){
@@ -37,7 +37,7 @@ void Cliente::setAlturaDosPais(string AlturaDosPais){
 void Cliente::print(){
 
 	std::cout << "[Cliente]" << endl
-         << "  Nome: " << this->getNOME() << endl
+         << "  Nome: " << this->getNome() << endl
 		 << "  Endereco: " << this->getEndereco() << endl
 		 << "  CEP: " << this->getCep() << endl;
 

@@ -8,8 +8,8 @@ class Cliente{
 
 	public:
 		void print(); // imprime na tela os dados de um cliente cadastrado
-		string getNOME(); 
-		void setNOME(string nome);
+		string getNome(); 
+		void setNome(string nome);
 		string getEndereco(); 
 		void setEndereco(string endereco);
 		int getCep(); 
@@ -17,7 +17,7 @@ class Cliente{
 		string getAlturaDosPais(); 
 		void setAlturaDosPais(string AlturaDosPais); 
 	private:
-		string NOME;
+		string nome;
 		string endereco;
 		int Cep;
 		string AlturaDosPais;
