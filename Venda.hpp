@@ -5,10 +5,10 @@
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-class Venda{
+class Venda {
 
     public:
-        double VALOR;
+        double valor;
         std::string descricao;
         Especialista esp;
         std::string cliente;
@@ -17,4 +17,5 @@ class Venda{
         std::cout << "Especialista: " << esp.nome << " Cliente: " << cliente;
     }
 };
+
 #endif
