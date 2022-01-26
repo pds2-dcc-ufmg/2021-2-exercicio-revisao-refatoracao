@@ -5,16 +5,18 @@
 #include <iomanip>
 
 class Funcionario {
+
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        std::string IDADE;
         std::string nome;
-        int rgFunc;
+        double salariobase; // valor mínimo recebido pelo funcionário
+        std::string idade;
+        int rgfunc;
 
         void print() {
             std::cout << "[Funcionario]" << std::endl;
-            std::cout << "  Idade: " << IDADE << std::endl;
-            std::cout << "  RGFunc: " << rgFunc << std::endl;
+            std::cout << "  Idade: " << idade << std::endl;
+            std::cout << "  RGFunc: " << rgfunc << std::endl;
         }
 };
+
 #endif
