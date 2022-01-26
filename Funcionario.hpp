@@ -52,7 +52,7 @@ class Funcionario {
         }
 
         private:
-            double SalarioBase; // valor m�nimo recebido pelo funcion�rio
+            double SalarioBase; 
             string idade;
             string nome;
             int rgFunc;
