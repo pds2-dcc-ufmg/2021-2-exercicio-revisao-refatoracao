@@ -74,7 +74,6 @@ int main()
 
 
     Gerente g01;
-    double bonificacao01 = 0;
     g01.nome = "Nick Fury";
     g01.IDADE = "72";
     g01.rgFunc = 21121948;
