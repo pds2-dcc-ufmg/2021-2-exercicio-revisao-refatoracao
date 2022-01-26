@@ -11,7 +11,7 @@ class Funcionario {
 
         void print() {
             cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
+            << "  Idade: " << idade << endl
             << "  RGFunc: " << rgFunc << endl;
         }
 
@@ -28,11 +28,11 @@ class Funcionario {
         }
 
         string getIdade(){
-            return this->IDADE; 
+            return this->idade; 
         }
 
         void setIdade(string idade){
-            this->IDADE = idade; 
+            this->idade = idade; 
         }
 
         string getNome(){
@@ -53,7 +53,7 @@ class Funcionario {
 
         private:
             double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-            string IDADE;
+            string idade;
             string nome;
             int rgFunc;
 };
