@@ -85,8 +85,8 @@ int main()
     v01.cliente= "J. Jonah Jameson";
     v01.esp = e01;
     v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
+    v01.Valor = 100;
+    comissao01 += e01.comissao(v01.Valor);
     numAtendimentos01+=1;
 
 
@@ -94,8 +94,8 @@ int main()
     v02.cliente= "Bruce Benner";
     v02.esp = e02;
     v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
+    v02.Valor = 100;
+    comissao02 += e02.comissao(v02.Valor);
     numAtendimentos02+=1;
 
 
@@ -103,8 +103,8 @@ int main()
     v03.cliente= "Norman Osborn";
     v03.esp = e01;
     v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
+    v03.Valor = 150;
+    comissao01 += e01.comissao(v03.Valor);
     numAtendimentos01+=1;
 
 
@@ -112,8 +112,8 @@ int main()
     v04.cliente= "J. Jonah Jameson";
     v04.esp = e02;
     v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
+    v04.Valor = 10;
+    comissao02 += e02.comissao(v04.Valor);
     numAtendimentos02+=1;
 
 
@@ -121,8 +121,8 @@ int main()
     v05.cliente= "Bruce Benner";
     v05.esp = e03;
     v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
+    v05.Valor = 10000;
+    comissao03 += e03.comissao(v05.Valor);
     numAtendimentos03+=1;
 
 
@@ -130,13 +130,13 @@ int main()
     v06.cliente= "Steve Rogers";
     v06.esp = e03;
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
+    v06.Valor = 3000;
+    comissao03 += e03.comissao(v06.Valor);
     numAtendimentos03+=1;
 
 
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
+    v06.Valor = 3000;
 
 
 
@@ -144,8 +144,8 @@ int main()
     v07.cliente= "J. Jonah Jameson";
     v07.esp = e03;
     v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
+    v07.Valor = 5000;
+    comissao03 += e03.comissao(v07.Valor);
     numAtendimentos03+=1;
 
 
@@ -153,8 +153,8 @@ int main()
     v08.cliente= "Otto Octavius";
     v08.esp = e02;
     v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
+    v08.Valor = 80;
+    comissao02 += e02.comissao(v08.Valor);
     numAtendimentos02+=1;
 
 
@@ -191,8 +191,6 @@ int main()
 
 
 
-
-
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
     cout << "Num Atendimentos: " << numAtendimentos01 << endl;
@@ -207,9 +205,9 @@ int main()
     cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
 
 
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.Bonificacao = g01.calcula_Bonificacao_Gerente(NUMTOTALservicos);
+    int NumTotalServicos = 0;
+    NumTotalServicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
+    g01.Bonificacao = g01.calcula_Bonificacao_Gerente(NumTotalServicos);
     g01.print();
     cout << "Salario Total: " << g01.SalarioBase + g01.Bonificacao<<endl;
 
