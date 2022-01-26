@@ -13,14 +13,10 @@ double percWanda = 0.1;
 class Especialista : public Funcionario {
 
     public:
-
-    public:
-        string especialidade;
-
-    double comissao(double ValorVenda) {
+        double comissao(double ValorVenda) {
         double c = ValorVenda*perc;
                   return c;
-    }
+        }
 
 
     void print() {
@@ -34,6 +30,16 @@ class Especialista : public Funcionario {
         << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
 
     }
+
+    string getEspecialidade(){
+        return this->especialidade; 
+    }
+    void setEspecialidade(string especialidade){
+        this->especialidade = especialidade;  
+    }
+
+    private: 
+        string especialidade;
 };
 
 #endif
