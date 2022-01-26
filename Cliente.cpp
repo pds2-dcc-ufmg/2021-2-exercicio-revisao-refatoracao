@@ -1,13 +1,19 @@
-#include <iostream>
-#include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+Cliente::Cliente (std::string _nome, std::string _endereco, unsigned _cep) :
+	nome(_nome), endereco(_endereco), cep(_cep) {}
 
-	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
+
+void Cliente::SetNome (std::string _nome) {
+	nome = _nome;
+}
+
+void Cliente::print() {
+
+	std::cout << "[Cliente]" << std::endl
+         << "  Nome: " << nome << std::endl
+		 << "  Endereco: " << endereco << std::endl
+		 << "  CEP: " << cep << std::endl;
 
 }
 
