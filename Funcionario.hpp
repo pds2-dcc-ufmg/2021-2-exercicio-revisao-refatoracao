@@ -6,23 +6,23 @@
 
 class Funcionario
 {
-public:
-    double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-    std::string IDADE;
+protected:
+    double salarioMinimo;
+    std::string idade;
     std::string nome;
     int rgFunc;
 
-    void print()
+    static double perc;
+    static double percWanda;
+
+public:
+    void imprimirDados()
     {
         std::cout << "[Funcionario]" << std::endl
-             << "  Idade: " << IDADE << std::endl
-             << "  RGFunc: " << rgFunc << std::endl;
+                  << "  Idade: " << idade << std::endl
+                  << "  RGFunc: " << rgFunc << std::endl;
     }
-
-    void print_oi()
-    {
-        std::cout << "Tchau" << std::endl;
-    }
+    double getSalarioMinimo() { return salarioMinimo; }
 };
 
 #endif

@@ -1,11 +1,18 @@
-#include <iostream>
-#include <string>
 #include "Cliente.hpp"
 
-void Cliente::print()
+Cliente::Cliente(std::string nomeAux,
+				 std::string enderecoAux,
+				 std::string cepAux)
+{
+	nome = nomeAux;
+	endereco = enderecoAux;
+	cep = cepAux;
+}
+
+void Cliente::imprimirDados()
 {
 	std::cout << "[Cliente]" << std::endl
-			  << "  Nome: " << NOME << std::endl
+			  << "  Nome: " << nome << std::endl
 			  << "  Endereco: " << endereco << std::endl
-			  << "  CEP: " << Cep << std::endl;
+			  << "  CEP: " << cep << std::endl;
 }
