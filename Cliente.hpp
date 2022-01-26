@@ -3,14 +3,14 @@
 
 #include <string>
 
-class Cliente{
+class Cliente {
 
 	public:
-		std::string NOME;
+		std::string nome;
 		std::string endereco;
-		std::string Cep;
-		std::string AlturaDosPais;
+		std::string cep;
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
 };
+
 #endif
