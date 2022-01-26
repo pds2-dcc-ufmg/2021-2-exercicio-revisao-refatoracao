@@ -2,7 +2,7 @@
 
 #include "Cliente.hpp"
 #include "Especialista.hpp"
-// #include "Funcionario.hpp"
+#include "Funcionario.hpp"
 #include "Gerente.hpp"
 #include "Venda.hpp"
 using namespace std;
