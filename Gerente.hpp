@@ -21,10 +21,10 @@ public:
             double salarioMinimoAux = 0.0,
             double bonificacaoAux = 0.0);
     void imprimirDados();
-    void acrescentarBonificacao(int numTotalVendas);
-    double calcularBonificacao(int numTotalVendas);
+    void acrescentarBonificacao();
     double getSalarioMinimo() { return salarioMinimo; }
     double getBonificacao() { return bonificacao; }
+    double getSalarioTotal() { return getSalarioMinimo() + getBonificacao(); }
 
 protected:
     static double valorBonificacao;

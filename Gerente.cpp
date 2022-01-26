@@ -25,12 +25,7 @@ void Gerente::imprimirDados()
               << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salarioMinimo << std::endl;
 }
 
-void Gerente::acrescentarBonificacao(int numTotalVendas)
+void Gerente::acrescentarBonificacao()
 {
-    bonificacao += calcularBonificacao(numTotalVendas);
-}
-
-double Gerente::calcularBonificacao(int numTotalVendas)
-{
-    return double(numTotalVendas) * valorBonificacao;
+    bonificacao += valorBonificacao;
 }
