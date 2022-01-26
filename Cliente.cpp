@@ -5,7 +5,7 @@
 void Cliente::print() {
 
 	std::cout << "[Cliente]" << std::endl;
-        std::cout << "  Nome: " << nome << std::endl;
-	std::cout << "  Endereco: " << endereco << std::endl;
-	std::cout << "  CEP: " << cep << std::endl;
+    std::cout << "  Nome: " << this->nome << std::endl;
+	std::cout << "  Endereco: " << this->endereco << std::endl;
+	std::cout << "  CEP: " << this->cep << std::endl;
 }

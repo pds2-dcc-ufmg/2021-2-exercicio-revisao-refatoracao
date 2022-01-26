@@ -8,15 +8,12 @@ class Funcionario {
 
     public:
         std::string nome;
-        double salariobase; // valor mínimo recebido pelo funcionário
         std::string idade;
         int rgfunc;
+        double salariobase; // valor mínimo recebido pelo funcionário
 
-        void print() {
-            std::cout << "[Funcionario]" << std::endl;
-            std::cout << "  Idade: " << idade << std::endl;
-            std::cout << "  RGFunc: " << rgfunc << std::endl;
-        }
+        virtual void print();
+          
 };
 
 #endif

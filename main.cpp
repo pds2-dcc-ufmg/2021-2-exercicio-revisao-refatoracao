@@ -11,31 +11,36 @@ int main() {
     Cliente cliente1;
     cliente1.nome = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
-    cliente1.cep = "35690000";
+	cliente1.cep = "35690000";
     cliente1.print();
 
     Cliente cliente2;
     cliente2.nome = "Norman Osborn";
     cliente2.endereco ="Hartlford";
-    cliente2.cep = "22061955";
+	cliente2.cep = "22061955";
     cliente2.print();
 
     Cliente cliente3;
     cliente3.nome = "Otto Octavius";
     cliente3.endereco ="Schenectady";
-    cliente3.cep = "24051953";
+	cliente3.cep = "24051953";
     cliente3.print();
 
     Cliente cliente4;
     cliente4.nome = "Bruce Benner";
     cliente4.endereco ="Dayton";
-    cliente4.cep = "22111967";
+	cliente4.cep = "22111967";
+    cliente4.print();
+
+    cliente4.nome = "Bruce Benner";
+    cliente4.endereco ="Dayton";
+	cliente4.cep = "22111967";
     cliente4.print();
 
     Cliente cliente5;
     cliente5.nome = "Steve Rogers";
     cliente5.endereco ="Lower East Side";
-    cliente5.cep = "13061981";
+	cliente5.cep = "13061981";
     cliente5.print();
 
     Especialista e01;
@@ -63,7 +68,7 @@ int main() {
     e03.idade = "32";
     e03.rgfunc = 16021989;
     e03.salariobase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
+    e03.especialidade = "Engenharia e Designer";
 
     Gerente g01;
     double bonificacao01 = 0;
@@ -119,6 +124,9 @@ int main() {
     v06.valor = 3000;
     comissao03 += e03.comissao(v06.valor);
     numatendimentos03 += 1;
+
+    v06.descricao = "Decoracao de Apartamento no Brooklyn";
+    v06.valor = 3000;
 
     Venda v07;
     v07.cliente= "J. Jonah Jameson";
