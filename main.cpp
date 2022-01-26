@@ -122,8 +122,6 @@ int main(){
     v06.VALOR = 3000;
     comissao03 += e03.comissao(v06.VALOR);
     numAtendimentos03+=1;
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
 
     Venda v07;
