@@ -16,7 +16,7 @@ Cliente::Cliente(std::string nome, std::string endereco, int cep){
 void Cliente::print(){
 
 	std::cout << "[Cliente]" << std::endl;
-    std::cout << "  Nome: " << this->Nome << std::endl;
+        std::cout << "  Nome: " << this->Nome << std::endl;
 	std::cout << "  Endereco: " << this->Endereco << std::endl;
 	std::cout << "  CEP: " << this->Cep << std::endl;
 
