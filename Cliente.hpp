@@ -12,14 +12,14 @@ class Cliente{
 		void setNOME(string nome);
 		string getEndereco(); 
 		void setEndereco(string endereco);
-		string getCep(); 
-		void setCep(string cep); 
+		int getCep(); 
+		void setCep(int cep); 
 		string getAlturaDosPais(); 
 		void setAlturaDosPais(string AlturaDosPais); 
 	private:
 		string NOME;
 		string endereco;
-		string Cep;
+		int Cep;
 		string AlturaDosPais;
 };
 

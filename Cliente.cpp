@@ -18,11 +18,11 @@ void Cliente::setEndereco(string endereco){
 	this->endereco = endereco; 
 }
 
-string Cliente::getCep(){
+int Cliente::getCep(){
 	return this->Cep; 
 }
 
-void Cliente::setCep(string cep){
+void Cliente::setCep(int cep){
 	this->Cep = cep; 
 }
 

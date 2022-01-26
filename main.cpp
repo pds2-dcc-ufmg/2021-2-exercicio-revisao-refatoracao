@@ -12,31 +12,31 @@ int main()
     Cliente cliente1;
     cliente1.setNOME("J. Jonah Jameson"); 
     cliente1.setEndereco("Nova York"); 
-	cliente1.setCep("35690000");
+	cliente1.setCep(35690000);
     cliente1.print();
 
     Cliente cliente2;
     cliente2.setNOME("Norman Osborn");
     cliente2.setEndereco("Hartlford"); 
-	cliente2.setCep("22061955");
+	cliente2.setCep(22061955);
     cliente2.print();
 
     Cliente cliente3;
     cliente3.setNOME("Otto Octavius"); 
     cliente3.setEndereco("Schenectady"); 
-	cliente3.setCep("24051953");  
+	cliente3.setCep(24051953);  
     cliente3.print();
 
     Cliente cliente4;
     cliente4.setNOME("Bruce Benner");
     cliente4.setEndereco("Dayton") ;
-	cliente4.setCep("22111967"); 
+	cliente4.setCep(22111967); 
     cliente4.print();
 
     Cliente cliente5;
     cliente5.setNOME("Steve Rogers");
     cliente5.setEndereco("Lower East Side");
-	cliente5.setCep("13061981"); 
+	cliente5.setCep(13061981); 
     cliente5.print();
 
 
