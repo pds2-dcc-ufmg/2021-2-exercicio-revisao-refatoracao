@@ -11,15 +11,14 @@ class Funcionario {
         std::string nome;
         int rgFunc;
 
-        void print() {
+        void print() { // imprime as infos do funcionario
             std::cout << "[Funcionario]" << std::endl
             << "  Idade: " << IDADE << std::endl
             << "  RGFunc: " << rgFunc << std::endl;
         }
+ 
+        
 
-        void print_oi(){
-            std::cout << "Tchau" << std::endl; 
-        }
 };
 
 #endif

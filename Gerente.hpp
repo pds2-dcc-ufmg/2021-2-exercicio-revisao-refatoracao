@@ -8,10 +8,10 @@
 double ValorBONIFICACAO = 15.0;
 
 class Gerente:public Funcionario {
-    public: // apaguei as variaveis e transformei Gerente uma subclasse de Funcionario
+    public: 
         double bonificacao;
 
-        void print() {
+        void print() { // imprime informacoes do funcionario e gerente
             std::cout << "[Funcionario]" << std::endl
             << "[Gerente]" << std::endl
             << "  Nome: " << nome << std::endl
@@ -20,8 +20,8 @@ class Gerente:public Funcionario {
             << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << SalarioBase << std::endl;
         }
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            bonificacao = numTOTALVendas*ValorBONIFICACAO; // tirei o x e coloquei a bonificacao.
+        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){ // calcula bonificacai do gerente
+            bonificacao = numTOTALVendas*ValorBONIFICACAO; 
             return bonificacao;
         }
 

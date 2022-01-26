@@ -13,13 +13,13 @@ class Especialista : public Funcionario {
     public:
         std::string especialidade;
 
-    double comissao(double ValorVenda) {
+    double comissao(double ValorVenda) { // calcula a comissao do funcionario
         double c = ValorVenda*perc;
             return c; 
     }
 
 
-    void print() {
+    void print() { // imprime as infos do especialista
 
         std::cout << "[Especialista]" << std::endl;
         Funcionario::print();

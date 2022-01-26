@@ -14,15 +14,15 @@ class Venda{
     std::string cliente;
 
 
-    void print() {
+    void print() { // imprime nome do especialista e  cliente 
 
         std::cout << "Especialista: ";
         std::cout << esp.nome;
 
         std::cout << " Cliente: ";
-        std::cout << cliente; // adc std
+        std::cout << cliente; 
 
-    } // apaguei os comentarios 
+    }  
 
 };
 
