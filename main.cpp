@@ -82,79 +82,73 @@ int main()
 
 
     Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
+    v01.setCliente("J. Jonah Jameson");
+    v01.setEspecialista(e01);
+    v01.setDescricao("Fotos do Homem Aranha");
+    v01.setValor(100);
+    comissao01 += e01.comissao(v01.getValor());
     numAtendimentos01+=1;
 
 
     Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
+    v02.setCliente("Bruce Benner");
+    v02.setEspecialista(e02);
+    v02.setDescricao("Troca da tela do telefone");
+    v02.setValor(100);
+    comissao02 += e02.comissao(v02.getValor());
     numAtendimentos02+=1;
 
 
     Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
+    v03.setCliente("Norman Osborn");
+    v03.setEspecialista(e01);
+    v03.setDescricao("Fotos do novo planador");
+    v03.setValor(150);
+    comissao01 += e01.comissao(v03.getValor());
     numAtendimentos01+=1;
 
 
     Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
+    v04.setCliente("J. Jonah Jameson");
+    v04.setEspecialista(e02);
+    v04.setDescricao("Recarga de cartucho");
+    v04.setValor(10);
+    comissao02 += e02.comissao(v04.getValor());
     numAtendimentos02+=1;
 
 
     Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
+    v05.setCliente("Bruce Benner");
+    v05.setEspecialista(e03);
+    v05.setDescricao("Reconstrucao de Predio");
+    v05.setValor(10000);
+    comissao03 += e03.comissao(v05.getValor());
     numAtendimentos03+=1;
 
 
     Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
+    v06.setCliente("Steve Rogers");
+    v06.setEspecialista(e03);
+    v06.setDescricao("Decoracao de Apartamento no Brooklyn");
+    v06.setValor(3000);
+    comissao03 += e03.comissao(v06.getValor());
     numAtendimentos03+=1;
 
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
-
     Venda v07;
-    v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
+    v07.setCliente("J. Jonah Jameson");
+    v07.setEspecialista(e03);
+    v07.setDescricao("Reforma do Clarim Diario");
+    v07.setValor(5000);
+    comissao03 += e03.comissao(v07.getValor());
     numAtendimentos03+=1;
 
 
     Venda v08;
-    v08.cliente= "Otto Octavius";
-    v08.esp = e02;
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
+    v08.setCliente("Otto Octavius");
+    v08.setEspecialista(e02);
+    v08.setDescricao("Formatacao do PC");
+    v08.setValor(80);
+    comissao02 += e02.comissao(v08.getValor());
     numAtendimentos02+=1;
 
 
@@ -162,31 +156,31 @@ int main()
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
     v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
+    cout << " Descricao: " << v01.getDescricao() << endl;
 
     v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
+    cout << " Descricao: " << v02.getDescricao() << endl;
 
     v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
+    cout << " Descricao: " << v03.getDescricao() << endl;
 
     v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
+    cout << " Descricao: " << v04.getDescricao() << endl;
 
     v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
+    cout << " Descricao: " << v05.getDescricao() << endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
+    cout << " Descricao: " << v06.getDescricao() << endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
+    cout << " Descricao: " << v06.getDescricao() << endl;
 
     v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
+    cout << " Descricao: " << v07.getDescricao()<< endl;
 
     v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
+    cout << " Descricao: " << v08.getDescricao() << endl;
 
 
 
