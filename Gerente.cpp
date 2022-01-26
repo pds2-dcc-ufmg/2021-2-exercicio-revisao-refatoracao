@@ -1,4 +1,6 @@
+#include <iostream>
 #include <string>
+#include "Venda.hpp"
 #include "Gerente.hpp"
 
 using namespace std;
