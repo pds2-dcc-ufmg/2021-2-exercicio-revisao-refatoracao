@@ -9,10 +9,10 @@
 class Venda{
     public:
 
-    double Valor;
-        std::string descricao;
-        Especialista esp;
-        std::string cliente;
+        double Valor;
+            std::string descricao;
+            Especialista esp;
+            std::string cliente;
 
         void print() {
             std::cout << "Especialista: "<< std::endl;
