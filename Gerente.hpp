@@ -4,7 +4,7 @@
 #include <iostream>
 #include <iomanip>
 
-double ValorBONIFICACAO = 15.0;
+double valorbonificacao = 15.0;
 
 class Gerente : public Funcionario {
     
@@ -16,15 +16,16 @@ class Gerente : public Funcionario {
             std::cout << "[Funcionario]" << std::endl;
             std::cout << "[Gerente]" << std::endl;
             std::cout << "  Nome: " << nome << std::endl;
-            std::cout << "  Idade: " << IDADE << std::endl;
-            std::cout << "  RGFunc: " << rgFunc << std::endl;
-            std::cout << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << SalarioBase << std::endl;
+            std::cout << "  Idade: " << idade << std::endl;
+            std::cout << "  RGFunc: " << rgfunc << std::endl;
+            std::cout << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salariobase << std::endl;
         }
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas) {
+        double calculabonificacaogerente(int numtotalvendas) {
             double x;
-            return numTOTALVendas*ValorBONIFICACAO;
+            return numtotalvendas*valorbonificacao;
         }
 
 };
+
 #endif
