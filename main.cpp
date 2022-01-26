@@ -75,7 +75,7 @@ int main()
 
     Gerente g01;
     g01.nome = "Nick Fury";
-    g01.IDADE = "72";
+    g01.idade = "72";
     g01.rgFunc = 21121948;
     g01.SalarioBase = 10000;
 
@@ -209,8 +209,6 @@ int main()
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
     g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
-    g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
 
     return 0;
 }
