@@ -9,8 +9,8 @@ class Venda
 {
 private:
     Cliente cliente;
-    std::string descricao;
     Especialista especialista;
+    std::string descricao;
     double valor;
 
 public:
