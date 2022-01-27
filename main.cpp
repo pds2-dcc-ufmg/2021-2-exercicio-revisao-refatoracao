@@ -5,10 +5,10 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
+
 using namespace std;
 
-int main()
-{
+int main() {
     Cliente cliente1;
     cliente1.nome = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
@@ -138,8 +138,8 @@ int main()
     v08.valor = 80;
     comissao02 += e02.comissao(v08.valor);
     numAtendimentos02+=1;
-
-
+    
+    
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
     v01.print();
