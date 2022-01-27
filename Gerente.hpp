@@ -1,37 +1,22 @@
-#ifndef GERENTE_HPP
-#define GERENTE_HPP
+#ifndef GERENTE_H
+#define GERENTE_H
 
-#include <iostream>
-#include <iomanip>
+#include "Funcionario.hpp"
 
-using namespace std;
+class Gerente : public Funcionario {
 
-double ValorBONIFICACAO = 15.0;
-
-class Gerente {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
 
+        Gerente(std::string nome, std::string idade, unsigned int rgFunc, unsigned int salarioBase);
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+        void bonificacao(int numTotalServicos);
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+        void print() const override;
+    
+    private:
+        double _bonificacao = 0;
+        double _valorBonificacao = 15.0;
 
 };
 
 #endif
-
