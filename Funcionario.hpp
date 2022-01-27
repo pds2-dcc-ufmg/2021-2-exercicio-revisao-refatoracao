@@ -13,6 +13,7 @@ class Funcionario { //Classe abstrata de funcionarios (Especialistas + Gerentes)
         std::string _idade;
         int _rgFunc;
         int _salarioBase;
+        friend class Venda;
         
 };
 

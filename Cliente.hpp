@@ -15,7 +15,7 @@ class Cliente{
 		std::string _nome;
 		std::string _endereco;
 		std::string _cep;
-
+        friend class Venda;
 };
 
 #endif
