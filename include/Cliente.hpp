@@ -6,6 +6,8 @@
 
 class Cliente{
   public:
+
+    Cliente(std::string nome, std::string endereco, std::string cep);
     void imprime_dados();
   
   private:

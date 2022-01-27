@@ -1,5 +1,18 @@
 #include "Especialista.hpp"
 
+Especialista::Especialista(std::string nome,
+                           int idade, int rgFunc, double salarioBase,
+                           std:: string especialidade,
+                           double perc) {
+
+  this->_nome = nome;
+  this->_idade = idade;
+  this-> _rgFunc = rgFunc;
+  this->_salarioBase = salarioBase;
+  this->_especialidade = especialidade;
+  this->_perc = perc;
+}
+
 void Especialista::imprime_dados() {
   std::cout << "[Especialista]" << std:: endl
         << "[Funcionario]" << std::endl

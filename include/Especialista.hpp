@@ -2,11 +2,14 @@
 #define ESPECIALISTA_H
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
-
 
 class Especialista : public Funcionario {
   public:
+    Especialista(std::string nome,
+                 int idade, int rgFunc, double salarioBase,
+                 std:: string especialidade,
+                 double perc);
+
     double comissao(double ValorVenda);
 
     void imprime_dados() override;
