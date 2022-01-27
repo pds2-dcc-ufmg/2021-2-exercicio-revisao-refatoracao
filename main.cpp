@@ -34,7 +34,7 @@ int main(){
                                     "Consertos de equipamentos eletronicos");
 
     Especialista e03 = Especialista("Wanda Maximoff", 32, 16021989, 5000, 
-                                    "Engenharia e Designer");
+                                    "Engenharia e Designeeeeer");
 
 
     // Inicialização dos dados do gerente
