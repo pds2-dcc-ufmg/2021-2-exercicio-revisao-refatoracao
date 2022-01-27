@@ -7,7 +7,7 @@ Venda::Venda(Cliente& cliente,Especialista& esp, std::string descricao, double v
     this->_descricao = descricao;
     this->_valor = valor;
 
-    
+    esp.comissao(this->_valor);
 }
 
 void Venda::print(){
