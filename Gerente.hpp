@@ -6,17 +6,17 @@
 
 using namespace std;
 
-double valorBonificacao = 15.0;
-
 class Gerente:public Funcionario{
   public:
+    int bonificacao;
+  
     void print() {
       cout << "[Funcionario]" << endl << "[Gerente]" << endl << "Nome: " << nome << endl << "Idade: " << idade << endl
-      << "RGFunc: " << rgFunc << endl << "SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
+      << "Numero do RG: " << rgNumber << endl << "SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
     }
 
     double calculaBonificacaoGerente(int numTotalVendas){
-      return numTotalVendas*valorBonificacao;
+      return numTotalVendas*bonificacao;
     }
 };
 
