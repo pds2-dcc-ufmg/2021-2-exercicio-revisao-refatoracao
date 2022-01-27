@@ -1,4 +1,3 @@
-
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
@@ -15,7 +14,7 @@ class Venda{
     Especialista esp;
     
     void print(){
-      cout << "Especialista:" << esp.nome << endl << "Cliente: " << cliente;
+      cout << "Especialista: " << esp.nome << endl << "Cliente: " << cliente;
     }
 };
 
