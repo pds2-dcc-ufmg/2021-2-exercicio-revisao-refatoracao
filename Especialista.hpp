@@ -6,13 +6,12 @@
 
 using namespace std;
 
-double perc = 0.1;
-
 class Especialista : public Funcionario {
 
     public:
 
         string especialidade;
+        double perc = 0.1;
 
         double comissao(double valorVenda);
         void print();
