@@ -45,34 +45,20 @@ int main(){
     // Inicialização das informações das vendas
 
     Venda v01 = Venda(&cliente1, &e01, "Fotos do Homem Aranha", 100);
-    e01.addComissao(e01.calculaComissao(v01.getValor()));
 
     Venda v02 = Venda(&cliente4, &e02, "Troca da tela do telefone", 100);
-    e02.addComissao(e02.calculaComissao(v02.getValor()));
-
 
     Venda v03 = Venda(&cliente2, &e01, "Fotos do novo planador", 150);
-    e01.addComissao(e01.calculaComissao(v03.getValor()));
-
 
     Venda v04 = Venda(&cliente1, &e02, "Recarga de cartucho", 10);
-    e02.addComissao(e02.calculaComissao(v04.getValor()));
-
 
     Venda v05 = Venda(&cliente4, &e03, "Reconstrucao de Predio", 10000);
-    e03.addComissao(e02.calculaComissao(v05.getValor()));
-
 
     Venda v06 = Venda(&cliente5, &e03, "Decoracao de Apartamento no Brooklyn", 3000);
-    e03.addComissao(e02.calculaComissao(v06.getValor()));
-
 
     Venda v07 = Venda(&cliente1, &e03, "Reforma do Clarim Diario", 5000);
-    e03.addComissao(e02.calculaComissao(v07.getValor()));
-
 
     Venda v08 = Venda(&cliente3, &e02, "Formatacao do PC", 80);
-    e02.addComissao(e02.calculaComissao(v08.getValor()));
 
 
     // Impressão do relatório de vendas
