@@ -4,6 +4,10 @@ Cliente::Cliente (std::string _nome, std::string _endereco, unsigned _cep) :
 	nome(_nome), endereco(_endereco), cep(_cep) {}
 
 
+std::string Cliente::GetNome() {
+	return nome;
+}
+
 void Cliente::SetNome (std::string _nome) {
 	nome = _nome;
 }

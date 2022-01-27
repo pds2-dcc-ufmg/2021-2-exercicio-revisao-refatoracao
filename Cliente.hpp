@@ -17,6 +17,7 @@ class Cliente {
 
 		Cliente(std::string _nome, std::string _endereco, unsigned _cep);
 
+		std::string GetNome();
 		void SetNome(std::string _nome);
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
