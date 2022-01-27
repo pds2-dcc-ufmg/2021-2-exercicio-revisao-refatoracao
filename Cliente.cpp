@@ -4,9 +4,9 @@
 
 //Imprime as informações do cliente, na ordem nome, endereço e CEP.
 void Cliente::print(){
-	std::cout << "[Cliente]: " << std::endl; 
-	std::cout << "  Nome: " << NOME << std::endl;
-	std::cout << "  Endereco: " << endereco << std::endl;
-	std::cout << "  CEP: " << Cep << endl;
+	cout << "[Cliente]: " << endl; 
+	cout << "  Nome: " << NOME << endl;
+	cout << "  Endereco: " << endereco << endl;
+	cout << "  CEP: " << Cep << endl;
 }
 
