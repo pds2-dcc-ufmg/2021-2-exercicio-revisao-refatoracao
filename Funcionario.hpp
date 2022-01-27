@@ -10,10 +10,10 @@ class Funcionario {
   public:
     double salarioBase;
     string idade, nome;
-    int rgFunc;
+    int rgNumber;
 
     void print() {
-      cout << "[Funcionario]" << endl << "Idade: " << idade << endl << "RGFunc: " << rgFunc << endl;
+      cout << "[Funcionario]" << endl << "Idade: " << idade << endl << "Numero do RG: " << rgNumber << endl;
     }
 };
 
