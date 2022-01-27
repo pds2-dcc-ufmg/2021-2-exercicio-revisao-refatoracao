@@ -1,6 +1,7 @@
 #ifndef FUNCIONARIO_H
 #define FUNCIONARIO_H
 
+#include <iomanip>
 #include <iostream>
 
 class Funcionario {
