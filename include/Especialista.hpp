@@ -26,7 +26,10 @@ class Especialista : public Funcionario {
     void print() {
 
         std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+        Funcionario::print()
+        cout << "[Funcionario]" << endl
+                << "  Idade: " << IDADE << endl
+                << "  RGFunc: " << rgFunc << endl;
 
 
 
