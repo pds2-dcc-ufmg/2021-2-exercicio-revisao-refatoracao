@@ -32,6 +32,8 @@ int main()
     vendas.emplace_back(&clientes[4], &especialistas[2], "Decoracao de Apartamento no Brooklyn", 3000.0);
     vendas.emplace_back(&clientes[0], &especialistas[2], "Reforma do Clarim Diario", 5000.0);
     vendas.emplace_back(&clientes[2], &especialistas[1], "Formatacao do PC", 80.0);
+
+    // Atribuição do valor de pagamento por cada Venda ao Gerente e aos Especialistas
     for (Venda &venda : vendas)
     {
         venda.getEspecialista()->acrescentarComissao(venda.getValor());
