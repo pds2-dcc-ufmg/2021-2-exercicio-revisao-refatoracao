@@ -1,170 +1,54 @@
 #include "FerramentaADM.hpp"
 
 
-int main()
-{
-    FerramentaADM adm;
-    Cliente cliente1 = Cliente("J. Jonah Jameson", "Nova York", "35690000");
-    Cliente cliente2 = Cliente("Norman Osborn", "Hartlford", "22061955");
-    Cliente cliente3 = Cliente("Otto Octavius", "Schenectady", "24051953");
-    Cliente cliente4 = Cliente("Bruce Benner", "Dayton", "22111967");
-    Cliente cliente5 = Cliente("Steve Rogers", "Lower East Side", "13061981");
+int main() {
+  FerramentaADM adm;
+
+
+  Cliente cliente1 = Cliente("J. Jonah Jameson", "Nova York", "35690000");
+  Cliente cliente2 = Cliente("Norman Osborn", "Hartlford", "22061955");
+  Cliente cliente3 = Cliente("Otto Octavius", "Schenectady", "24051953");
+  Cliente cliente4 = Cliente("Bruce Benner", "Dayton", "22111967");
+  Cliente cliente5 = Cliente("Steve Rogers", "Lower East Side", "13061981");
+
+  adm.add_cliente(cliente1);
+  adm.add_cliente(cliente2);
+  adm.add_cliente(cliente3);
+  adm.add_cliente(cliente4);
+  adm.add_cliente(cliente5);
+
+  adm.imprime_clientes();
+
+
+  Especialista e01 = Especialista("Peter Parker", 46, 27061975, 3000, "Fotografia", 0.1);
+  Especialista e02 = Especialista("Tony Stark", 56, 4041965, 1000, "Consertos de equipamentos eletronicos", 0.1);
+  Especialista e03 = Especialista("Wanda Maximoff", 32, 16021989, 5000, "Engenharia e Designeeeeer", 0.1);
+
+  adm.add_especialista(e01);
+  adm.add_especialista(e02);
+  adm.add_especialista(e03);
+
+  Gerente g01 = Gerente("Nick Fury", 72, 21121948, 10000, 15);
+
+  Venda v01 = Venda(cliente1, e01, "Fotos do Homem Aranha", 100);
+  Venda v02 = Venda(cliente4, e02, "Troca da tela do telefone", 100);
+  Venda v03 = Venda(cliente2, e01, "Fotos do novo planador", 150);
+  Venda v04 = Venda(cliente1, e02, "Regarda de cartucho", 10);
+  Venda v05 = Venda(cliente4, e03, "Reconstruao de Predio", 10000);
+  Venda v06 = Venda(cliente5, e03, "Decoracao de Apartamento no Brooklyn", 3000);
+  Venda v07 = Venda(cliente1, e03, "Reforma do Clarim Diario", 5000);
+  Venda v08 = Venda(cliente3, e02, "Formatacao do PC", 80);
    
-    adm.add_cliente(cliente1);
-    adm.add_cliente(cliente2);
-    adm.add_cliente(cliente3);
-    adm.add_cliente(cliente4);
-    adm.add_cliente(cliente5);
-    
-    adm.imprime_clientes();
-
-
-
-    Especialista e01;
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
-
-
-
-    Especialista e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
-
-
-    Especialista e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
-
-
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
-
-
-    Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
-
-    Venda v07;
-    v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v08;
-    v08.cliente= "Otto Octavius";
-    v08.esp = e02;
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
-    numAtendimentos02+=1;
-
-
-
-    cout <<" \n \n           Relatorio das Vendas \n" << endl;
-
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
-
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
-
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
-
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
-
-    v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
-
-    v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
+  adm.add_venda(v01);
+  adm.add_venda(v02);
+  adm.add_venda(v03);
+  adm.add_venda(v04);
+  adm.add_venda(v05);
+  adm.add_venda(v06);
+  adm.add_venda(v07);
+  adm.add_venda(v08);
+  
+  adm.imprime_vendas();
 
 
 

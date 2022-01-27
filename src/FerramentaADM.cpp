@@ -17,3 +17,14 @@ void FerramentaADM::imprime_clientes() {
         it->imprime_dados();
     }
 }
+
+void FerramentaADM::add_venda(Venda& venda) {
+    this->v_vendas.push_back(venda);
+}
+
+void FerramentaADM::imprime_vendas() {
+    std::cout << " \n \n           Relatorio das Vendas \n" << std::endl;
+    for (auto it = this->v_vendas.begin(); it < this->v_vendas.end(); it++) {
+        it->imprime_dados();
+    }
+}

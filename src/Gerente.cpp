@@ -1,15 +1,12 @@
 #include "Gerente.hpp"
 
-Gerente::Gerente(std::string nome,
-                 int idade, int rgFunc, double salarioBase,
-                 std:: string especialidade,
-                 double bonificacao) {
+Gerente::Gerente(std::string nome, int idade, int rgFunc, double salarioBase, double bonifPorVenda) {
 
   this->_nome = nome;
   this->_idade = idade;
   this-> _rgFunc = rgFunc;
   this->_salarioBase = salarioBase;
-  this->_bonificacao = bonificacao;
+  this->_bonifPorVenda = bonifPorVenda;
 }
 
 void Gerente::imprime_dados() {
@@ -22,5 +19,5 @@ void Gerente::imprime_dados() {
 }
 
 double Gerente::calcula_bonificacao(int numTotalVendas) {
-  return numTotalVendas * _valorBonificacao;
+  return numTotalVendas * this->_bonifPorVenda;
 }

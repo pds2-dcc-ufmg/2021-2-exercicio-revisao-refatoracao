@@ -5,9 +5,12 @@ Venda::Venda(Cliente& cliente, Especialista& esp, std::string descricao, double 
   this->_esp = esp._nome;
   this->_descricao = descricao;
   this->_valor = valor;
+  esp._comissao += esp.comissao(valor); 
 }
 
 void Venda::imprime_dados() {
   std::cout << "Especialista: " << _esp
-    << " Cliente: " << _cliente;
+    << " Cliente: " << _cliente
+    << " Descricao" << _descricao << std::endl;
+
 }

@@ -14,9 +14,14 @@ class Especialista : public Funcionario {
 
     void imprime_dados() override;
 
+    void novo_atendimento();
+
+    friend class Venda;
+
   private:
     std::string _especialidade;
-    double _perc;
+    double _perc, _comissao;
+    int _numAtendimentos;
 };
 
 #endif
