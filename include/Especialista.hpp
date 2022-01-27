@@ -17,6 +17,7 @@ class Especialista : public Funcionario {
     void novo_atendimento();
 
     friend class Venda;
+    friend class FerramentaADM;
 
   private:
     std::string _especialidade;

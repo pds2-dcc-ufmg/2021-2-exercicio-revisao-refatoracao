@@ -28,3 +28,21 @@ void FerramentaADM::imprime_vendas() {
         it->imprime_dados();
     }
 }
+
+void FerramentaADM::relatorio_funcs() {
+    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
+    for (auto it = this->v_especialistas.begin(); it < this->v_especialistas.end(); it++) {
+        it->imprime_dados();
+        std::cout << "Num Atendimentos: " << it->_numAtendimentos << std::endl
+                << "Salario Total: " << it->_salarioBase + it->_comissao << std::endl;
+    }
+}
+
+void FerramentaADM::relatorio_gerente() {
+    for (auto it = this->v_gerentes.begin(); it < this->v_gerentes.end(); it++) {
+        it->imprime_dados();
+        it->calcula_bonificacao(v_vendas.size());
+        std::cout << "Salario Total: " << it->_salarioBase + it->_bonifTotal << std::endl;
+    }
+    
+}

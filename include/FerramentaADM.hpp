@@ -17,6 +17,8 @@ class FerramentaADM {
     void add_venda(Venda& venda);
     void imprime_clientes();
     void imprime_vendas();
+    void relatorio_funcs();
+    void relatorio_gerente();
 
   private:
   std::vector<Cliente> v_clientes;

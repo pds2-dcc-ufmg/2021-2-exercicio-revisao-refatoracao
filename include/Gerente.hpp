@@ -10,6 +10,8 @@ class Gerente: public Funcionario {
     void imprime_dados() override;
     
     double calcula_bonificacao(int numTotalVendas);
+
+    friend class FerramentaADM;
   
   private:
     double _bonifPorVenda;
