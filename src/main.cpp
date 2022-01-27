@@ -11,26 +11,11 @@ int main() {
     Cliente cliente4 = Cliente("Bruce Benner", "Dayton", "22111967");
     Cliente cliente5 = Cliente("Steve Rogers", "Lower East Side", "13061981");
 
-    adm.add_cliente(cliente1);
-    adm.add_cliente(cliente2);
-    adm.add_cliente(cliente3);
-    adm.add_cliente(cliente4);
-    adm.add_cliente(cliente5);
-
-    adm.imprime_clientes();
-
-
     Especialista e01 = Especialista("Peter Parker", 46, 27061975, 3000, "Fotografia", 0.1);
     Especialista e02 = Especialista("Tony Stark", 56, 4041965, 1000, "Consertos de equipamentos eletronicos", 0.1);
     Especialista e03 = Especialista("Wanda Maximoff", 32, 16021989, 5000, "Engenharia e Designeeeeer", 0.1);
 
-    adm.add_especialista(e01);
-    adm.add_especialista(e02);
-    adm.add_especialista(e03);
-
-
     Gerente g01 = Gerente("Nick Fury", 72, 21121948, 10000, 15);
-
 
     Venda v01 = Venda(cliente1, e01, "Fotos do Homem Aranha", 100);
     Venda v02 = Venda(cliente4, e02, "Troca da tela do telefone", 100);
@@ -41,6 +26,16 @@ int main() {
     Venda v07 = Venda(cliente1, e03, "Reforma do Clarim Diario", 5000);
     Venda v08 = Venda(cliente3, e02, "Formatacao do PC", 80);
 
+    adm.add_cliente(cliente1);
+    adm.add_cliente(cliente2);
+    adm.add_cliente(cliente3);
+    adm.add_cliente(cliente4);
+    adm.add_cliente(cliente5);
+
+    adm.add_especialista(e01);
+    adm.add_especialista(e02);
+    adm.add_especialista(e03);
+
     adm.add_venda(v01);
     adm.add_venda(v02);
     adm.add_venda(v03);
@@ -49,6 +44,10 @@ int main() {
     adm.add_venda(v06);
     adm.add_venda(v07);
     adm.add_venda(v08);
+
+    adm.add_gerente(g01);
+
+    adm.imprime_clientes();
 
     adm.imprime_vendas();
 

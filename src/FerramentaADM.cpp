@@ -41,7 +41,7 @@ void FerramentaADM::relatorio_funcs() {
 void FerramentaADM::relatorio_gerente() {
     for (auto it = this->v_gerentes.begin(); it < this->v_gerentes.end(); it++) {
         it->imprime_dados();
-        it->calcula_bonificacao(v_vendas.size());
+        it->_bonifTotal += it->calcula_bonificacao(v_vendas.size());
         std::cout << "Salario Total: " << it->_salarioBase + it->_bonifTotal << std::endl;
     }
     

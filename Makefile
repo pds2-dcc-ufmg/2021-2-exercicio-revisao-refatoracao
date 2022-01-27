@@ -29,6 +29,8 @@ ${BUILD_DIR}/main.o: ${INCLUDE_DIR}/Cliente.hpp ${INCLUDE_DIR}/Funcionario.hpp $
 
 # Rule for cleaning files generated during compilation.
 # Call 'make clean' to use it.
-
 clean:
 	rm -f ${BUILD_DIR}/*
+
+debug:
+	${CC} ${CFLAGS} -o ${TARGET} ${BUILD_DIR}/*.o -g
