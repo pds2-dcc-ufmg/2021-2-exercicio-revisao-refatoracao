@@ -12,7 +12,7 @@ int main()
     Cliente cliente1;
     cliente1.nome = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
-	cliente1.cep = "35690000";
+    cliente1.cep = "35690000";
     cliente1.print();
 
     Cliente cliente2;
@@ -24,19 +24,19 @@ int main()
     Cliente cliente3;
     cliente3.nome = "Otto Octavius";
     cliente3.endereco ="Schenectady";
-	cliente3.cep = "24051953";
+    cliente3.cep = "24051953";
     cliente3.print();
 
     Cliente cliente4;
     cliente4.nome = "Bruce Benner";
     cliente4.endereco ="Dayton";
-	cliente4.cep = "22111967";
+    cliente4.cep = "22111967";
     cliente4.print();
 
     Cliente cliente5;
     cliente5.nome = "Steve Rogers";
     cliente5.endereco ="Lower East Side";
-	cliente5.cep = "13061981";
+    cliente5.cep = "13061981";
     cliente5.print();
 
 
@@ -165,9 +165,6 @@ int main()
 
     v08.print();
     cout << " Descricao: " << v08.descricao << "." << endl;
-
-
-
 
 
 
