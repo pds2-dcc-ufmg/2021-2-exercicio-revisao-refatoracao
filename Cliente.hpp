@@ -2,19 +2,20 @@
 #define CLIENTE_H
 
 #include <string>
-using namespace std;
 
 class Cliente{
 
 	public:
 
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+		Cliente(std::string nome, std::string endereco, std::string cep): _nome(nome), _endereco(endereco), _cep(cep) {}
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print();
 
+	private:
+		std::string _nome;
+		std::string _endereco;
+		std::string _cep;
+        friend class Venda;
 };
 
 #endif

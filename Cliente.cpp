@@ -1,13 +1,11 @@
 #include <iostream>
-#include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+void Cliente::print(){ //Saida de dados na formatacao dos Clientes
 
-	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
+	std::cout << "[Cliente]" << std::endl
+         << "  Nome: " << this->_nome << std::endl
+		 << "  Endereco: " << this->_endereco << std::endl
+		 << "  CEP: " << this->_cep << std::endl;
 
 }
-
