@@ -134,7 +134,7 @@ int main(){
   v08.descricao = "Formatacao do PC";
   v08.valor = 80;
   comissao02 += e02.comissao(v08.valor);
-  numAtendimentos02+=1;
+  numAtendimentos02++;
 
   cout << "Relatorio das Vendas" << endl;
 
