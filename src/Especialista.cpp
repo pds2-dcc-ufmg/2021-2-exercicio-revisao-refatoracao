@@ -17,13 +17,9 @@ Especialista::Especialista(std::string nomeAux,
     comissao = comissaoAux;
 }
 
-void Especialista::acrescentarNumAtendimentos()
-{
-    numAtendimentos += 1;
-}
-
 void Especialista::acrescentarComissao(double valorVenda)
 {
+    numAtendimentos += 1;
     comissao += valorVenda * perc;
 }
 

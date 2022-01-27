@@ -22,7 +22,6 @@ public:
                  int numAtendimentosAux = 0,
                  double comissaoAux = 0.0);
 
-    void acrescentarNumAtendimentos();
     void acrescentarComissao(double valorVenda);
 
     void imprimirDados() override;

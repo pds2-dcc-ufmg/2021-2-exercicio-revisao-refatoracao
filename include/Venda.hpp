@@ -21,9 +21,10 @@ public:
 
     void imprimirDados();
 
-    std::string getNomeEspecialista() { return especialista.getNome(); }
-    std::string getNomeCliente() { return cliente.getNome(); }
+    Especialista getEspecialista() { return especialista; }
+    Cliente getCliente() { return cliente; }
     std::string getDescricao() { return descricao; }
+    double getValor() { return valor; }
 };
 
 #endif
