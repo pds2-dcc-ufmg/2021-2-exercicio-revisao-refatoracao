@@ -13,7 +13,11 @@ class Especialista : public Funcionario {
 
     public:
 
-        std::string especialidade;
+	std::string especialidade;
+
+	void set_perc(double new_perc) { this->perc = new_perc; }
+
+	double get_perc() { return this->perc; }
 
         double comissao(double ValorVenda) {
             double c = ValorVenda*perc;
