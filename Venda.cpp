@@ -11,6 +11,7 @@ Venda::Venda(Cliente *_cliente, Especialista *_especialista, std::string descric
     this->Descricao = descricao;
     this->Valor = valor;
     _especialista->novoAtendimento();
+    _especialista->addComissao(_especialista->calculaComissao(valor));
 
 }
 
