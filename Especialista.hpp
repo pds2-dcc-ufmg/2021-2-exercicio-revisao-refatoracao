@@ -11,8 +11,8 @@ class Especialista:public Funcionario{
     string especialidade;
   
     double comissao(double ValorVenda){
-      double c = ValorVenda*(0.1);
-      return c;
+      double comissaoTotal = ValorVenda*(0.1);
+      return comissaoTotal;
     }
 
     void print(){
