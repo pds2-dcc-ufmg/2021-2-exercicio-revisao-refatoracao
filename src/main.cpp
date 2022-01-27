@@ -1,44 +1,22 @@
-#include <iostream>
+#include "FerramentaADM.hpp"
 
-#include "Cliente.hpp"
-#include "Funcionario.hpp"
-#include "Especialista.hpp"
-#include "Venda.hpp"
-#include "Gerente.hpp"
-using namespace std;
 
 int main()
 {
-    Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
-    cliente1.print();
-
-    Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
-
-    Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
-
-    Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
-
-    Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
-
+    FerramentaADM adm;
+    Cliente cliente1 = Cliente("J. Jonah Jameson", "Nova York", "35690000");
+    Cliente cliente2 = Cliente("Norman Osborn", "Hartlford", "22061955");
+    Cliente cliente3 = Cliente("Otto Octavius", "Schenectady", "24051953");
+    Cliente cliente4 = Cliente("Bruce Benner", "Dayton", "22111967");
+    Cliente cliente5 = Cliente("Steve Rogers", "Lower East Side", "13061981");
+   
+    adm.add_cliente(cliente1);
+    adm.add_cliente(cliente2);
+    adm.add_cliente(cliente3);
+    adm.add_cliente(cliente4);
+    adm.add_cliente(cliente5);
+    
+    adm.imprime_clientes();
 
 
 

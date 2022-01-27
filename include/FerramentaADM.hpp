@@ -13,6 +13,7 @@ class FerramentaADM {
     void add_cliente(Cliente& cliente);
     void add_especialista(Especialista& esp);
     void add_gerente(Gerente& gerente);
+    void imprime_clientes();
 
   private:
   std::vector<Cliente> v_clientes;
