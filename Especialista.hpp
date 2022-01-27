@@ -6,15 +6,12 @@
 
 using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
-
 class Especialista:public Funcionario{
   public:
     string especialidade;
   
     double comissao(double ValorVenda){
-      double c = ValorVenda*perc;
+      double c = ValorVenda*(0.1);
       return c;
     }
 
