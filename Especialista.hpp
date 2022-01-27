@@ -7,20 +7,25 @@
 using namespace std;
 
 double perc = 0.1;
-double percWanda = 0.1;
 
 
 class Especialista : public Funcionario {
 
-    public:
-
-    public:
+    private:
         string especialidade;
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+    public:
+
+        string getEspecialidade(){ return especialidade;}
+        void setEspecialidade(string newEspecialidade)
+        {
+            this->especialidade = newEspecialidade;
+        }
+
+        double comissao(double ValorVenda) {
+            double c = ValorVenda*perc;
+                 return c;
+        }
 
 
     void print() {
