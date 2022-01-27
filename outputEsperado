@@ -1,0 +1,72 @@
+[Cliente]
+  Nome: J. Jonah Jameson
+  Endereco: Nova York
+  CEP: 35690000
+[Cliente]
+  Nome: Norman Osborn
+  Endereco: Hartlford
+  CEP: 22061955
+[Cliente]
+  Nome: Otto Octavius
+  Endereco: Schenectady
+  CEP: 24051953
+[Cliente]
+  Nome: Bruce Benner
+  Endereco: Dayton
+  CEP: 22111967
+[Cliente]
+  Nome: Bruce Benner
+  Endereco: Dayton
+  CEP: 22111967
+[Cliente]
+  Nome: Steve Rogers
+  Endereco: Lower East Side
+  CEP: 13061981
+ 
+ 
+           Relatorio das Vendas 
+
+Especialista: Peter Parker Cliente: J. Jonah Jameson Descricao: Fotos do Homem Aranha
+Especialista: Tony Stark Cliente: Bruce Benner Descricao: Troca da tela do telefone
+Especialista: Peter Parker Cliente: Norman Osborn Descricao: Fotos do novo planador
+Especialista: Tony Stark Cliente: J. Jonah Jameson Descricao: Recarga de cartucho
+Especialista: Wanda Maximoff Cliente: Bruce Benner Descricao: Reconstrucao de Predio
+Especialista: Wanda Maximoff Cliente: Steve Rogers Descricao: Decoracao de Apartamento no Brooklyn
+Especialista: Wanda Maximoff Cliente: Steve Rogers Descricao: Decoracao de Apartamento no Brooklyn
+Especialista: Wanda Maximoff Cliente: J. Jonah Jameson Descricao: Reforma do Clarim Diario
+Especialista: Tony Stark Cliente: Otto Octavius Descricao: Formatacao do PC
+ 
+ 
+           Relatorio dos Funcionarios 
+
+[Especialista]
+[Funcionario]
+  Idade: 46
+  RGFunc: 27061975
+  Nome: Peter Parker
+  SalarioBase: R$ 3000.00
+Num Atendimentos: 2
+Salario Total: 3025.00
+[Especialista]
+[Funcionario]
+  Idade: 56
+  RGFunc: 4041965
+  Nome: Tony Stark
+  SalarioBase: R$ 1000.00
+Num Atendimentos: 3
+Salario Total: 1511.00
+[Especialista]
+[Funcionario]
+  Idade: 32
+  RGFunc: 16021989
+  Nome: Wanda Maximoff
+  SalarioBase: R$ 5000.00
+Num Atendimentos: 3
+Salario Total: 6800.00
+[Funcionario]
+[Gerente]
+  Nome: Nick Fury
+  Idade: 72
+  RGFunc: 21121948
+  SalarioBase: R$ 10000.00
+Salario Total: 10120.00

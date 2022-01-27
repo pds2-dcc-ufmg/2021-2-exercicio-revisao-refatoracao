@@ -37,6 +37,8 @@ class Venda{
         std::cout << " Cliente: ";
         cout << cliente;
     }*/
+    private:
+        
 };
 
 #endif
