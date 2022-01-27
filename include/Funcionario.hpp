@@ -7,6 +7,7 @@
 class Funcionario {
   public:
     virtual void imprime_dados() = 0;
+    friend class Venda;
 
   protected:
     std::string _nome;
