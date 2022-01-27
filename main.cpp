@@ -18,7 +18,7 @@ int main()
     Cliente cliente2;
     cliente2.nome = "Norman Osborn";
     cliente2.endereco ="Hartlford";
-	cliente2.cep = "22061955";
+    cliente2.cep = "22061955";
     cliente2.print();
 
     Cliente cliente3;
