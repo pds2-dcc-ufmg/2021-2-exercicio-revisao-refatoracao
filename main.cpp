@@ -74,7 +74,6 @@ int main() {
     e03.salarioBase = 5000;
     e03.especialidade = "Engenharia e Designer";
 
-// removida variáveis
     Gerente g01;
     g01.nome = "Nick Fury";
     g01.idade = 72;
