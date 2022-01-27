@@ -36,7 +36,7 @@ int main() {
     Venda v02 = Venda(cliente4, e02, "Troca da tela do telefone", 100);
     Venda v03 = Venda(cliente2, e01, "Fotos do novo planador", 150);
     Venda v04 = Venda(cliente1, e02, "Regarda de cartucho", 10);
-    Venda v05 = Venda(cliente4, e03, "Reconstruao de Predio", 10000);
+    Venda v05 = Venda(cliente4, e03, "Reconstrucao de Predio", 10000);
     Venda v06 = Venda(cliente5, e03, "Decoracao de Apartamento no Brooklyn", 3000);
     Venda v07 = Venda(cliente1, e03, "Reforma do Clarim Diario", 5000);
     Venda v08 = Venda(cliente3, e02, "Formatacao do PC", 80);
