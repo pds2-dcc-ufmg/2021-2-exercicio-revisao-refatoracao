@@ -158,7 +158,7 @@ int main()
 
 
 
-    std::cout <<" \n \n           Relatorio das Vendas \n" << std::endl;
+    std::cout <<" \n \n Relatorio das Vendas \n" << std::endl;
 
     v01.print();
     std::cout << " Descricao: " << v01.descricao << std::endl;
@@ -191,7 +191,7 @@ int main()
 
 
 
-    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
+    std::cout <<" \n \n Relatorio dos Funcionarios \n" << std::endl;
     e01.print();
     std::cout << "Num Atendimentos: " << numAtendimentos01 << std::endl;
     std::cout << "Salario Total: " << e01.SalarioBase+comissao01 << std::endl;
