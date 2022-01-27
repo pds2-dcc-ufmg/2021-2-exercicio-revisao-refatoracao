@@ -8,7 +8,5 @@ void Cliente::print() {
          << "  Nome: " << nome << endl
 		 << "  Endereco: " << endereco << endl
 		 << "  CEP: " << cep << endl << endl;
-
+	
 }
-
-
