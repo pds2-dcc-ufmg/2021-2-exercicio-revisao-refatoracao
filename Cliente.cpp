@@ -4,10 +4,8 @@
 
 void Cliente::print(){
 
-	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
-
+	std::cout << "[Cliente]" << std::endl
+			  << "  Nome: " << nome << std::endl
+		      << "  Endereco: " << endereco << std::endl
+			  << "  CEP: " << cep << std::endl;
 }
-
