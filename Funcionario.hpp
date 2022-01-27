@@ -3,25 +3,22 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Servidor.hpp"
 
 using namespace std;
 
-class Funcionario {
-    public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
+class Funcionario : public Servidor {
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+public:
+    void print() override {
+        cout << "[Funcionario]" << endl
+             << "  Idade: " << idade << endl
+             << "  RGFunc: " << rgFunc << endl;
+    }
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+    static void print_oi() {
+        cout << "Tchau" << endl;
+    }
 };
 
 #endif
