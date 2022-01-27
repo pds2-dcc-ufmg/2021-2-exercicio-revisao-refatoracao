@@ -66,7 +66,6 @@ int main(){
   e03.especialidade = "Engenharia e Designeeeeer";
 
   Gerente g01;
-  double bonificacao01 = 0;
   g01.nome = "Nick Fury";
   g01.idade = "72";
   g01.rgNumber = 21121948;
