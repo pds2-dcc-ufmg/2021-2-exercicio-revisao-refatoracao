@@ -2,8 +2,8 @@ CC = g++
 CFLAGS = -std=c++11 -Wall
 
 TARGET = main
-OBJ_FILES = build/main.o build/Cliente.o build/Especialista.o build/Funcionario.o build/Gerente.o build/Venda.o
-INCLUDE_FILES = include/Cliente.hpp include/Especialista.hpp include/Funcionario.hpp include/Gerente.hpp include/Venda.hpp
+OBJ_FILES = build/main.o build/Cliente.o build/Funcionario.o build/Venda.o
+INCLUDE_FILES = include/Cliente.hpp include/Funcionario.hpp include/Venda.hpp
 
 OBJ_DIR = ./build
 SRC_DIR = ./src

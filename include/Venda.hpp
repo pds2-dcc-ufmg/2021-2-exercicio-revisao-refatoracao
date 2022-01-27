@@ -3,7 +3,6 @@
 
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
-#include "Especialista.hpp"
 
 class Venda
 {
