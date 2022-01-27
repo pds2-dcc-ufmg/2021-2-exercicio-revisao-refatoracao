@@ -10,7 +10,6 @@ class Especialista : public Funcionario {
 
     public:
 
-        string especialidade;
         double perc = 0.1;
 
         double comissao(double valorVenda);
