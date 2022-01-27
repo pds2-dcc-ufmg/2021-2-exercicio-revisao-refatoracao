@@ -10,6 +10,7 @@ Venda::Venda(Cliente *_cliente, Especialista *_especialista, std::string descric
     this->especialista = *_especialista;
     this->Descricao = descricao;
     this->Valor = valor;
+    _especialista->novoAtendimento();
 
 }
 
