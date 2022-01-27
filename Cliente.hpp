@@ -14,8 +14,8 @@ class Cliente{
 
 		void setNome(std::string nome);
 		void setEndereco(std::string endereco);
-        void setCep(std::string cep);
-        void setAlturaPais(std::string alturaPais);
+    	void setCep(std::string cep);
+		void setAlturaPais(std::string alturaPais);
 };
 
 #endif
