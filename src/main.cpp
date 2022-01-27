@@ -26,17 +26,17 @@ int main()
     clientes.emplace_back("Steve Rogers", "Lower East Side", "13061981");
 
     std::vector<Venda> vendas;
-    vendas.emplace_back(clientes[0], especialistas[0], "Fotos do Homem Aranha", 100.0);
-    vendas.emplace_back(clientes[3], especialistas[1], "Troca da tela do telefone", 100.0);
-    vendas.emplace_back(clientes[1], especialistas[0], "Fotos do novo planador", 150.0);
-    vendas.emplace_back(clientes[0], especialistas[1], "Recarga de cartucho", 10.0);
-    vendas.emplace_back(clientes[3], especialistas[2], "Reconstrucao de Predio", 10000.0);
-    vendas.emplace_back(clientes[4], especialistas[2], "Decoracao de Apartamento no Brooklyn", 3000.0);
-    vendas.emplace_back(clientes[0], especialistas[2], "Reforma do Clarim Diario", 5000.0);
-    vendas.emplace_back(clientes[2], especialistas[1], "Formatacao do PC", 80.0);
+    vendas.emplace_back(&clientes[0], &especialistas[0], "Fotos do Homem Aranha", 100.0);
+    vendas.emplace_back(&clientes[3], &especialistas[1], "Troca da tela do telefone", 100.0);
+    vendas.emplace_back(&clientes[1], &especialistas[0], "Fotos do novo planador", 150.0);
+    vendas.emplace_back(&clientes[0], &especialistas[1], "Recarga de cartucho", 10.0);
+    vendas.emplace_back(&clientes[3], &especialistas[2], "Reconstrucao de Predio", 10000.0);
+    vendas.emplace_back(&clientes[4], &especialistas[2], "Decoracao de Apartamento no Brooklyn", 3000.0);
+    vendas.emplace_back(&clientes[0], &especialistas[2], "Reforma do Clarim Diario", 5000.0);
+    vendas.emplace_back(&clientes[2], &especialistas[1], "Formatacao do PC", 80.0);
     for (Venda &venda : vendas)
     {
-        venda.getEspecialista().acrescentarComissao(venda.getValor());
+        venda.getEspecialista()->acrescentarComissao(venda.getValor());
         gerente.acrescentarBonificacao();
     }
 

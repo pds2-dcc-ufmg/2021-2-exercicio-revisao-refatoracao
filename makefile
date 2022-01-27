@@ -14,5 +14,5 @@ all : $(TARGET)
 $(TARGET) : $(OBJ_FILES)
 	$(CC) $(CFLAGS) $^ -o $@
 
-$(OBJ_DIR)/%.o : $(SRC_DIR)/%.cpp $(INCLUDE_FILES)
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.cpp $(INCLUDE_DIR)/%.hpp
 	$(CC) $(CFLAGS) -I $(INCLUDE_DIR) -c $< -o $@

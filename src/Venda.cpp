@@ -1,7 +1,7 @@
 #include "Venda.hpp"
 
-Venda::Venda(Cliente clienteAux,
-             Especialista especialistaAux,
+Venda::Venda(Cliente *clienteAux,
+             Especialista *especialistaAux,
              std::string descricaoAux,
              double valorAux)
 {
@@ -14,7 +14,7 @@ Venda::Venda(Cliente clienteAux,
 void Venda::imprimirDados()
 {
     std::cout << "Especialista: ";
-    std::cout << especialista.getNome();
+    std::cout << especialista->getNome();
     std::cout << " Cliente: ";
-    std::cout << cliente.getNome();
+    std::cout << cliente->getNome();
 }
