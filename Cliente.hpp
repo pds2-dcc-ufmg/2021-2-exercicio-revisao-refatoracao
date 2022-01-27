@@ -3,17 +3,16 @@
 
 #include <string>
 
+using namespace std;
+
 class Cliente{
-	
 	public:
-		
-		std::string NOME;
-		std::string endereco;
-		std::string Cep;
-		std::string AlturaDosPais;
+		string NOME;
+		string endereco;
+		string Cep;
+		string AlturaDosPais;
 		
 		void print(); // imprime na tela os dados de um cliente cadastrado
-
 };
 
 #endif
