@@ -1,217 +1,161 @@
-#include <iostream>
-
+/*
+Embora apenas os includes Venda.hpp e Gerente.hpp fossem necessarios,
+uma vez que, por uma relacao de cascata, esses dois juntos incluem todos
+os arquivos necessarios, foram colocados os includes de todos os 
+arquivos necessarios separadamente por questao de clareza e organizacao
+*/
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
 #include "Especialista.hpp"
-#include "Venda.hpp"
 #include "Gerente.hpp"
-using namespace std;
+#include "Venda.hpp"
 
-int main()
-{
-    Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
-    cliente1.print();
+/*
+Programa que realiza o cadastro de 5 clientes, 3 especialistas,
+e 1 gerente, alem de simular vendas e imprime:
 
-    Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
+    1-Uma lista com os clientes cadastrados e suas respectivas informacoes
 
-    Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
+    2-Um relatorio de vendas com o especialista responsavel, o cliente envolvido,
+      e o servico realizado em cada venda
 
-    Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
+    3-Um relatorio de funcionarios com seus cargos, suas informacoes, numero de 
+      atendimentos realizados (em caso de funcionario especialista), e salarios totais
+      
+*/
+int main() {
 
-    Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
+    /*
+    Cadastramento dos clientes
+    */
+    Cliente cliente1 = Cliente("J. Jonah Jameson", "Nova York", "35690000");
+    cliente1.imprimir_dados_cliente(); //impressao dos dados do cliente cadastrado
 
+    //Processos sucessivos equivalentes ao anterior
+    Cliente cliente2 = Cliente("Norman Osborn", "Hartlford", "22061955");
+    cliente2.imprimir_dados_cliente(); 
 
+    Cliente cliente3 = Cliente("Otto Octavius", "Schenectady", "24051953");
+    cliente3.imprimir_dados_cliente(); 
 
+    Cliente cliente4 = Cliente("Bruce Benner", "Dayton", "22111967");
+    cliente4.imprimir_dados_cliente(); 
 
-    Especialista e01;
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
+    Cliente cliente5 = Cliente("Steve Rogers", "Lower East Side", "13061981");
+    cliente5.imprimir_dados_cliente(); 
 
 
 
-    Especialista e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
+    /*
+    Cadastramento dos funcionarios especialistas
+    */
+    Especialista e01 = Especialista(3000, "46", "Peter Parker", 27061975, "Fotografia");
+    Especialista e02 = Especialista(1000, "56", "Tony Stark", 4041965, "Consertos de equipamentos eletronicos");
+    Especialista e03 = Especialista(5000, "32", "Wanda Maximoff", 16021989, "Engenharia e Designeeeeer");
+    
 
 
-    Especialista e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
-
-
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
-
-
-    Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
+    /*
+    Cadastramento do funcionario gerente
+    */
+    Gerente g01 = Gerente(10000, "72", "Nick Fury", 21121948);
 
 
 
-    Venda v07;
-    v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
-    numAtendimentos03+=1;
+    /*
+    Realizacao das vendas
+    */
+    Venda v01 = Venda("Fotos do Homem Aranha", e01, cliente1, 100); //cadastro da venda no sistema
+    //registro do valor da comissao a ser recebida pelo especialista responsavel no sistema
+    e01.adicionar_comissao(v01.getvalor());
+    //contagem da venda no numero de atendimentos do especialista
+    e01.contador_de_atend();
 
+    //Processos sucessivos equivalentes ao anterior
+    Venda v02 = Venda("Troca da tela do telefone", e02, cliente4, 100); 
+    e02.adicionar_comissao(v02.getvalor());
+    e02.contador_de_atend();
+    
+    Venda v03 = Venda("Fotos do novo planador", e01, cliente2, 150); 
+    e01.adicionar_comissao(v03.getvalor());
+    e01.contador_de_atend();
 
-    Venda v08;
-    v08.cliente= "Otto Octavius";
-    v08.esp = e02;
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
-    numAtendimentos02+=1;
+    Venda v04 = Venda("Recarga de cartucho", e02, cliente1, 10); 
+    e02.adicionar_comissao(v04.getvalor());
+    e02.contador_de_atend();
 
+    Venda v05 = Venda("Reconstrucao de Predio", e03, cliente4, 10000); 
+    e03.adicionar_comissao(v05.getvalor());
+    e03.contador_de_atend();
 
+    Venda v06 = Venda("Decoracao de Apartamento no Brooklyn", e03, cliente5, 3000); 
+    e03.adicionar_comissao(v06.getvalor());
+    e03.contador_de_atend();
 
-    cout <<" \n \n           Relatorio das Vendas \n" << endl;
+    Venda v07 = Venda("Reforma do Clarim Diario", e03, cliente1, 5000); 
+    e03.adicionar_comissao(v07.getvalor());
+    e03.contador_de_atend();
 
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
-
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
-
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
-
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
-
-    v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
-
-    v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
+    Venda v08 = Venda("Formatacao do PC", e02, cliente3, 80); 
+    e02.adicionar_comissao(v08.getvalor());
+    e02.contador_de_atend();
 
 
 
+    /*
+    Impressao do relatorio de vendas
+    */
+    std::cout <<" \n \n           Relatorio das Vendas \n" << std::endl;
+
+    v01.imprime_venda();
+    v02.imprime_venda();
+    v03.imprime_venda();
+    v04.imprime_venda();
+    v05.imprime_venda();
+    v06.imprime_venda();
+    v06.imprime_venda();
+    v07.imprime_venda();
+    v08.imprime_venda();
+    
 
 
+    /*
+    Impressao do relatorio dos funcionario
+    */
+    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
+    
+    /*
+    Parte dos funcionarios especialistas
+    */
+    e01.imprimir_dados_funcionario(); //imprime os dados do funcionario
+    //imprime o numero de atendimentos realizados pelo especialista
+    std::cout << "Num Atendimentos: " << e01.get_num_atend() << std::endl; 
+    //imprime o salario o salario total do especialista
+    std::cout << "Salario Total: " << (e01.get_salario_base()) + (e01.get_comissao_total()) << std::endl;
 
-    cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-    e01.print();
-    cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
+    //Processos sucessivos equivalentes ao anterior
+    e02.imprimir_dados_funcionario();
+    std::cout << "Num Atendimentos: " << e02.get_num_atend() << std::endl;
+    std::cout << "Salario Total: " << (e02.get_salario_base()) + (e02.get_comissao_total()) << std::endl;
 
-    e02.print();
-    cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
-
-    e03.print();
-    cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
+    e03.imprimir_dados_funcionario();
+    std::cout << "Num Atendimentos: " << e03.get_num_atend() << std::endl;
+    std::cout << "Salario Total: " << (e03.get_salario_base()) + (e03.get_comissao_total()) << std::endl;
 
 
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
-    g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    /*
+    Parte do funcionario gerente
+    */
+    //calcula o numero total de atendimentos dos especialistas da empresa
+    int num_tot_atend = e01.get_num_atend() + e02.get_num_atend() + e03.get_num_atend();
+    //registra o valor da bonificacao total a ser recebida pelo gerente no sistema
+    g01.calcula_bonificacao_total(num_tot_atend);
+    //imprime os dados do funcionario gerente
+    g01.imprimir_dados_funcionario();
+    //imprime o salario total do gerente
+    std::cout << "Salario Total: " << g01.get_salario_base() + g01.getbonificacao_tot() << std::endl;
+
+
 
     return 0;
 }

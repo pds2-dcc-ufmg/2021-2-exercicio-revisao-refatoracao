@@ -1,35 +1,40 @@
 #ifndef GERENTE_HPP
 #define GERENTE_HPP
 
-#include <iostream>
-#include <iomanip>
+#include "Funcionario.hpp"
 
-using namespace std;
-
-double ValorBONIFICACAO = 15.0;
-
-class Gerente {
+/*
+Classe que representa um funcionario do tipo Gerente
+*/
+class Gerente : public Funcionario {
+    
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
 
+        //metodo construtor da classe
+        Gerente(double salariob = 0,
+                std::string idade = " ",
+                std::string nome = " ",
+                int rgfunc = 0,
+                double bonificacao_por_venda = 15.0,
+                double bonificacao_total = 0);
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+        //imprime na tela os dados de um gerente cadastrado
+        void imprimir_dados_funcionario() override;
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+        //calcula o valor total recebido pelo gerente como bonificacao
+        void calcula_bonificacao_total(int num_total_atend);
+
+        //retorna o valor total recebido pelo gerente como bonificacao
+        double getbonificacao_tot();
+
+    private:
+
+        /*
+        Dados relacionados ao gerente
+        */
+        double _bonificacao_por_venda; //valor recebido como bonificacao a cada venda
+
+        double _bonificacao_total; //valor total recebido como bonificacao
 
 };
 
