@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+
 #include "Funcionario.hpp"
 
 void Funcionario:: print() {
