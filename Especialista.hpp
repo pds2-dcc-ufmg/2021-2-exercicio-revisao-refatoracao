@@ -1,39 +1,38 @@
 #ifndef Especialista_HPP
 #define Especialista_HPP
 
+#include <string>
+#include <iostream>
+
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
 
-using namespace std;
-
-double perc = 0.1;
-double percWanda = 0.1;
-
+//As porcentagens ficam melhor como atributo
 
 class Especialista : public Funcionario {
-
+//Repetindo public. Atributos publicos, e falta um atributo para comisao.
     public:
+	//As funções não devem ser definidas no contrato.
+	std::string GetEspecialidade();
+	double GetPerc();
+	double GetComissao();
+	double GetSalarioTotal();
+	int GetNumAtendimentos();
 
-    public:
-        string especialidade;
+	void SetEspecialidade(const std::string& especialidade);
+	void SetPerc(double perc);
+	void SetComissao(double valorVenda);
+	void Inicializacao();
+	void NovoAtendimento();
+	void AcrescentaSalario();
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+	void print();
 
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+    private:
+	std::string _especialidade;
+	double _comissao;
+	double _perc;
+	int _numAtendimentos;
+	double _salarioTotal;
 };
 
 #endif
