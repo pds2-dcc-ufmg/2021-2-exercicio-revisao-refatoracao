@@ -17,26 +17,7 @@ class Venda{
     string cliente;
 
 
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+    void print(); //imprime dados sobre a venda.
 };
 
 #endif

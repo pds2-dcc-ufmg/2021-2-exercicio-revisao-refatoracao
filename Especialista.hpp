@@ -17,23 +17,10 @@ class Especialista : public Funcionario {
     public:
         string especialidade;
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+    double comissao(double ValorVenda);// calcula a comissão destinada a um Especialista de acordo com sua venda.
 
 
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+    void print();// imprime na tela os dados do salario de um Especialista cadastrado.
 };
 
 #endif
