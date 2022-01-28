@@ -15,8 +15,10 @@ class Funcionario {
 
         void print() {
             std::cout << "[Funcionario]" << std::endl
+	    << "  Nome: " << this->nome << std::endl
             << "  Idade: " << this->IDADE << std::endl
-            << "  RGFunc: " << this->rgFunc << std::endl;
+            << "  RGFunc: " << this->rgFunc << std::endl
+            << "  SalarioBase: R$ " << std::fixed << setprecision(2) << this->SalarioBase <<std::endl;
         }
 
 };
