@@ -10,7 +10,7 @@ void Funcionario::print() {
 
 }
 
-void print_tchau(){
+void Funcionario::print_tchau(){
 
     cout << "Tchau" << endl;
 
@@ -61,5 +61,14 @@ void Funcionario::setNome(string nome) {
 void Funcionario::setRG(int rg) {
 
     this->rgFunc = rg;
+
+}
+
+Funcionario::Funcionario(double salarioBase, string idade, string nome, int rgFunc){
+
+    this->salarioBase = salarioBase;
+    this->idade = idade;
+    this->nome = nome;
+    this->rgFunc = rgFunc;
 
 }

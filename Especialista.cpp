@@ -2,10 +2,10 @@
 #include <string>
 #include "Especialista.hpp"
 
-double Especialista::comissao(double ValorVenda) {
+double Especialista::calculaComissao(double ValorVenda) {
 
-        double c = ValorVenda*perc;
-        return c;
+    double c = ValorVenda*porcentagem;
+    return c;
 
 }
 
@@ -26,12 +26,37 @@ string Especialista::getEspecialidade() {
 
 }
 
-Especialista::Especialista(string nome, string idade, int rgFunc, double salarioBase, string especialidade) {
+int Especialista::getNumAtendimentos() {
+    
+    return numAtendimentos;
 
-    setNome(nome);
-    setIdade(idade);
-    setRG(rgFunc);
-    setSalarioBase(salarioBase);
+}
+
+int Especialista::somaNumAtendimentos(int soma) {
+    
+    return numAtendimentos + soma;
+
+}
+
+double Especialista::getComissao() {
+
+    return comissao;
+
+}
+
+double Especialista::somaComissao(double valor) {
+
+    return comissao + valor;
+
+}
+
+Especialista::Especialista(string nome, string idade, int rgFunc, double salarioBase, string especialidade,
+                           int numAtendimentos, double comissao, double porcentagem) : 
+                            Funcionario(salarioBase, idade, nome, rgFunc) {
+    
+    this->numAtendimentos = numAtendimentos;
+    this->comissao = comissao;
+    this->porcentagem = porcentagem;
     this->especialidade = especialidade;
 
 }

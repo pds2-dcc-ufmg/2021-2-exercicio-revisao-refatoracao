@@ -2,11 +2,10 @@
 #define CLIENTE_H
 
 #include <string>
-#include "Pessoa.hpp"
 
 using namespace std;
 
-class Cliente : public Pessoa{
+class Cliente {
 
 	public:
 		
@@ -16,7 +15,7 @@ class Cliente : public Pessoa{
 
 		Cliente(string nome, string endereco, string cep);
 
-		void print() override; 
+		void print(); 
 
 	private:
 

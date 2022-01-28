@@ -4,20 +4,20 @@
 #include <iostream>
 #include <iomanip>
 #include "Funcionario.hpp"
-#include "Pessoa.hpp"
 
 using namespace std;
-
-double ValorBONIFICACAO = 15.0;
 
 class Gerente : public Funcionario {
 
     public:
         
         double getBonificacao();
-        void print() override;
+        void setBonificacao(double newBonificacao);
+        void print();
 
-        double calculaBonificacao;
+        double calculaBonificacao(int numTOTALVendas);
+
+        Gerente(string nome = "", string idade = "", int rgFunc = 0, double salarioBase = 0, double bonificacao = 15.0);
 
     private:
 

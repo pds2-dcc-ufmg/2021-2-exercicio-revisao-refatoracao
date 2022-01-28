@@ -11,15 +11,13 @@ class Venda{
 
     public:
 
-    void print() {
+    double getValor();
+    string getDescricao();
+    Especialista getEsp();
+    string getcliente();
+    void print();
 
-        std::cout << "Especialista: ";
-        cout << esp.getNome();
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-    }
+    Venda(double valor = 0, string descricao = "", Especialista esp = Especialista(), string cliente = "");
 
     private:
     

@@ -6,7 +6,8 @@
 
 using namespace std;
 
-class Funcionario : public Pessoa {
+class Funcionario {
+
     public:
         
         double getSalarioBase();
@@ -19,8 +20,10 @@ class Funcionario : public Pessoa {
         void setNome(string nome);
         void setRG(int rg);
 
-        void print() override;
+        void print();
         void print_tchau();
+
+        Funcionario(double salarioBase = 0, string idade = "", string nome = "", int rgFunc = 0);
 
     private:
 

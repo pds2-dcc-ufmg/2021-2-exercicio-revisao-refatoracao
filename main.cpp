@@ -5,6 +5,7 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
+
 using namespace std;
 
 int main()
@@ -25,158 +26,99 @@ int main()
     cliente5.print();
 
 
-    Especialista e01("Peter Parker", "46", 27061975, 3000, "Fotografia");
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
+    Especialista e01("Peter Parker", "46", 27061975, 3000, "Fotografia", 0, 0);
 
-    Especialista e02("Tony Stark", "56", 4041965, 1000, "Consertos de equipamentos eletronicos");
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
+    Especialista e02("Tony Stark", "56", 4041965, 1000, "Consertos de equipamentos eletronicos", 0, 0);
 
-    Especialista e03("Wanda Maximoff", "32", 16021989, 5000, "Engenharia e Designeeeeer");
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
+    Especialista e03("Wanda Maximoff", "32", 16021989, 5000, "Engenharia e Designeeeeer", 0, 0);
 
 
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
+    Gerente g01("Nick Fury", "72", 21121948, 10000,  0);
 
 
-    Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
+    Venda v01(100, "Fotos do Homem Aranha", e01, "J. Jonah Jameson");
+    v01.getEsp().somaComissao(v01.getEsp().calculaComissao(v01.getValor()));
+    v01.getEsp().somaNumAtendimentos(1);
 
+    Venda v02(100, "Troca da tela do telefone", e02, "Bruce Benner");
+    v02.getEsp().somaComissao(v02.getEsp().calculaComissao(v02.getValor()));
+    v02.getEsp().somaNumAtendimentos(1);
 
-    Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
-    numAtendimentos02+=1;
+    Venda v03(150, "Fotos do novo planador", e01, "Norman Osborn");
+    v03.getEsp().somaComissao(v03.getEsp().calculaComissao(v03.getValor()));
+    v03.getEsp().somaNumAtendimentos(1);
+ 
+    Venda v04(10, "Recarga de cartucho", e02, "J. Jonah Jameson");
+    v04.getEsp().somaComissao(v04.getEsp().calculaComissao(v04.getValor()));
+    v04.getEsp().somaNumAtendimentos(1);
+ 
+    Venda v05(10000, "Reconstrucao de Predio", e03, "Bruce Benner");
+    v05.getEsp().somaComissao(v05.getEsp().calculaComissao(v05.getValor()));
+    v05.getEsp().somaNumAtendimentos(1);
 
+    Venda v06(3000, "Decoracao de Apartamento no Brooklyn", e03, "Steve Rogers");
+    v06.getEsp().somaComissao(v06.getEsp().calculaComissao(v06.getValor()));
+    v06.getEsp().somaNumAtendimentos(1);
 
-    Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
-
-    Venda v07;
-    v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v08;
-    v08.cliente= "Otto Octavius";
-    v08.esp = e02;
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
-    numAtendimentos02+=1;
-
+    Venda v07(5000, "Reforma do Clarim Diario", e03, "J. Jonah Jameson");
+    v07.getEsp().somaComissao(v07.getEsp().calculaComissao(v07.getValor()));
+    v07.getEsp().somaNumAtendimentos(1);
+ 
+    Venda v08(80, "Formatacao do PC", e02, "Otto Octavius");
+    v08.getEsp().somaComissao(v08.getEsp().calculaComissao(v08.getValor()));
+    v08.getEsp().somaNumAtendimentos(1);
 
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
     v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
+    cout << " Descricao: " << v01.getDescricao() << endl;
 
     v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
+    cout << " Descricao: " << v02.getDescricao() << endl;
 
     v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
+    cout << " Descricao: " << v03.getDescricao() << endl;
 
     v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
+    cout << " Descricao: " << v04.getDescricao() << endl;
 
     v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
+    cout << " Descricao: " << v05.getDescricao() << endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
+    cout << " Descricao: " << v06.getDescricao() << endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
+    cout << " Descricao: " << v06.getDescricao() << endl;
 
     v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
+    cout << " Descricao: " << v07.getDescricao() << endl;
 
     v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
-
-
-
+    cout << " Descricao: " << v08.getDescricao() << endl;
 
 
 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
-    cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.getSalarioBase()+comissao01<<endl;
+    cout << "Num Atendimentos: " << e01.getNumAtendimentos() << endl;
+    cout << "Salario Total: " << e01.getSalarioBase() + e01.getComissao() << endl;
 
     e02.print();
-    cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.getSalarioBase()+comissao02<<endl;
+    cout << "Num Atendimentos: " << e02.getNumAtendimentos() << endl;
+    cout << "Salario Total: " << e02.getSalarioBase() + e02.getComissao() << endl;
 
     e03.print();
-    cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.getSalarioBase()+comissao03<<endl;
+    cout << "Num Atendimentos: " << e03.getNumAtendimentos() << endl;
+    cout << "Salario Total: " << e03.getSalarioBase()+ e03.getComissao() << endl;
 
 
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    int numTotalServicos = 0;
+    numTotalServicos = e01.getNumAtendimentos() + e02.getNumAtendimentos() + e03.getNumAtendimentos();
+    g01.setBonificacao(g01.calculaBonificacao(numTotalServicos));
     g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    cout << "Salario Total: " << g01.getSalarioBase() + g01.getBonificacao() << endl;
 
     return 0;
 }

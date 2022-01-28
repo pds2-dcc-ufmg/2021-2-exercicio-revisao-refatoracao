@@ -13,9 +13,28 @@ void Gerente::print() {
 
 }
 
-double calculaBonificacao(int numTOTALVendas){
+double Gerente::calculaBonificacao(int numTOTALVendas){
     
     double x;
-    return numTOTALVendas*ValorBONIFICACAO;
+    return numTOTALVendas*bonificacao;
+
+}
+
+double Gerente::getBonificacao() {
+
+    return bonificacao;
+
+}
+
+void Gerente::setBonificacao(double newBonificacao) {
+
+    this->bonificacao = newBonificacao;
+
+}
+
+Gerente::Gerente(string nome, string idade, int rgFunc, double salarioBase, double bonificacao) : 
+    Funcionario(salarioBase, idade, nome, rgFunc) {
+
+    this->bonificacao = bonificacao;
 
 }
