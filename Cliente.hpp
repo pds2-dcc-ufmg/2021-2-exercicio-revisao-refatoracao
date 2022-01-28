@@ -7,16 +7,13 @@ using namespace std;
 class Cliente{
 
 	private:
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+		string _NOME;
+		string _endereco;
+		string _Cep;
 	public:
+		Cliente(string name,string endereco, string cep);
+		Cliente() = default;
 		void print(); // imprime na tela os dados de um cliente cadastrado
-		void setNome(string name);
-		void setEndereco(string endereco);
-		void setCep(string cep);
-		void setAlturaDosPais(string altura);
 		
 };
 

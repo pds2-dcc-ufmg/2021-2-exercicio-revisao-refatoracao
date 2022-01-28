@@ -4,23 +4,14 @@
 
 void Cliente::print(){
 	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
+         << "  Nome: " << _NOME << endl
+		 << "  Endereco: " << _endereco << endl
+		 << "  CEP: " << _Cep << endl;
+}
+Cliente::Cliente(string nome,string endereco, string cep){
+	_NOME = nome;
+	_endereco = endereco;
+	_Cep = cep;
 }
 
-void Cliente::setAlturaDosPais(string altura){
-	this->AlturaDosPais = altura;
-}
 
-void Cliente::setNome(string nome){
-	this->NOME = nome;
-}
-
-void Cliente::setEndereco(string endereco){
-	this->endereco = endereco;
-}
-
-void Cliente::setCep(string cep){
-	this->Cep = cep;
-}
