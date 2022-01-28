@@ -17,7 +17,7 @@ class Venda{
 
         std::cout << "Especialista: " << this->esp.nome << std::endl;
 
-        std::cout << " Cliente: " << this->cliente << syd::endl;
+        std::cout << " Cliente: " << this->cliente << std::endl;
 
         //std::cout << " : ";
         //cout << cliente;
