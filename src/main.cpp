@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
@@ -8,39 +9,22 @@
 using namespace std;
 
 int main()
-{
-    Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
-    cliente1.print();
+ {
+     int num_clientes = 5;
 
-    Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
+    std::vector<Cliente> cliente;
 
-    Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
+    cliente.push_back(Cliente("J. Jonah Jameson", "Nova York", "35690000"));
+    cliente.push_back(Cliente("Normam Osborn", "Hartlford", "22061955"));
+    cliente.push_back(Cliente("Otto Octavius", "Schenectady", "24051953"));
+    cliente.push_back(Cliente("Bruce Benner", "Dayton", "22111967"));
+    cliente.push_back(Cliente("Steve Rogers", "Lower East Side", "13061981"));
 
-    Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
-
-    Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
-
-
-
+    for (int i = 0; i < num_clientes; i++)
+    {
+        cliente[i].print();
+    }
+    
 
     Especialista e01;
     int numAtendimentos01 = 0;
