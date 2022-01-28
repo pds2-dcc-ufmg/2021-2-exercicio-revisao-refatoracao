@@ -6,8 +6,8 @@
 void Cliente::print() {
 
 	cout << "Cliente:" << endl
-         << "  Nome: " << nome << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << cep << endl << endl;
+             << "  Nome: " << nome << endl
+	     << "  Endereco: " << endereco << endl
+	     << "  CEP: " << cep << endl << endl;
 	
 }
