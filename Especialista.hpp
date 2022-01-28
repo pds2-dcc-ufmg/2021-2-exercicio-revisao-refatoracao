@@ -3,7 +3,6 @@
 
 #include "Funcionario.hpp"
 
-using namespace std;
 
 double perc = 0.1;
 
@@ -12,24 +11,23 @@ class Especialista : public Funcionario {
 
     public:
 
-    public:
-        string especialidade;
+        std::string especialidade;
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
-
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+	double comissao(double ValorVenda) {
+        	double c = ValorVenda*perc;
+        	return c;
+    	}
 
 
+    	void print() {
 
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+        	std::cout << "[Especialista]" << std::endl;
+        	Funcionario::print();
+
+
+
+        	std::cout << "  Nome: " << this->nome << std::endl
+       	 	<< "  SalarioBase: R$ " << std::fixed << setprecision(2) << this->SalarioBase <<std::endl;
 
     }
 };
