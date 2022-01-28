@@ -1,12 +1,12 @@
 #include "Especialista.hpp"
 
-Especialista::Especialista(std::string nome, double salario_base, int idade, int rg_funcionario, std::string especialidade, double percentual) {
+Especialista::Especialista(std::string nome, double salario_base, int idade, int rg_funcionario, std::string especialidade, double percentual_comissao) {
     this->_nome = nome;
     this->_salario_base = salario_base;
     this->_idade = idade;
     this->_rg_funcionario = rg_funcionario;
     this->_especialidade = especialidade;
-    this->_percentual = percentual;
+    this->_percentual_comissao = percentual_comissao;
 }
 
 void Especialista::imprime_dados() const {
@@ -31,7 +31,7 @@ int Especialista::getNumAtendimentos() {
 }
 
 void Especialista::calcula_comissao(double valor_venda) {
-    double valor_comissao = valor_venda * this->_percentual;
+    double valor_comissao = valor_venda * this->_percentual_comissao;
     
     this->_comissao += valor_comissao;
 }
