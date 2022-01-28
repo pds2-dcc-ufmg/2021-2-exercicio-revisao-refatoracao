@@ -3,7 +3,7 @@
 
 #include "Cliente.hpp"
 #include "Especialista.hpp"
-#nclude "Venda.hpp"
+#include "Venda.hpp"
 
 double Venda::GetValor()
 {
@@ -30,6 +30,6 @@ void Venda::print()
 	std::cout << " [Venda] " << std::endl
 	<< " Descricao: " << GetDescricao() << std::endl
 	<< " Valor: R$" << std::setprecision(2) << std::fixed << GetValor() << std::endl;
-	especialista.print();
-	cliente.print();
+	this -> especialista.print();
+	this -> cliente.print();
 }

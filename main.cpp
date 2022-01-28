@@ -8,8 +8,8 @@
 #include "Gerente.hpp"
 
 //Tais funções poderiam ter sido colocadas como construtores em suas classes tambem.
-void NovoCliente(Cliente * cliente, const std::string& nome, const std::string& endereco
-			const std::string& cep)
+void NovoCliente(Cliente * cliente, std::string nome, std::string endereco,
+			std::string cep)
 {
 	cliente -> SetNome(nome);
 	cliente -> SetEndereco(endereco);
@@ -17,7 +17,7 @@ void NovoCliente(Cliente * cliente, const std::string& nome, const std::string& 
 }
 
 void NovoEspecialista(Especialista * especialista, double valorMinimo, double perc, 
-				const std::string& nome, const std::string& idade, int RG
+				const std::string& nome, const std::string& idade, int RG,
 				const std::string& especialidade)
 {
 	especialista -> SetSalarioBase(valorMinimo);
@@ -29,13 +29,13 @@ void NovoEspecialista(Especialista * especialista, double valorMinimo, double pe
 	especialista -> SetEspecialidade(especialidade);
 }
 	
-void NovoGerente(Gerente * gerente, int valorBonificacao, const std::string& nome, const std::string& idade
+void NovoGerente(Gerente * gerente, int valorBonificacao, const std::string& nome, const std::string& idade,
 			int RG, double valorMinimo)
 {
 	gerente -> SetValorBonificacao(valorBonificacao);
 	gerente -> SetBonificacao(0);
 	gerente -> SetNome(nome);
-	gerente -> SetIdade(idade).
+	gerente -> SetIdade(idade);
 	gerente -> SetRGFuncionario(RG);
 	gerente -> SetSalarioBase(valorMinimo);
 }
@@ -62,7 +62,7 @@ int main()
     cliente2.print();
 
     Cliente cliente3;
-    NovoCliente(cliente3, "Otto Octavius", "Schenectady", "24051953");
+    NovoCliente(&cliente3, "Otto Octavius", "Schenectady", "24051953");
     cliente3.print();
 
     Cliente cliente4;
@@ -133,7 +133,6 @@ int main()
     int numTotalServicos = 0;
     numTotalServicos = e01.GetNumAtendimentos() + e02.GetNumAtendimentos() + e03.GetNumAtendimentos();
     g01.SetBonificacao(numTotalServicos);
-    g01.SetSalarioTotal();
     g01.print();
 
     return 0;

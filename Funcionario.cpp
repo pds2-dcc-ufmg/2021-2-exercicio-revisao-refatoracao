@@ -47,11 +47,12 @@ void Funcionario::SetRGFuncionario(int RG)
 
 void Funcionario::print()
 {	//Aqui, como ja se tem os atributos nome e salario base, é mais vantajoso ja os imprimir aqui
-	std::cout << "[Funcionario] << std::endl
-	<< " Nome: " << GetNome() << std::endl;
+	std::cout << "[Funcionario]" << std::endl
+	<< " Nome: " << GetNome() << std::endl
 	<< " Idade: " << GetIdade() << std::endl
 	<< " RGFunc: " << GetRGFuncionario() << std::endl
-	<< " Salario Base: R$" << std::setprecision(2) << std::fixed << GetSalarioBase();
+	<< " Salario Base: R$" << std::setprecision(2) << std::fixed << GetSalarioBase()
+	<< std::endl;
 }
 
 

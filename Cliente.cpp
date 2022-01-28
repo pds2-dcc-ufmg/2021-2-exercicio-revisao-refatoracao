@@ -18,26 +18,26 @@ std::string Cliente::GetCep()
 	return _cep;
 }
 
-void Cliente::SetNome(const std::string& nome)
+void Cliente::SetNome(std::string nome)
 {
 	this -> _nome = nome;
 }
 
-void Cliente::SetEndereco(const std::string& endereco)
+void Cliente::SetEndereco(std::string endereco)
 {
 	this -> _endereco = endereco;
 }
 
-void Cliente::SetCep(const std::string& cep)
+void Cliente::SetCep(std::string cep)
 {
 	this -> _cep = cep;
 }
 
 void Cliente::print(){
-\\Falta o espaço ser definido no endl + padronizar o espaçamento
+//Falta o espaço ser definido no endl + padronizar o espaçamento
 	std::cout << "[Cliente]" << std::endl
          << "  Nome: " << GetNome() << std::endl
-	 << "  Endereco: " << GetEndereco() << endl
+	 << "  Endereco: " << GetEndereco() << std::endl
 	 << "  CEP: " << GetCep() << std::endl;
 
 }

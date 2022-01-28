@@ -46,7 +46,7 @@ void Especialista::SetComissao(double valorVenda)
 
 void Especialista::Inicializacao()
 {
-	this -> _numAtendimento = 0;
+	this -> _numAtendimentos = 0;
 	this -> _salarioTotal = this -> salarioBase;
 }
 
@@ -57,10 +57,10 @@ void Especialista::NovoAtendimento()
 
 void Especialista::AcrescentaSalario()
 {
-	this -> _salarioTotal += this -> comissao;
+	this -> _salarioTotal += this -> _comissao;
 }
 
-voit Especialista:: print()
+void Especialista:: print()
 {
 	std::cout << "[Especialista]" << std::endl
 	<< " Especialidade: " << GetEspecialidade() << std::endl;
