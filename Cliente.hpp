@@ -2,19 +2,23 @@
 #define CLIENTE_H
 
 #include <string>
-using namespace std;
+//Removi o "using namespace"
 
 class Cliente{
 
-	public:
+    private:
+        std::string _nome;
+        std::string _endereco;
+        std::string _cep;       
 
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+        //Removi a Altura dos Pais, visto que não era usada
+    public:
+        Cliente();
+        Cliente(std::string nome, std::string endereco, std::string cep);  //Declaro os tipos de construtores
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+        void print(); // imprime na tela os dados de um cliente cadastrado
 
+       std::string getNome();
 };
 
 #endif
