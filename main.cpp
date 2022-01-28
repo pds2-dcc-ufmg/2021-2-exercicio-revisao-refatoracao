@@ -44,8 +44,6 @@ int main()
 
     Especialista e01 = Especialista(3000,"46","Peter Parker",27061975,"Fotografia");
     
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
     // e01.nome = "Peter Parker";
     // e01.IDADE = "46";
     // e01.rgFunc = 27061975;
@@ -55,8 +53,6 @@ int main()
 
 
     Especialista e02 = Especialista(1000,"56","Tony Stark",4041965,"Consertos de equipamentos eletronicos"); 
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
     // e02.nome = "Tony Stark";
     // e02.IDADE = "56";
     // e02.rgFunc = 4041965;
@@ -65,8 +61,6 @@ int main()
 
 
     Especialista e03 = Especialista(5000,"32","Wanda Maximoff",16021989,"Engenharia e Designeeeeer");
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
     // e03.nome = "Wanda Maximoff";
     // e03.IDADE = "32";
     // e03.rgFunc = 16021989;
@@ -84,58 +78,75 @@ int main()
 
 
     Venda v01 = Venda(100,"Fotos do Homem Aranha",e01,"J. Jonah Jameson");
+    e01.adicionarComissao(e01.comissao(v01.getValor()));
+    e01.adicionarAtendimento(1);       
         
     // v01.cliente= "J. Jonah Jameson";
     // v01.esp = e01;
     // v01.descricao = "Fotos do Homem Aranha";
     // v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.getValor());
-    numAtendimentos01+=1;
+    // comissao01 += e01.comissao(v01.getValor());
+    // numAtendimentos01+=1;
 
 
     Venda v02 = Venda(100,"Troca da tela do telefone",e02,"Bruce Benner");
+    e02.adicionarComissao(e02.comissao(v02.getValor()));
+    e02.adicionarAtendimento(1);       
+   
     // v02.cliente= "Bruce Benner";
     // v02.esp = e02;
     // v02.descricao = "Troca da tela do telefone";
     // v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.getValor());
-    numAtendimentos02+=1;
+    // comissao02 += e02.comissao(v02.getValor());
+    // numAtendimentos02+=1;
 
 
     Venda v03= Venda(150,"Fotos do novo planador",e01,"Norman Osborn");
+    e01.adicionarComissao(e01.comissao(v03.getValor()));
+    e01.adicionarAtendimento(1);       
+   
     // v03.cliente= "Norman Osborn";
     // v03.esp = e01;
     // v03.descricao = "Fotos do novo planador";
     // v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.getValor());
-    numAtendimentos01+=1;
+    // comissao01 += e01.comissao(v03.getValor());
+    // numAtendimentos01+=1;
 
 
     Venda v04 = Venda(10,"Recarga de cartucho",e02,"J. Jonah Jameson");
+    e02.adicionarComissao(e02.comissao(v04.getValor()));
+    e02.adicionarAtendimento(1);       
+   
     // v04.cliente= "J. Jonah Jameson";
     // v04.esp = e02;
     // v04.descricao = "Recarga de cartucho";
     // v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.getValor());
-    numAtendimentos02+=1;
+    // comissao02 += e02.comissao(v04.getValor());
+    // numAtendimentos02+=1;
 
 
     Venda v05 = Venda(10000,"Reconstrucao de Predio",e03,"Bruce Benner");
+    e03.adicionarComissao(e03.comissao(v05.getValor()));
+    e03.adicionarAtendimento(1);       
+   
     // v05.cliente= "Bruce Benner";
     // v05.esp = e03;
     // v05.descricao = "Reconstrucao de Predio";
     // v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.getValor());
-    numAtendimentos03+=1;
+    // comissao03 += e03.comissao(v05.getValor());
+    // numAtendimentos03+=1;
 
 
     Venda v06 = Venda(3000,"Decoracao de Apartamento no Brooklyn",e03,"Steve Rogers");
+    e03.adicionarComissao(e03.comissao(v06.getValor()));
+    e03.adicionarAtendimento(1);       
+   
     // v06.cliente= "Steve Rogers";
     // v06.esp = e03;
     // v06.descricao = "Decoracao de Apartamento no Brooklyn";
     // v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.getValor());
-    numAtendimentos03+=1;
+    // comissao03 += e03.comissao(v06.getValor());
+    // numAtendimentos03+=1;
 
 
     v06.setDescricao("Decoracao de Apartamento no Brooklyn");
@@ -144,21 +155,26 @@ int main()
 
 
     Venda v07 = Venda(5000,"Reforma do Clarim Diario",e03,"J. Jonah Jameson");
+    e03.adicionarComissao(e03.comissao(v07.getValor()));
+    e03.adicionarAtendimento(1);       
+    
     // v07.cliente= "J. Jonah Jameson";
     // v07.esp = e03;
     // v07.descricao = "Reforma do Clarim Diario";
     // v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.getValor());
-    numAtendimentos03+=1;
+    // comissao03 += e03.comissao(v07.getValor());
+    // numAtendimentos03+=1;
 
 
     Venda v08 = Venda(80,"Formatacao do PC",e02,"Otto Octavius");
+    e02.adicionarComissao(e02.comissao(v08.getValor()));
+    e02.adicionarAtendimento(1);       
     // v08.cliente= "Otto Octavius";
     // v08.esp = e02;
     // v08.descricao = "Formatacao do PC";
     // v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.getValor());
-    numAtendimentos02+=1;
+    //comissao02 += e02.comissao(v08.getValor());
+    //numAtendimentos02+=1;
 
 
 
@@ -198,23 +214,23 @@ int main()
 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
-    cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.getSalarioBase()+comissao01<<endl;
+    cout << "Num Atendimentos: " << e01.getNumAtendimento() << endl;
+    cout << "Salario Total: " << e01.calcularTotal()<<endl;
 
     e02.print();
-    cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.getSalarioBase()+comissao02<<endl;
+    cout << "Num Atendimentos: " << e02.getNumAtendimento() << endl;
+    cout << "Salario Total: " << e02.calcularTotal()<<endl;
 
     e03.print();
-    cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.getSalarioBase()+comissao03<<endl;
+    cout << "Num Atendimentos: " << e03.getNumAtendimento() << endl;
+    cout << "Salario Total: " << e03.calcularTotal()<<endl;
 
 
     int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
+    NUMTOTALservicos = e01.getNumAtendimento() + e02.getNumAtendimento() + e03.getNumAtendimento();
     g01.setBonificao(g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos));
     g01.print();
-    cout << "Salario Total: " << g01.getSalarioBase() + g01.getBonificacao()<<endl;
+    cout << "Salario Total: " << g01.calcularTotal()<<endl;
 
     return 0;
 }

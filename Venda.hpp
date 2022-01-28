@@ -30,7 +30,7 @@ class Venda{
             return _VALOR;
         }
         void setValor(double novoValor){
-            _Valor = novoValor;
+            _VALOR = novoValor;
         }
         void setDescricao(string novaDescricao){
             _descricao = novaDescricao;

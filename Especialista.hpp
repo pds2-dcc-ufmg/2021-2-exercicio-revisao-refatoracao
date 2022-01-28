@@ -14,8 +14,8 @@ class Especialista : public Funcionario {
 
     private:
         string _especialidade;
-    //     int _numAtendimento;
-    //     int _comissao
+        int _numAtendimento = 0;
+        double _comissao = 0;
     
     public:
         Especialista(double salarioBase,string Idade, string nome, int rgFunc,string especialidade){
@@ -26,6 +26,7 @@ class Especialista : public Funcionario {
             _especialidade = especialidade;          
         }
         Especialista() = default;
+
         double comissao(double ValorVenda) {
             double c = ValorVenda*perc;
                     return c;
@@ -35,6 +36,18 @@ class Especialista : public Funcionario {
         }
         string getNome(){
             return _nome;
+        }
+        void adicionarComissao(double comissao){
+            _comissao += comissao;
+        }
+        void adicionarAtendimento(int numAtendimento){
+            _numAtendimento += numAtendimento;
+        }
+        double calcularTotal(){
+            return _comissao+_SalarioBase;
+        }
+        int getNumAtendimento(){
+            return _numAtendimento;
         }
         void print() {
 

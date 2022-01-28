@@ -38,6 +38,9 @@ class Gerente : private Funcionario{
         double getSalarioBase(){
             return _SalarioBase;
         }
+        double calcularTotal(){
+            return _SalarioBase + _bonificacao;
+        }
         double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
             double x;
             return numTOTALVendas*ValorBONIFICACAO;
