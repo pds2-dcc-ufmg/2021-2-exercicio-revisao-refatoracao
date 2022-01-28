@@ -71,7 +71,6 @@ int main()
     e02.adicionarAtendimento(1);       
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
-
     v01.print();
     v02.print();
     v03.print();
@@ -84,16 +83,8 @@ int main()
 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
-    cout << "Num Atendimentos: " << e01.getNumAtendimento() << endl;
-    cout << "Salario Total: " << e01.calcularTotal()<<endl;
-
     e02.print();
-    cout << "Num Atendimentos: " << e02.getNumAtendimento() << endl;
-    cout << "Salario Total: " << e02.calcularTotal()<<endl;
-
     e03.print();
-    cout << "Num Atendimentos: " << e03.getNumAtendimento() << endl;
-    cout << "Salario Total: " << e03.calcularTotal()<<endl;
 
 
     int NUMTOTALservicos = 0;
