@@ -1,42 +1,85 @@
-
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef VENDA_H
+#define VENDA_H
 
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
-
-using namespace std;
+#include <iostream>
+#include <string>
 
 class Venda{
 
+    private:
+        double _VALOR;
+        std::string _descricao;
+        Especialista _esp;
+        std::string _cliente;
+
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+         /**
+         * @brief Atualiza o valor da venda
+         *
+         * @param valor Novo _VALOR
+         */
+        void setValor(const double& valor);
+
+		/**
+         * @brief Atualiza a descrição
+         *
+         * @param descricao nova _descricao
+         */
+        void setDescricao(const std::string& descricao);
 
 
-    void print() {
+		/**
+         * @brief Atualiza o especialista
+         *
+         * @param especialista Novo _esp
+         */
+        void setEspecialista(const Especialista& especialista);
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
 
-        std::cout << " Cliente: ";
-        cout << cliente;
+		/**
+         * @brief Atualiza o cliente
+         *
+         * @param cliente Novo _cliente
+         */
+        void setCliente(const std::string& cliente);				
 
-        //std::cout << " : ";
-        //cout << cliente;
-    }
 
-    /*void print() {
+		/**
+         * @brief Retorna o _VALOR
+         *
+         * @return double _VALOR
+         */
+		double getValor() const;
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
 
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+		/**
+         * @brief Retorna a descrição
+         *
+         * @return std::string _descricao
+         */
+		std::string getDescricao() const;
+
+		/**
+         * @brief Retorna o especialista
+         *
+         * @return Especialista _esp
+         */
+		Especialista getEspecialista() const;
+
+
+		/**
+         * @brief Retorna o cliente
+         *
+         * @return std::string _cliente
+         */
+		std::string getCliente() const;
+
+
+        void print();
+
 };
 
 #endif

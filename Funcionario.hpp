@@ -1,27 +1,83 @@
-#ifndef FUNCIONARIO_HPP
-#define FUNCIONARIO_HPP
+#ifndef FUNCIONARIO_H
+#define FUNCIONARIO_H
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 
-using namespace std;
 
 class Funcionario {
     public:
-        double SalarioBase; // valor mÌnimo recebido pelo funcion·rio
-        string IDADE;
-        string nome;
-        int rgFunc;
+        /**
+         * @brief Atualiza o sal√°rio base
+         *
+         * @param salario_base Novo sal√°rio base
+         */
+        void setSalarioBase(const double& salario_base);
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+		/**
+         * @brief Atualiza a idade
+         *
+         * @param idade nova idade
+         */
+        void setIDADE(const std::string& idade);
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+
+		/**
+         * @brief Atualiza o nome
+         *
+         * @param nome Novo nome do funcionario
+         */
+        void setNome(const std::string& nome);
+
+
+		/**
+         * @brief Atualiza o rg_Func
+         *
+         * @param rg_Func Novo rg_Func do funcionario
+         */
+        void setRgFunc(const int& rg_Func);				
+
+
+		/**
+         * @brief Retorna o SalarioBase
+         *
+         * @return double _SalarioBase
+         */
+		double getSalarioBase() const;
+
+
+		/**
+         * @brief Retorna a idade do funcionario
+         *
+         * @return std::string _IDADE
+         */
+		std::string getIdade() const;
+
+		/**
+         * @brief Retorna o nome do funcion√°rio
+         *
+         * @return std::string _nome
+         */
+		std::string getNome() const;
+
+
+		/**
+         * @brief Retorna o _rgFunc
+         *
+         * @return int _rgFunc
+         */
+		int getRgFunc() const;
+
+        virtual void print();
+
+        void print_oi();
+
+    private:
+        double _SalarioBase; // valor mÔøΩnimo recebido pelo funcionÔøΩrio
+        std::string _IDADE;
+        std::string _nome;
+        int _rgFunc;
 };
 
 #endif
