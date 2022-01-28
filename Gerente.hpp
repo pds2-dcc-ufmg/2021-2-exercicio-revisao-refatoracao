@@ -15,8 +15,8 @@ class Gerente : public Funcionario {
 
        double ValorBonificacao = 15.0;
 
-        void print();
-        double calculaBonificacaoGerente(int numTotalVendas);
+       void print();
+       double calculaBonificacaoGerente(int numTotalVendas);
 
 };
 
