@@ -6,7 +6,7 @@
 
 double ValorBONIFICACAO = 15.0;
 
-class Gerente : public Funcioario {
+class Gerente : public Funcionario {
     public:
         double bonificacao;
 
