@@ -1,217 +1,139 @@
 #include <iostream>
+#include <string>
 
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
-using namespace std;
 
+//Tais funções poderiam ter sido colocadas como construtores em suas classes tambem.
+void NovoCliente(Cliente * cliente, std::string nome, std::string endereco,
+			std::string cep)
+{
+	cliente -> SetNome(nome);
+	cliente -> SetEndereco(endereco);
+	cliente -> SetCep(cep);
+}
+
+void NovoEspecialista(Especialista * especialista, double valorMinimo, double perc, 
+				const std::string& nome, const std::string& idade, int RG,
+				const std::string& especialidade)
+{
+	especialista -> SetSalarioBase(valorMinimo);
+	especialista -> Inicializacao();
+	especialista -> SetPerc(perc);
+	especialista -> SetNome(nome);
+	especialista -> SetIdade(idade);
+	especialista -> SetRGFuncionario(RG);
+	especialista -> SetEspecialidade(especialidade);
+}
+	
+void NovoGerente(Gerente * gerente, int valorBonificacao, const std::string& nome, const std::string& idade,
+			int RG, double valorMinimo)
+{
+	gerente -> SetValorBonificacao(valorBonificacao);
+	gerente -> SetBonificacao(0);
+	gerente -> SetNome(nome);
+	gerente -> SetIdade(idade);
+	gerente -> SetRGFuncionario(RG);
+	gerente -> SetSalarioBase(valorMinimo);
+}
+
+void NovaVenda(Venda * venda, Cliente _cliente, Especialista * _especialista, const std::string& descricao,
+			double valor)
+{
+	venda -> cliente = _cliente;
+	venda -> especialista = *(_especialista);
+	venda -> SetDescricao(descricao);
+	venda -> SetValor(valor);
+	_especialista -> SetComissao(venda -> GetValor());
+	_especialista -> AcrescentaSalario();
+	_especialista -> NovoAtendimento();
+}	
 int main()
 {
     Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
+    NovoCliente(&cliente1, "J. Jonah Jameson", "Nova York", "35690000");
     cliente1.print();
 
     Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
+    NovoCliente(&cliente2, "Norman Osborn", "Hartlford", "22061955");
     cliente2.print();
 
     Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
+    NovoCliente(&cliente3, "Otto Octavius", "Schenectady", "24051953");
     cliente3.print();
 
     Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
+    NovoCliente(&cliente4, "Bruce Benner", "Dayton", "22111967");
     cliente4.print();
 
     Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
+    NovoCliente(&cliente5, "Steve Rogers", "Lower East Side", "13061981");
     cliente5.print();
 
 
-
-
     Especialista e01;
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
-
-
+    NovoEspecialista(&e01, 3000, 0.1, "Peter Parker", "46", 27061975, "Fotografia");
 
     Especialista e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
-
+    NovoEspecialista(&e02, 1000, 0.1, "Tony Stark", "56", 4041965, "Consertos de equipamentos eletronicos");
 
     Especialista e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
+    NovoEspecialista(&e03, 5000, 0.15, "Wanda Maximoff", "32", 16021989, "Engenharia e Designeeeeer");
 
 
     Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
+    NovoGerente(&g01, 15, "Nick Fury", "72", 21121948, 10000);
 
 
     Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
-
+    NovaVenda(&v01, cliente1, &e01, "Fotos do Homem Aranha", 100);
 
     Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
-    numAtendimentos02+=1;
-
+    NovaVenda(&v02, cliente4, &e02, "Troca da tela do telefone", 100);
 
     Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
-    numAtendimentos01+=1;
-
+    NovaVenda(&v03, cliente2, &e01, "Fotos do novo planador", 150);
 
     Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
-    numAtendimentos02+=1;
-
+    NovaVenda(&v04, cliente1, &e02, "Recarga de cartucho", 10);
 
     Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
-    numAtendimentos03+=1;
-
+    NovaVenda(&v05, cliente4, &e03, "Reconstrucao de Predio", 10000);
 
     Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
+    NovaVenda(&v06, cliente5, &e03, "Decoracao de Apartamento no Brooklyn", 3000);
 
     Venda v07;
-    v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
-    numAtendimentos03+=1;
-
+    NovaVenda(&v07, cliente1, &e03, "Reforma do Clarim Diario", 5000);
 
     Venda v08;
-    v08.cliente= "Otto Octavius";
-    v08.esp = e02;
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
-    numAtendimentos02+=1;
+    NovaVenda(&v08, cliente3, &e02, "Formatacao do PC", 80);
+ 
 
-
-
-    cout <<" \n \n           Relatorio das Vendas \n" << endl;
+    std::cout <<"           Relatorio das Vendas" << std::endl;
 
     v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
-
     v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
-
     v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
-
     v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
-
     v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
-
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
     v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
-
     v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
 
-
-
-
-
-
-    cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
+    std::cout <<"           Relatorio dos Funcionarios" << std::endl;
     e01.print();
-    cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
-
     e02.print();
-    cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
-
     e03.print();
-    cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
 
-
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    int numTotalServicos = 0;
+    numTotalServicos = e01.GetNumAtendimentos() + e02.GetNumAtendimentos() + e03.GetNumAtendimentos();
+    g01.SetBonificacao(numTotalServicos);
     g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
 
     return 0;
 }

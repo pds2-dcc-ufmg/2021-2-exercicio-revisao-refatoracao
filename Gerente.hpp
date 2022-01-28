@@ -4,32 +4,23 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
+//Gerente possui muitas caracteristicas em comum com Funcionario.
+#include "Funcionario.hpp"
 
-double ValorBONIFICACAO = 15.0;
-
-class Gerente {
+class Gerente : public Funcionario{
+    //Atributos publicos
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
+        double GetBonificacao();
+	double GetValorBonificacao();
 
+	void SetValorBonificacao(int valorBonificacao);
+	void SetBonificacao(int numTotalVendas);
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+        void print();
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+      private:
+	double _bonificacao;
+	double _valorBonificacao;
 
 };
 
