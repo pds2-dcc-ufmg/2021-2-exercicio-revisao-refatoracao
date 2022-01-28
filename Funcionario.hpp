@@ -10,7 +10,7 @@ class Funcionario {
 
     public:
 
-        double salarioBase; // valor mínimo recebido pelo funcionário
+        double salarioBase; // salario mínimo recebido pelo funcionário
         string idade;
         string nome;
         int rgFunc;
