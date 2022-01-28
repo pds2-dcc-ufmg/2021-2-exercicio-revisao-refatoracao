@@ -23,9 +23,6 @@ class Venda{
             _esp = esp;
             _cliente = cliente;
         }
-        string getDescricao(){
-            return _descricao;
-        }
         double getValor(){
             return _VALOR;
         }
@@ -43,18 +40,9 @@ class Venda{
             std::cout << " Cliente: ";
             cout << _cliente;
 
-            //std::cout << " : ";
-            //cout << cliente;
+            std::cout << " Descricao: " << _descricao << endl;
         }
 
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
 };
 
 #endif

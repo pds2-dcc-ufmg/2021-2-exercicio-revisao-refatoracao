@@ -10,37 +10,19 @@ using namespace std;
 int main()
 {
     Cliente cliente1 =  Cliente("J. Jonah Jameson","Nova York","35690000");
-    // cliente1.setNome("J. Jonah Jameson");
-    // cliente1.setEndereco("Nova York");
-	// cliente1.setCep("35690000");
     cliente1.print();
 
     Cliente cliente2 = Cliente("Norman Osborn","Hartlford","22061955");
-
-    // cliente2.setNome("Norman Osborn");
-    // cliente2.setEndereco("Hartlford");
-	// cliente2.setCep("22061955");
     cliente2.print();
 
     Cliente cliente3 = Cliente("Otto Octavius","Schenectady","24051953");
-    // cliente3.setNome("Otto Octavius");
-    // cliente3.setEndereco("Schenectady");
-	// cliente3.setCep("24051953");
     cliente3.print();
 
     Cliente cliente4 = Cliente("Bruce Benner","Dayton","22111967");
-    // cliente4.setNome("Bruce Benner");
-    // cliente4.setEndereco("Dayton");
-	// cliente4.setCep("22111967");
     cliente4.print();
 
     Cliente cliente5 = Cliente("Steve Rogers","Lower East Side","13061981");
-    // cliente5.setNome("Steve Rogers");
-    // cliente5.setEndereco("Lower East Side");
-	// cliente5.setCep("13061981");
     cliente5.print();
-
-
 
 
     Especialista e01 = Especialista(3000,"46","Peter Parker",27061975,"Fotografia");
@@ -48,6 +30,7 @@ int main()
     Especialista e02 = Especialista(1000,"56","Tony Stark",4041965,"Consertos de equipamentos eletronicos"); 
 
     Especialista e03 = Especialista(5000,"32","Wanda Maximoff",16021989,"Engenharia e Designeeeeer");
+
 
     Gerente g01 = Gerente(10000,"72","Nick Fury",21121948,0) ;
 
@@ -62,31 +45,22 @@ int main()
 
     Venda v03= Venda(150,"Fotos do novo planador",e01,"Norman Osborn");
     e01.adicionarComissao(e01.comissao(v03.getValor()));
-    e01.adicionarAtendimento(1);       
-   
-   
+    e01.adicionarAtendimento(1);          
 
     Venda v04 = Venda(10,"Recarga de cartucho",e02,"J. Jonah Jameson");
     e02.adicionarComissao(e02.comissao(v04.getValor()));
     e02.adicionarAtendimento(1);       
    
-
     Venda v05 = Venda(10000,"Reconstrucao de Predio",e03,"Bruce Benner");
     e03.adicionarComissao(e03.comissao(v05.getValor()));
     e03.adicionarAtendimento(1);       
-   
     
-
     Venda v06 = Venda(3000,"Decoracao de Apartamento no Brooklyn",e03,"Steve Rogers");
     e03.adicionarComissao(e03.comissao(v06.getValor()));
     e03.adicionarAtendimento(1);       
    
-    
-
     v06.setDescricao("Decoracao de Apartamento no Brooklyn");
     v06.setValor(3000);
-
-
 
     Venda v07 = Venda(5000,"Reforma do Clarim Diario",e03,"J. Jonah Jameson");
     e03.adicionarComissao(e03.comissao(v07.getValor()));
@@ -96,41 +70,17 @@ int main()
     e02.adicionarComissao(e02.comissao(v08.getValor()));
     e02.adicionarAtendimento(1);       
 
-
-
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
     v01.print();
-    cout << " Descricao: " << v01.getDescricao() << endl;
-
     v02.print();
-    cout << " Descricao: " << v02.getDescricao() << endl;
-
     v03.print();
-    cout << " Descricao: " << v03.getDescricao() << endl;
-
     v04.print();
-    cout << " Descricao: " << v04.getDescricao() << endl;
-
     v05.print();
-    cout << " Descricao: " << v05.getDescricao() << endl;
-
     v06.print();
-    cout << " Descricao: " << v06.getDescricao() << endl;
-
     v06.print();
-    cout << " Descricao: " << v06.getDescricao() << endl;
-
     v07.print();
-    cout << " Descricao: " << v07.getDescricao() << endl;
-
     v08.print();
-    cout << " Descricao: " << v08.getDescricao() << endl;
-
-
-
-
-
 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
