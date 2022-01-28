@@ -18,7 +18,7 @@ class Funcionario {
 	    << "  Nome: " << this->nome << std::endl
             << "  Idade: " << this->IDADE << std::endl
             << "  RGFunc: " << this->rgFunc << std::endl
-            << "  SalarioBase: R$ " << std::fixed << setprecision(2) << this->SalarioBase <<std::endl;
+            << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->SalarioBase <<std::endl;
         }
 
 };
