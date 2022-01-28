@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+
 #include "Venda.hpp"
 
 void Venda:: print() {
