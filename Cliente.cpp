@@ -11,9 +11,9 @@ void Cliente::Print(){
 
 }
 
-Cliente::Cliente(std::string Nome = ' ',
-		std::string Endereco = ' ',
-		std::string Cep = ' ') : Endereco(Endereco), Nome(Nome), Cep(Cep) {}
+Cliente::Cliente(std::string Nome = " ",
+		std::string Endereco = " ",
+		std::string Cep = " ") : Endereco(Endereco), Nome(Nome), Cep(Cep) {}
 
 std::string Cliente::getNome(){
 	return this->Nome;
