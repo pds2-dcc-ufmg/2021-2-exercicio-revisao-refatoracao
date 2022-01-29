@@ -68,11 +68,3 @@ std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes, st
     Venda* NovaVenda = new Venda(ValorVenda, Descricao, MeuEspecialista, MeuCliente);
     Vendas.push_back(NovaVenda);
 }
-
-
-template <class T>
-void ImprimeStatus(std::vector <T*> Impresso) {
-    for (const auto& iterator_1:Impresso){
-                iterator_1->Print();            
-    }
-}

@@ -27,6 +27,10 @@ void InsereVenda(double ValorVenda, std::string Descricao, std::string Especiali
 std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes, std::vector <Venda*> &Vendas);
 
 template <class T>
-void ImprimeStatus(std::vector <T*> Impresso);
+void ImprimeStatus(std::vector <T*> Impresso) {
+    for (const auto& iterator_1:Impresso){
+                iterator_1->Print();            
+    }
+}
 
 #endif
