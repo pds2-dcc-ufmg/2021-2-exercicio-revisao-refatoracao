@@ -6,25 +6,23 @@
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-using namespace std;
+//removi o namespace
+//using namespace std;
 
-class Venda{
+class Venda
+{
 
-    public:
-    double VALOR;
-    string descricao;
+public:
+    double valor_venda;
+    std::string descricao;
     Especialista esp;
-    string cliente;
+    std::string cliente;
 
+    void imprime_Venda()
+    {
 
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
+        std::cout << "Especialista: " << esp.nome_funcionario << ", Cliente: " << cliente << ",";
+        //alterei a impresão
         //std::cout << " : ";
         //cout << cliente;
     }
