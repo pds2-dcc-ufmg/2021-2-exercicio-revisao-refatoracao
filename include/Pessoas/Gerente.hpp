@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iomanip>
 
+#include "./Funcionario.hpp"
 using namespace std;
 
 double ValorBONIFICACAO = 15.0;

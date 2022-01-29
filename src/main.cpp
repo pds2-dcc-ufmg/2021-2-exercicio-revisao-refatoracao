@@ -1,10 +1,11 @@
 #include <iostream>
 
-#include "Cliente.hpp"
-#include "Funcionario.hpp"
-#include "Especialista.hpp"
-#include "Venda.hpp"
-#include "Gerente.hpp"
+#include ".././include/Pessoas/Gerente.hpp"
+#include ".././include/Pessoas/Cliente.hpp"
+#include ".././include/Pessoas/Funcionario.hpp"
+#include ".././include/Pessoas/Especialista.hpp"
+#include ".././include/Venda/Venda.hpp"
+
 using namespace std;
 
 int main()

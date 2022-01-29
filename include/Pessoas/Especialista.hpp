@@ -1,8 +1,8 @@
 #ifndef Especialista_HPP
 #define Especialista_HPP
 
-#include "Funcionario.hpp"
-#include "Cliente.hpp"
+#include "./Funcionario.hpp"
+#include "./Cliente.hpp"
 
 using namespace std;
 

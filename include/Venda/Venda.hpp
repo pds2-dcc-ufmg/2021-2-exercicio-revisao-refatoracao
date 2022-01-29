@@ -2,9 +2,9 @@
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
-#include "Funcionario.hpp"
-#include "Cliente.hpp"
-#include "Especialista.hpp"
+#include ".././Pessoas/Funcionario.hpp"
+#include ".././Pessoas/Cliente.hpp"
+#include ".././Pessoas/Especialista.hpp"
 
 using namespace std;
 

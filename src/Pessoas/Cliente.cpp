@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include "Cliente.hpp"
+#include "../../include/Pessoas/Cliente.hpp"
+
 
 void Cliente::print(){
 	std::cout << "[Cliente]" << endl
