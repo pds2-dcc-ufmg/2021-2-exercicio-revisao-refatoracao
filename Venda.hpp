@@ -13,6 +13,14 @@ class Venda{
     	std::string cliente;
 
 
+    Venda(double _VALOR, std::string _descricao, Especialista _esp, std::string _cliente){
+	this->VALOR=_VALOR;
+	this->descricao=_descricao;
+	this->esp=_esp;
+	this->cliente=_cliente;
+    }
+
+
     void print() {
 
         std::cout << "Especialista: " << this->esp.nome << std::endl;
