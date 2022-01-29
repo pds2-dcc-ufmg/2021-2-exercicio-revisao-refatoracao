@@ -2,38 +2,52 @@
 #define Especialista_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
 
-using namespace std;
 
 double perc = 0.1;
-double percWanda = 0.1;
 
 
 class Especialista : public Funcionario {
 
     public:
-
-    public:
-        string especialidade;
-
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+		double comissao;
+		int numAtendimentos;
+        std::string especialidade;
 
 
-    void print() {
+		Especialista(double _SalarioBase, std::string _IDADE, std::string _nome, int _rgFunc, std::string _especialidade){
+			this->SalarioBase=_SalarioBase;
+			this->IDADE=_IDADE;
+			this->nome=_nome;
+			this->rgFunc=_rgFunc;
+			this->especialidade=_especialidade;
+			this->comissao=0;
+			this->numAtendimentos=0;
+		}
 
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+		Especialista(){
+			this->SalarioBase=0.0;
+			this->IDADE="";
+			this->nome="";
+			this->rgFunc=0;
+			this->especialidade="";
+			this->comissao=0;
+			this->numAtendimentos=0;
+		}
 
 
+		void comissao_inc(double ValorVenda) {
+        	this->comissao+=ValorVenda*perc;
+			this->numAtendimentos++;
+    	}
 
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
 
-    }
+    	void print() {
+        	std::cout << "[Especialista]" << std::endl;
+        	this->Funcionario::print();
+			std::cout << "Num Atendimentos: " << this->numAtendimentos << std::endl;
+			std::cout << "Salario Total: " << this->SalarioBase+this->comissao<< std::endl;
+    	}
 };
 
 #endif
