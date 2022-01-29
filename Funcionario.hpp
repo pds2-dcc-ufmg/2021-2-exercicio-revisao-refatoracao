@@ -13,17 +13,10 @@ class Funcionario {
         std::string nome;
         int rgFunc;
 
-	Funcionario( double _SalarioBase, std::string _IDADE, std:: _nome, int _rgFunc){
-		this->SalarioBase=_SalarioBase;
-		this->IDADE=_IDADE;
-		this->nome=_nome;
-		this->rgFunc=_rgFunc;
-	}
-
 
         void print() {
             std::cout << "[Funcionario]" << std::endl
-	    << "  Nome: " << this->nome << std::endl
+	        << "  Nome: " << this->nome << std::endl
             << "  Idade: " << this->IDADE << std::endl
             << "  RGFunc: " << this->rgFunc << std::endl
             << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->SalarioBase <<std::endl;

@@ -6,7 +6,7 @@
 
 int main()
 {
-    Cliente cliente1("J. Jonah Jameson","Nova York","35690000";
+    Cliente cliente1("J. Jonah Jameson","Nova York","35690000");
     cliente1.print();
 
     Cliente cliente2("Norman Osborn", "Hartlford", "22061955");
@@ -24,50 +24,50 @@ int main()
 
 
 
-    Especialista e01( 3000, "46", "Peter Parker", 27061975, "Fotografia";
+    Especialista e01(3000.0, "46", "Peter Parker", 27061975, "Fotografia");
 
 
-    Especialista e02(1000, "56", "Tony Stark", 4041965, "Consertos de equipamentos eletronicos");
+    Especialista e02(1000.0, "56", "Tony Stark", 4041965, "Consertos de equipamentos eletronicos");
 
 
-    Especialista e03( 5000, "Wanda Maximoff", 16021989, "Engenharia e Designeeeeer");
-
-
-
-    Gerente g01(10000, "72", "Nick Fury", 21121948);
+    Especialista e03(5000.0,"32", "Wanda Maximoff", 16021989, "Engenharia e Designeeeeer");
 
 
 
-    Venda v01(100, "Fotos do Homem Aranha", e01, "J. Jonah Jameson");
-    e01.comissao(v01.VALOR);
+    Gerente g01(10000.0, "72", "Nick Fury", 21121948);
 
 
-    Venda v02(100, "Troca da tela do telefone", e02, "Bruce Benner");
-    e02.comissao(v02.VALOR);
+
+    Venda v01(100.0, "Fotos do Homem Aranha", e01, "J. Jonah Jameson");
+    e01.comissao_inc(v01.VALOR);
 
 
-    Venda v03(150, "Fotos do novo planador", e01, "Norman Osborn");
-    e01.comissao(v03.VALOR);
+    Venda v02(100.0, "Troca da tela do telefone", e02, "Bruce Benner");
+    e02.comissao_inc(v02.VALOR);
 
 
-    Venda v04(10, "Recarga de cartucho", e02, "J. Jonah Jameson");
-    e02.comissao(v04.VALOR);
+    Venda v03(150.0, "Fotos do novo planador", e01, "Norman Osborn");
+    e01.comissao_inc(v03.VALOR);
 
 
-    Venda v05(10000, "Reconstrucao de Predio", e03,"Bruce Benner");
-    e03.comissao(v05.VALOR);
+    Venda v04(10.0, "Recarga de cartucho", e02, "J. Jonah Jameson");
+    e02.comissao_inc(v04.VALOR);
 
 
-    Venda v06=(3000,"Decoracao de Apartamento no Brooklyn", e03, "Steve Rogers");
-    e03.comissao(v06.VALOR);
+    Venda v05(10000.0, "Reconstrucao de Predio", e03,"Bruce Benner");
+    e03.comissao_inc(v05.VALOR);
 
 
-    Venda v07(5000, "Reforma do Clarim Diario", e03, "J. Jonah Jameson");
-    e03.comissao(v07.VALOR);
+    Venda v06(3000.0,"Decoracao de Apartamento no Brooklyn", e03, "Steve Rogers");
+    e03.comissao_inc(v06.VALOR);
 
 
-    Venda v08(80, "Formatacao do PC", e02, "Otto Octavius");
-    e02.comissao(v08.VALOR);
+    Venda v07(5000.0, "Reforma do Clarim Diario", e03, "J. Jonah Jameson");
+    e03.comissao_inc(v07.VALOR);
+
+
+    Venda v08(80.0, "Formatacao do PC", e02, "Otto Octavius");
+    e02.comissao_inc(v08.VALOR);
 
 
 
@@ -102,7 +102,7 @@ int main()
 
 
     int NUMTOTALservicos = 0;
-    NUMTOTALservicos = e01.numAtendimentos + e02.numAtendimentos + e03numAtendimentos;
+    NUMTOTALservicos = e01.numAtendimentos + e02.numAtendimentos + e03.numAtendimentos;
     g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
     g01.print();
     std::cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<< std::endl;

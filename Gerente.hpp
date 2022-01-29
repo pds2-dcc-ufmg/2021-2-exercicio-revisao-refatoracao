@@ -10,14 +10,16 @@ class Gerente : public Funcionario {
     public:
         double bonificacao;
 
-	Gerente( double _SalarioBase, std::string _IDADE, std:: _nome, int _rgFunc){
-		this->Funcionario(_SalarioBase, _IDADE, _nome, _rgFunc);
-	}
+	    Gerente(double _SalarioBase, std::string _IDADE, std::string _nome, int _rgFunc){
+		    this->SalarioBase=_SalarioBase;
+			this->IDADE=_IDADE;
+			this->nome=_nome;
+			this->rgFunc=_rgFunc;
 
-
+        }
         void print() {
             std::cout << "[Gerente]" << std::endl;
-            this->Funcionario::print();
+            Funcionario::print();
         }
 
 
