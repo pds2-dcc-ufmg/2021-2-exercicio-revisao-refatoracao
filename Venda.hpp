@@ -6,37 +6,29 @@
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-using namespace std;
-
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+        double VALOR;
+        std::string descricao;
+        Especialista esp;
+        std::string cliente;
 
 
-    void print() {
+        void print() {
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
+            std::cout << "Especialista: ";
+            std::cout << esp.nome;
 
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+            std::cout << " Cliente: ";
+            std::cout << cliente;
+        }
 };
 
 #endif
+
+/*
+    *** O código duplicado que estava comentado foi retirado
+    *** O código comentado que estava dentro do método print foi retirado
+    ***
+*/
