@@ -35,7 +35,7 @@ class Funcionario {
                  // void setSalarioBase(double Salario){
         //     this->SalarioBase=Salario;
         // }
-        virtual void print();
+        virtual void Print();
         void print_oi();
 };
 
