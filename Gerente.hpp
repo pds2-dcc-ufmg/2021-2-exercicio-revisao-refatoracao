@@ -8,12 +8,10 @@
 static constexpr double VALOR_BONIFICACAO = 15.0;
 
 class Gerente : public Funcionario {
-    private:
-        double Bonificacao;
 
     public:
         Gerente(double Salario, std::string Idade,
-         std::string Nome, int RgFuncionario, double Bonificacao);
+         std::string Nome, int RgFuncionario);
         ~Gerente();
 
 

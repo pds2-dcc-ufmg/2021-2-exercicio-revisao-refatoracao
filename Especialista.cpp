@@ -17,6 +17,8 @@ void Especialista::Print() {
         Funcionario::Print();
         std::cout << "  Nome: " << this->getNome() << std::endl
         << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->getSalarioBase() <<std::endl;
+        std::cout << "Num Atendimentos: " << this->getNumAtendimentos() << std::endl;      
+        std::cout << "Salario Total: " << this->getSalarioTotal() << std::endl; 
     }
 Especialista::~Especialista(){
         delete this;
