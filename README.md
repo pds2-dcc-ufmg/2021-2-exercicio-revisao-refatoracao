@@ -11,3 +11,20 @@ No **título** do seu Pull Request, informe o valor **MD5** obtido a partir da s
 
 Lembre-se de analisar aspectos como: nomenclatura, formatação, organização, comentários, aplicação correta dos conceitos de OO, entre outros.
 Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração (https://refactoring.com/catalog/).
+
+
+    *** Aalterações:
+    
+    Todos "include namespace std" foram retirados e "std::" adicionado antes de cada uso (Para todos os códigos).
+    
+    Ainda no .cpp foi retirado o "#include <string>", este include já é feito 
+no .hpp e paassado na chamada do "#include "Cliente.hpp"". (CLiente.cpp).
+
+    Variáveis com nomes sem significado (como double c) foram substituídas por um nome que se relacione com
+o código.
+
+	Códigos comentados e sem propísito e códigos duplicados foram retirados.
+
+    A variável "bonificacao" passou a ser apontada pelo método "calcula_BONIFICACAO_GERENTE" e seu valor é calculado dentro
+    do próprio método.
+
