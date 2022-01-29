@@ -1,0 +1,28 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar",
+            "type": "shell",
+            "command": "g++ -std=c++11 -Wall main.cpp Cliente.cpp Especialista.cpp Funcionario.cpp Gerente.cpp Venda.cpp -o Executavel -g",
+            //"command": "g++ -std=c++11 -Wall main.cpp Disciplina.cpp  Alocacao.cpp QuadroAlocacao.cpp -o Executavel -g",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Executar",
+            "type": "shell",
+            "command": "./Executavel < in2.txt",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}
