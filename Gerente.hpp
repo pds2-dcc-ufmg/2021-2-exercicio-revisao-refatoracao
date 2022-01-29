@@ -1,37 +1,42 @@
 #ifndef GERENTE_HPP
 #define GERENTE_HPP
 
+#include "Funcionario.hpp"
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
 
-double ValorBONIFICACAO = 15.0;
 
-class Gerente {
-    public:
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-        string IDADE;
-        string nome;
-        int rgFunc;
+
+
+class Gerente : public Funcionario {
+
+    private: 
+
+        Funcionario* mf;
         double bonificacao;
 
+    public:
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+        double valorBonificacao = 15.0;
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+        //Declarar um construtor da classe
+        Gerente(Funcionario *f, double bonificacao);
+
+        virtual ~Gerente();
+
+        void print() override;
+
+        double calculaBonificacaoGerente(int numTotalVendas);
+
+        double calculaSalario();
+
+        void setBonificacao(double bonificacao);
 
 };
+
+// Após as alterações Gerente agora é uma instância de Funcionario, declaração dos metodos calculaSalario e setBonificacao, algumas variáveis inutilizadas foram comentadas
+//e declarado um construtor para a classe além de que agora o "hpp" só possui as declarações
 
 #endif
 

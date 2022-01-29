@@ -2,38 +2,54 @@
 #define Especialista_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
 
-using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
+// Não é uma boa prática utilizar namespaces em escopo global, pois pode gerar conflitos
+//using namespace std;
+
+
+
+//Variável não utilizada
+//double percWanda = 0.1;
 
 
 class Especialista : public Funcionario {
 
-    public:
+    private:
+        std::string especialidade;
+        Funcionario* mf;
+        int numAtendimentos;
+        double comissao;
+        //As variáveis numAtendimentos e comissao agora são próprias da classe
 
     public:
-        string especialidade;
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+        double perc = 0.1;
 
+        //Os nomes das funções e das variáveis devem ser bem escolhidos de forma a esclarecer o código
+        Especialista(Funcionario *f, std::string especialidade, int numAtendimentos);
 
-    void print() {
+        Especialista();
 
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+        virtual ~Especialista();
+        
+        double calculaComissao(double valorVenda);
 
+        double calculaSalario();
 
+        void setComissao(int comissao_);
 
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+        double getComissao();
 
-    }
+        void setAtendimentos(int atendimentos_);
+
+        int getAtendimentos();
+
+        void print() override;
 };
+
+//Declarando as variaveis como private, retirando o include "Cliente.hpp" o qual é desnecessario,
+//padronizando o layout das variáveis, alterando o nome das funções de forma a melhor compreensão
+//,modularizando em hpp/cpp e a declaração dos metodos setComissao, getComissao, setAtendimentos, getAtendimentos e calculaSalario
 
 #endif
