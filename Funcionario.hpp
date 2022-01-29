@@ -4,24 +4,23 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
 
-class Funcionario {
+class Funcionario{
+
     public:
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-        string IDADE;
-        string nome;
+        double salarioBase;
+        std::string idade, nome;
         int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+        Funcionario(double salarioBase, std::string idade, std::string nome, int rgFunc);
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        virtual ~Funcionario();
+
+        Funcionario();
+
+        virtual void print();
+
 };
 
+//Funcionario agora é uma classe abstrata, base para as outras e print é um metodo virtual, além da declaração dos construtores.
 #endif
