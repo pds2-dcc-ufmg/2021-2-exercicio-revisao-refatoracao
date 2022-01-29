@@ -89,9 +89,9 @@ int main()
 
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = e01.getNumAtendimento() + e02.getNumAtendimento() + e03.getNumAtendimento();
+  
     g01.setBonificao(g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos));
     g01.print();
-    cout << "Salario Total: " << g01.calcularTotal()<<endl;
 
     return 0;
 }

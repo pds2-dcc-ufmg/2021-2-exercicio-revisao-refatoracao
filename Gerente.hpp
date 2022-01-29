@@ -20,6 +20,8 @@ class Gerente : private Funcionario{
             << "  Idade: " << _IDADE << endl
             << "  RGFunc: " << _rgFunc << endl
             << "  SalarioBase: R$ " << fixed << setprecision(2) << _SalarioBase <<endl;
+            cout << "Salario Total: " << calcularTotal()<<endl;
+
         }
         Gerente(double salarioBase, string Idade, string nome, int rgFunc,double bonificacao){
             _IDADE = Idade;
