@@ -28632,6 +28632,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 using namespace std;
 
 class Cliente{
+
  public:
 
   string NOME;

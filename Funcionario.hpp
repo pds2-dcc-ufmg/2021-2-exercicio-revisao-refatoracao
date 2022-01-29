@@ -19,13 +19,15 @@ class Funcionario {
         std::string Idade;
         std::string Nome;
         int RgFuncionario;
+        double SalarioTotal;
 
     public:
 
         virtual ~Funcionario(){};
 
+        double getSalarioTotal();
         double getSalarioBase();
-        void setSalarioBase(double ValorAdicionado);
+        void setSalarioTotal(double ValorAdicionado);
         std::string getIdade();
         std::string getNome();
         int getRgFuncionario();
@@ -37,7 +39,6 @@ class Funcionario {
         //     this->SalarioBase=Salario;
         // }
         virtual void Print();
-        void print_oi();
 };
 
 #endif

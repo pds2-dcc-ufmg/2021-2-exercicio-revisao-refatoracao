@@ -13,6 +13,6 @@ void Venda::Print() {
         std::cout << "Especialista: ";
         std::cout << this->_Especialista->getNome();
 
-        std::cout << " Cliente: ";
-         this->_Cliente->Print();
+        std::cout << " Cliente: "<<
+         this->_Cliente->getNome();
 }

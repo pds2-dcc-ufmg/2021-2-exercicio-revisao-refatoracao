@@ -26,10 +26,9 @@ double Bonificacao, std::vector <Gerente*> &Gerentes){
 void InsereVenda(double ValorVenda, std::string Descricao, std::string EspecialistaVenda, std::string ClienteVenda,
 std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes, std::vector <Venda*> &Vendas){
 
-    /* Variaveis que verificam se o cliente e o especialista da venda foram encontrados
+    /* Variavel que verificam se o cliente e o especialista da venda foram encontrados
     */
-   Cliente* MeuCliente;
-   Especialista* MeuEspecialista;
+   Cliente* MeuCliente; Especialista* MeuEspecialista;
 
     bool ClienteEncontrado = false;
     bool EspecialistaEcontrado = false; 
@@ -45,7 +44,7 @@ std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes, st
                 if (EspecialistaVenda == iterator_2->getNome()){
                 MeuEspecialista = iterator_2;
                 EspecialistaEcontrado = true;
-                MeuEspecialista->setSalarioBase(MeuEspecialista->getComissao(ValorVenda));
+                MeuEspecialista->setSalarioTotal(MeuEspecialista->getComissao(ValorVenda));
                 }
             }
 
@@ -76,9 +75,9 @@ int main()
         InsereEspecialista(1000, "56", "Tony Stark", 4041965, "Consertos de equipamentos eletronicos", 0, 0, Especialistas);
         InsereEspecialista(5000, "32", "Wanda Maximoff", 16021989,  "Engenharia e Designeeeeer", 0, 0, Especialistas);
 
-            for (const auto& iterator_1:Especialistas){
-                iterator_1->Print();
-            }
+            // for (const auto& iterator_1:Especialistas){
+            //     iterator_1->Print();
+            // }
         
     std::vector<Gerente*> Gerentes;
         InsereGerente(10000, "72", "Nick Fury", 21121948, 0, Gerentes);
@@ -109,6 +108,7 @@ int main()
             for (const auto& iterator_1:Especialistas){
                 iterator_1->Print();
                 std::cout << "Num Atendimentos: " << iterator_1->getNumAtendimentos() << std::endl;      
+                std::cout << "Salario Total: " << iterator_1->getSalarioTotal() << std::endl; 
                  NumTotalservicos+=iterator_1->getNumAtendimentos(); 
             }
 

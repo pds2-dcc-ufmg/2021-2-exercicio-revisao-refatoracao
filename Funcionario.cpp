@@ -1,22 +1,23 @@
 #include "Funcionario.hpp"
 
 Funcionario::Funcionario(double Salario, std::string Idade,
-         std::string Nome, int RgFuncionario) : SalarioBase(Salario), Idade(Idade), Nome(Nome), RgFuncionario(RgFuncionario) {}
+         std::string Nome, int RgFuncionario) : SalarioBase(Salario), Idade(Idade), Nome(Nome), RgFuncionario(RgFuncionario),
+         SalarioTotal(Salario) {}
 
 
 void Funcionario::Print() {
             std::cout << "[Funcionario]" << std::endl
             << "  Idade: " << Idade << std::endl
             << "  RGFunc: " << RgFuncionario << std::endl;
-        }
-void Funcionario::print_oi(){
-            std::cout << "Tchau" << std::endl;
-        }
+}
+double Funcionario::getSalarioTotal(){
+            return this->SalarioTotal;
+}
 double Funcionario::getSalarioBase(){
             return this->SalarioBase;
 }
-void Funcionario::setSalarioBase(double ValorAdicionado){
-    this->SalarioBase+=ValorAdicionado;
+void Funcionario::setSalarioTotal(double ValorAdicionado){
+    this->SalarioTotal+=ValorAdicionado;
 }
 std::string Funcionario::getIdade(){
             return this->Idade;

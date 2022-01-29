@@ -13,6 +13,7 @@ class Venda{
     std::string Descricao;
     Especialista* _Especialista;
     Cliente* _Cliente;
+    
 
 
     public:
@@ -21,18 +22,6 @@ class Venda{
     std::string getDescricao();
 
     void Print();
-
-        //std::cout << " : ";
-        //cout << cliente;
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
 };
 
 #endif
