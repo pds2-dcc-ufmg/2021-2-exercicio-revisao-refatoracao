@@ -13,22 +13,10 @@ class Funcionario {
         string _nome;
         int _rgFunc;
 
-        Funcionario(double salarioBase,string Idade, string nome, int rgFunc){
-            _IDADE = Idade;
-            _SalarioBase = salarioBase;
-            _nome = nome;
-            _rgFunc = rgFunc;
-        }
+        Funcionario(double salarioBase,string Idade, string nome, int rgFunc);
         Funcionario() = default;
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << _IDADE << endl
-            << "  RGFunc: " << _rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        void print() ;
+        void print_oi();
 };
 
 #endif
