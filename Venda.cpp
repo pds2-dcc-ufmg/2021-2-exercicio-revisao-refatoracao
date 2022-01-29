@@ -21,7 +21,8 @@ void Venda::Print() {
          this->_Cliente->getNome();
 
         std::cout << " Descricao: "<<
-         this->getDescricao();
+         this->getDescricao()<< std::endl;
+
 
 }
 void Venda::setGerente(Gerente* _Gerente){

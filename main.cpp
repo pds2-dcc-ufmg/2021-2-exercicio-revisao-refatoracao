@@ -11,17 +11,23 @@ void InsereCliente (std::string Nome, std::string Endereco, std::string Cep,  st
     Cliente* NovoCliente = new Cliente(Nome, Endereco, Cep);
     Clientes.push_back(NovoCliente);
 }
+
+
 void InsereEspecialista(double Salario, std::string Idade, std::string Nome, int RgFuncionario, 
 std::string Especialidade, int NumAtendimentos, double Comissao, std::vector <Especialista*> &Especialistas){
     Especialista* NovoEspecialista = new Especialista (Salario, Idade, Nome, RgFuncionario, 
     Especialidade, NumAtendimentos,Comissao);
     Especialistas.push_back(NovoEspecialista);
 }
+
+
 void InsereGerente(double Salario, std::string Idade, std::string Nome, int RgFuncionario,
 std::vector <Gerente*> &Gerentes){
     Gerente* NovoGerente = new Gerente (Salario, Idade, Nome, RgFuncionario);
     Gerentes.push_back(NovoGerente);
 }
+
+
 Cliente* VerificaClienteDaVenda (std::string ClienteVenda, std::vector <Cliente*> &Clientes){
      Cliente* MeuCliente;
                 for(const auto& iterator_1:Clientes){
@@ -30,8 +36,9 @@ Cliente* VerificaClienteDaVenda (std::string ClienteVenda, std::vector <Cliente*
                 }
             }
         return MeuCliente;
-
 }
+
+
 Especialista* VerificaEspecialistaDaVenda (std::string EspecialistaVenda, std::vector <Especialista*> &Especialistas){
      Especialista* MeuEspecialista;
                 for(const auto& iterator_1:Especialistas){
@@ -40,8 +47,9 @@ Especialista* VerificaEspecialistaDaVenda (std::string EspecialistaVenda, std::v
                 }
             }
         return MeuEspecialista;
-
 }
+
+
 void setGerenteDaVenda (std::string GerenteVenda, std::vector <Gerente*> &Gerentes, std::vector <Venda*> &Vendas ){
     Gerente* MeuGerente;
     int NumTotalServicos = Vendas.size();
@@ -54,8 +62,8 @@ void setGerenteDaVenda (std::string GerenteVenda, std::vector <Gerente*> &Gerent
                     iterator_2->setGerente(MeuGerente);
                 }
                 MeuGerente->setSalarioTotal(MeuGerente->calculaBonificacaoGerente(NumTotalServicos));
-
 }
+
 
 void InsereVenda(double ValorVenda, std::string Descricao, std::string EspecialistaVenda, std::string ClienteVenda,
 std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes, std::vector <Venda*> &Vendas){
@@ -68,6 +76,13 @@ std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes, st
 }
 
 
+template <class T>
+void ImprimeStatus(std::vector <T*> Impresso){
+    for (const auto& iterator_1:Impresso){
+                iterator_1->Print();            
+         }
+
+}
 
 
 int main()
@@ -97,34 +112,18 @@ int main()
         InsereVenda(5000,  "Reforma do Clarim Diario", "Wanda Maximoff", "J. Jonah Jameson", Especialistas, Clientes, Vendas1);
         InsereVenda(80, "Formatacao do PC", "Tony Stark", "Otto Octavius", Especialistas, Clientes, Vendas1);
         setGerenteDaVenda("Nick Fury", Gerentes, Vendas1);
-    
-            for (const auto& iterator_1:Clientes){
-                iterator_1->Print();
-            }
-
-    std::cout <<" \n \n           Relatorio das Vendas \n" << std::endl;
-
-        for (const auto& iterator_1:Vendas1){
-                iterator_1->Print();
-                std::cout <<std::endl;
-                
-         }
 
 
-    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
-  
-            for (const auto& iterator_1:Especialistas){
-                iterator_1->Print();
-            }
-    
-            for (const auto& iterator_1:Gerentes){
-                iterator_1->Print();
-            }
+        ImprimeStatus<Cliente>(Clientes);
 
-    
-    // g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
-    // g01.print();
-    // cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+        std::cout <<" \n \n           Relatorio das Vendas \n" << std::endl;
+
+        ImprimeStatus<Venda>(Vendas1);
+
+        std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
+
+        ImprimeStatus<Especialista>(Especialistas);
+        ImprimeStatus<Gerente>(Gerentes);
 
     return 0;
 }
