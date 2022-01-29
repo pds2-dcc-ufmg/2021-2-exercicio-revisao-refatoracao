@@ -6,10 +6,6 @@
 
 using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
-
-
 class Especialista : public Funcionario {
 
     private:
@@ -18,49 +14,17 @@ class Especialista : public Funcionario {
         double _comissao = 0;
     
     public:
-        Especialista(double salarioBase,string Idade, string nome, int rgFunc,string especialidade){
-            _IDADE = Idade;
-            _SalarioBase = salarioBase;
-            _nome = nome;
-            _rgFunc = rgFunc;
-            _especialidade = especialidade;          
-        }
+        Especialista(double salarioBase,string Idade, string nome, int rgFunc,string especialidade);
         Especialista() = default;
 
-        double comissao(double ValorVenda) {
-            double c = ValorVenda*perc;
-                    return c;
-        }
-        double getSalarioBase(){
-            return _SalarioBase;
-        }
-        string getNome(){
-            return _nome;
-        }
-        void adicionarComissao(double comissao){
-            _comissao += comissao;
-        }
-        void adicionarAtendimento(int numAtendimento){
-            _numAtendimento += numAtendimento;
-        }
-        double calcularTotal(){
-            return _comissao+_SalarioBase;
-        }
-        int getNumAtendimento(){
-            return _numAtendimento;
-        }
-        void print() {
-
-            std::cout << "[Especialista]" << endl;
-            Funcionario::print();
-
-            std::cout << "  Nome: " << _nome << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << _SalarioBase <<endl;
-
-            std::cout << "Num Atendimentos: " << _numAtendimento << endl;
-
-            std::cout << "Salario Total: " << calcularTotal()<<endl;
-        }
+        double comissao(double ValorVenda);
+        double getSalarioBase();
+        string getNome();
+        void adicionarComissao(double comissao);
+        void adicionarAtendimento(int numAtendimento);
+        double calcularTotal();
+        int getNumAtendimento();
+        void print();
 };
 
 #endif
