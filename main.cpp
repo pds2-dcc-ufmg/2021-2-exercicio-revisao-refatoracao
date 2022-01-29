@@ -5,80 +5,53 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
-using namespace std;
+#include <vector>
+void InsereCliente (std::string Nome, std::string Endereco, std::string Cep,  std::vector <Cliente*> &Clientes){
+    Cliente* NovoCliente = new Cliente(Nome, Endereco, Cep);
+    Clientes.push_back(NovoCliente);
+}
+
+void InsereEspecialista(double Salario, std::string Idade, std::string Nome, int RgFuncionario, 
+std::string Especialidade, int NumAtendimentos, double Comissao, std::vector <Especialista*> &Especialistas){
+    Especialista* NovoEspecialista = new Especialista (Salario, Idade, Nome, RgFuncionario, 
+    Especialidade, NumAtendimentos,Comissao);
+    Especialistas.push_back(NovoEspecialista);
+}
+void InsereGerente(double Salario, std::string Idade, std::string Nome, int RgFuncionario,
+double Bonificacao, std::vector <Gerente*> &Gerentes){
+    Gerente* NovoGerente = new Gerente (Salario, Idade, Nome, RgFuncionario, Bonificacao);
+    Gerentes.push_back(NovoGerente);
+}
+void InsereVenda(){}
+
 
 int main()
 {
-    Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
-    cliente1.print();
+    std::vector <Cliente*> Clientes;
+        InsereCliente("J. Jonah Jameson", "Nova York", "35690000", Clientes);
+        InsereCliente("Norman Osborn", "Hartlford", "22061955", Clientes);
+        InsereCliente("Otto Octavius", "Schenectady", "24051953", Clientes);
+        InsereCliente("Bruce Benner", "Dayton", "22111967", Clientes);
+        InsereCliente("Steve Rogers", "Lower East Side", "13061981", Clientes);
 
-    Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
+            for (const auto& iterator_1:Clientes){
+                iterator_1->Print();
+            }
+     std::vector <Especialista*> Especialistas;
+        InsereEspecialista(3000, "46", "Peter Parker", 27061975, "Fotografia", 0, 0, Especialistas);
+        InsereEspecialista(1000, "56", "Tony Stark", 4041965, "Consertos de equipamentos eletronicos", 0, 0, Especialistas);
+        InsereEspecialista(5000, "32", "Wanda Maximoff", 16021989,  "Engenharia e Designeeeeer", 0, 0, Especialistas);
 
-    Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
-
-    Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
-
-    Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
-
-
-
+            for (const auto& iterator_1:Clientes){
+                iterator_1->Print();
+            }
+        
+    std::vector<Gerente*> Gerentes;
+        InsereGerente(10000, "72", "Nick Fury", 21121948, 0, Gerentes);
     
-    Especialista e01;
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
+    std::vector<Venda*> Vendas;
+        InsereVenda()
 
-
-
-    Especialista e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
-
-
-    Especialista e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
-
-
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
 
 
     Venda v01;

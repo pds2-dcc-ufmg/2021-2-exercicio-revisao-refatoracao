@@ -2,7 +2,7 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+void Cliente::Print(){
 
 	std::cout << "[Cliente]" << std::endl
          << "  Nome: " << this->Nome << std::endl
@@ -10,4 +10,8 @@ void Cliente::print(){
 		 << "  CEP: " << this->Cep << std::endl;
 
 }
+
+Cliente::Cliente(std::string Nome,
+		std::string Endereco,
+		std::string Cep) : Endereco(Endereco), Nome(Nome), Cep(Cep) {}
 

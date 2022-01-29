@@ -12,7 +12,11 @@ class Cliente{
 		std::string Cep;
 		
 	public:
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		Cliente(std::string Nome,
+		std::string Endereco,
+		std::string Cep);
+
+		void Print(); // imprime na tela os dados de um cliente cadastrado
 
 };
 
