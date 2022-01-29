@@ -24,7 +24,7 @@ double Bonificacao, std::vector <Gerente*> &Gerentes){
 }
 
 void InsereVenda(double ValorVenda, std::string Descricao, std::string EspecialistaVenda, std::string ClienteVenda,
-std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes){
+std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes, std::vector <Venda*> &Vendas){
 
     /* Variaveis que verificam se o cliente e o especialista da venda foram encontrados
     */
@@ -51,6 +51,7 @@ std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes){
 
         if (EspecialistaEcontrado && ClienteEncontrado){
             Venda* NovaVenda = new Venda(ValorVenda, Descricao, MeuEspecialista, MeuCliente);
+            Vendas.push_back(NovaVenda);
         }
 
 
@@ -75,7 +76,7 @@ int main()
         InsereEspecialista(1000, "56", "Tony Stark", 4041965, "Consertos de equipamentos eletronicos", 0, 0, Especialistas);
         InsereEspecialista(5000, "32", "Wanda Maximoff", 16021989,  "Engenharia e Designeeeeer", 0, 0, Especialistas);
 
-            for (const auto& iterator_1:Clientes){
+            for (const auto& iterator_1:Especialistas){
                 iterator_1->Print();
             }
         
@@ -83,14 +84,14 @@ int main()
         InsereGerente(10000, "72", "Nick Fury", 21121948, 0, Gerentes);
     
     std::vector<Venda*> Vendas;
-        InsereVenda(100,  "Fotos do Homem Aranha", "Peter Parker", "J. Jonah Jameson", Especialistas, Clientes);
-        InsereVenda(100,  "Troca da tela do telefone", "Tony Stark", "Bruce Benner", Especialistas, Clientes);
-        InsereVenda(150,  "Fotos do novo planador", "Peter Parker", "Norman Osborn", Especialistas, Clientes);        
-        InsereVenda(10,  "Recarga de cartucho", "Tony Stark", "J. Jonah Jameson", Especialistas, Clientes);
-        InsereVenda(10000,  "Reconstrucao de Predio", "Wanda Maximoff", "Bruce Benner", Especialistas, Clientes);
-        InsereVenda(3000,  "Decoracao de Apartamento no Brooklyn", "Wanda Maximoff", "Steve Rogers", Especialistas, Clientes);
-        InsereVenda(5000,  "Reforma do Clarim Diario", "Wanda Maximoff", "J. Jonah Jameson", Especialistas, Clientes);
-        InsereVenda(80, "Formatacao do PC", "Tony Stark", "Otto Octavius", Especialistas, Clientes);
+        InsereVenda(100,  "Fotos do Homem Aranha", "Peter Parker", "J. Jonah Jameson", Especialistas, Clientes, Vendas);
+        InsereVenda(100,  "Troca da tela do telefone", "Tony Stark", "Bruce Benner", Especialistas, Clientes, Vendas);
+        InsereVenda(150,  "Fotos do novo planador", "Peter Parker", "Norman Osborn", Especialistas, Clientes, Vendas);        
+        InsereVenda(10,  "Recarga de cartucho", "Tony Stark", "J. Jonah Jameson", Especialistas, Clientes, Vendas);
+        InsereVenda(10000,  "Reconstrucao de Predio", "Wanda Maximoff", "Bruce Benner", Especialistas, Clientes, Vendas);
+        InsereVenda(3000,  "Decoracao de Apartamento no Brooklyn", "Wanda Maximoff", "Steve Rogers", Especialistas, Clientes, Vendas);
+        InsereVenda(5000,  "Reforma do Clarim Diario", "Wanda Maximoff", "J. Jonah Jameson", Especialistas, Clientes, Vendas);
+        InsereVenda(80, "Formatacao do PC", "Tony Stark", "Otto Octavius", Especialistas, Clientes, Vendas);
 
 
 

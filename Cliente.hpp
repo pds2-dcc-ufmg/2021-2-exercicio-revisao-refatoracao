@@ -6,9 +6,8 @@
 class Cliente{
 
 	private:
-
-		std::string Nome;
 		std::string Endereco;
+		std::string Nome;
 		std::string Cep;
 		
 	public:

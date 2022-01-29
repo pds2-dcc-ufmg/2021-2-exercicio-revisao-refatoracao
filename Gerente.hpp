@@ -14,13 +14,12 @@ class Gerente : public Funcionario {
     public:
         Gerente(double Salario, std::string Idade,
          std::string Nome, int RgFuncionario, double Bonificacao);
+        ~Gerente();
 
 
         void Print() override;
 
-        double calculaBonificacaoGerente(int NumTotalVendas){
-            return NumTotalVendas*VALOR_BONIFICACAO;
-        }
+        double calculaBonificacaoGerente(int NumTotalVendas);
 
 };
 
