@@ -25,20 +25,17 @@ class Funcionario {
 
         virtual ~Funcionario(){};
 
-        double getSalarioTotal();
-        double getSalarioBase();
+        double getSalarioTotal() const;
+        double getSalarioBase() const ;
         void setSalarioTotal(double ValorAdicionado);
-        std::string getIdade();
-        std::string getNome();
-        int getRgFuncionario();
+        std::string getIdade() const;
+        std::string getNome() const;
+        int getRgFuncionario() const;
 
         Funcionario(double Salario, std::string Idade,
          std::string Nome, int RgFuncionario);
-         
-                 // void setSalarioBase(double Salario){
-        //     this->SalarioBase=Salario;
-        // }
-        virtual void Print();
+
+        virtual void Print() const;
 };
 
 #endif

@@ -9,12 +9,11 @@ double Especialista::getComissao(double ValorVenda) {
         double ComissaoFuncionario = ValorVenda*PERCENTUAL_COMISSAO;
         this->NumAtendimentos++;
         return ComissaoFuncionario;
-    }
+}
 
-void Especialista::Print() {
+void Especialista::Print() const {
 
         std::cout << "[Especialista]" << std::endl;
-        Funcionario::Print();
         std::cout << "  Nome: " << this->getNome() << std::endl
         << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->getSalarioBase() <<std::endl;
         std::cout << "Num Atendimentos: " << this->getNumAtendimentos() << std::endl;      
@@ -23,6 +22,6 @@ void Especialista::Print() {
 Especialista::~Especialista(){
         delete this;
 }
-int Especialista::getNumAtendimentos(){
+int Especialista::getNumAtendimentos() const {
     return this->NumAtendimentos;
 }

@@ -20,10 +20,10 @@ class Especialista : public Funcionario {
          std::string Nome, int RgFuncionario, std::string Especialidade, int NumAtendimentos, double Comissao );
 
     double getComissao(double ValorVenda);
-    int getNumAtendimentos();
+    int getNumAtendimentos() const;
 
 
-    void Print() override;
+    void Print() const override;
 };
 
 #endif

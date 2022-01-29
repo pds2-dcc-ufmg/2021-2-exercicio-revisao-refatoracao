@@ -7,6 +7,8 @@
 #include "Especialista.hpp"
 #include "Gerente.hpp"
 
+
+
 class Venda{
 
     private:
@@ -14,17 +16,16 @@ class Venda{
     std::string Descricao;
 
     public:
-
     Especialista* _Especialista;
     Cliente* _Cliente;
     Gerente* _Gerente;
 
     Venda(double ValorVenda, std::string Descricao, Especialista* Especialista, Cliente* Cliente);    
-    std::string getDescricao();
+    std::string getDescricao() const;
 
     void setGerente(Gerente * _Gerente);
 
-    void Print();
+    void Print() const;
 };
 
 #endif

@@ -15,7 +15,7 @@ class Gerente : public Funcionario {
         ~Gerente();
 
 
-        void Print() override;
+        void Print() const override;
 
         double calculaBonificacaoGerente(int NumTotalVendas);
 

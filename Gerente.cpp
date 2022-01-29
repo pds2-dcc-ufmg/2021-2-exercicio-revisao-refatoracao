@@ -13,7 +13,7 @@ double Gerente::calculaBonificacaoGerente(int NumTotalVendas){
         }
 
 
-void Gerente::Print() {
+void Gerente::Print() const {
             std::cout << "[Funcionario]" << std::endl
             << "[Gerente]" << std::endl
             << "  Nome: " << this->getNome() << std::endl
