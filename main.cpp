@@ -22,7 +22,38 @@ double Bonificacao, std::vector <Gerente*> &Gerentes){
     Gerente* NovoGerente = new Gerente (Salario, Idade, Nome, RgFuncionario, Bonificacao);
     Gerentes.push_back(NovoGerente);
 }
-void InsereVenda(){}
+
+void InsereVenda(double ValorVenda, std::string Descricao, std::string EspecialistaVenda, std::string ClienteVenda,
+std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes){
+    /* Variaveis que verificam se o cliente e o especialista da venda foram encontrados
+    */
+   Cliente* MeuCliente;
+   Especialista* MeuEspecialista;
+
+    bool ClienteEncontrado = false;
+    bool EspecialistaEcontrado = false; 
+
+            for(const auto& iterator_1:Clientes){
+                if (ClienteVenda == iterator_1->getNome()){
+                MeuCliente = iterator_1;
+                ClienteEncontrado = true;
+
+                }
+            }
+            for(const auto& iterator_2:Especialistas){
+                if (EspecialistaVenda == iterator_2->getNome()){
+                MeuEspecialista = iterator_2;
+                EspecialistaEcontrado = true;
+                }
+            }
+
+        if (EspecialistaEcontrado && ClienteEncontrado){
+            Venda* NovaVenda = new (ValorVenda, Descricao, MeuEspecialista, MeuCliente);
+        }
+
+
+}
+
 
 
 int main()
@@ -50,7 +81,7 @@ int main()
         InsereGerente(10000, "72", "Nick Fury", 21121948, 0, Gerentes);
     
     std::vector<Venda*> Vendas;
-        InsereVenda()
+        InsereVenda(100,  "Fotos do Homem Aranha", "Peter Parker", "J. Jonah Jameson", Especialistas, Clientes);
 
 
 

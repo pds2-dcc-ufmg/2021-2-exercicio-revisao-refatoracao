@@ -1,7 +1,7 @@
 #include "Especialista.hpp"
 
-Especialista::Especialista(double Salario, std::string Idade,
-         std::string Nome, int RgFuncionario, std::string Especialidade, int NumAtendimentos, double Comissao) : 
+Especialista::Especialista(double Salario = 0.0, std::string Idade = 0,
+         std::string Nome = ' ', int RgFuncionario, std::string Especialidade, int NumAtendimentos, double Comissao) : 
          Funcionario(Salario, Idade, Nome, RgFuncionario), Especialidade(Especialidade), NumAtendimentos(NumAtendimentos),
          Comissao(Comissao){}
 

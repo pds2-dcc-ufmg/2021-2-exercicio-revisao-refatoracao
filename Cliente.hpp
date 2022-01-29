@@ -12,6 +12,10 @@ class Cliente{
 		std::string Cep;
 		
 	public:
+		std::string Cliente::getNome();
+		std::string Cliente::getEndereco();
+		std::string Cliente::getCep();
+
 		Cliente(std::string Nome,
 		std::string Endereco,
 		std::string Cep);

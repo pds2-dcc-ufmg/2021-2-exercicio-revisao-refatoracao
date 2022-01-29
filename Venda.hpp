@@ -9,13 +9,15 @@
 class Venda{
 
     private:
-    double Valor;
+    double ValorVenda;
     std::string Descricao;
     Especialista* _Especialista;
     Cliente* _Cliente;
 
 
     public:
+
+    Venda(double ValorVenda, std::string Descricao, Especialista* Especialista, Cliente* Cliente);    
 
     void Print();
 
