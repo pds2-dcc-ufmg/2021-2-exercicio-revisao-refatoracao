@@ -6,7 +6,7 @@
         {
             "label": "Compilar",
             "type": "shell",
-            "command": "g++ -std=c++11 -Wall main.cpp Cliente.cpp Venda.cpp Funcionario.cpp Especialista.cpp Gerente.cpp  -o Executavel -g",
+            "command": "g++ -std=c++11 -Wall util.cpp main.cpp Cliente.cpp Venda.cpp Funcionario.cpp Especialista.cpp Gerente.cpp  -o Executavel -g",
             //"command": "g++ -std=c++11 -Wall main.cpp Disciplina.cpp  Alocacao.cpp QuadroAlocacao.cpp -o Executavel -g",
             "problemMatcher": [],
             "group": {
