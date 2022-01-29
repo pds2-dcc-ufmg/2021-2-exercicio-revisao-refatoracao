@@ -18,6 +18,7 @@ class Venda{
     public:
 
     Venda(double ValorVenda, std::string Descricao, Especialista* Especialista, Cliente* Cliente);    
+    std::string getDescricao();
 
     void Print();
 

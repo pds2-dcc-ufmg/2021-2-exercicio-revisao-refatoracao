@@ -25,6 +25,7 @@ class Funcionario {
         virtual ~Funcionario(){};
 
         double getSalarioBase();
+        void setSalarioBase(double ValorAdicionado);
         std::string getIdade();
         std::string getNome();
         int getRgFuncionario();

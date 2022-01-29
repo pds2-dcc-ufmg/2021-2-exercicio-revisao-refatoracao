@@ -7,6 +7,7 @@ Especialista::Especialista(double Salario = 0.0, std::string Idade = 0,
 
 double Especialista::getComissao(double ValorVenda) {
         double ComissaoFuncionario = ValorVenda*PERCENTUAL_COMISSAO;
+        this->NumAtendimentos++;
         return ComissaoFuncionario;
     }
 
@@ -19,4 +20,7 @@ void Especialista::Print() {
     }
 Especialista::~Especialista(){
         delete this;
+}
+int Especialista::getNumAtendimentos(){
+    return this->NumAtendimentos;
 }

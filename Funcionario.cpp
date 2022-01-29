@@ -15,6 +15,9 @@ void Funcionario::print_oi(){
 double Funcionario::getSalarioBase(){
             return this->SalarioBase;
 }
+void Funcionario::setSalarioBase(double ValorAdicionado){
+    this->SalarioBase+=ValorAdicionado;
+}
 std::string Funcionario::getIdade(){
             return this->Idade;
 }
