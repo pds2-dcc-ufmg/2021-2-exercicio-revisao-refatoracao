@@ -6,11 +6,11 @@
 #include "Venda.hpp"
 #include "Gerente.hpp"
 #include <vector>
+
 void InsereCliente (std::string Nome, std::string Endereco, std::string Cep,  std::vector <Cliente*> &Clientes){
     Cliente* NovoCliente = new Cliente(Nome, Endereco, Cep);
     Clientes.push_back(NovoCliente);
 }
-
 void InsereEspecialista(double Salario, std::string Idade, std::string Nome, int RgFuncionario, 
 std::string Especialidade, int NumAtendimentos, double Comissao, std::vector <Especialista*> &Especialistas){
     Especialista* NovoEspecialista = new Especialista (Salario, Idade, Nome, RgFuncionario, 
@@ -25,6 +25,7 @@ double Bonificacao, std::vector <Gerente*> &Gerentes){
 
 void InsereVenda(double ValorVenda, std::string Descricao, std::string EspecialistaVenda, std::string ClienteVenda,
 std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes){
+
     /* Variaveis que verificam se o cliente e o especialista da venda foram encontrados
     */
    Cliente* MeuCliente;
@@ -44,11 +45,12 @@ std::vector <Especialista*> &Especialistas, std::vector <Cliente*> &Clientes){
                 if (EspecialistaVenda == iterator_2->getNome()){
                 MeuEspecialista = iterator_2;
                 EspecialistaEcontrado = true;
+                MeuEspecialista->setSalarioBase(MeuEspecialista->getComissao(ValorVenda));
                 }
             }
 
         if (EspecialistaEcontrado && ClienteEncontrado){
-            Venda* NovaVenda = new (ValorVenda, Descricao, MeuEspecialista, MeuCliente);
+            Venda* NovaVenda = new Venda(ValorVenda, Descricao, MeuEspecialista, MeuCliente);
         }
 
 
@@ -82,140 +84,39 @@ int main()
     
     std::vector<Venda*> Vendas;
         InsereVenda(100,  "Fotos do Homem Aranha", "Peter Parker", "J. Jonah Jameson", Especialistas, Clientes);
+        InsereVenda(100,  "Troca da tela do telefone", "Tony Stark", "Bruce Benner", Especialistas, Clientes);
+        InsereVenda(150,  "Fotos do novo planador", "Peter Parker", "Norman Osborn", Especialistas, Clientes);        
+        InsereVenda(10,  "Recarga de cartucho", "Tony Stark", "J. Jonah Jameson", Especialistas, Clientes);
+        InsereVenda(10000,  "Reconstrucao de Predio", "Wanda Maximoff", "Bruce Benner", Especialistas, Clientes);
+        InsereVenda(3000,  "Decoracao de Apartamento no Brooklyn", "Wanda Maximoff", "Steve Rogers", Especialistas, Clientes);
+        InsereVenda(5000,  "Reforma do Clarim Diario", "Wanda Maximoff", "J. Jonah Jameson", Especialistas, Clientes);
+        InsereVenda(80, "Formatacao do PC", "Tony Stark", "Otto Octavius", Especialistas, Clientes);
 
 
 
-    Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
+    std::cout <<" \n \n           Relatorio das Vendas \n" << std::endl;
+
+        for (const auto& iterator_1:Vendas){
+                iterator_1->Print();
+                std::cout << " Descricao: " << iterator_1->getDescricao() << std::endl;
+                
+            }
 
 
-    Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
-    numAtendimentos02+=1;
+    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
+    int NumTotalservicos = 0;  
+            for (const auto& iterator_1:Especialistas){
+                iterator_1->Print();
+                std::cout << "Num Atendimentos: " << iterator_1->getNumAtendimentos() << std::endl;      
+                 NumTotalservicos+=iterator_1->getNumAtendimentos(); 
+            }
 
 
-    Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
-
-    Venda v07;
-    v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v08;
-    v08.cliente= "Otto Octavius";
-    v08.esp = e02;
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
-    numAtendimentos02+=1;
-
-
-
-    cout <<" \n \n           Relatorio das Vendas \n" << endl;
-
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
-
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
-
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
-
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
-
-    v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
-
-    v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
-
-
-
-
-
-
-    cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-    e01.print();
-    cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
-
-    e02.print();
-    cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
-
-    e03.print();
-    cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
-
-
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
-    g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    // NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
+    
+    // g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    // g01.print();
+    // cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
 
     return 0;
 }
