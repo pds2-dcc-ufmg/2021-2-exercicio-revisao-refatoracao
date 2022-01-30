@@ -10,7 +10,7 @@ Gerente::Gerente(std::string nome, int rgFuncionario, int idade, double salarioB
     this->idade = idade;
     this->salarioBase = salarioBase;
     this->bonificacao = bonificacao;
-	this->valorBonificacao = valorBonificacao;
+    this->valorBonificacao = valorBonificacao;
 
 }
 
