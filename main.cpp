@@ -66,14 +66,13 @@ int main()
      e03.especialidade = "Engenharia e Designeeeeer";
 
      Gerente g01;
-     double bonificacao01 = 0;
      g01.nome = "Nick Fury";
      g01.idade = "72";
      g01.rgFunc = 21121948;
      g01.salarioBase = 10000;
 
      Venda v01;
-     v01.cliente = "J. Jonah Jameson";
+     v01.cliente = cliente1;
      v01.esp = e01;
      v01.descricao = "Fotos do Homem Aranha";
      v01.valor = 100;
@@ -81,7 +80,7 @@ int main()
      numAtendimentos01 += 1;
 
      Venda v02;
-     v02.cliente = "Bruce Benner";
+     v02.cliente = cliente4;
      v02.esp = e02;
      v02.descricao = "Troca da tela do telefone";
      v02.valor = 100;
@@ -89,7 +88,7 @@ int main()
      numAtendimentos02 += 1;
 
      Venda v03;
-     v03.cliente = "Norman Osborn";
+     v03.cliente = cliente2;
      v03.esp = e01;
      v03.descricao = "Fotos do novo planador";
      v03.valor = 150;
@@ -97,7 +96,7 @@ int main()
      numAtendimentos01 += 1;
 
      Venda v04;
-     v04.cliente = "J. Jonah Jameson";
+     v04.cliente = cliente1;
      v04.esp = e02;
      v04.descricao = "Recarga de cartucho";
      v04.valor = 10;
@@ -105,7 +104,7 @@ int main()
      numAtendimentos02 += 1;
 
      Venda v05;
-     v05.cliente = "Bruce Benner";
+     v05.cliente = cliente4;
      v05.esp = e03;
      v05.descricao = "Reconstrucao de Predio";
      v05.valor = 10000;
@@ -113,18 +112,17 @@ int main()
      numAtendimentos03 += 1;
 
      Venda v06;
-     v06.cliente = "Steve Rogers";
+     v06.cliente = cliente5;
      v06.esp = e03;
      v06.descricao = "Decoracao de Apartamento no Brooklyn";
      v06.valor = 3000;
      comissao03 += e03.comissao(v06.valor);
      numAtendimentos03 += 1;
-
      v06.descricao = "Decoracao de Apartamento no Brooklyn";
      v06.valor = 3000;
 
      Venda v07;
-     v07.cliente = "J. Jonah Jameson";
+     v07.cliente = cliente1;
      v07.esp = e03;
      v07.descricao = "Reforma do Clarim Diario";
      v07.valor = 5000;
@@ -132,7 +130,7 @@ int main()
      numAtendimentos03 += 1;
 
      Venda v08;
-     v08.cliente = "Otto Octavius";
+     v08.cliente = cliente3;
      v08.esp = e02;
      v08.descricao = "Formatacao do PC";
      v08.valor = 80;

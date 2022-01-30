@@ -11,7 +11,7 @@ public:
     double valor;
     string descricao;
     Especialista esp;
-    string cliente;
+    Cliente cliente;
 
     void print();
 };

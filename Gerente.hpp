@@ -4,13 +4,11 @@
 #include <iostream>
 #include <iomanip>
 
-class Gerente
+#include "Funcionario.hpp"
+
+class Gerente : public Funcionario
 {
 public:
-    double salarioBase;
-    string idade;
-    string nome;
-    int rgFunc;
     double bonificacao;
 
     void print();
