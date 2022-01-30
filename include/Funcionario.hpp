@@ -8,7 +8,6 @@ class Funcionario {
 
     public:
 
-        //Funcionario(std::string nome, int rgFuncionario, int idade, double salarioBase);
         void setNome(std::string nome);
         void setRgFuncionario(int rgFuncionario);
         void setIdade(int idade);
