@@ -6,9 +6,9 @@
 class Cliente
 {
 public:
-	string nome;
-	string endereco;
-	string cep;
+	std::string nome;
+	std::string endereco;
+	std::string cep;
 
 	void print();
 };

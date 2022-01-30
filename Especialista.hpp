@@ -7,7 +7,7 @@
 class Especialista : public Funcionario
 {
 public:
-    string especialidade;
+    std::string especialidade;
 
     double comissao(double ValorVenda);
     void print();
