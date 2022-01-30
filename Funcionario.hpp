@@ -2,26 +2,41 @@
 #define FUNCIONARIO_HPP
 
 #include <iostream>
+#include <string>
 #include <iomanip>
 
-using namespace std;
-
+/*
+Classe que representa um funcionario da empresa
+*/
 class Funcionario {
+
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+        //metodo construtor da classe
+        Funcionario(double salariob = 0,
+                    std::string idade = " ",
+                    std::string nome = " ",
+                    int rgfunc = 0);
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        //imprime na tela os dados de um funcionario cadastrado
+        virtual void imprimir_dados_funcionario();
+
+        //retorna o nome do funcionario
+        std::string getnome_func();
+
+        //retorna o salario base do funcionario
+        double get_salario_base();
+
+    protected:
+
+        /*
+        Dados relacionados ao funcionario
+        */
+        double _salario_base; //valor minimo recebido pelo funcionario
+        std::string _idade;
+        std::string _nome;
+        int _rgFunc; //RG do funcionario
+
 };
 
 #endif
