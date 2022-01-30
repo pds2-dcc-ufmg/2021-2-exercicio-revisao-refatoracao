@@ -9,6 +9,8 @@
 
 int main()
 {
+    // Criando e preenchendo um vetor com Clientes
+
     std::vector<Cliente> vetorClientes;
 
     Cliente cliente1("J. Jonah Jameson", "Nova York", "35690000");
@@ -31,6 +33,8 @@ int main()
         element.imprimirDados();
     }
 
+    // Declarando Especialistas
+
     Especialista especialista1("Peter Parker", 46, "27061975", 3000, "Fotografia");
 
     Especialista especialista2("Tony Stark", 56, "4041965", 1000, "Consertos de equipamentos eletronicos");
@@ -38,7 +42,8 @@ int main()
     Especialista especialista3("Wanda Maximoff", 32, "16021989", 5000, "Engenharia e Designeeeeer");
 
     Gerente gerente1("Nick Fury", 72, "21121948", 10000);
-    double bonificacao01 = 0; // pode tirar ne?
+
+    // Criando e preenchendo um vetor com Vendas
 
     std::vector<Venda> vetorVendas;
     Venda venda1(cliente1, &especialista1, "Fotos do Homem Aranha", 100);
@@ -72,6 +77,8 @@ int main()
     {
         element.imprimirDados();
     }
+
+    // Criando e preenchendo um vetor com Especialistas
 
     std::vector<Especialista> vetorEspecialistas;
 
