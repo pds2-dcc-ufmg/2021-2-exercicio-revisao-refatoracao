@@ -11,13 +11,13 @@ class Cliente{
 		std::string cep;
 
 	public:
-		std::string getNome() {return(nome);}
-		std::string getEndereco() {return(endereco);}
-		std::string getCep() {return(cep);}
+		std::string getNome();
+		std::string getEndereco();
+		std::string getCep();
 
-		void setNome(std::string novoNome) {nome = novoNome;}
-		void setEndereco(std::string novoEndereco) {endereco = novoEndereco;}
-		void setCep(std::string novoCep) {cep = novoCep;}
+		void setNome(std::string novoNome);
+		void setEndereco(std::string novoEndereco);
+		void setCep(std::string novoCep);
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
 
