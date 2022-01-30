@@ -1,3 +1,5 @@
+//#include <iostream>
+
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
 #include "Especialista.hpp"
@@ -138,7 +140,7 @@ int main()
      comissao02 += e02.valor_Comissao(v08.valor_venda);
      numAtendimentos02 += 1;
 
-     cout << "\n           Relatorio das Vendas \n"
+     cout << "\n            Relatorio das Vendas \n"
           << endl;
 
      v01.imprime_Venda();
@@ -165,7 +167,7 @@ int main()
      v08.imprime_Venda();
      cout << " Descricao: " << v08.descricao << endl;
 
-     cout << " \n            Relatorio dos Funcionarios \n"
+     cout << " \n             Relatorio dos Funcionarios \n"
           << endl;
 
      e01.imprime_Funcionario();

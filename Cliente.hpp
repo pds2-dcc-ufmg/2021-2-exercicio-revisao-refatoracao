@@ -12,7 +12,7 @@ public:
 	std::string endereco_cliente; //endereco do cliente
 	std::string cep_cliente;	  //CEP do cliente
 
-	void imprime_Cliente(); // imprime na tela os dados de um cliente cadastrado
+	void imprime_Cliente(); // imprime na tela os dados do cliente cadastrado
 };
 
 #endif

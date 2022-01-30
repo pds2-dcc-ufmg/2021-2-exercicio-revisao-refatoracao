@@ -15,9 +15,10 @@ public:
     virtual void imprime_Funcionario() //imprime os dados do funcionario
     {
         std::cout << "[Funcionario]" << std::endl
-                  << "Nome: " << nome_funcionario << ", Idade: " << idade_funcionario
-                  << ", RGFunc: " << rg_funcionario << ", SalarioBase: R$ " << std::fixed
-                  << std::setprecision(2) << salariobase_funcionario << std::endl;
+                  << "  Idade: " << idade_funcionario << std::endl
+                  << "  RGFunc: " << rg_funcionario << std::endl;
+        std::cout << "  Nome: " << nome_funcionario << std::endl
+                  << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salariobase_funcionario << std::endl;
     }
 };
 

@@ -17,7 +17,11 @@ public:
 
     void imprime_Venda()
     {
-        std::cout << "Especialista: " << esp.nome_funcionario << " – Cliente: " << cliente << " –";
+        std::cout << "Especialista: ";
+        std::cout << esp.nome_funcionario;
+
+        std::cout << " Cliente: ";
+        std::cout << cliente;
     }
 };
 
