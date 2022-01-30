@@ -1,14 +1,11 @@
 #include <iostream>
 #include <string>
+
 #include "Especialista.hpp"
 
-double percWanda = 0.1;
-
-double Especialista::comissao(double ValorVenda)
+double Especialista::comissao(double valorVenda)
 {
-    double perc = 0.1;
-    double c = ValorVenda * perc;
-    return c;
+    return valorVenda * 0.1;
 }
 
 void Especialista::print()
