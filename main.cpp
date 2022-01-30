@@ -8,9 +8,11 @@
 #include "Venda.hpp"
 
 int main() {
-    vector<Cliente*> m_clientes;
-    vector<Especialista*> m_especialistas;
-    vector<Venda*> m_vendas;
+    int num_total_vendas = 0;
+
+    std::vector<Cliente*> m_clientes;
+    std::vector<Especialista*> m_especialistas;
+    std::vector<Venda*> m_vendas;
 
     Cliente cliente1("J. Jonah Jameson", "Nova York", "35690000");
     cliente1.print();
@@ -36,12 +38,7 @@ int main() {
     Especialista e03("Wanda Maximoff", "32", 16021989, 5000, "Engenharia e Designeeeeer");
     m_especialistas.push_back(&e03);
 
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
+    Gerente g01("Nick Fury", "72", 21121948, 10000);
 
     Venda v01("J. Jonah Jameson", &e01, "Fotos do Homem Aranha", 100);
     m_vendas.push_back(&v01);
@@ -81,11 +78,9 @@ int main() {
         especialista->print();
     }
 
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = e01._numAtendimentos + e02._numAtendimentos + e03._numAtendimentos;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    num_total_vendas = e01._numAtendimentos + e02._numAtendimentos + e03._numAtendimentos;
+    g01._bonificacao = g01.calcula_BONIFICACAO_GERENTE(num_total_vendas);
     g01.print();
-    std::cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao << std::endl;
 
     return 0;
 }
