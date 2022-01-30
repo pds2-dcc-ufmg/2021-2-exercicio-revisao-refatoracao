@@ -1,4 +1,3 @@
-
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
@@ -18,14 +17,13 @@ public:
 
     void print()
     {
-
         std::cout << "Especialista: ";
         cout << esp.nome;
 
-        std::cout << " Cliente: ";
+        std::cout << "Cliente: ";
         cout << cliente;
 
-        //std::cout << " : ";
+        //std::cout << ": ";
         //cout << cliente;
     }
 
@@ -34,7 +32,7 @@ public:
         std::cout << "Especialista: ";
         cout << esp.nome;
 
-        std::cout << " Cliente: ";
+        std::cout << "Cliente: ";
         cout << cliente;
     }*/
 };

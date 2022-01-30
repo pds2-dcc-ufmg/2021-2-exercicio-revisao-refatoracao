@@ -5,6 +5,7 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
+
 using namespace std;
 
 int main()
@@ -140,37 +141,37 @@ int main()
      comissao02 += e02.comissao(v08.valor);
      numAtendimentos02 += 1;
 
-     cout << " \n \n           Relatorio das Vendas \n"
+     cout << "\n \n           Relatorio das Vendas \n"
           << endl;
 
      v01.print();
-     cout << " Descricao: " << v01.descricao << endl;
+     cout << "Descricao: " << v01.descricao << endl;
 
      v02.print();
-     cout << " Descricao: " << v02.descricao << endl;
+     cout << "Descricao: " << v02.descricao << endl;
 
      v03.print();
-     cout << " Descricao: " << v03.descricao << endl;
+     cout << "Descricao: " << v03.descricao << endl;
 
      v04.print();
-     cout << " Descricao: " << v04.descricao << endl;
+     cout << "Descricao: " << v04.descricao << endl;
 
      v05.print();
-     cout << " Descricao: " << v05.descricao << endl;
+     cout << "Descricao: " << v05.descricao << endl;
 
      v06.print();
-     cout << " Descricao: " << v06.descricao << endl;
+     cout << "Descricao: " << v06.descricao << endl;
 
      v06.print();
-     cout << " Descricao: " << v06.descricao << endl;
+     cout << "Descricao: " << v06.descricao << endl;
 
      v07.print();
-     cout << " Descricao: " << v07.descricao << endl;
+     cout << "Descricao: " << v07.descricao << endl;
 
      v08.print();
-     cout << " Descricao: " << v08.descricao << endl;
+     cout << "Descricao: " << v08.descricao << endl;
 
-     cout << " \n \n           Relatorio dos Funcionarios \n"
+     cout << "\n \n           Relatorio dos Funcionarios \n"
           << endl;
      e01.print();
      cout << "Num Atendimentos: " << numAtendimentos01 << endl;

@@ -17,8 +17,8 @@ public:
     void print()
     {
         cout << "[Funcionario]" << endl
-             << "  Idade: " << idade << endl
-             << "  RGFunc: " << rgFunc << endl;
+             << "Idade: " << idade << endl
+             << "RGFunc: " << rgFunc << endl;
     }
 
     void print_oi()

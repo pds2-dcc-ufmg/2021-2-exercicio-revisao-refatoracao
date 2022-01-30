@@ -21,10 +21,10 @@ public:
     {
         cout << "[Funcionario]" << endl
              << "[Gerente]" << endl
-             << "  Nome: " << nome << endl
-             << "  Idade: " << idade << endl
-             << "  RGFunc: " << rgFunc << endl
-             << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
+             << "Nome: " << nome << endl
+             << "Idade: " << idade << endl
+             << "RGFunc: " << rgFunc << endl
+             << "SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
     }
 
     double calcula_BONIFICACAO_GERENTE(int numTOTALVendas)
