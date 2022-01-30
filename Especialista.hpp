@@ -11,7 +11,7 @@ class Especialista : public Funcionario
 public:
     std::string especialidade; // especialidade do funcionario
 
-    double valor_Comissao(double ValorVenda) // valor da comissao a ser recebida pela venda
+    double valor_Comissao(double ValorVenda) // valor da comissao a ser recebida pela venda feita
     {
         return ValorVenda * PORCENTAGEM_COMISSAO;
     }
