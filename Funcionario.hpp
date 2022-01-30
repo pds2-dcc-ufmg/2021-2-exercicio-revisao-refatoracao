@@ -19,7 +19,7 @@ class Funcionario {
 		std::string getNome();
 		int getRgFunc();
 
-		void setSalarioBase(double salario);
+		void setSalarioBase(double novoSalario);
 		void setNome(std::string novoNome);
 		void setIdade(std::string novaIdade);
 		void setRgFunc(int novoRgFunc);
