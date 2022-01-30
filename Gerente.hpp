@@ -3,20 +3,17 @@
 
 #include "Funcionario.hpp"
 
-class Gerente : public Funcionario {
-    public:
-        Gerente(std::string nome = "", int idade = 0, std::string RG = "", int salario = 0);
-        
-        void imprimirDados() const override; 
+class Gerente : public Funcionario
+{
+public:
+    Gerente(std::string nome = "", int idade = 0, std::string RG = "", int salario = 0);
 
-        void atribuirBonificacao(int numTotalVendas); 
+    void imprimirDados() const override;
 
-        
-    private:
-        double _bonificacao;
-    
+    void atribuirBonificacao(int numTotalVendas);
 
+private:
+    double _bonificacao;
 };
 
 #endif
-

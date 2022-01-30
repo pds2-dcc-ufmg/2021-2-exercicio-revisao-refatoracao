@@ -6,14 +6,12 @@
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-
-
 class Venda
 {
 
 public:
-    Venda(Cliente cliente = Cliente(), Especialista* especialista = new Especialista(), std::string descricao = "", double valor = 0.0);
-    
+    Venda(Cliente cliente = Cliente(), Especialista *especialista = new Especialista(), std::string descricao = "", double valor = 0.0);
+
     void imprimirDados() const;
 
 private:

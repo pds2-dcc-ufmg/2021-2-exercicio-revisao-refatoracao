@@ -4,22 +4,20 @@
 #include <iostream>
 #include <string>
 
+class Cliente
+{
 
-class Cliente{
+public:
+	Cliente(std::string nome = "", std::string endereco = "", std::string CEP = "");
 
-	public:
+	std::string getNome() const;
 
-		
-		Cliente(std::string nome ="", std::string endereco = "", std::string CEP = "");	
-		
-		std::string getNome() const;
+	void imprimirDados() const;
 
-		void imprimirDados() const; 
-	private:
-		std::string _nome;
-		std::string _endereco;
-		std::string _CEP;
-		
+private:
+	std::string _nome;
+	std::string _endereco;
+	std::string _CEP;
 };
 
 #endif

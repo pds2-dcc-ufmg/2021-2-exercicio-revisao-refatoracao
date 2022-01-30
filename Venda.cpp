@@ -1,17 +1,16 @@
 #include "Venda.hpp"
 
-Venda::Venda(Cliente cliente, Especialista* especialista , std::string descricao , double valor){
+Venda::Venda(Cliente cliente, Especialista *especialista, std::string descricao, double valor)
+{
     this->_cliente = cliente;
     this->_especialista = *especialista;
     this->_descricao = descricao;
     this->_valor = valor;
     especialista->executarVenda(valor);
-    
-    
 }
 
-
-void Venda::imprimirDados() const{
+void Venda::imprimirDados() const
+{
 
     std::cout << "Especialista: ";
     std::cout << _especialista.getNome();
