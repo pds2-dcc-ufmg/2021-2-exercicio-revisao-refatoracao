@@ -5,5 +5,6 @@
 void Venda::print()
 {
     std::cout << "Especialista: " << esp.nome << std::endl
-              << "Cliente: " << cliente.nome << std::endl;
+              << "Cliente: " << cliente.nome << std::endl
+              << "Descricao: " << descricao << std::endl;
 }

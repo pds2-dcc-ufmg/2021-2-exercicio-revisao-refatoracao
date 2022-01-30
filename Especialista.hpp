@@ -11,7 +11,7 @@ public:
     int numAtendimentos;
     double comissao;
 
-    double comissao(double ValorVenda);
+    double calcularComissao(double ValorVenda);
     void print();
 };
 

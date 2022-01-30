@@ -9,7 +9,8 @@ void Gerente::print()
               << "Nome: " << nome << std::endl
               << "Idade: " << idade << std::endl
               << "RGFunc: " << rgFunc << std::endl
-              << "SalarioBase: R$ " << std::fixed << setprecision(2) << salarioBase << std::endl;
+              << "SalarioBase: R$ " << std::fixed << setprecision(2) << salarioBase << std::endl
+              << "Salario Total: " << salarioBase + bonificacao << std::endl;
 }
 
 double Gerente::calculaBonificacaoGerente(int numTotalVendas)
