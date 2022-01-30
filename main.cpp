@@ -15,19 +15,19 @@ int main() {
     std::vector<Venda*> m_vendas;
 
     Cliente cliente1("J. Jonah Jameson", "Nova York", "35690000");
-    cliente1.print();
+    m_clientes.push_back(&cliente1);
 
     Cliente cliente2("Norman Osborn", "Hartlford", "22061955");
-    cliente2.print();
+    m_clientes.push_back(&cliente2);
 
     Cliente cliente3("Otto Octavius", "Schenectady", "24051953");
-    cliente3.print();
+    m_clientes.push_back(&cliente3);
 
     Cliente cliente4("Bruce Benner", "Dayton", "22111967");
-    cliente4.print();
+    m_clientes.push_back(&cliente4);
 
     Cliente cliente5("Steve Rogers", "Lower East Side", "13061981");
-    cliente5.print();
+    m_clientes.push_back(&cliente5);
 
     Especialista e01("Peter Parker", "46", 27061975, 3000, "Fotografia");
     m_especialistas.push_back(&e01);
@@ -63,6 +63,10 @@ int main() {
 
     Venda v08("Otto Octavius", &e02, "Formatacao do PC", 80);
     m_vendas.push_back(&v08);
+
+    for (const auto& cliente : m_clientes) {
+        cliente->print();
+    }
 
     std::cout << " \n \n           Relatorio das Vendas \n"
               << std::endl;
