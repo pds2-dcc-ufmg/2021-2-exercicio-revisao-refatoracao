@@ -17,7 +17,7 @@ public:
         Funcionario::imprime_Funcionario();
     }
 
-    double calcula_BONIFICACAO_GERENTE(int numTOTALVendas) //retorna o valor da bonificacao recebida pelo gerente
+    double calcula_BONIFICACAO_GERENTE(int numTOTALVendas) //calcula o valor da bonificacao recebida pelo gerente
     {
         return numTOTALVendas * VALOR_BONIFICACAO;
     }
