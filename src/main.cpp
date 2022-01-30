@@ -16,7 +16,7 @@ int main()
     Cliente cliente2 = Cliente("Norman Osborn", "Hartlford", "22061955");
     cliente2.print();
 
-    Cliente cliente3 = Cliente("Otto Octavius", "Hartlford", "22061955");
+    Cliente cliente3 = Cliente("Otto Octavius", "Schenectady", "24051953");
     cliente3.print();
 
     Cliente cliente4 = Cliente("Bruce Benner", "Dayton", "22111967");
@@ -68,7 +68,6 @@ int main()
     v03.print();
     v04.print();
     v05.print();
-    v06.print();
     v06.print();
     v07.print();
     v08.print();

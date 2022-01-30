@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-Especialista::Especialista(std::string nome, int rgFuncionario, int idade, double salarioBase, std::string especialidade, double percentual = 0.1, int numAtendimentos = 0, double comissaoTotal = 0) {
+Especialista::Especialista(std::string nome, int rgFuncionario, int idade, double salarioBase, std::string especialidade, double percentual, int numAtendimentos, double comissaoTotal) {
 
     this->nome = nome;
     this->rgFuncionario = rgFuncionario;

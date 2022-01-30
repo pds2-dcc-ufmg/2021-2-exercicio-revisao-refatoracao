@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-Gerente::Gerente(std::string nome, int rgFuncionario, int idade, double salarioBase, double bonificacao = 0, double valorBonificacao = 15.0) {
+Gerente::Gerente(std::string nome, int rgFuncionario, int idade, double salarioBase, double bonificacao, double valorBonificacao) {
 
     this->nome = nome;
     this->rgFuncionario = rgFuncionario;
