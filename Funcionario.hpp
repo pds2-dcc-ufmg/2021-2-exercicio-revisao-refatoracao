@@ -13,7 +13,6 @@ public:
     int rgFunc;
 
     void print();
-    void print_oi();
 };
 
 #endif

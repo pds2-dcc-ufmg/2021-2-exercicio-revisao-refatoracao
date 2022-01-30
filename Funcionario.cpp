@@ -8,8 +8,3 @@ void Funcionario::print()
               << "Idade: " << idade << std::endl
               << "RGFunc: " << rgFunc << std::endl;
 }
-
-void Funcionario::print_oi()
-{
-    std::cout << "Tchau" << std::endl;
-}

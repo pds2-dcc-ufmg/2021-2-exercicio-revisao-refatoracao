@@ -9,7 +9,6 @@ public:
 	string nome;
 	string endereco;
 	string cep;
-	string alturaDosPais;
 
 	void print();
 };
