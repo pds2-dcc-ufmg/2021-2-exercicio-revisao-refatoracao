@@ -1,34 +1,39 @@
+// Retirei comentarios desnecessarios e o namespace std, nesse caso desnecessario por serem poucas utilizacoes
+// Arrumei os nomes das variaveis do tipo string presentes para que fiquem de acordo com as boas praticas
+// Fiz algumas alteracoes na impressao, para que o codigo fique mais organizado e facilite o encontro de erros
+// Organizacao da identacao da classe
+
 #ifndef GERENTE_HPP
 #define GERENTE_HPP
 
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
 
-double ValorBONIFICACAO = 15.0;
+double valor_bonificacao = 15.0;
 
 class Gerente {
+
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
+        double salario_minimo;
+        std::string idade;
+        std::string nome;
+        int rg_funcionario;
         double bonificacao;
 
 
         void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+            std::cout << "[Funcionario]" << std::endl;
+            std::cout << "[Gerente]" << std::endl;
+            std::cout << "  Nome: " << nome << std::endl;
+            std::cout << "  Idade: " << idade << std::endl;
+            std::cout << "  RGFunc: " << rg_funcionario << std::endl;
+            std::cout << "  SalarioBase: R$ " << fixed << setprecision(2) << salario_minimo << std::endl;
         }
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
+        double calcula_bonif_gerente(int num_total_vendas){
             double x;
-            return numTOTALVendas*ValorBONIFICACAO;
+            return num_total_vendas*valor_bonificacao;
         }
 
 };
