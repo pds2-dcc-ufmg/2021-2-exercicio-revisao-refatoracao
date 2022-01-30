@@ -26,7 +26,7 @@ int main() {
 
     Especialista e02("Tony Stark", "56", 4041965, 1000, "Consertos de equipamentos eletronicos");
 
-    Especialista e03("Wanda Maximoff", "32", 6021989, 5000, "Engenharia e Designeeeeer");
+    Especialista e03("Wanda Maximoff", "32", 16021989, 5000, "Engenharia e Designeeeeer");
 
     Gerente g01;
     double bonificacao01 = 0;
@@ -35,36 +35,36 @@ int main() {
     g01.rgFunc = 21121948;
     g01.SalarioBase = 10000;
 
-    Venda v01("J. Jonah Jameson", e01, "Fotos do Homem Aranha", 100);
-    v01._esp.comissao(v01._VALOR);
+    Venda v01("J. Jonah Jameson", &e01, "Fotos do Homem Aranha", 100);
+    v01._esp->comissao(v01._VALOR);
     e01._numAtendimentos += 1;
 
-    Venda v02("Bruce Benner", e02, "Troca da tela do telefone", 100);
-    v02._esp.comissao(v02._VALOR);
+    Venda v02("Bruce Benner", &e02, "Troca da tela do telefone", 100);
+    v02._esp->comissao(v02._VALOR);
     e02._numAtendimentos += 1;
 
-    Venda v03("Norman Osborn", e01, "Fotos do novo planador", 150);
-    v03._esp.comissao(v03._VALOR);
+    Venda v03("Norman Osborn", &e01, "Fotos do novo planador", 150);
+    v03._esp->comissao(v03._VALOR);
     e01._numAtendimentos += 1;
 
-    Venda v04("J. Jonah Jameson", e02, "Recarga de cartucho", 10);
-    v04._esp.comissao(v04._VALOR);
+    Venda v04("J. Jonah Jameson", &e02, "Recarga de cartucho", 10);
+    v04._esp->comissao(v04._VALOR);
     e02._numAtendimentos += 1;
 
-    Venda v05("Bruce Benner", e03, "Reconstrucao de Predio", 10000);
-    e03.comissao(v05._VALOR);
+    Venda v05("Bruce Benner", &e03, "Reconstrucao de Predio", 10000);
+    v05._esp->comissao(v05._VALOR);
     e03._numAtendimentos += 1;
 
-    Venda v06("Steve Rogers", e03, "Decoracao de Apartamento no Brooklyn", 3000);
-    v06._esp.comissao(v06._VALOR);
+    Venda v06("Steve Rogers", &e03, "Decoracao de Apartamento no Brooklyn", 3000);
+    v06._esp->comissao(v06._VALOR);
     e03._numAtendimentos += 1;
 
-    Venda v07("J. Jonah Jameson", e03, "Reforma do Clarim Diario", 5000);
-    v07._esp.comissao(v07._VALOR);
+    Venda v07("J. Jonah Jameson", &e03, "Reforma do Clarim Diario", 5000);
+    v07._esp->comissao(v07._VALOR);
     e03._numAtendimentos += 1;
 
-    Venda v08("Otto Octavius", e02, "Formatacao do PC", 80);
-    v08._esp.comissao(v08._VALOR);
+    Venda v08("Otto Octavius", &e02, "Formatacao do PC", 80);
+    v08._esp->comissao(v08._VALOR);
     e02._numAtendimentos += 1;
 
     std::cout << " \n \n           Relatorio das Vendas \n"

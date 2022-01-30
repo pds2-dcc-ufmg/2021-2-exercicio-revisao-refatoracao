@@ -19,7 +19,7 @@ class Especialista : public Funcionario {
     Especialista() {
     }
 
-    Especialista(std::string IDADE, std::string nome, int rgFunc, double SalarioBase, std::string especialidade) {
+    Especialista(std::string nome, std::string IDADE, int rgFunc, double SalarioBase, std::string especialidade) {
         _SalarioBase = SalarioBase;
         _IDADE = IDADE;
         _nome = nome;
