@@ -2,24 +2,18 @@
 #define GERENTE_HPP
 
 #include "Funcionario.hpp"
-#include <iostream>
-#include <iomanip>
-
-using namespace std;
-
-double ValorBONIFICACAO = 15.0;
 
 class Gerente : public Funcionario {
     public:
-        void print() override; 
-
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
-
-        double getBonificacao();
+        Gerente(std::string nome = "", int idade = 0, std::string RG = "", int salario = 0);
         
-        void setBonificacao(double _bonificacao);
+        void imprimirDados() const override; 
+
+        void atribuirBonificacao(int numTotalVendas); 
+
+        
     private:
-        double bonificacao;
+        double _bonificacao;
     
 
 };

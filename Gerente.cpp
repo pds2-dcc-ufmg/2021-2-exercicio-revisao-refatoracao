@@ -1,25 +1,34 @@
 #include "Gerente.hpp"
-void Gerente::print(){
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+const double VALOR_BONIFICACAO = 15.0;
+
+
+
+Gerente::Gerente(std::string nome, int idade, std::string RG , int salario ){
+    this->_nome = nome;
+    this->_idade = idade;
+    this->_RG = RG;
+    this->_salarioBase = salario;
+}
+void Gerente::imprimirDados() const{
+            std::cout << "[Funcionario]" << std::endl
+            << "[Gerente]" << std::endl
+            << "  Nome: " << this->_nome << std::endl
+            << "  Idade: " << this->_idade << std::endl
+            << "  RGFunc: " << this->_RG << std::endl
+            << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << _salarioBase <<std::endl
+            << "Salario Total: " << this->_salarioBase + this->_bonificacao << std::endl; //colocar salbase no protected
+
 }
 
-double Gerente::calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
+void Gerente::atribuirBonificacao(int numTotalVendas){
     double x;
-    return numTOTALVendas*ValorBONIFICACAO;       
+    this->_bonificacao = numTotalVendas*VALOR_BONIFICACAO;       
 }
 
 
-double Gerente::getBonificacao(){
-    return this->bonificacao;
-}
 
-void Gerente::setBonificacao(double _bonificacao){
-    this->bonificacao = _bonificacao;
-}
+
+
+
 
 
