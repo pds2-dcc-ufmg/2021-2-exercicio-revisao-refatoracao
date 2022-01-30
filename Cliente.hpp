@@ -10,6 +10,8 @@ public:
 	std::string endereco;
 	std::string cep;
 
+	Cliente(std::string nome, std::string endereco, std::string cep);
+
 	void print();
 };
 

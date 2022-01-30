@@ -11,6 +11,8 @@ public:
     int numAtendimentos;
     double comissao;
 
+    Especialista(std::string nome, std::string idade, int rgFunc, double salarioBase, std::string especialidade);
+
     double calcularComissao(double ValorVenda);
     void print();
 };

@@ -3,6 +3,17 @@
 
 #include "Especialista.hpp"
 
+Especialista::Especialista(std::string nome, std::string idade, int rgFunc, double salarioBase, std::string especialidade)
+{
+    this->nome = nome;
+    this->idade = idade;
+    this->rgFunc = rgFunc;
+    this->salarioBase = salarioBase;
+    this->especialidade = especialidade;
+    this->numAtendimentos = 0;
+    this->comissao = 0;
+}
+
 double Especialista::calcularComissao(double valorVenda)
 {
     return valorVenda * 0.1;

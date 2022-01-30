@@ -2,6 +2,15 @@
 #include <string>
 #include "Gerente.hpp"
 
+Gerente::Gerente(std::string nome, std::string idade, int rgFunc, double salarioBase)
+{
+    this->nome = nome;
+    this->idade = idade;
+    this->rgFunc = rgFunc;
+    this->salarioBase = salarioBase;
+    this->bonificacao = 0;
+}
+
 void Gerente::print()
 {
     std::cout << "[Funcionario]" << std::endl
