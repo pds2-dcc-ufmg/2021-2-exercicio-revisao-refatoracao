@@ -5,12 +5,12 @@
 
 Gerente::Gerente(std::string nome, int rgFuncionario, int idade, double salarioBase, double bonificacao, double valorBonificacao) {
 
-    this->nome = nome;
-    this->rgFuncionario = rgFuncionario;
-    this->idade = idade;
-    this->salarioBase = salarioBase;
-    this->bonificacao = bonificacao;
-    this->valorBonificacao = valorBonificacao;
+	this->nome = nome;
+	this->rgFuncionario = rgFuncionario;
+	this->idade = idade;
+	this->salarioBase = salarioBase;
+	this->bonificacao = bonificacao;
+	this->valorBonificacao = valorBonificacao;
 
 }
 
@@ -28,17 +28,17 @@ double Gerente::getBonificacao() {
 
 double Gerente::calcularBonificacao(int numTotalVendas) {
 
-            return numTotalVendas*valorBonificacao;
+	return numTotalVendas*valorBonificacao;
 
 }
 
 void Gerente::print() const {
 
-            std::cout << "[Funcionario]" << std::endl
-            << "[Gerente]" << std::endl
-            << "  Nome: " << this->nome << std::endl
-            << "  Idade: " << this->idade << std::endl
-            << "  RGFunc: " << this->rgFuncionario << std::endl
-            << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->salarioBase << std::endl;
+	std::cout << "[Funcionario]" << std::endl
+	<< "[Gerente]" << std::endl
+	<< "  Nome: " << this->nome << std::endl
+	<< "  Idade: " << this->idade << std::endl
+	<< "  RGFunc: " << this->rgFuncionario << std::endl
+	<< "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->salarioBase << std::endl;
             
 }
