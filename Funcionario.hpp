@@ -7,15 +7,17 @@
 class Funcionario
 {
 public:
-    double salariobase_funcionario; // valor m�nimo recebido pelo funcion�rio
-    std::string idade_funcionario;
-    std::string nome_funcionario;
-    int rg_funcionario;
+    double salariobase_funcionario; // valor minimo recebido pelo funcionario
+    std::string idade_funcionario;  //idade do funcionario
+    std::string nome_funcionario;   // nome do funcionario
+    int rg_funcionario;             //rg do funcionario
 
-    void imprime_Funcionario()
+    virtual void imprime_Funcionario() //imprime os dados do funcionario
     {
         std::cout << "[Funcionario]" << std::endl
-                  << "Idade: " << idade_funcionario << ", RGFunc: " << rg_funcionario;
+                  << "Nome: " << nome_funcionario << ", Idade: " << idade_funcionario
+                  << ", RGFunc: " << rg_funcionario << ", SalarioBase: R$ " << std::fixed
+                  << std::setprecision(2) << salariobase_funcionario << std::endl;
     }
 };
 

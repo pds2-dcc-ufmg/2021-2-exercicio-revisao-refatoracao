@@ -1,4 +1,4 @@
-#include <iostream>
+//#include <iostream>
 
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
@@ -160,9 +160,6 @@ int main()
 
      v06.imprime_Venda();
      cout << " Descricao: " << v06.descricao << endl;
-
-     //v06.print();
-     //cout << " Descricao: " << v06.descricao << endl;
 
      v07.imprime_Venda();
      cout << " Descricao: " << v07.descricao << endl;
