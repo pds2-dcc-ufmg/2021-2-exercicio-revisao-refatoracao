@@ -4,6 +4,6 @@
 
 void Venda::print()
 {
-    std::cout << "Especialista: " << esp.nome << endl
-              << "Cliente: " << cliente << endl;
+    std::cout << "Especialista: " << esp.nome << std::endl
+              << "Cliente: " << cliente << std::endl;
 }

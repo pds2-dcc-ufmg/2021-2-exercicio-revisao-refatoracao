@@ -6,8 +6,6 @@
 #include "Venda.hpp"
 #include "Gerente.hpp"
 
-using namespace std;
-
 int main()
 {
      Cliente cliente1;
@@ -141,55 +139,55 @@ int main()
      comissao02 += e02.comissao(v08.valor);
      numAtendimentos02 += 1;
 
-     cout << "\n \n           Relatorio das Vendas \n"
-          << endl;
+     std::cout << "\n \n           Relatorio das Vendas \n"
+               << std::endl;
 
      v01.print();
-     cout << "Descricao: " << v01.descricao << endl;
+     std::cout << "Descricao: " << v01.descricao << std::endl;
 
      v02.print();
-     cout << "Descricao: " << v02.descricao << endl;
+     std::cout << "Descricao: " << v02.descricao << std::endl;
 
      v03.print();
-     cout << "Descricao: " << v03.descricao << endl;
+     std::cout << "Descricao: " << v03.descricao << std::endl;
 
      v04.print();
-     cout << "Descricao: " << v04.descricao << endl;
+     std::cout << "Descricao: " << v04.descricao << std::endl;
 
      v05.print();
-     cout << "Descricao: " << v05.descricao << endl;
+     std::cout << "Descricao: " << v05.descricao << std::endl;
 
      v06.print();
-     cout << "Descricao: " << v06.descricao << endl;
+     std::cout << "Descricao: " << v06.descricao << std::endl;
 
      v06.print();
-     cout << "Descricao: " << v06.descricao << endl;
+     std::cout << "Descricao: " << v06.descricao << std::endl;
 
      v07.print();
-     cout << "Descricao: " << v07.descricao << endl;
+     std::cout << "Descricao: " << v07.descricao << std::endl;
 
      v08.print();
-     cout << "Descricao: " << v08.descricao << endl;
+     std::cout << "Descricao: " << v08.descricao << std::endl;
 
-     cout << "\n \n           Relatorio dos Funcionarios \n"
-          << endl;
+     std::cout << "\n \n           Relatorio dos Funcionarios \n"
+               << std::endl;
      e01.print();
-     cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-     cout << "Salario Total: " << e01.salarioBase + comissao01 << endl;
+     std::cout << "Num Atendimentos: " << numAtendimentos01 << std::endl;
+     std::cout << "Salario Total: " << e01.salarioBase + comissao01 << std::endl;
 
      e02.print();
-     cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-     cout << "Salario Total: " << e02.salarioBase + comissao02 << endl;
+     std::cout << "Num Atendimentos: " << numAtendimentos02 << std::endl;
+     std::cout << "Salario Total: " << e02.salarioBase + comissao02 << std::endl;
 
      e03.print();
-     cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-     cout << "Salario Total: " << e03.salarioBase + comissao03 << endl;
+     std::cout << "Num Atendimentos: " << numAtendimentos03 << std::endl;
+     std::cout << "Salario Total: " << e03.salarioBase + comissao03 << std::endl;
 
      int numTotalServicos = 0;
      numTotalServicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
      g01.bonificacao = g01.calculaBonificacaoGerente(numTotalServicos);
      g01.print();
-     cout << "Salario Total: " << g01.salarioBase + g01.bonificacao << endl;
+     std::cout << "Salario Total: " << g01.salarioBase + g01.bonificacao << std::endl;
 
      return 0;
 }
