@@ -19,7 +19,7 @@ class Cliente{
 		void setEndereco(std::string novoEndereco);
 		void setCep(std::string novoCep);
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print();
 
 };
 
