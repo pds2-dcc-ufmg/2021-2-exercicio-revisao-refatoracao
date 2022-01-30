@@ -1,13 +1,49 @@
 # Exercício de Revisão e Refatoração
 
-O objetivo dessa atividade é praticar a parte de revisão e refatoração utilizando um sistema de controle de versão.
+Alterações Feitas
 
-**Considere a seguinte descrição em alto nível da funcionalidade do código:**  
-> Uma empresa prestadora de diferentes serviços quer armazenar dados das vendas, cliente e funcionários. A empresa possui um gerente que recebe um bônus para cada serviço vendido. Outro tipo de funcionário é o especialista, a pessoa que realizará o serviço e que recebe uma comissão sob o valor da venda. A porcentagem da comissão e o valor da bonificação podem variar para cada funcionário.
+No arquivo Cliente.cpp
 
-Você deve criar um **Fork** desse repositório, fazer as alterações que julgar necessárias e então realizar um **Pull Request**. Você é livre para criar outros arquivos, classes, métodos, etc., desde que o main continue produzindo a mesma saída. Lembre-se que essa etapa não altera o comportamento funcional.
+• Removi os includes das bibliotecas iostream e string, visto que ambas estão contidas no arquivo .hpp.
+• Mudei a forma com que os dados são impressos, os separando por virgula e somente ao final uma quebra de linha.
+• E fiz as adaptações provenientes das mudanças no .hpp
 
-No **título** do seu Pull Request, informe o valor **MD5** obtido a partir da sua **matrícula**. Você pode gerar esse valor a partir de diferentes sites, um exemplo está [aqui](http://www.md5.cz/). Lembre-se de também informar seus dados no forms disponibilizado no Moodle. Na **descrição** faça uma **lista/análise detalhada** das **soluções** que você utilizou. Submissões que não seguirem essas instruções não serão avaliadas.
+No arquivo Cliente.hpp
 
-Lembre-se de analisar aspectos como: nomenclatura, formatação, organização, comentários, aplicação correta dos conceitos de OO, entre outros.
-Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração (https://refactoring.com/catalog/).
+• Adicionei a biblioteca iostream, já que seria feito um include dessa biblioteca no Cliente.cpp
+• Removi o using namespace std e adicionei o std::, nos locais necessários
+• Troquei o nome da função que faz a impressão de print para imprime_Cliente, a variável nome de NOME para nome_cliente, Cep para cep_cliente e endereco para endereco_cliente
+
+No arquivo Especialista.cpp
+
+• Removi o using namespace std e adicionei o std::, nos locais necessários
+• Removi a variável percWanda que não tinha uso e possuía o mesmo valor da variável perc, esta última que seu nome foi alterado para PORCENTAGEM_COMISSAO
+• Removi o public: que estava duplicado
+• Troquei o nome da função comissão para valor_Comissao, e nela extingui a variável c que armazenava o valor da multiplicação de ValorVenda e PORCENTAGEM_COMISSAO, e no lugar de retorná-la retornei à multiplicação direto
+• Mudei o nome da função print para imprime_Especialista, e em seu funcionamento primeiramente imprimo [Especialista] e chamo a função Funcionario::imprime_Funcionario()
+
+No arquivo Funcionario.hpp
+
+• Removi o using namespace std e adicionei o std::, nos locais necessários
+• Alterei as o nome das variáveis SalarioBase = salariobase_funcionario, IDADE = idade_funcionario, nome = nome_funcionario e rgFunc = rg_funcionario
+• Mudei o nome da função print para imprime_Funcionario, e sua implementação foi alterada, ela imprime primeiramente [Funcionario] com uma quebra de linha e na linha seguinte imprime nome_funcionario, idade_funcionario, rg_funcionario e salariobase_funcionario, nesta ordem. Ela também é utilizada para fazer as impressões dos dados do Especialista e Gerente
+• Foi feita a remoção da função print_oi que não era necessária para o código
+
+No arquivo Gerente.hpp
+
+• Removi o using namespace std e adicionei o std::, nos locais necessários
+• Alterei o nome da variável global BONIFICACAO para VALOR_BONIFICACAO
+• Transformei a classe Gerente numa subclasse de Funcionario, portanto as variáveis de Nome, Idade, Rgfunc e Salario base foram herdadas de Funcionarios tornando desnecessário a definição delas
+• Mudei o nome da função print para imprime_Gerente, e em seu funcionamento primeiramente imprimo [Gerente] e chamo a função Funcionario::imprime_Funcionario()
+• Removi a variável x que não possuía utilidade
+
+No arquivo Venda.hpp
+
+• Removi o using namespace std e adicionei o std::, nos locais necessários
+• Troquei o nome da variável VALOR para valor_venda,
+• Mudei o nome da função print para imprime_Venda, e concatenei a impressão do nome do especialista a do cliente separando por um "–"
+• Removi o código comentado que não possui utilidade
+
+No arquivo main.cpp
+• Removi a impressão da venda 06 que estava duplicada
+• Alterei o nomes das variáveis que foram alteradas nas funções

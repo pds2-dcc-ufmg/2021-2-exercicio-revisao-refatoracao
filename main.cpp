@@ -78,7 +78,7 @@ int main()
      v01.esp = e01;
      v01.descricao = "Fotos do Homem Aranha";
      v01.valor_venda = 100;
-     comissao01 += e01.Valor_Comissao(v01.valor_venda);
+     comissao01 += e01.valor_Comissao(v01.valor_venda);
      numAtendimentos01 += 1;
 
      Venda v02;
@@ -86,7 +86,7 @@ int main()
      v02.esp = e02;
      v02.descricao = "Troca da tela do telefone";
      v02.valor_venda = 100;
-     comissao02 += e02.Valor_Comissao(v02.valor_venda);
+     comissao02 += e02.valor_Comissao(v02.valor_venda);
      numAtendimentos02 += 1;
 
      Venda v03;
@@ -94,7 +94,7 @@ int main()
      v03.esp = e01;
      v03.descricao = "Fotos do novo planador";
      v03.valor_venda = 150;
-     comissao01 += e01.Valor_Comissao(v03.valor_venda);
+     comissao01 += e01.valor_Comissao(v03.valor_venda);
      numAtendimentos01 += 1;
 
      Venda v04;
@@ -102,7 +102,7 @@ int main()
      v04.esp = e02;
      v04.descricao = "Recarga de cartucho";
      v04.valor_venda = 10;
-     comissao02 += e02.Valor_Comissao(v04.valor_venda);
+     comissao02 += e02.valor_Comissao(v04.valor_venda);
      numAtendimentos02 += 1;
 
      Venda v05;
@@ -110,7 +110,7 @@ int main()
      v05.esp = e03;
      v05.descricao = "Reconstrucao de Predio";
      v05.valor_venda = 10000;
-     comissao03 += e03.Valor_Comissao(v05.valor_venda);
+     comissao03 += e03.valor_Comissao(v05.valor_venda);
      numAtendimentos03 += 1;
 
      Venda v06;
@@ -118,7 +118,7 @@ int main()
      v06.esp = e03;
      v06.descricao = "Decoracao de Apartamento no Brooklyn";
      v06.valor_venda = 3000;
-     comissao03 += e03.Valor_Comissao(v06.valor_venda);
+     comissao03 += e03.valor_Comissao(v06.valor_venda);
      numAtendimentos03 += 1;
 
      v06.descricao = "Decoracao de Apartamento no Brooklyn";
@@ -129,7 +129,7 @@ int main()
      v07.esp = e03;
      v07.descricao = "Reforma do Clarim Diario";
      v07.valor_venda = 5000;
-     comissao03 += e03.Valor_Comissao(v07.valor_venda);
+     comissao03 += e03.valor_Comissao(v07.valor_venda);
      numAtendimentos03 += 1;
 
      Venda v08;
@@ -137,7 +137,7 @@ int main()
      v08.esp = e02;
      v08.descricao = "Formatacao do PC";
      v08.valor_venda = 80;
-     comissao02 += e02.Valor_Comissao(v08.valor_venda);
+     comissao02 += e02.valor_Comissao(v08.valor_venda);
      numAtendimentos02 += 1;
 
      cout << "\n           Relatorio das Vendas \n"
