@@ -16,3 +16,4 @@ std::string Venda::getCliente() {return(cliente);}
 void Venda::setValorVenda(double novoValorVenda) {valorVenda = novoValorVenda;}
 void Venda::setDescricao(std::string novaDescricao) {descricao = novaDescricao;}
 void Venda::setCliente(std::string novoCliente) {cliente = novoCliente;}
+void Venda::setEspecialista(Especialista especialista) {esp = especialista;}

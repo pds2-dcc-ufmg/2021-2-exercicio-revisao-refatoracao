@@ -12,6 +12,7 @@ class Venda {
     		double valorVenda;
     		std::string descricao;
     		std::string cliente;
+		Especialista esp;
 
 	public:
 		void print();
@@ -23,8 +24,7 @@ class Venda {
 		void setValorVenda(double novoValorVenda);
 		void setDescricao(std::string novaDescricao);
 		void setCliente(std::string novoCliente);
-
-		Especialista esp;
+		void setEspecialista(Especialista especialista);
 };
 
 #endif
