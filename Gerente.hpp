@@ -3,34 +3,28 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Funcionario.hpp"
 
-using namespace std;
+/*
+Essa Ã© classe de um funcionario do tipo gerente da empresa
+*/
 
-double ValorBONIFICACAO = 15.0;
+class Gerente : public Funcionario {
 
-class Gerente {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
 
+        Gerente(std::string nome, std::string idade, int rgFunc, double salariobase);  //metodo contrutor da classe
+        
+        void print() override; //imprime os dados de um gerente
+        
+        void calculaBonificacaoGerente(int numTotalVendas); //calcula bonificacao acumulada que o gerente deve receber
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
-
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
-
+    private:
+        /*
+        Atribuicoes relacionadas a um gerente
+        */
+        double _bonificacaoAcumulada = 0; //valor total acumulado pelo gerente em bonificacoes
+        double _valorBonificacao = 15.0; //valor recebido por cada bonificacao
 };
 
 #endif
