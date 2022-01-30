@@ -20,3 +20,6 @@ void Especialista::print() {
         	  << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salarioBase << std::endl;
 
 }
+
+std::string Especialista::getEspecialidade() {return(especialidade);}
+void Especialista::setEspecialidade(std::string novaEspecialidade) {especialidade = novaEspecialidade;}

@@ -13,6 +13,9 @@ class Especialista : public Funcionario {
 	public:
 		double comissao(double valorVenda);
                 void print();
+
+		std::string getEspecialidade();
+		void setEspecialidade(std::string novaEspecialidade);
 };
 
 #endif
