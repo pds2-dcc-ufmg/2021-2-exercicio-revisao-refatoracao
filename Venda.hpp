@@ -11,7 +11,7 @@ using namespace std;
 class Venda
 {
 public:
-    double VALOR;
+    double valor;
     string descricao;
     Especialista esp;
     string cliente;
