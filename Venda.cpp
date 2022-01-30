@@ -1,8 +1,8 @@
 #include "Venda.hpp"
 
-Venda::Venda(Cliente cliente, Especialista *especialista, std::string descricao, double valor)
+Venda::Venda(Cliente* cliente, Especialista *especialista, std::string descricao, double valor)
 {
-    this->_cliente = cliente;
+    this->_cliente = *cliente;
     this->_especialista = *especialista;
     this->_descricao = descricao;
     this->_valor = valor;

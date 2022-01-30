@@ -46,28 +46,28 @@ int main()
     // Criando e preenchendo um vetor com Vendas
 
     std::vector<Venda> vetorVendas;
-    Venda venda1(cliente1, &especialista1, "Fotos do Homem Aranha", 100);
+    Venda venda1(&cliente1, &especialista1, "Fotos do Homem Aranha", 100);
     vetorVendas.push_back(venda1);
 
-    Venda venda2(cliente4, &especialista2, "Troca da tela do telefone", 100);
+    Venda venda2(&cliente4, &especialista2, "Troca da tela do telefone", 100);
     vetorVendas.push_back(venda2);
 
-    Venda venda3(cliente2, &especialista1, "Fotos do novo planador", 150);
+    Venda venda3(&cliente2, &especialista1, "Fotos do novo planador", 150);
     vetorVendas.push_back(venda3);
 
-    Venda venda4(cliente1, &especialista2, "Recarga de cartucho", 10);
+    Venda venda4(&cliente1, &especialista2, "Recarga de cartucho", 10);
     vetorVendas.push_back(venda4);
 
-    Venda venda5(cliente4, &especialista3, "Reconstrucao de Predio", 10000);
+    Venda venda5(&cliente4, &especialista3, "Reconstrucao de Predio", 10000);
     vetorVendas.push_back(venda5);
 
-    Venda venda6(cliente5, &especialista3, "Decoracao de Apartamento no Brooklyn", 3000);
+    Venda venda6(&cliente5, &especialista3, "Decoracao de Apartamento no Brooklyn", 3000);
     vetorVendas.push_back(venda6);
 
-    Venda venda7(cliente1, &especialista3, "Reforma do Clarim Diario", 5000);
+    Venda venda7(&cliente1, &especialista3, "Reforma do Clarim Diario", 5000);
     vetorVendas.push_back(venda7);
 
-    Venda venda8(cliente3, &especialista2, "Formatacao do PC", 80);
+    Venda venda8(&cliente3, &especialista2, "Formatacao do PC", 80);
     vetorVendas.push_back(venda8);
 
     std::cout << " \n \n           Relatorio das Vendas \n"
