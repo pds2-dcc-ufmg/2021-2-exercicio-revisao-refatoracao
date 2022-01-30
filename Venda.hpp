@@ -18,6 +18,8 @@ class Venda {
         _esp = esp;
         _descricao = descricao;
         _VALOR = VALOR;
+        esp->_numAtendimentos++;
+        esp->comissao(_VALOR);
     }
 
     void print() {
@@ -26,6 +28,8 @@ class Venda {
 
         std::cout << " Cliente: ";
         std::cout << _cliente;
+
+        std::cout << " Descricao: " << _descricao << std::endl;
     }
 };
 

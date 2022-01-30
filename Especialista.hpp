@@ -43,7 +43,9 @@ class Especialista : public Funcionario {
         Funcionario::print();
 
         std::cout << "  Nome: " << _nome << std::endl
-                  << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << _SalarioBase << std::endl;
+                  << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << _SalarioBase << std::endl
+                  << "  Num Atendimentos: " << _numAtendimentos << std::endl
+                  << "  Salario Total: " << _SalarioBase + get_commissao() << std::endl;
     }
 };
 
