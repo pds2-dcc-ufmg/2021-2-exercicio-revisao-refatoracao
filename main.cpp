@@ -1,5 +1,3 @@
-//#include <iostream>
-
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
 #include "Especialista.hpp"
