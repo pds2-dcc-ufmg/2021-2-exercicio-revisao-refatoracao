@@ -68,12 +68,12 @@ void Venda::adicionarComissao() {
 
 void Venda::print() {
 
-        std::cout << "Especialista: ";
-        std::cout << especialista->getNome();
+    std::cout << "Especialista: ";
+    std::cout << especialista->getNome();
 
-        std::cout << " Cliente: ";
-        std::cout << cliente->getNome();
+    std::cout << " Cliente: ";
+    std::cout << cliente->getNome();
 
-        std::cout << " Descricao: " << this->descricao << std::endl;
+    std::cout << " Descricao: " << this->descricao << std::endl;
 
 }
