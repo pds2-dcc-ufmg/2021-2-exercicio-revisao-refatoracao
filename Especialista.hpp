@@ -1,38 +1,51 @@
 #ifndef Especialista_HPP
 #define Especialista_HPP
 
-#include "Funcionario.hpp"
 #include "Cliente.hpp"
+#include "Funcionario.hpp"
 
-using namespace std;
-
-double perc = 0.1;
-double percWanda = 0.1;
-
+const double perc = 0.1;
+const double percWanda = 0.1;
 
 class Especialista : public Funcionario {
+   public:
+    std::string _especialidade;
+    int _numAtendimentos;
 
-    public:
+   protected:
+    double _comissao;
 
-    public:
-        string especialidade;
-
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
+   public:
+    Especialista() {
     }
 
+    Especialista(std::string nome, std::string IDADE, int rgFunc, double SalarioBase, std::string especialidade) {
+        _SalarioBase = SalarioBase;
+        _IDADE = IDADE;
+        _nome = nome;
+        _rgFunc = rgFunc;
+        _especialidade = especialidade;
+        _numAtendimentos = 0;
+        _comissao = 0;
+    }
+
+    void comissao(double ValorVenda) {
+        double c = ValorVenda * perc;
+        _comissao += c;
+    }
+
+    float get_commissao() {
+        return _comissao;
+    }
 
     void print() {
-
-        std::cout << "[Especialista]" << endl;
+        std::cout << "[Especialista]" << std::endl;
         Funcionario::print();
 
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
+        std::cout << "  Nome: " << _nome << std::endl
+                  << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << _SalarioBase << std::endl
+                  << "  Num Atendimentos: " << _numAtendimentos << std::endl
+                  << "  Salario Total: " << _SalarioBase + get_commissao() << std::endl;
     }
 };
 
