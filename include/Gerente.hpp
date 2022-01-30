@@ -7,7 +7,6 @@
 #include <iostream>
 #include <string>
 
- //padronizar nomeclatura
 
 class Gerente : public Funcionario {
     public:
