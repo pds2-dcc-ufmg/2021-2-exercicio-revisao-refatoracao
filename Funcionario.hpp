@@ -9,7 +9,7 @@ using namespace std;
 class Funcionario
 {
 public:
-    double salarioBase; // valor m�nimo recebido pelo funcion�rio
+    double salarioBase;
     string idade;
     string nome;
     int rgFunc;

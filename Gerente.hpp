@@ -11,7 +11,7 @@ double ValorBONIFICACAO = 15.0;
 class Gerente
 {
 public:
-    double salarioBase; // valor m�nimo recebido pelo funcion�rio
+    double salarioBase;
     string idade;
     string nome;
     int rgFunc;

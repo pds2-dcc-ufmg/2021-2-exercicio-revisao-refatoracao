@@ -12,7 +12,7 @@ public:
 	string cep;
 	string alturaDosPais;
 
-	void print(); // imprime na tela os dados de um cliente cadastrado
+	void print();
 };
 
 #endif
