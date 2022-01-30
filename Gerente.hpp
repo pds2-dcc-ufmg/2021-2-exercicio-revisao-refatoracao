@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <iostream>
 
-double ValorBONIFICACAO = 15.0;
+const double ValorBONIFICACAO = 15.0;
 
 class Gerente {
    public:
