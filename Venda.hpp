@@ -15,14 +15,7 @@ public:
     Especialista esp;
     string cliente;
 
-    void print()
-    {
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << "Cliente: ";
-        cout << cliente;
-    }
+    void print();
 };
 
 #endif

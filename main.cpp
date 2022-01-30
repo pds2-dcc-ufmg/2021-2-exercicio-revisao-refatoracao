@@ -187,7 +187,7 @@ int main()
 
      int numTotalServicos = 0;
      numTotalServicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-     g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(numTotalServicos);
+     g01.bonificacao = g01.calculaBonificacaoGerente(numTotalServicos);
      g01.print();
      cout << "Salario Total: " << g01.salarioBase + g01.bonificacao << endl;
 
