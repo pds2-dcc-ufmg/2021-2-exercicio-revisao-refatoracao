@@ -13,27 +13,14 @@ double percWanda = 0.1;
 class Especialista : public Funcionario {
 
     public:
+        string especialidade;    
 
-    public:
-        string especialidade;
+        Especialista(double SalarioBase = 0, string IDADE = " ",
+                     string nome = " ", int rgFunc = 0, string especialidade = " ");
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+        double comissao(double ValorVenda);
 
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+        void print_esp();
 };
 
 #endif
