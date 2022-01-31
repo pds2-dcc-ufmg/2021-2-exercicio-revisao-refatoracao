@@ -10,10 +10,10 @@ double ValorBONIFICACAO = 15.0;
 
 class Gerente {
     public:
-        double SalarioBase; // valor mÌnimo recebido pelo funcion·rio
-        string IDADE;
+        double SalarioBase; // valor m√≠nimo recebido pelo funcion√°rio
+        string idade;
         string nome;
-        int rgFunc;
+        int rgFuncionario;
         double bonificacao;
 
 
@@ -21,13 +21,12 @@ class Gerente {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
             << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
+            << "  Idade: " << idade << endl
+            << "  RGFunc: " << rgFuncionario << endl
             << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
         }
 
         double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
             return numTOTALVendas*ValorBONIFICACAO;
         }
 
