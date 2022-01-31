@@ -4,24 +4,42 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
+namespace Funcionario{
 
-class Funcionario {
-    public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
+    class Funcionario {
+    
+        protected:
+            
+            double __salarioBase;
+            std::string __idade;
+            std::string __nome;
+            int __rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+        public:
+            
+            /* Armazena a quantidade de vendas que foram efetuadas, juntando todos os funcionários */
+            static unsigned int NUMVENDAS;
+            
+            /* Armazena a soma de todas as vendas efetuadas pelos funcionarios */
+            static double VALORTOTAL;
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
-};
+            /* Método construtor da classe Funcionário */
+            Funcionario(double salario,
+                std::string idade,
+                std::string nome,
+                int rg);
+
+            /* Método que imprime as infrmações relacionadas a um determinado funcionário */
+            virtual void imprimeDados() const;
+
+            /* Retorna o salário total de um determinado funcionário */
+            virtual double salarioTotal();
+
+            /* Retorna o nome de um determinado funcionário */
+            std::string getNome();
+
+    };
+
+}
 
 #endif
