@@ -4,24 +4,25 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
 
 class Funcionario {
+
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
+
+        virtual void print();
+
+        virtual void print_oi();
+    
+
+    private:
+
+        double SalarioBase; // valor mï¿½nimo recebido pelo funcionï¿½rio
+
+        std::string IDADE;
+
+        std::string nome;
+
         int rgFunc;
-
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
 };
 
 #endif
