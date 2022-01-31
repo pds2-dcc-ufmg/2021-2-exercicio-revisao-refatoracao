@@ -83,78 +83,73 @@ int main()
 
     Venda v01;
     v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
+    v01.specialist = e01;
     v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
+    v01.valor = 100;
+    comissao01 += e01.comissao(v01.valor);
     numAtendimentos01+=1;
 
 
     Venda v02;
     v02.cliente= "Bruce Benner";
-    v02.esp = e02;
+    v02.specialist = e02;
     v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
+    v02.valor = 100;
+    comissao02 += e02.comissao(v02.valor);
     numAtendimentos02+=1;
 
 
     Venda v03;
     v03.cliente= "Norman Osborn";
-    v03.esp = e01;
+    v03.specialist = e01;
     v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
+    v03.valor = 150;
+    comissao01 += e01.comissao(v03.valor);
     numAtendimentos01+=1;
 
 
     Venda v04;
     v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
+    v04.specialist = e02;
     v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
+    v04.valor = 10;
+    comissao02 += e02.comissao(v04.valor);
     numAtendimentos02+=1;
 
 
     Venda v05;
     v05.cliente= "Bruce Benner";
-    v05.esp = e03;
+    v05.specialist = e03;
     v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
+    v05.valor = 10000;
+    comissao03 += e03.comissao(v05.valor);
     numAtendimentos03+=1;
 
 
     Venda v06;
     v06.cliente= "Steve Rogers";
-    v06.esp = e03;
+    v06.specialist = e03;
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
+    v06.valor = 3000;
+    comissao03 += e03.comissao(v06.valor);
     numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
 
 
     Venda v07;
     v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
+    v07.specialist = e03;
     v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
+    v07.valor = 5000;
+    comissao03 += e03.comissao(v07.valor);
     numAtendimentos03+=1;
 
 
     Venda v08;
     v08.cliente= "Otto Octavius";
-    v08.esp = e02;
+    v08.specialist = e02;
     v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
+    v08.valor = 80;
+    comissao02 += e02.comissao(v08.valor);
     numAtendimentos02+=1;
 
 
