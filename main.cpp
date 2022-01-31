@@ -25,17 +25,13 @@ int main() {
 
     //-------------Especialistas-------------
     Especialista especialista1("Peter Parker", 46, 3000, 27061975, "Fotografia");
-    especialista1.imprimirDados();
 
     Especialista especialista2("Tony Stark", 56, 1000, 4041965, "Consertos de equipamentos eletronicos");
-    especialista2.imprimirDados();
 
     Especialista especialista3("Wanda Maximoff", 32, 5000, 16021989, "Engenharia e Designer");
-    especialista3.imprimirDados();
 
     //-------------Gerente-------------
     Gerente gerente1("Nick Fury", 72, 10000, 21121948);
-    gerente1.imprimirDados();
 
     //-------------Vendas-------------
     Venda venda1(100.0, "Fotos do Homem Aranha", especialista1, cliente1);

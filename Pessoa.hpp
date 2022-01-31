@@ -14,9 +14,16 @@ class Pessoa {
             this->nome = nome;
             this->idade = idade;
         }
+
         Pessoa(std::string nome){
             this->nome = nome;
             this->idade = 0;
+        }
+
+        Pessoa(){}
+
+        std::string getNome(){
+            return this->nome;
         }
 
         virtual void imprimirDados() {}

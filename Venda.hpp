@@ -25,9 +25,9 @@ class Venda{
         }
         
         void relatorioVendas() {
-            std::cout << "[Especialista: " << especialista.nome << "]";
-            std::cout << " -> Cliente: " << cliente.nome;
-            std::cout << " -> Descricao: " << descricao;
+            std::cout << "[Especialista: " << especialista.getNome() << "]";
+            std::cout << " -> [Cliente: " << cliente.getNome() << "]";
+            std::cout << " -> [Descricao: " << this->descricao << "]";
             std::cout << std::endl;
         }
 };
