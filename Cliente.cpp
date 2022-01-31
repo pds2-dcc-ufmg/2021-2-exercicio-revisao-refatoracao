@@ -2,7 +2,7 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+void Cliente::imprimeDados(){
 
 	std::cout << "[Cliente]" << endl
          << "  Nome: " << NOME << endl
