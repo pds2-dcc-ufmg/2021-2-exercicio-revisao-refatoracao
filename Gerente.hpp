@@ -6,7 +6,7 @@
 #include "Funcionario.hpp"
 
 /*
-Essa é classe de um funcionario do tipo gerente da empresa
+Essa eh a classe de um funcionario do tipo gerente da empresa
 */
 
 class Gerente : public Funcionario {

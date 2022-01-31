@@ -16,6 +16,7 @@ void Gerente::calculaBonificacaoGerente(int numTotalVendas) {
 }
 
 void Gerente::print() {
+    std::cout << "[Funcionario]" << std::endl;
     std::cout << "[Gerente]" << std::endl;
     std::cout << "  Nome: " << _nome << std::endl;
     std::cout << "  Idade: " << _idade<< std::endl;

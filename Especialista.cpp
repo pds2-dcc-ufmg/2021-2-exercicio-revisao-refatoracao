@@ -26,6 +26,7 @@ void Especialista::calcularComissao(double ValorVenda){
 
 void Especialista::print() {
     std::cout << "[Especialista]" << std::endl;
+    std::cout << "[Funcionario]" << std::endl;
     std::cout << "  Nome: " << this->_nome << std::endl;
     std::cout << "  Idade: " << this->_idade << std::endl;
     std::cout << "  RGFunc: " << this->_rgFunc << std::endl;

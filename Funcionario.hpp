@@ -6,12 +6,12 @@
 #include <string>
 
 /*
-Essa é classe de um funcionario da empresa
+Essa eh a classe de um funcionario da empresa
 */
 
 class Funcionario {
-    public:
 
+    public:
         virtual void print(); //imprime os dados do funcionario
         std::string getNome(); //acessa o nome do funcionario
 

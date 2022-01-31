@@ -5,7 +5,7 @@
 #include "Especialista.hpp"
 
 /*
-Essa é classe de uma venda realizada na empresa
+Essa eh a classe de uma venda realizada na empresa
 */
 
 class Venda{

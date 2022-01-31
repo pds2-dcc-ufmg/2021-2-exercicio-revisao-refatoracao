@@ -12,8 +12,7 @@ Venda::Venda(Cliente *cliente, Especialista *especialista, std::string descricao
 }
 
 void Venda::print() {
-    std::cout << "[Venda]" << std::endl;
-    std::cout << " Especialista: " << this->_especialista->getNome()<<std::endl;
+    std::cout << "Especialista: " << this->_especialista->getNome()<<std::endl;
     std::cout << " Cliente: " << this->_cliente->getNome()<<std::endl;
     std::cout << " Descricao: " << this->_descricao << std::endl;
 }

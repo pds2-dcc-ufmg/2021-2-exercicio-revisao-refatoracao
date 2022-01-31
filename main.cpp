@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
 #include "Especialista.hpp"
@@ -15,8 +14,7 @@ solicitou a venda e a descricao dessa venda
 -um relatorio de funcionarios contendo seus dados, cargo, salario total e numero de atendimentos
 realizados caso seja um especialista */
 
-int main()
-{
+int main() {
     /*
     Clientes
     */

@@ -5,7 +5,7 @@
 #include <iostream>
 
 /*
-Essa é classe de um cliente da empresa
+Essa eh a classe de um cliente da empresa
 */
 
 class Cliente{
