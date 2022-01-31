@@ -4,23 +4,15 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
-
-class Funcionario {
+class Funcionario : public Pessoa {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
+        double salarioBase;
         int rgFunc;
 
-        void print() {
+        void imprimirDados() override {
             cout << "[Funcionario]" << endl
             << "  Idade: " << IDADE << endl
             << "  RGFunc: " << rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
         }
 };
 
