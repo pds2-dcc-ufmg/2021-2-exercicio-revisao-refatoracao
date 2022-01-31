@@ -46,8 +46,8 @@ int main()
     int numAtendimentos01 = 0;
     double comissao01 = 0;
     e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
+    e01.idade = "46";
+    e01.rgFuncionario = 27061975;
     e01.SalarioBase = 3000;
     e01.especialidade = "Fotografia";
 
@@ -57,8 +57,8 @@ int main()
     int numAtendimentos02 = 0;
     double comissao02 = 0;
     e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
+    e02.idade = "56";
+    e02.rgFuncionario = 4041965;
     e02.SalarioBase = 1000;
     e02.especialidade = "Consertos de equipamentos eletronicos";
 
@@ -67,8 +67,8 @@ int main()
     int numAtendimentos03 = 0;
     double comissao03 = 0;
     e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
+    e03.idade = "32";
+    e03.rgFuncionario = 16021989;
     e03.SalarioBase = 5000;
     e03.especialidade = "Engenharia e Designeeeeer";
 
@@ -76,8 +76,8 @@ int main()
     Gerente g01;
     double bonificacao01 = 0;
     g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
+    g01.idade = "72";
+    g01.rgFuncionario = 21121948;
     g01.SalarioBase = 10000;
 
 
