@@ -4,36 +4,41 @@
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
+
 using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
+double percentualComissao = 0.1;
 
 
 class Especialista : public Funcionario {
-
-    public:
-
-    public:
+    
+    private:
         string especialidade;
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+    public:
+
+        string getespecialidade(){
+            return especialidade;
+        }
+
+        void setespecialidade(string esp){
+            especialidade = esp;
+        }
+
+        double comissao(double ValorVenda) {
+            return ValorVenda*percentualComissao;
+        }
 
 
-    void print() {
+        void print(){
 
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+            cout << "[Especialista]" << endl
+            << "[Funcionario]" << endl;
+            Funcionario::print();
+            cout << "  Nome: " << nome << endl
+            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBaseFuncionario <<endl;
 
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+        }
 };
 
 #endif
