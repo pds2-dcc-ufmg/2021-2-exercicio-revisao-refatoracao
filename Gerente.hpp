@@ -16,7 +16,7 @@ class Gerente {
     private:
 
         const double VALOR_BONIFICACAO = 15.0;
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
+        double salarioBase; // valor m�nimo recebido pelo funcion�rio
         double bonificacao;
 
         int rgFunc;
