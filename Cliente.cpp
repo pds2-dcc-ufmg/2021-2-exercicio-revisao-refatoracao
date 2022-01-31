@@ -10,4 +10,9 @@ void Cliente::print(){
 		 << "  CEP: " << Cep << endl;
 
 }
-
+Cliente::Cliente (std::string Nome, std::string Endereco, std::string cep, std::string alturadospais){
+	this->NOME = Nome;
+	this->endereco = Endereco;
+	this->Cep = cep;
+	this->AlturaDosPais = alturadospais;
+}

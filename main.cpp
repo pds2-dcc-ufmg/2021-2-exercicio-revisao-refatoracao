@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <list>
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
 #include "Especialista.hpp"
@@ -9,36 +9,38 @@ using namespace std;
 
 int main()
 {
+    std::list<Cliente> clientes;
+    
     Cliente cliente1;
     cliente1.NOME = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
 	cliente1.Cep = "35690000";
-    cliente1.print();
+    clientes.push_back(cliente1);
 
-    Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
+    cliente1.NOME = "Norman Osborn";
+    cliente1.endereco ="Hartlford";
+	cliente1.Cep = "22061955";
+    clientes.push_back(cliente1);
 
-    Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
+    cliente1.NOME = "Otto Octavius";
+    cliente1.endereco ="Schenectady";
+	cliente1.Cep = "24051953";
+    clientes.push_back(cliente1);
 
-    Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
+    cliente1.NOME = "Bruce Benner";
+    cliente1.endereco ="Dayton";
+	cliente1.Cep = "22111967";
+    clientes.push_back(cliente1);
 
-    Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
+    cliente1.NOME = "Steve Rogers";
+    cliente1.endereco ="Lower East Side";
+	cliente1.Cep = "13061981";
+    clientes.push_back(cliente1);
 
+    std::list<Cliente>::iterator it;
+    for (it = clientes.begin(); it != clientes.end(); ++it){
+        it->print();
+    }
 
 
 
@@ -160,6 +162,8 @@ int main()
 
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
+
+
 
     v01.print();
     cout << " Descricao: " << v01.descricao << endl;
