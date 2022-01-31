@@ -2,12 +2,16 @@
 
 void Funcionario::print() {
     std::cout << "[Funcionario]" << std::endl
-    << "  Idade: " << this->IDADE << std::endl
+    << "  Idade: " << this->idade << std::endl
     << "  RGFunc: " << this->rgFunc << std::endl
     << "  Nome: " << this->nome << std::endl
-    << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->SalarioBase << std::endl;
+    << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->salarioBase << std::endl;
 }
 
-void print_oi(){
+void Funcionario::printOi() {
     std::cout << "Tchau" << std::endl;
+}
+
+std::string Funcionario::getName() {
+    return this->nome;
 }
