@@ -8,7 +8,7 @@ using namespace std;
 
 class Funcionario {
     public:
-        double SalarioBase; // valor mÌnimo recebido pelo funcion·rio
+        double SalarioBase; // valor m√≠nimo recebido pelo funcion√°rio
         string IDADE;
         string nome;
         int rgFunc;
