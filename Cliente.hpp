@@ -3,14 +3,13 @@
 
 #include <string>
 
-class Cliente{
-	public:
-		std::string nome;
+class Cliente : public Pessoa {
+	private:
 		std::string endereco;
 		std::string cep;
-		std::string alturaDosPais;
 
-		void imprimeDados(); 
+		void setEndereco(std::string edereco) {}
+		void setCep(int cep) {}
 };
 
 #endif

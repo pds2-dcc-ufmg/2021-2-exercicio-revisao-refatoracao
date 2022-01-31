@@ -5,14 +5,23 @@
 #include <iomanip>
 
 class Funcionario : public Pessoa {
-    public:
+    private:
         double salarioBase;
         int rgFunc;
 
+    public:
         void imprimirDados() override {
             cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
+            << "  Idade: " << idade << endl
             << "  RGFunc: " << rgFunc << endl;
+        }
+
+        void setSalarioBase(double novoSalario){
+            salarioBase = novoSalario;
+        }
+
+        void setRgFunc(int novoRG){
+            rgFunc = novoRG;
         }
 };
 

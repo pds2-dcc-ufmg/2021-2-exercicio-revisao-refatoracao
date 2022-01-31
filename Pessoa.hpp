@@ -9,9 +9,14 @@ class Pessoa {
         std::string idade;
         std::string nome;
 
+    public:
         virtual void imprimirDados() {}
-        virtual void setNome(std::string nome) {}
-        virtual void setIdade(int idade) {}
+        void setNome(std::string novoNome) {
+            nome = novoNome;
+        }
+        void setIdade(int novaIdade) {
+            idade = novaIdade
+        }
 };
 
 #endif
