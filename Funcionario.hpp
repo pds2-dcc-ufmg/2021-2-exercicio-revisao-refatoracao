@@ -11,14 +11,16 @@ class Funcionario {
 
         virtual void print();
 
-        virtual void print_oi();
+        virtual void printOi();
+
+        virtual std::string getName();
     
 
     private:
 
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
+        double salarioBase; // valor m�nimo recebido pelo funcion�rio
 
-        std::string IDADE;
+        std::string idade;
 
         std::string nome;
 
