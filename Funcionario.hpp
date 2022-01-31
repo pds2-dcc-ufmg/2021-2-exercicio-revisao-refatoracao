@@ -2,24 +2,17 @@
 #define FUNCIONARIO_HPP
 
 #include <iostream>
-#include <iomanip>
 #include <string>
 
 using namespace std;
 
 class Funcionario {
+  
     public:
-       virtual void print();
-    
-       string get_nome();
-
-    protected:
-    
-       double _salario_base;
-    
-       string _idade, _nome;
-    
-       int _rg_func;
+     int rg;
+     int idade;
+     string nome;
+     double salario_base; // valor minimo recebido pelo funcionario
 };
 
 #endif
