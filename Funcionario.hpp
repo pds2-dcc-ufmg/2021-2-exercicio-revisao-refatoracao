@@ -7,14 +7,14 @@
 
 class Funcionario {
     public:
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-        std::string IDADE;
+        double salarioBase; // valor m�nimo recebido pelo funcion�rio
+        std::string idade;
         std::string nome;
         int rgFunc;
-        std::string get_Idade(){return IDADE;}
-        std::string get_Nome(){return nome;}
-        int get_Rg(){return rgFunc;}
-        double get_Salario(){return SalarioBase;}
+        std::string get_Idade();
+        std::string get_Nome();
+        int get_Rg();
+        double get_Salario();
 
         void print();
 };

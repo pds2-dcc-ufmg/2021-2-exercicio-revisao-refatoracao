@@ -8,6 +8,6 @@ void Venda::print() {
     cout << esp.get_Nome();
 
     std::cout << " Cliente: ";
-    cout << cliente;
+    cout << this->cliente;
 
 }
