@@ -10,33 +10,26 @@ using namespace std;
 
 class Venda{
 
-    public:
-    double VALOR;
+  public:
+    Venda(Cliente cli, Especialista* esp, string descricao, double valor) : cliente(cli), especialista(esp) {
+      this->descricao = descricao;
+      this->valor = valor;
+
+      esp->calcula_comissao(valor);
+      esp->numAtendimentos++;
+    }
+
+    double valor;
     string descricao;
-    Especialista esp;
-    string cliente;
+    Especialista* especialista;
+    Cliente cliente;
 
 
     void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
+      cout << "Especialista: "  << especialista->nome
+           << " Cliente: "  << cliente.nome 
+           << " Descricao: "  << descricao << endl;
     }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
 };
 
 #endif
