@@ -11,6 +11,6 @@ class Cliente{
         Cliente(std::string nome,std::string endereco, std::string Cep);
 
 		void print();
-};
+}
 
 #endif

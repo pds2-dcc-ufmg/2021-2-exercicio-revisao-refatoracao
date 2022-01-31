@@ -13,6 +13,6 @@ class Venda{
 
     void print();
 
-};
+}
 
 #endif

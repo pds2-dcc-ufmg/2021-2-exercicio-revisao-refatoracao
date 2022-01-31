@@ -4,11 +4,10 @@
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
-/*#include "Funcionario.hpp"
-#include "Cliente.hpp"*/
+
 class Especialista : public Funcionario {
 
-    //Alteracao3- havia um public inutil nesse lugar
+
     double perc = 0.1;
     public:
         std::string especialidade;
