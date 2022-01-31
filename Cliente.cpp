@@ -1,17 +1,18 @@
-#include <iostream>
-#include <string>
 #include "Cliente.hpp"
 
-void Cliente::Cliente( string nome, string endereco, string cep){
-	
-	this->_nome = nome;
-	
-	this->_endereco = endereco;
-	
-	this->_cep = cep;
+#include <iostream>
+#include <string>
+
+Cliente::Cliente(string nome, string endereco, string cep){
+  this->endereco = endereco;
+  this->nome = nome;
+  this->cep = cep;
 }
 
-string Cliente:getNome(){
 
-	return this->_nome;
-}
+void Cliente::print(){
+    cout << "[Cliente]" << endl
+         << "  Nome: " << nome << endl
+		     << "  Endereco: " << endereco << endl
+		     << "  CEP: " << cep << endl;
+    }
