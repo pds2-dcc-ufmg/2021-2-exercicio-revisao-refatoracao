@@ -15,8 +15,7 @@ class Especialista : public Funcionario {
         string especialidade;
 
     double comissao(double ValorVenda) {
-        double c = ValorVenda*percentual;
-                  return c;
+        return ValorVenda*percentual;
     }
 
 
