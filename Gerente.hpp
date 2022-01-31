@@ -11,9 +11,9 @@ double ValorBONIFICACAO = 15.0;
 class Gerente {
     public:
         double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
+        string idade;
         string nome;
-        int rgFunc;
+        int rgFuncionario;
         double bonificacao;
 
 
@@ -21,8 +21,8 @@ class Gerente {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
             << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
+            << "  Idade: " << idade << endl
+            << "  RGFunc: " << rgFuncionario << endl
             << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
         }
 
