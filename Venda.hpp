@@ -19,6 +19,10 @@ class Venda{
             this->especialista = especialista;
             this->cliente = cliente;
         }
+
+        double getValor(){
+            return this->valor;
+        }
         
         void relatorioVendas() {
             std::cout << "[Especialista: " << especialista.nome << "]";

@@ -5,7 +5,7 @@
 #include <iomanip>
 
 class Pessoa {
-    private:
+    protected:
         int idade;
         std::string nome;
 

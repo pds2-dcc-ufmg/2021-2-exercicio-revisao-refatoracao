@@ -2,6 +2,7 @@
 #define CLIENTE_HPP
 
 #include <string>
+#include "Pessoa.hpp"
 
 class Cliente : public Pessoa {
 	private:

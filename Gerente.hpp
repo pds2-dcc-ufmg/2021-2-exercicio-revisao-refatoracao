@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Funcionario.hpp"
 
 class Gerente : public Funcionario {
     public:
@@ -12,7 +13,7 @@ class Gerente : public Funcionario {
         }
 
         void imprimirDados() override {
-            cout << "[Funcionario]" << endl
+            std::cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
             Funcionario::imprimirDados();
         }
