@@ -21,7 +21,7 @@ void Especialista::print() {
     Funcionario::print();
 
     std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase << endl;
+        << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
 
     cout << "Num Atendimentos: " << numAtendimentos << endl;
     cout << "Salario Total: " << salarioBase + comissaoValor << endl;
