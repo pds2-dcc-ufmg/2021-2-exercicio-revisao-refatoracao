@@ -6,17 +6,20 @@
 
 class Pessoa {
     private:
-        std::string idade;
+        int idade;
         std::string nome;
 
     public:
+        Pessoa(std::string nome, int idade){
+            this->nome = nome;
+            this->idade = idade;
+        }
+        Pessoa(std::string nome){
+            this->nome = nome;
+            this->idade = 0;
+        }
+
         virtual void imprimirDados() {}
-        void setNome(std::string novoNome) {
-            nome = novoNome;
-        }
-        void setIdade(int novaIdade) {
-            idade = novaIdade
-        }
 };
 
 #endif

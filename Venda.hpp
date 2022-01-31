@@ -14,20 +14,11 @@ class Venda{
         Cliente cliente;
 
     public:
-        void setValor(double novoValor){
-            valor = novoValor;
-        }
-
-        void setDescricao(std::string novaDescricao){
-            descricao = novaDescricao;
-        }
-
-        void setEspecialista(Especialista novoEspecialista){
-            especialista = novoEspecialista;
-        }
-
-        void setCliente(Cliente novoCliente){
-            cliente = novoCliente;
+        Venda(double valor, std::string descricao, Especialista especialista, Cliente cliente) {
+            this->valor = valor;
+            this->descricao = descricao;
+            this->especialista = especialista;
+            this->cliente = cliente;
         }
         
         void relatorioVendas() {

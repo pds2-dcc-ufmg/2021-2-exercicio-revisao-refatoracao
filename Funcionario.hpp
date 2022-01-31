@@ -11,6 +11,12 @@ class Funcionario : public Pessoa {
         double valorBonificacao;
 
     public:
+        Funcionario(std::string nome, int idade, double salarioBase, int rgFunc) : Pessoa(nome, idade) {
+            this->salarioBase = salarioBase;
+            this->rgFunc = rgFunc;
+            this->valorBonificacao = 0.0;
+        }
+
         void imprimirDados() override {
             std::cout << "  Nome: " << nome << endl;
             std::cout << "  Idade: " << idade << endl
@@ -21,14 +27,6 @@ class Funcionario : public Pessoa {
         double comissao(double valorVenda) {
             double c = valorVenda*valorBonificacao;
             return c;
-        }
-
-        void setSalarioBase(double novoSalario){
-            salarioBase = novoSalario;
-        }
-
-        void setRgFunc(int novoRG){
-            rgFunc = novoRG;
         }
 };
 
