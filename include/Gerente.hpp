@@ -4,34 +4,34 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
+#include "Funcionario.hpp"
 
-double ValorBONIFICACAO = 15.0;
+namespace Funcionario{
 
-class Gerente {
-    public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
+    class Gerente : public Funcionario {
+        
+        protected:
+            
+            /* Valor recebido pelo gerente a cada venda realizada */
+            static double BONIFICACAO;
 
+            // /* Calcula o bônus total recebido pelo gerente */
+            // double calculaBonificacao(unsigned int  numTotalDeVendas);
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+        public:
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+            /* Método construtor da classe Gerente */
+            Gerente(double salario, std::string idade, std::string nome, int rg) :
+                Funcionario(salario, idade, nome, rg) {}
 
-};
+            /* Imprime os dados de um determinado gerente */
+            void imprimeDados() const override;
+
+            /* Retorna o salário total recebido pelo gerente */
+            double salarioTotal() override;
+
+    };
+
+}
 
 #endif
-
