@@ -1,42 +1,28 @@
-
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
-#include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-using namespace std;
+/*
+Essa eh a classe de uma venda realizada na empresa
+*/
 
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+    Venda(Cliente *cliente, Especialista *especialista, std::string descricao, double valor); //construtor da classe
+    void print(); //imprime os dados de uma venda 
+    double getValor(); //acessa o valor da venda
 
-
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+    private:
+        /*
+        Atribuicoes relacionadas a uma venda
+        */
+        std::string _descricao; //servico solicitado pelo cliente
+        Especialista* _especialista; //especialista que realizou o servico
+        Cliente* _cliente; //cliente que realizou a compra
+        double _valor; //valor total do servico
 };
 
 #endif
