@@ -23,6 +23,6 @@ class Especialista : public Funcionario {
             Especialista(double SalarioBase,std::string idade,std::string nome, int rgFunc,std::string especialidade);
        double comissao(double ValorVenda);
     void print();
-};
+}
 
 #endif
