@@ -14,6 +14,7 @@ class Venda{
     std::string descricao;
     Especialista esp;
     Cliente cliente;
+    Venda(Cliente,Especialista,std::string,double);
 
 
     void print() {

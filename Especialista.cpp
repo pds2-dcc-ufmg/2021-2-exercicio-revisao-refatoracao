@@ -15,8 +15,19 @@ Especialista :: Especialista (string _nome,
         comissaoValor = 0;
     }
 
+    Especialista :: Especialista (){
+        nome = "vazio";
+        idade = 0;
+        registro = 0;
+        SalarioBase = 0;
+        especialidade = "Nenhuma";
+        numAtendimentos = 0;
+        comissaoValor = 0;
+
+    }
+
     double Especialista :: comissao(double ValorVenda){
-        comissaoValor = perc*ValorVenda;
+        comissaoValor += perc*ValorVenda;
     };
 
     void Especialista :: print()
