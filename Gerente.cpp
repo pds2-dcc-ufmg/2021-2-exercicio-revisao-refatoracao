@@ -3,13 +3,13 @@
 void Gerente::print () {
     std::cout << "[Funcionario]" << std::endl
     << "[Gerente]" << std::endl
-    << "  Nome: " << nome << std::endl
-    << "  Idade: " << idade << std::endl
-    << "  RGFunc: " << rgFunc << std::endl
-    << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << SalarioBase << std::endl;
+    << "  Nome: " << this->nome << std::endl
+    << "  Idade: " << this->idade << std::endl
+    << "  RGFunc: " << this->rgFunc << std::endl
+    << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->SalarioBase << std::endl;
 }
 
 double Gerente::calcula_BONIFICACAO_GERENTE (int numTOTALVendas){
-    
-    return numTOTALVendas * VALOR_BONIFICACAO;
+
+    return numTOTALVendas * this->VALOR_BONIFICACAO;
 }
