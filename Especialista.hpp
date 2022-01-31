@@ -22,6 +22,7 @@ class Especialista : public Funcionario {
                       int registro,
                       double SalarioBase,
                       string );
+        Especialista();
         double comissao(double ValorVenda);
         void print();
         void contagemAtendimento();
