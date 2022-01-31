@@ -16,14 +16,13 @@ class Funcionario {
         virtual std::string getName();
     
 
-    private:
-
-        double salarioBase; // valor m�nimo recebido pelo funcion�rio
-
-        std::string idade;
+    protected:
 
         std::string nome;
+        
+        double salarioBase; // valor m�nimo recebido pelo funcion�rio
 
+        int idade;
         int rgFunc;
 };
 
