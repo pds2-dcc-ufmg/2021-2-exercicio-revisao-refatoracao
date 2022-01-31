@@ -2,38 +2,52 @@
 #define Especialista_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
 
-using namespace std;
-
-double perc = 0.1;
-double percWanda = 0.1;
-
+#include <iostream>
+#include <iomanip>
 
 class Especialista : public Funcionario {
 
     public:
+        void print() override {
+            std::cout << "[Especialista]"       << std::endl;
+            std::cout << "[Funcionario]"        << std::endl;
+            std::cout << "  Idade: "  << idade  << std::endl;
+            std::cout << "  RGFunc: " << rgFunc << std::endl;
+            std::cout << "  Nome: "   << nome   << std::endl;
+            std::cout << "  SalarioBase: R$ "   
+                      << std::fixed << std::setprecision(2) << salarioBase << std::endl;
+        }
 
-    public:
-        string especialidade;
+        void setComissao(double valorVenda) {
+            this->comissao += valorVenda*percentualVenda;
+        }
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+        double getComissao() {
+            return this->comissao;
+        }
 
+        void setNumeroAtendimentos() {
+            this->numeroAtendimentos++;
+        }
 
-    void print() {
+        int getNumeroAtendimentos() {
+            return this->numeroAtendimentos;
+        }
 
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+        void setEspecialidade(std::string especialidade){
+            this->especialidade = especialidade;
+        }
 
+        std::string getEspecialidade(){
+            return this->especialidade;
+        }
 
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+    private:
+        std::string especialidade;
+        double percentualVenda = 0.1;
+        double comissao = 0;
+        int numeroAtendimentos = 0;
 };
 
 #endif
