@@ -1,3 +1,7 @@
+//NOTA DE ALTERAÇÕES
+//Remoção de método desnecessário print_oi();
+//Variáveis IDADE e SalarioBase trocadas para corresponder padrão de nomeclatura
+
 #ifndef FUNCIONARIO_HPP
 #define FUNCIONARIO_HPP
 
@@ -8,19 +12,15 @@ using namespace std;
 
 class Funcionario {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
+        double salarioBase; // valor mínimo recebido pelo funcionário
+        string idade;
         string nome;
         int rgFunc;
 
         void print() {
             cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
+            << "  Idade: " << idade << endl
             << "  RGFunc: " << rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
         }
 };
 
