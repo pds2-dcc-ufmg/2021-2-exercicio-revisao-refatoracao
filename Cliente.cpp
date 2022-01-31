@@ -11,3 +11,21 @@ void Cliente::print(){
 
 }
 
+void Cliente::setNOME(string name){
+	NOME = name;
+}
+string Cliente::getNOME(){
+	return NOME;
+}
+void Cliente::setendereco(string end){
+	endereco = end;
+}
+string Cliente::getendereco(){
+	return endereco;
+}
+void Cliente::setCep(string C){
+	Cep = C;
+}
+string Cliente::getCep(){
+	return Cep;
+}
