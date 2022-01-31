@@ -6,7 +6,6 @@
 #include "Especialista.hpp"
 
 class Venda{
-
     private:
         double valor;
         std::string descricao;

@@ -7,9 +7,12 @@ class Cliente : public Pessoa {
 	private:
 		std::string endereco;
 		std::string cep;
-
-		void setEndereco(std::string edereco) {}
-		void setCep(int cep) {}
+		
+	public: 
+		Cliente(std::string nome, int idade, std::string endereco, std::string cep) : Pessoa(nome, idade) {
+			this->endereco = endereco;
+			this->cep = cep;
+		}
 };
 
 #endif
