@@ -1,9 +1,9 @@
-////NOTA DE ALTERA«’ES
-//Classe Venda passa a receber um ponteiro para os clientes ao invÈs do nome
-//Classe Venda passa a receber um ponteiro para os clientes ao invÈs de uma cÛpia do elemento
-//Vari·vel valor foi alterada para os padrıes de nomeclatura
-//CriaÁ„o de mÈtodo construtor
-//RemoÁ„o de cÛdigos n„o utilizados
+////NOTA DE ALTERA√á√ïES
+//Classe Venda passa a receber um ponteiro para os clientes ao inv√©s do nome
+//Classe Venda passa a receber um ponteiro para os clientes ao inv√©s de uma c√≥pia do elemento
+//Vari√°vel valor foi alterada para os padr√µes de nomeclatura
+//Cria√ß√£o de m√©todo construtor
+//Remo√ß√£o de c√≥digos n√£o utilizados
 
 #ifndef VENDA_HPP
 #define VENDA_HPP
@@ -23,19 +23,19 @@ public:
     Especialista* esp;
     Cliente* clientPointer;
 
-    //InicializaÁ„o dos atributos da classe
+    //Inicializa√ß√£o dos atributos da classe
     Venda(Cliente* _cPointer, Especialista* _ePointer,string _descricao, double _valor) {
-        this->clientPointer = &_cPointer;
-        this->esp = &_ePointer;
+        this->clientPointer = _cPointer;
+        this->esp = _ePointer;
         this->descricao = _descricao;
         this->valor = _valor;
         
-        //AtribuiÁ„o dos valores de comiss„o e qtd de atendimentos do especialista
+        //Atribui√ß√£o dos valores de comiss√£o e qtd de atendimentos do especialista
         esp->comissaoValor += esp->comissao(this->valor);
         esp->numAtendimentos++;
     }
 
-    //Impress„o de infos da venda
+    //Impress√£o de infos da venda
     void print() {
 
         std::cout << "Especialista: ";
