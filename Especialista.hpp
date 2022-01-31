@@ -1,39 +1,28 @@
-#ifndef Especialista_HPP
-#define Especialista_HPP
+#ifndef ESPECIALISTA_H
+#define ESPECIALISTA_H
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
 
 using namespace std;
-
-double perc = 0.1;
-double percWanda = 0.1;
-
 
 class Especialista : public Funcionario {
 
     public:
+        void setEspecialidade(string especialidade);
+        string getEspecialidade();
 
-    public:
-        string especialidade;
+        void IncrementaComissao(double ValorVenda); // Soma 10% do valor da venda à comissão total do especialista, armazenando em "Comissao"
+        double getComissao();
+        
+        void IncrementaAtendimentos(); // Soma 1 no atributo "NumAtendimentos"
+        double getNumAtendimentos();
+        
+        void print() override; // Imprime na tela os dados do especialista
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
-
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+    private:
+        string Especialidade;
+        double Comissao = 0;
+        int NumAtendimentos = 0;
 };
 
 #endif
