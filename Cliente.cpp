@@ -10,3 +10,13 @@ void Cliente::print(){
               << "  CEP: " << this->cep << std::endl;
 
 }
+
+Cliente::Cliente (std::string nome, std::string endereco, std::string cep) {
+    this->nome = nome;
+    this->endereco = endereco;
+    this->cep = cep;
+}
+
+Cliente::~Cliente () {
+    delete this;
+}

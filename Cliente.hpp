@@ -6,12 +6,9 @@
 class Cliente{
 
 	public:
-        Cliente (std::string nome, std::string endereco,
-        std::string cep) {
-            this->nome = nome;
-            this->endereco = endereco;
-            this->cep = cep;
-        }
+        Cliente (std::string nome, std::string endereco, std::string cep);
+
+        ~Cliente();
 
 		void print (); // imprime na tela os dados de um cliente cadastrado
 
