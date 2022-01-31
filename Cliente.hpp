@@ -8,7 +8,7 @@ class Cliente{
 
 	public:
 
-		string NOME;
+		string nome;
 		string endereco;
 		string Cep;
 
