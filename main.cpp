@@ -10,31 +10,31 @@ using namespace std;
 int main()
 {
     Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
+    cliente1.nome = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
 	cliente1.Cep = "35690000";
     cliente1.print();
 
     Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
+    cliente2.nome = "Norman Osborn";
     cliente2.endereco ="Hartlford";
 	cliente2.Cep = "22061955";
     cliente2.print();
 
     Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
+    cliente3.nome = "Otto Octavius";
     cliente3.endereco ="Schenectady";
 	cliente3.Cep = "24051953";
     cliente3.print();
 
     Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
+    cliente4.nome = "Bruce Benner";
     cliente4.endereco ="Dayton";
 	cliente4.Cep = "22111967";
     cliente4.print();
 
     Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
+    cliente5.nome = "Steve Rogers";
     cliente5.endereco ="Lower East Side";
 	cliente5.Cep = "13061981";
     cliente5.print();
