@@ -69,8 +69,8 @@ int main()
     v02.esp = e02;
     v02.descricao = "Troca da tela do telefone";
     v02.valor = 100;
-    comissao02 += e02.comissao(v02.valor);
-    numAtendimentos02+=1;
+    e02.comissao(v02.valor);
+    e02.contagemAtendimento();
 
 
     Venda v03;
