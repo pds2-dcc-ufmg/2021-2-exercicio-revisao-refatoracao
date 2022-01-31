@@ -9,6 +9,7 @@ class Funcionario : public Pessoa {
         double salarioBase;
         int rgFunc;
         double valorBonificacao;
+        double comissao;
 
     public:
         Funcionario(std::string nome, int idade, double salarioBase, int rgFunc) : Pessoa(nome, idade) {
@@ -24,9 +25,9 @@ class Funcionario : public Pessoa {
             std::cout << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
         }
 
-        double comissao(double valorVenda) {
+        double adicionaComissao(double valorVenda) {
             double c = valorVenda*valorBonificacao;
-            return c;
+            comissao += c;
         }
 };
 

@@ -6,10 +6,10 @@
 class Cliente : public Pessoa {
 	private:
 		std::string endereco;
-		std::string cep;
-		
+		int cep;
+
 	public: 
-		Cliente(std::string nome, int idade, std::string endereco, std::string cep) : Pessoa(nome, idade) {
+		Cliente(std::string nome, std::string endereco, int cep) : Pessoa(nome) {
 			this->endereco = endereco;
 			this->cep = cep;
 		}

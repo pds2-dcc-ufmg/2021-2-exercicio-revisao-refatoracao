@@ -8,6 +8,7 @@ class Especialista : public Funcionario {
     private:
         std::string especialidade;
         int numAtendimentos;
+        double comissao;
 
     public:
         Especialista(std::string nome, int idade, double salarioBase, int rgFunc, std::string especialidade) 
@@ -15,6 +16,7 @@ class Especialista : public Funcionario {
             this->especialidade = especialidade;
             numAtendimentos = 0;
             valorBonificacao = 0.1;
+            comissao = 0;
         }
 
         void imprimirDados() override {
