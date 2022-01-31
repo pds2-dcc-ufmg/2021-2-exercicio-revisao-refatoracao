@@ -8,19 +8,9 @@
 class Gerente {
     public:
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << idade << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+        virtual void print();
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas * VALOR_BONIFICACAO;
-        }
+        virtual double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
 
 
     private:
@@ -31,8 +21,8 @@ class Gerente {
 
         int rgFunc;
 
-        string idade;
-        string nome;
+        std::string idade;
+        std::string nome;
 };
 
 #endif
