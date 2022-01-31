@@ -17,7 +17,7 @@ class Funcionario {
         int RgDoFuncionario;
 
         void print() {
-            cout << "[Funcionario]" << endl  << "  Idade: " << Idade << endl  << "  RG do Funcionario: " << RgDoFuncionario << endl;
+            cout << "[Funcionario]" << endl  << "  Idade: " << Idade << endl  << "  RGFunc: " << RgDoFuncionario << endl;
         }
 
       
