@@ -3,33 +3,42 @@
 
 #include <iostream>
 #include <iomanip>
+#include <vector>
+
+#include "Especialista.hpp"
 
 using namespace std;
 
-double ValorBONIFICACAO = 15.0;
+class Gerente : public Funcionario {
+  public:
+    double bonificacao = 15.0;
 
-class Gerente {
-    public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
+    Gerente(string nome, int idade, int rg, double salarioBase){
+      this->rg = rg;
+      this->nome = nome;
+      this->idade = idade;
+      this->salarioBase = salarioBase;
+    }
 
+    void print() {
+        cout << "[Funcionario]" << endl
+        << "[Gerente]" << endl
+        << "  Nome: " << nome << endl
+        << "  Idade: " << idade << endl
+        << "  RGFunc: " << rg << endl
+        << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl
+        << "Salario Total: " << salarioBase + bonificacao << endl;
+    }
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+    void calcula_bonificacao(vector<Especialista*> especialistas){
+      int numVendas = 0;
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+      for(int i = 0; i < especialistas.size(); i++){
+        numVendas += especialistas[i]->numAtendimentos;
+      }
+
+      this->bonificacao = numVendas * bonificacao;
+    }
 
 };
 
