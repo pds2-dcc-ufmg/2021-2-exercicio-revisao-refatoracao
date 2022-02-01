@@ -5,4 +5,5 @@
 double Especialista::comissao(double ValorVenda) {
     double c = ValorVenda*perc;
     return c;
+
 }

@@ -11,4 +11,5 @@ void Venda::print() {
             std::cout << "Descricao: " << descricao << std::endl;
 
             std::cout << "Valor: " << valor << std::endl;
-        }
+
+}
