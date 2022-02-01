@@ -15,12 +15,16 @@ class Especialista : public Funcionario {
     public:
 
     public:
-        string especialidade;
+        string _especialidade;
+        int _numAtendimentos;
+        double _comissao;
 
-    Especialista(double salarioBase, string idade, string nome, int rg): Funcionario(salarioBase, idade, nome, rg){};
+    Especialista(double salarioBase, string idade, string nome, int rg, string especialidade, int numAtendimentos, double comissao):
+                Funcionario(salarioBase, idade, nome, rg),
+                _especialidade(especialidade), _numAtendimentos(numAtendimentos), _comissao(comissao){};
     double comissao(double ValorVenda) {
         double c = ValorVenda*perc;
-                  return c;
+        return c;
     }
 
 
