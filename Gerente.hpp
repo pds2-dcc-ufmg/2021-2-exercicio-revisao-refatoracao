@@ -1,37 +1,31 @@
 #ifndef GERENTE_HPP
 #define GERENTE_HPP
 
-#include <iostream>
-#include <iomanip>
+#include "Funcionario.hpp"
 
-using namespace std;
+class Gerente:public Funcionario {
+    private:
 
-double ValorBONIFICACAO = 15.0;
-
-class Gerente {
-    public:
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-        string IDADE;
-        string nome;
-        int rgFunc;
         double bonificacao;
 
+    public:
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+        double getBonificacao();
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+        void setBonificacao(double Bonificacao);
+
+        void print();
+
+        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
 
 };
 
 #endif
 
+//Aplica-se o 'std' nas palavras reservadas, 'endl' e 'cout'
+//Herança da classe Funcionario
+//Alteração de bonificação para um atributo privado
+//Retira-se a biblioteca <iostream> e <iomanip>, pois já foram incluídas em Funcionario.hpp
+//Exclui-se o escopo das funções print e calcula_BONIFICACAO_GERENTE para defini-los no .cpp
+//Adição de getters e setters
+//Move-se ValorBonificacao para o Gerente.cpp, a título de se evitar a múltipla declaração.

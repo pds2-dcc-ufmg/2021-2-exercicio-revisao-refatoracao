@@ -1,42 +1,34 @@
-
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
-#include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-using namespace std;
-
 class Venda{
 
+    private:
+        double VALOR;
+        std::string descricao;
+
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
 
+        Especialista esp;
+        Cliente cliente;
 
-    void print() {
+        void print();
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+        double getValor();
+		std::string getDescricao();
+		void setValor(double Valor);
+		void setDescricao(std::string Descricao);
+		
 };
 
 #endif
+
+//Aplicam-se os 'std'
+//Retira-se comentários desnecessários
+//Troca-se cliente de string para o tipo Cliente
+//Adiciona-se getters e setters
+//Apaga-se o #include Funcionario, visto que não sera será necessário.
+//Exclui-se o escopo da função print para defini-lo no .cpp
