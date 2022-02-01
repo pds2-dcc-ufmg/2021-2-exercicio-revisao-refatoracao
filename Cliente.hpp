@@ -13,8 +13,8 @@ class Cliente{
 		string Cep;
 		string AlturaDosPais;
 
-		Cliente(string n, string e, string c, string a = 0)
-			: NOME(n), endereco(e), Cep(c), AlturaDosPais(a) {};
+		Cliente(string n, string e, string c)
+			: NOME(n), endereco(e), Cep(c) {};
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
 

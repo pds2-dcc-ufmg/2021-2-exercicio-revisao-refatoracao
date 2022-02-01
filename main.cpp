@@ -87,8 +87,8 @@ int main()
     venda.push_back(&v07);
 
     Venda v08("Otto Octavius", e02, "Formatacao do PC", 80);
-    e03.comissao_ += e02.comissao(v08.VALOR);
-    e03.numAtendimentos += 1;
+    e02.comissao_ += e02.comissao(v08.VALOR);
+    e02.numAtendimentos += 1;
     venda.push_back(&v08);
 
 
