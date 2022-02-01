@@ -20,14 +20,12 @@ void Cliente::setNome(string nomeNovo){
 }
 
 
-#/---get/set endereço
 string Cliente::getEndereco(){ 
 	return endereco;
 }
 void Cliente::setENDERECO(string enderecoNovo){
 	this->endereco = enderecoNovo;
 }
-#---/
 
 
 #/---get/set cep
