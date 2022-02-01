@@ -11,7 +11,7 @@ class Especialista : public Funcionario {
         /**
         *@brief Imprime informações do especialista (nome, idade, rg e salario base)
         */
-        void print() {
+        void print() override {
             cout << "[Funcionario]" << endl
             << "[Especialista]" << endl
             << "  Nome: " << nome << endl
@@ -22,7 +22,7 @@ class Especialista : public Funcionario {
         /**
         *@param valorVenda Valor da Venda
         */
-        double calculaExtra(double valorVenda) {
+        double calculaExtra(double valorVenda) override {
             return valorVenda*percComissao;
         } 
 
