@@ -2,6 +2,7 @@
 #define Especialista_HPP
 #define PERCENTUAL 0.1
 
+#include "Pessoa.hpp"
 #include "Funcionario.hpp"
 
 using namespace std;
