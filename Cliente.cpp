@@ -12,7 +12,11 @@ void Cliente::print(){
 }
 
 
-string Cliente::getNOME(){ return NOME;}
+string Cliente::getNOME(){ 
+	
+	return NOME;
+
+}
 
 void Cliente::setNOME(string NOME_NOVO)
 {
@@ -20,7 +24,9 @@ void Cliente::setNOME(string NOME_NOVO)
 }
 
 
-string Cliente::getENDERECO(){ return endereco;}
+string Cliente::getENDERECO(){ 
+	return endereco;
+}
 
 void Cliente::setENDERECO(string ENDERECO_NOVO)
 {
@@ -28,7 +34,10 @@ void Cliente::setENDERECO(string ENDERECO_NOVO)
 }
 
 
-string Cliente::getCEP(){ return Cep;}
+string Cliente::getCEP(){ 
+	
+	return Cep;
+}
 
 void Cliente::setCEP(string CEP_NOVO)
 {
