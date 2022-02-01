@@ -4,17 +4,24 @@
 #include <string>
 using namespace std;
 
-class Cliente{
+class Cliente
+{
 
-	public:
+private:
+	string nome;
+	string endereco;
+	string cep;
 
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+public:
+	Cliente() : nome(""), endereco(""), cep(""){};
+	Cliente(string nome, string endereco, string cep) : nome(nome), endereco(endereco), cep(cep){};
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+	string getNome();
+	string getEndereco();
+	string getCep();
+	double getAlturaDosPais();
 
+	void print(); // imprime na tela os dados de um cliente cadastrado
 };
 
 #endif
