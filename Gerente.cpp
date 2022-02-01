@@ -2,9 +2,11 @@
 #include "Funcionario.hpp"
 
 void Gerente::print() {
+            cout << "[Funcionario]" << endl;
             cout << "[Gerente]" << endl;
-            Funcionario::print();
             cout << "  Nome: " << getNome() << endl
+            << "  Idade: " << getIdade() << endl
+            << "  RGFunc: "<< getRg() << endl
             << "  SalarioBase: R$ " << fixed << setprecision(2) << getSalarioBase() <<endl;
         }
 
