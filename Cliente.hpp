@@ -12,7 +12,13 @@ class Cliente{
 		std::string cep;
 
 	public:
-
+		void setNome(std::string nome);
+		void setEndereco(std::string endereco);
+		void setCep(std::string cep);
+		std::string getNome();
+		std::string getEndereco();
+		std::string getCep();
+		
 		void print(); // imprime na tela os dados de um cliente cadastrado
 
 }

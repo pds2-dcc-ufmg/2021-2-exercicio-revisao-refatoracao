@@ -13,6 +13,11 @@ class Gerente: public Funcionário {
 
     public:
 
+        void setBonificacao(double bonificacao);
+        void setValorBONIFICACAO(double ValorBONIFICACAO);
+        double getBonificacao();
+        double getValorBONIFICACAO();
+
         void print(); //imprime dados do gerente
 
         double calcula_BONIFICACAO_GERENTE(numTOTALVendas);

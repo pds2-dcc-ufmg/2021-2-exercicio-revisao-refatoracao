@@ -16,6 +16,10 @@ class Venda{
 
     public:
 
+        void setValor(double valor);
+        void setDescricao(std::string descricao);
+        void setCliente(std::string cliente);
+        
         void print(); // imprime na tela os dados da venda
 }
 

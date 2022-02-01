@@ -10,19 +10,16 @@ class Especialista : public Funcionario {
 
         double perc = 0.1;
         double percWanda = 0.1;
-        std::string especialidade;
 
     public:
 
+        void setPerc(double perc);
+        void setPercWanda(double percWanda);
+        double getPerc();
+        double getPercWanda();
+
         double comissao(ValorVenda);
 
-        void print() {
-
-            std::cout << "[Especialista]" << std::endl;
-            Funcionario::print();
-            std::cout << "Especialidade: " << especialidade << std::endl;
-
-        }
-}
+        void print();
 
 #endif
