@@ -27,3 +27,10 @@ void Cliente::setENDERECO(string ENDERECO_NOVO)
 	this->endereco = ENDERECO_NOVO;
 }
 
+
+string Cliente::getCEP(){ return Cep;}
+
+void Cliente::setCEP(string CEP_NOVO)
+{
+	this->Cep = CEP_NOVO;
+}
