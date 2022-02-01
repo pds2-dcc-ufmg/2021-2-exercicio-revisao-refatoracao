@@ -11,7 +11,8 @@ class Cliente{
 		string NOME;
 		string endereco;
 		string Cep;
-		string AlturaDosPais;
+
+        Cliente(string NOME = "", string endereco = "", string Cep = "");
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
 
