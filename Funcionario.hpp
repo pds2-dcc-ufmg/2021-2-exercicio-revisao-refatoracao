@@ -9,9 +9,17 @@ using namespace std;
 class Funcionario {
     public:
         /**
-        *@brief Imprime informações do funcionário (nome, idade e rg)
+        *@brief Imprime informações do funcionário
         */
         virtual void print();
+        /**
+        *@brief Calcula a renda extra do funcionario
+        */
+        virtual double calculaExtra();
+        /**
+        *@brief Define o valor da renda extra do funcionario
+        */
+        virtual double setRendaExtra();
     
     private:
         /**
@@ -19,6 +27,14 @@ class Funcionario {
         */
         double salarioBase;
         /**
+        *@brief Percentual de comissão recebido pelo funcionário    
+        */   
+        double percComissao;
+        /**
+        *@brief Renda extra que o funcionario ganhará (bonificação ou comissão)  
+        */
+        double rendaExtra;
+        /**       
         *@brief Dados do funcionário
         */
         string idade;
