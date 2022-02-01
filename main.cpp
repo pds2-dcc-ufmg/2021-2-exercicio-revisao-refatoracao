@@ -87,7 +87,7 @@ int main()
     v01.descricao = "Fotos do Homem Aranha";
     v01.VALOR = 100;
     comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
+    numAtendimentos01 += 1;
 
 
     Venda v02;
@@ -96,7 +96,7 @@ int main()
     v02.descricao = "Troca da tela do telefone";
     v02.VALOR = 100;
     comissao02 += e02.comissao(v02.VALOR);
-    numAtendimentos02+=1;
+    numAtendimentos02 += 1;
 
 
     Venda v03;
@@ -105,7 +105,7 @@ int main()
     v03.descricao = "Fotos do novo planador";
     v03.VALOR = 150;
     comissao01 += e01.comissao(v03.VALOR);
-    numAtendimentos01+=1;
+    numAtendimentos01 += 1;
 
 
     Venda v04;
@@ -114,7 +114,7 @@ int main()
     v04.descricao = "Recarga de cartucho";
     v04.VALOR = 10;
     comissao02 += e02.comissao(v04.VALOR);
-    numAtendimentos02+=1;
+    numAtendimentos02 += 1;
 
 
     Venda v05;
@@ -123,7 +123,7 @@ int main()
     v05.descricao = "Reconstrucao de Predio";
     v05.VALOR = 10000;
     comissao03 += e03.comissao(v05.VALOR);
-    numAtendimentos03+=1;
+    numAtendimentos03 += 1;
 
 
     Venda v06;
@@ -132,7 +132,7 @@ int main()
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
     comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
+    numAtendimentos03 += 1;
 
 
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
@@ -146,7 +146,7 @@ int main()
     v07.descricao = "Reforma do Clarim Diario";
     v07.VALOR = 5000;
     comissao03 += e03.comissao(v07.VALOR);
-    numAtendimentos03+=1;
+    numAtendimentos03 += 1;
 
 
     Venda v08;
@@ -155,7 +155,7 @@ int main()
     v08.descricao = "Formatacao do PC";
     v08.VALOR = 80;
     comissao02 += e02.comissao(v08.VALOR);
-    numAtendimentos02+=1;
+    numAtendimentos02 += 1;
 
 
 
@@ -196,15 +196,15 @@ int main()
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
     cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
+    cout << "Salario Total: " << e01.SalarioBase + comissao01 << endl;
 
     e02.print();
     cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
+    cout << "Salario Total: " << e02.SalarioBase + comissao02 << endl;
 
     e03.print();
     cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
+    cout << "Salario Total: " << e03.SalarioBase + comissao03 << endl;
 
 
     int NUMTOTALservicos = 0;
