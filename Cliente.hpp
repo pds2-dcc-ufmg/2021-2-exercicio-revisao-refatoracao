@@ -4,8 +4,6 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 class Cliente{
 	public:
 		Cliente(std::string nome, std::sring endereco, std::string cep);
