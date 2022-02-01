@@ -16,7 +16,7 @@ class Funcionario : public Pessoa {
         int get_RG() const;
         void print() const override;
     
-    private:
+    protected:
     
         double salarioBase;
         string idade;
