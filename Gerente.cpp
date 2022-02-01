@@ -34,7 +34,3 @@ Gerente::Gerente (std::string nome,
     this->rgFunc = rgFunc;
     this->salarioBase = salarioBase;
 }
-
-Gerente::~Gerente () {
-    delete this;
-}

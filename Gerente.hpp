@@ -15,7 +15,6 @@ class Gerente {
                  int idade,
                  std::string rgFunc,
                  int salarioBase);
-        ~Gerente ();
 
         double getSalarioBase ();
         double getBonificacao ();
