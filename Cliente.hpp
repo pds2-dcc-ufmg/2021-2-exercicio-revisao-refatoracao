@@ -1,19 +1,37 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
+#include "Pessoa.hpp"
 #include <string>
+
 using namespace std;
 
-class Cliente{
+class Cliente : public Pessoa {
 
 	public:
 
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+		void print() override;
+		
+		void setEndereco(string endereco){
+			this->endereco = endereco;
+		}		
+		
+		void setCEP(string CEP){
+			this->CEP = CEP;
+		}
+		
+		string getEndereco(){
+			return this->endereco;
+		}		
+		
+		string getCEP(){
+			return this->CEP;
+		}
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+	private:
+
+		string endereco;
+		string CEP;
 
 };
 
