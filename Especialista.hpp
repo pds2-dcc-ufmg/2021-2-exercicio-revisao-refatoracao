@@ -9,12 +9,12 @@ class Especialista : public Funcionario {
     public:
 
         Especialista ();
-        Especialista (std::string nome,
-                      int idade,
-                      std::string rgFunc,
-                      int salarioBase,
+
+        Especialista (std::string nome, 
+                      int idade, 
+                      std::string rgFunc, 
+                      int salarioBase, 
                       std::string especialidade);
-        ~Especialista ();
 
         double comissao(double ValorVenda);
         void print();

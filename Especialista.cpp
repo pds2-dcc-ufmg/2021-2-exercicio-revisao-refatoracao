@@ -13,22 +13,21 @@ void Especialista::print() {
 
 }
 
-Especialista::Especialista (std::string nome,
-                            int idade,
-                            std::string rgFunc,
-                            int salarioBase,
-                            std::string especialidade) {
-
-    this->nome = nome;
-    this->idade = idade;
-    this->rgFunc = rgFunc;
-    this->salarioBase = salarioBase;
-    this->especialidade = especialidade;
+Especialista::Especialista () {
 
 }
 
-Especialista::~Especialista () {
-    delete this;
+Especialista::Especialista (std::string nome, 
+                            int idade, 
+                            std::string rgFunc, 
+                            int salarioBase, 
+                            std::string especialidade) {
+    
+    this->nome = nome;
+    this->idade = idade;
+    this->rgFunc = rgFunc; 
+    this->salarioBase = salarioBase;
+    this->especialidade = especialidade;
 }
 
 std::string Especialista::getEspecialidade () {
