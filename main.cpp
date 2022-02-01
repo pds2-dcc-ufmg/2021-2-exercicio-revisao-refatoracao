@@ -14,27 +14,27 @@ int main()
     Cliente cliente1;
     cliente1.NOME = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
+    cliente1.Cep = "35690000";
     clientes.push_back(cliente1);
 
     cliente1.NOME = "Norman Osborn";
     cliente1.endereco ="Hartlford";
-	cliente1.Cep = "22061955";
+    cliente1.Cep = "22061955";
     clientes.push_back(cliente1);
 
     cliente1.NOME = "Otto Octavius";
     cliente1.endereco ="Schenectady";
-	cliente1.Cep = "24051953";
+    cliente1.Cep = "24051953";
     clientes.push_back(cliente1);
 
     cliente1.NOME = "Bruce Benner";
     cliente1.endereco ="Dayton";
-	cliente1.Cep = "22111967";
+    cliente1.Cep = "22111967";
     clientes.push_back(cliente1);
 
     cliente1.NOME = "Steve Rogers";
     cliente1.endereco ="Lower East Side";
-	cliente1.Cep = "13061981";
+    cliente1.Cep = "13061981";
     clientes.push_back(cliente1);
 
     std::list<Cliente>::iterator it;
