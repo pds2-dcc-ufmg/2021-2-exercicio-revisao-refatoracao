@@ -28,11 +28,9 @@ void Cliente::setENDERECO(string enderecoNovo){
 }
 
 
-#/---get/set cep
 string Cliente::getCep(){ 
 	return cep;
 }
 void Cliente::setCep(string cepNovo){
 	this->cep = cepNovo;
 }
-#---/
