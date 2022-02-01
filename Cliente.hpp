@@ -7,14 +7,20 @@ using namespace std;
 class Cliente{
 
 	public:
-
-		string NOME;
-		string endereco;
+	//Implementação dos Metodos de Set da Classe Cliente
+	void SetNome(string Nome);
+	void SetEndereco(string Endereco);
+	void SetCep(string Cep);
+	//Implementação dos Metodos de Set da Classe Cliente
+	string GetNome();
+	string GetEndereco();
+	string GetCep(); 
+	// imprime na tela os dados de um cliente cadastrado
+	void Print(); 
+	private:
+		string Nome;
+		string Endereco;
 		string Cep;
-		string AlturaDosPais;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
 };
 
 #endif

@@ -11,32 +11,22 @@ using namespace std;
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
-
-
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+    //Implementação dos Metodos de Set da Classe Cliente
+	void SetValor(double Nome);
+	void SetDescricao(string Descricao);
+	void SetEspecialista(Especialista esp);
+    void SetCliente(string Cliente);
+	//Implementação dos Metodos de Set da Classe Cliente
+	double GetValor();
+	string GetDescricao();
+	Especialista GetEspecialista(); 
+    string SetCliente();
+    void Print();
+    private:
+    double Valor;
+    string Descricao;
+    Especialista Esp;
+    string Cliente;
 };
 
 #endif

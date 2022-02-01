@@ -1,13 +1,32 @@
 #include <iostream>
 #include <string>
 #include "Cliente.hpp"
-
-void Cliente::print(){
-
+//Metodos de Set da Classe Cliente
+void Cliente::SetNome(string Nome){
+	this->Nome = Nome;
+}
+void Cliente::SetEndereco(string Endereco){
+	this->Endereco = Endereco;
+}
+void Cliente::SetCep(string Cep)
+{
+	this->Cep = Cep;
+}
+// Metodos de Set da Classe Cliente
+string Cliente::GetNome(){
+	return Nome;
+}
+string Cliente::GetEndereco(){
+	return Endereco;
+}
+string Cliente::GetCep(){
+	return Cep;
+}
+//Metodo que imprime os dados do cliente 
+void Cliente::Print(){
 	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
-
+         << "  Nome: " << GetNome() << endl
+		 << "  Endereco: " << GetEndereco() << endl
+		 << "  CEP: " << GetCep() << endl;
 }
 
