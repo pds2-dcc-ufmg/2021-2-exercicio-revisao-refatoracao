@@ -1,5 +1,5 @@
-#ifndef Especialista_HPP
-#define Especialista_HPP
+#ifndef ESPECIALISTA_HPP
+#define ESPECIALISTA_HPP
 
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
