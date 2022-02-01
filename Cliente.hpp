@@ -8,16 +8,19 @@ class Cliente{
 
 	private:
 
-		string NOME;
+		string nome;
 		string endereco;
-		string Cep;
+		string cep;
 	public:
-		string getNOME();
-		void setNOME(string NOME_NOVO);
+		string getNome();
+		void setNome(string nomeNovo);
 		
-		string getENDERECO();
-		void setENDERECO(string ENDERECO_NOVO);
+		string getEndereco();
+		void setEndereco(string enderecoNovo);
 	
+		string getCep();
+		void setCep(string cepNovo);
+		
 		void print(); // imprime na tela os dados de um cliente cadastrado
 
 };
