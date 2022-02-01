@@ -20,3 +20,10 @@ void Cliente::setNOME(string NOME_NOVO)
 }
 
 
+string Cliente::getENDERECO(){ return endereco;}
+
+void Cliente::setENDERECO(string ENDERECO_NOVO)
+{
+	this->endereco = ENDERECO_NOVO;
+}
+
