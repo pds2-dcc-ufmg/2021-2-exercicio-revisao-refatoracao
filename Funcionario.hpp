@@ -6,7 +6,7 @@
 
 class Funcionario {
     private:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
+        double SalarioBase;
         std::string IDADE;
         std::string nome;
         int rgFunc;
@@ -19,7 +19,7 @@ class Funcionario {
         }
 
         void print_oi(){
-            cout << "Tchau" << endl;
+            std::cout << "Tchau" << std::endl;
         }
 };
 
