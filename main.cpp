@@ -9,10 +9,11 @@ using namespace std;
 
 /*
 Foram feitos vectors para armazenar os dados dos clientes, dos especialistas e das vendas, para diminuir as repetições no main.
-Foram feitos funções voidImprime para imprimir os dados contidos nesses vectors de acordo com o método individual incluso em 
-cada classe chamada.
+Foram feitos funções voidImprime para imprimir os dados contidos nesses vectors que continham as classes Cliente e Venda,
+utilizando a recursividade.
 Foi utilizado o #include <vector>.
-Criou-se uma função para imprimir todas as comissões (observação escrita nela).
+A quantidade de informações no arquivo main para o cálculo das comissões foi reduzida, e adaptada para seguir os novos métodos
+introduzidos em outros arquivos do programa a fim de seguir o princípio do encapsulamento.
 Foi veito um vector único para armazenar as informações de Gerente e auxiliar nas suas operações.
 */
 
@@ -22,6 +23,7 @@ std::vector<Cliente> NovoCliente() {
     clientela.push_back(Cliente("J. Jonah Jameson","Nova York","35690000"));
     clientela.push_back(Cliente("Norman Osborn","Hartlford","22061955"));
     clientela.push_back(Cliente("Otto Octavius","Schenectady","24051953"));
+    clientela.push_back(Cliente("Bruce Benner","Dayton","22111967"));
     clientela.push_back(Cliente("Bruce Benner","Dayton","22111967"));
     clientela.push_back(Cliente("Steve Rogers","Lower East Side","13061981"));
     return clientela;
@@ -45,7 +47,6 @@ std::vector<Especialista> NovoEspecialista(){
 
     std::vector<Venda> vendido;
 std::vector<Venda> NovaVenda(){
-    //std::vector<Venda> vendido;
     vendido.push_back(Venda(100,"Fotos do Homem Aranha",pessoa[0],"J. Jonah Jameson"));
     vendido.push_back(Venda(100,"Troca da tela do telefone",pessoa[1],"Bruce Benner"));
     vendido.push_back(Venda(150,"Fotos do novo planador",pessoa[0],"Norman Osborn"));
@@ -58,54 +59,6 @@ std::vector<Venda> NovaVenda(){
     
 }
 
-/*
-Obs: essa função gera o erro std::bad_alloc. Não sei bem o que falta para ela funcionar, e a tarefa sendo pelo github
-dificultou um pouco pedir auxílio.
-Mas o método poderia ser implementado para calcular o valor da comissão para cada especalista, fazendo um loop no
-vector de venda e verificando qual é o atendente correspondente em cada venda. Isso iria retirar a necessidade de
-declarar no main uma variável para cada comissão e cada número de atendimento, trazendo maior eficiencia para o programa.
-*/  
-void Comissao(){
-    int numAtendimentos = 0;
-    double comissao = 0;
-    //std::vector<double> comission;
-    const auto i = 0;
-
-    std::vector<Venda>::iterator it;
-    for(it = vendido.begin();it!= vendido.end();it++){
-        if(it->getEsp().getRg() == pessoa[i].getRg()){
-        numAtendimentos += 1;
-        comissao += it->getEsp().comissao(it->getValor());
-        }
-        
-    }
-    std::cout << "Num Atendimentos: " << numAtendimentos << endl;
-    std::cout << "Salario Total: " << it->getEsp().getSalario() + comissao <<endl;
-}
-
-
-void ImprimeEspecialista(std::vector<Especialista> pessoa){
-    std::vector<Especialista>::iterator it;
-    for(it = pessoa.begin();it!=pessoa.end();it++){
-        it->printEspecialista();
-        
-        if(it->getIdade() == "46"){
-            std::cout << "Num Atendimentos: " << 2 << endl;
-            std::cout << "Salario Total: " << "3025.00"<<endl;
-        }
-        if(it->getIdade() == "56"){
-            std::cout << "Num Atendimentos: " << 3 << endl;
-            std::cout << "Salario Total: " << "1511.00"<<endl;
-        }
-        if(it->getIdade() == "32"){
-            std::cout << "Num Atendimentos: " << 3 << endl;
-            std::cout << "Salario Total: " << "6800.00"<<endl;
-        }
-
-        }
-    }
-
-
 void ImprimeVenda(std::vector<Venda> vendido){
     std::vector<Venda>::iterator it;
     for(it = vendido.begin();it!= vendido.end();it++){
@@ -117,32 +70,77 @@ void ImprimeVenda(std::vector<Venda> vendido){
 
 int main()
 {   
-    std::vector<Cliente> Teste;
-    Teste = NovoCliente();
-    ImprimeClientes(Teste);
+    std::vector<Cliente> Cliente;
+    Cliente = NovoCliente();
+    ImprimeClientes(Cliente);
 
-    std::vector<Especialista> Teste2;
-    Teste2 = NovoEspecialista();
+    std::vector<Especialista> Especial;
+    Especial = NovoEspecialista();
 
-    std::vector<Venda> Teste3;
-    Teste3 = NovaVenda();
+    std::vector<Venda> Vendeu;
+    Vendeu = NovaVenda();
 
     std::cout <<" \n \n           Relatorio das Vendas \n" << endl;
-    ImprimeVenda(Teste3);
-    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-    ImprimeEspecialista(Teste2);
+    ImprimeVenda(Vendeu);
 
-    //Comissao();
+    int numAtendimentos01 = 0;
+    double comissao01 = 0;
+    int numAtendimentos02 = 0;
+    double comissao02 = 0;
+    int numAtendimentos03 = 0;
+    double comissao03 = 0;
+
+    Venda e01 = Vendeu[0];
+    comissao01 += e01.getEsp().comissao(e01.getValor());
+    numAtendimentos01 += 1;
+
+    Venda e02 = Vendeu[1];
+    comissao02 += e02.getEsp().comissao(e02.getValor());
+    numAtendimentos02 += 1;
+
+    Venda e03 = Vendeu[2];
+    comissao01 += e03.getEsp().comissao(e03.getValor());
+    numAtendimentos01 += 1;
+    
+    Venda e04 = Vendeu[3];
+    comissao02 += e04.getEsp().comissao(e04.getValor());
+    numAtendimentos02 += 1;
+    
+    Venda e05 = Vendeu[4];
+    comissao03 += e05.getEsp().comissao(e05.getValor());
+    numAtendimentos03 += 1;
+    
+    Venda e06 = Vendeu[5];
+    comissao03 += e06.getEsp().comissao(e06.getValor());
+    numAtendimentos03 += 1;
+    
+    Venda e07 = Vendeu[6];
+    comissao03 += e07.getEsp().comissao(e07.getValor());
+    numAtendimentos03 += 1;
+    
+    Venda e08 = Vendeu[7];
+    comissao02 += e08.getEsp().comissao(e08.getValor());
+    numAtendimentos02 += 1;
+
+    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
+    Especialista v01 = Especial[0];
+    v01.printEspecialista();
+    std::cout << "Num Atendimentos: " << numAtendimentos01 << endl;
+    std::cout << "Salario Total: " << v01.getSalario() + comissao01 <<endl;
+
+    Especialista v02 = Especial[1];
+    v02.printEspecialista();
+    std::cout << "Num Atendimentos: " << numAtendimentos02 << endl;
+    std::cout << "Salario Total: " << v02.getSalario() + comissao02 <<endl;
+
+    Especialista v03 = Especial[2];
+    v03.printEspecialista();
+    std::cout << "Num Atendimentos: " << numAtendimentos03 << endl;
+    std::cout << "Salario Total: " << v03.getSalario() + comissao03 <<endl;
+    
 
     Gerente g01 = Gerente("72",21121948,"Nick Fury",10000,0);
-    //Calcula o total de atendimentos:
-    std::vector<Venda>::iterator it;
-    int numAtendimentos = 0;
-    for(it = vendido.begin();it!= vendido.end();it++){
-    numAtendimentos += 1;
-    }
-
-    int NUMTOTALservicos = numAtendimentos;
+    int NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
     g01.printGerente();
     std::cout << "Salario Total: " << g01.getSalario() + g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos) <<endl;
 
