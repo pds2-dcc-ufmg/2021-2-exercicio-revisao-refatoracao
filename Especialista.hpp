@@ -2,38 +2,28 @@
 #define Especialista_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
-
-using namespace std;
-
-double perc = 0.1;
-double percWanda = 0.1;
 
 
 class Especialista : public Funcionario {
 
-    public:
+    private:
+        std::string especialidade;
 
     public:
-        string especialidade;
+        std::string getEspecialidade();
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+        double comissao(double ValorVenda);
 
+        void setEspecialidade(std::string Especialidade);
 
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+        void print();
 };
 
 #endif
+
+//Aplicam-se os 'std' em todos os 'endl', palavras reservadas necessárias e na string 'especialidade'
+//Introduzem-se os getters e setters e o .cpp, a fim de definir as funções. 
+//Transforma-se Especialidade em um atributo privado. 
+//Exclui-se o escopo das funções 'comissao' e 'print' da classe, a fim de definí-los no .cpp
+//Retira-se o #include "Cliente", já que não será necessário.
+//Move-se perc e percWanda, a título de se evitar a múltipla declaração

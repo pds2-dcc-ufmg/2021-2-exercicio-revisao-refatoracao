@@ -1,27 +1,36 @@
 #ifndef FUNCIONARIO_HPP
 #define FUNCIONARIO_HPP
 
+#include <string>
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
-
 class Funcionario {
-    public:
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-        string IDADE;
-        string nome;
+    protected:
+
+        double SalarioBase; 
+        std::string IDADE;
+        std::string nome;
         int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+    public:
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        std::string getNome();
+		std::string getIdade();
+		double getSalarioBase();
+        double getrg();
+		void setNome(std::string nome);
+		void setIdade(std::string Idade);
+		void setSalarioBase(int SalarioBase);
+        void setrg(int rg);
+
+        void print();
+
+        void print_oi();
 };
 
 #endif
+
+//Adicionam-se os 'std' antes dos 'endl','cout' e string
+//Transforma-se os atributos em protected, a título de permitir a herança, porém não dar acesso direto a esses atributos.
+//Adição de getters e setters e definição do escopo das funções print e print_oi no .cpp
