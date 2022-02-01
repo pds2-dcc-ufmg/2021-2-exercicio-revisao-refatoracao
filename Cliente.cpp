@@ -23,7 +23,7 @@ void Cliente::setNome(string nomeNovo){
 string Cliente::getEndereco(){ 
 	return endereco;
 }
-void Cliente::setENDERECO(string enderecoNovo){
+void Cliente::setEndereco(string enderecoNovo){
 	this->endereco = enderecoNovo;
 }
 
