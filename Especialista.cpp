@@ -23,15 +23,12 @@ Especialista :: Especialista (string _nome,
 
     void Especialista :: print()
     {
-
         std::cout << "[Especialista]" << endl;
         Funcionario::print();
-
-
-
         std::cout << "  Nome: " << nome << endl
         << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
+        cout << "Num Atendimentos: " << numAtendimentos << endl;
+        cout << "Salario Total: " << SalarioBase+comissaoValor<<endl;
     }
 
     void Especialista :: contagemAtendimento (){

@@ -5,6 +5,7 @@
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
+#include "RelatorioVendas.hpp"
 
 
 class Venda{
@@ -15,7 +16,6 @@ class Venda{
     Especialista esp;
     Cliente cliente;
     Venda(Cliente,Especialista,std::string,double);
-
 
     void print() {
 

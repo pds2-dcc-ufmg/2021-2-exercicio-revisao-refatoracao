@@ -14,6 +14,7 @@ double ValorBonificacao = 15.0;
 class Gerente : public Funcionario{
     public:
         double bonificacao;
+        Gerente (string, int, int, double);
 
 
         void print() {
