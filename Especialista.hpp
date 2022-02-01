@@ -1,5 +1,5 @@
-#ifndef ESPECIALISTA_H
-#define ESPECIALISTA_H
+#ifndef ESPECIALISTA_HPP
+#define ESPECIALISTA_HPP
 
 double const PORCENTAGEM = 0.1;
 
