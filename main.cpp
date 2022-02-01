@@ -54,34 +54,22 @@ int main()
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
     v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
 
     v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
 
     v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
 
     v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
 
     v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
 
     v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
 
     v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
-
-
-
 
 
 
