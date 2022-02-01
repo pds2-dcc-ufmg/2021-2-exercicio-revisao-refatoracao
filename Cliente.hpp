@@ -2,19 +2,16 @@
 #define CLIENTE_H
 
 #include <string>
+#include <iostream>
+
 using namespace std;
 
 class Cliente{
-
 	public:
-
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+		Cliente(std::string nome, std::sring endereco, std::string cep);
+		void print();
+	private:
+		std::string _nome, std::string _endereco, std::string _cep;
 };
 
 #endif
