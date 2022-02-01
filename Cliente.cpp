@@ -11,14 +11,13 @@ void Cliente::print(){
 
 }
 
-#/---get/set nome
+
 string Cliente::getNome(){ 
 	return nome;
 }
 void Cliente::setNome(string nomeNovo){
 	this->nome = nomeNovo;
 }
-#---/
 
 
 #/---get/set endereço
