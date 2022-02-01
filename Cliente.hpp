@@ -10,10 +10,19 @@ class Cliente{
 
 		string NOME;
 		string endereco;
-		string Cep;
+		string CEP;
 		string AlturaDosPais;
+		std::string getNome();
+		std::string getEndereco();
+		std::string getCep();
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void imprimeInformacoes();
+
+
+	private:
+		std::string nome;
+		std::string endereco;
+		std::string CEP;
 
 };
 

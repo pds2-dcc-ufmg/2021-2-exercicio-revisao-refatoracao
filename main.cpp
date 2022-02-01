@@ -12,32 +12,32 @@ int main()
     Cliente cliente1;
     cliente1.NOME = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
-    cliente1.print();
+	cliente1.CEP = "35690000";
+    cliente1.imprimeInformacoes();
 
     Cliente cliente2;
     cliente2.NOME = "Norman Osborn";
     cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
+	cliente2.CEP = "22061955";
+    cliente2.imprimeInformacoes();
 
     Cliente cliente3;
     cliente3.NOME = "Otto Octavius";
     cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
+	cliente3.CEP = "24051953";
+    cliente3.imprimeInformacoes();
 
     Cliente cliente4;
     cliente4.NOME = "Bruce Benner";
     cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
+	cliente4.CEP = "22111967";
+    cliente4.imprimeInformacoes();
 
     Cliente cliente5;
     cliente5.NOME = "Steve Rogers";
     cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
+	cliente5.CEP = "13061981";
+    cliente5.imprimeInformacoes();
 
 
 
@@ -76,9 +76,9 @@ int main()
     Gerente g01;
     double bonificacao01 = 0;
     g01.nome = "Nick Fury";
-    g01.IDADE = "72";
+    g01.idade = "72";
     g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
+    g01.salarioBase = 10000;
 
 
     Venda v01;
@@ -209,9 +209,9 @@ int main()
 
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    g01.bonificacao = g01.calculaBonificacaoGerente(NUMTOTALservicos);
     g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    cout << "Salario Total: " << g01.salarioBase + g01.bonificacao<<endl;
 
     return 0;
 }
