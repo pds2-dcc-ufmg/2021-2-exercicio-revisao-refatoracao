@@ -8,20 +8,17 @@ using namespace std;
 
 class Funcionario {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
+        double SalarioBase; // valor mï¿½nimo recebido pelo funcionï¿½rio
         string IDADE;
         string nome;
         int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+        Funcionario(string n, string idade, int rg, double s) 
+            : SalarioBase(s), IDADE(idade), nome(n), rgFunc(rg) {};
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        void print();
+
+        void print_oi();
 };
 
 #endif
