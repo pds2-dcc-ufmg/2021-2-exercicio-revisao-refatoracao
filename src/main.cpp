@@ -6,196 +6,73 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
-using namespace std;
 
 int main()
- {
-     int num_clientes = 5;
+{
+    enum Clientes
+    {
+        JJJ,
+        Norman,
+        Otto,
+        Bruce,
+        Steve
+    };
+    enum Especialistas
+    {
+        Parker,
+        Stark,
+        Maximoff
+    };
 
     std::vector<Cliente> cliente;
+    std::vector<Especialista *> especialista;
+    std::vector<Venda> venda;
 
     cliente.push_back(Cliente("J. Jonah Jameson", "Nova York", "35690000"));
-    cliente.push_back(Cliente("Normam Osborn", "Hartlford", "22061955"));
+    cliente.push_back(Cliente("Norman Osborn", "Hartlford", "22061955"));
     cliente.push_back(Cliente("Otto Octavius", "Schenectady", "24051953"));
     cliente.push_back(Cliente("Bruce Benner", "Dayton", "22111967"));
     cliente.push_back(Cliente("Steve Rogers", "Lower East Side", "13061981"));
 
-    for (int i = 0; i < num_clientes; i++)
+    for (size_t i = 0; i < cliente.size(); i++)
     {
         cliente[i].print();
     }
-    
 
-    Especialista e01;
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
+    especialista.push_back(new Especialista("Peter Parker", "27061975", 46, 3000, "Fotografia"));
+    especialista.push_back(new Especialista("Tony Stark", "4041965", 56, 1000, "Consertos de equipamentos eletronicos"));
+    especialista.push_back(new Especialista("Wanda Maximoff", "16021989", 32, 5000, "Engenharia e Designeeeeer"));
 
+    Gerente *gerente = new Gerente("Nick Fury", "21121948", 72, 10000);
 
+    venda.push_back(Venda(100, "Fotos do Homem Aranha", especialista[Parker], cliente[JJJ].getNome()));
+    venda.push_back(Venda(100, "Troca da tela do telefone", especialista[Stark], cliente[Bruce].getNome()));
+    venda.push_back(Venda(150, "Fotos do novo planador", especialista[Parker], cliente[Norman].getNome()));
+    venda.push_back(Venda(10, "Recarga de cartucho", especialista[Stark], cliente[JJJ].getNome()));
+    venda.push_back(Venda(10000, "Reconstrucao de Predio", especialista[Maximoff], cliente[Bruce].getNome()));
+    venda.push_back(Venda(3000, "Decoracao de Apartamento no Brooklyn", especialista[Maximoff], cliente[Steve].getNome()));
+    venda.push_back(Venda(5000, "Reforma do Clarim Diario", especialista[Maximoff], cliente[JJJ].getNome()));
+    venda.push_back(Venda(80, "Formatacao do PC", especialista[Stark], cliente[Otto].getNome()));
 
-    Especialista e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
+    std::cout << " \n \n           Relatorio das Vendas \n"
+              << std::endl;
 
+    for (size_t i = 0; i < venda.size(); i++)
+    {
+        venda[i].print();
+    }
 
-    Especialista e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
+    std::cout << " \n \n           Relatorio dos Funcionarios \n"
+              << std::endl;
 
+    for (size_t i = 0; i < especialista.size(); i++)
+    {
+        especialista[i]->print();
+        gerente->calculaSalario(especialista[i]->getNumAtendimentos());
+        delete especialista[i];
+    }
 
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
-
-
-    Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
-
-    Venda v07;
-    v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v08;
-    v08.cliente= "Otto Octavius";
-    v08.esp = e02;
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
-    numAtendimentos02+=1;
-
-
-
-    cout <<" \n \n           Relatorio das Vendas \n" << endl;
-
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
-
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
-
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
-
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
-
-    v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
-
-    v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
-
-
-
-
-
-
-    cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-    e01.print();
-    cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
-
-    e02.print();
-    cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
-
-    e03.print();
-    cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
-
-
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
-    g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    gerente->print();
 
     return 0;
 }

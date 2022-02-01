@@ -3,7 +3,7 @@
   Endereco: Nova York
   CEP: 35690000
 [Cliente]
-  Nome: Normam Osborn
+  Nome: Norman Osborn
   Endereco: Hartlford
   CEP: 22061955
 [Cliente]
@@ -28,7 +28,6 @@ Especialista: Peter Parker Cliente: Norman Osborn Descricao: Fotos do novo plana
 Especialista: Tony Stark Cliente: J. Jonah Jameson Descricao: Recarga de cartucho
 Especialista: Wanda Maximoff Cliente: Bruce Benner Descricao: Reconstrucao de Predio
 Especialista: Wanda Maximoff Cliente: Steve Rogers Descricao: Decoracao de Apartamento no Brooklyn
-Especialista: Wanda Maximoff Cliente: Steve Rogers Descricao: Decoracao de Apartamento no Brooklyn
 Especialista: Wanda Maximoff Cliente: J. Jonah Jameson Descricao: Reforma do Clarim Diario
 Especialista: Tony Stark Cliente: Otto Octavius Descricao: Formatacao do PC
  
@@ -41,28 +40,28 @@ Especialista: Tony Stark Cliente: Otto Octavius Descricao: Formatacao do PC
   RGFunc: 27061975
   Nome: Peter Parker
   SalarioBase: R$ 3000.00
-Num Atendimentos: 2
-Salario Total: 3025.00
+  Num Atendimentos: 2
+  Salario Total: 3025.00
 [Especialista]
 [Funcionario]
   Idade: 56
   RGFunc: 4041965
   Nome: Tony Stark
   SalarioBase: R$ 1000.00
-Num Atendimentos: 3
-Salario Total: 1019.00
+  Num Atendimentos: 3
+  Salario Total: 1019.00
 [Especialista]
 [Funcionario]
   Idade: 32
   RGFunc: 16021989
   Nome: Wanda Maximoff
   SalarioBase: R$ 5000.00
-Num Atendimentos: 3
-Salario Total: 6800.00
-[Funcionario]
+  Num Atendimentos: 3
+  Salario Total: 6800.00
 [Gerente]
-  Nome: Nick Fury
+[Funcionario]
   Idade: 72
   RGFunc: 21121948
+  Nome: Nick Fury
   SalarioBase: R$ 10000.00
-Salario Total: 10120.00
+  Salario Total: 10120.00

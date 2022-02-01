@@ -2,17 +2,20 @@
 #include <string>
 #include "Cliente.hpp"
 
-Cliente::Cliente(std::string NOME, std::string endereco, std::string Cep, std::string AlturaDosPais) {
-	this->NOME = NOME;
+Cliente::Cliente(std::string nome, std::string endereco, std::string cep) {
+	this->nome = nome;
 	this->endereco = endereco;
-	this->Cep = Cep;
-	this->AlturaDosPais = AlturaDosPais;
+	this->cep = cep;
 }
 
 void Cliente::print()
 {
 	std::cout << "[Cliente]" << std::endl
-			  << "  Nome: " << this->NOME << std::endl
+			  << "  Nome: " << this->nome << std::endl
 			  << "  Endereco: " << this->endereco << std::endl
-			  << "  CEP: " << this->Cep << std::endl;
+			  << "  CEP: " << this->cep << std::endl;
+}
+
+std::string Cliente::getNome(){
+	return this->nome;
 }
