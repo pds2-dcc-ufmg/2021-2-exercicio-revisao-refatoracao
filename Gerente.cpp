@@ -8,7 +8,7 @@ double Gerente::getBonificacao(){
 }
 
 void Gerente::setBonificacao(double bonificacao){
-	_bonificacao = bonificacao;
+	this->_bonificacao = bonificacao;
 }
 
 void Gerente::imprimeDadosGerente() {
