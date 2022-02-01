@@ -23,7 +23,7 @@ void Cliente::setNOME(string NOME_NOVO)
 }
 #---/
 
-
+#/--get/set endereço
 string Cliente::getENDERECO(){ 
 	return endereco;
 }
@@ -32,7 +32,7 @@ void Cliente::setENDERECO(string ENDERECO_NOVO)
 {
 	this->endereco = ENDERECO_NOVO;
 }
-
+#---/
 
 
 string Cliente::getCEP(){ 
