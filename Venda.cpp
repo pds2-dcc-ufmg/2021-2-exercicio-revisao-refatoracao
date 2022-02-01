@@ -18,6 +18,10 @@ double Venda::getValor () {
     return this->valor;
 }
 
+std::string Venda::getDescricao () {
+    return this->descricao;
+}
+
 Venda::Venda (std::string cliente, 
               Especialista esp, 
               std::string descricao, 

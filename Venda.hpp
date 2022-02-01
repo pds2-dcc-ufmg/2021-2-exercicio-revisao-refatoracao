@@ -19,6 +19,8 @@ class Venda{
 
         double getValor ();
 
+        std::string getDescricao ();
+
 
     private:
         double valor;
