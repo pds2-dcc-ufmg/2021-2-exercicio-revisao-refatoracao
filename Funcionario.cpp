@@ -4,10 +4,6 @@ Funcionario::Funcionario () {
 
 }
 
-Funcionario::~Funcionario () {
-    delete this;
-}
-
 void Funcionario::print() {
     std::cout << "[Funcionario]" << std::endl
     << "  Idade: " << this->idade << std::endl
@@ -48,6 +44,6 @@ void Funcionario::setIdade (int idade) {
     this->idade = idade;
 }
 
-void Funcionario::setRgFunc (unsigned int rgFunc) {
+void Funcionario::setRgFunc (std::string rgFunc) {
     this->rgFunc = rgFunc;
 }

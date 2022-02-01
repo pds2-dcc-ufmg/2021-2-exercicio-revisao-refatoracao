@@ -10,7 +10,6 @@ class Funcionario {
     public:
 
         Funcionario ();
-        ~Funcionario ();
 
         void print();
         void printOi();
@@ -23,7 +22,7 @@ class Funcionario {
         void setName (std::string name);
         void setSalarioBase (double salarioBase);
         void setIdade (int idade);
-        void setRgFunc (unsigned int rgFunc);
+        void setRgFunc (std::string RgFunc);
     
 
     protected:
