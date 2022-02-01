@@ -22,14 +22,38 @@
  
            Relatorio das Vendas 
 
-Especialista: Peter Parker Cliente: J. Jonah Jameson Descricao: Fotos do Homem Aranha
-Especialista: Tony Stark Cliente: Bruce Benner Descricao: Troca da tela do telefone
-Especialista: Peter Parker Cliente: Norman Osborn Descricao: Fotos do novo planador
-Especialista: Tony Stark Cliente: J. Jonah Jameson Descricao: Recarga de cartucho
-Especialista: Wanda Maximoff Cliente: Bruce Benner Descricao: Reconstrucao de Predio
-Especialista: Wanda Maximoff Cliente: Steve Rogers Descricao: Decoracao de Apartamento no Brooklyn
-Especialista: Wanda Maximoff Cliente: J. Jonah Jameson Descricao: Reforma do Clarim Diario
-Especialista: Tony Stark Cliente: Otto Octavius Descricao: Formatacao do PC
+[Venda]
+  Descricao: Fotos do Homem Aranha
+  Especialista: Peter Parker
+  Cliente: J. Jonah Jameson
+[Venda]
+  Descricao: Troca da tela do telefone
+  Especialista: Tony Stark
+  Cliente: Bruce Benner
+[Venda]
+  Descricao: Fotos do novo planador
+  Especialista: Peter Parker
+  Cliente: Norman Osborn
+[Venda]
+  Descricao: Recarga de cartucho
+  Especialista: Tony Stark
+  Cliente: J. Jonah Jameson
+[Venda]
+  Descricao: Reconstrucao de Predio
+  Especialista: Wanda Maximoff
+  Cliente: Bruce Benner
+[Venda]
+  Descricao: Decoracao de Apartamento no Brooklyn
+  Especialista: Wanda Maximoff
+  Cliente: Steve Rogers
+[Venda]
+  Descricao: Reforma do Clarim Diario
+  Especialista: Wanda Maximoff
+  Cliente: J. Jonah Jameson
+[Venda]
+  Descricao: Formatacao do PC
+  Especialista: Tony Stark
+  Cliente: Otto Octavius
  
  
            Relatorio dos Funcionarios 
