@@ -2,12 +2,16 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+string Cliente::getNome(){
+	return nome;
+}
+
+void Cliente::imprimir(){
 
 	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
+         << "  Nome: " << nome << endl
 		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
+		 << "  CEP: " << cep << endl;
 
 }
 
