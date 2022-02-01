@@ -75,106 +75,75 @@ int main() {
     gerente1.rg = 21121948;
     gerente1.salarioBase = 10000;
 
-
-    Venda venda1;
-    venda1.cliente.nome = "J. Jonah Jameson";
-    venda1.especialista = especialista1;
-    venda1.descricao = "Fotos do Homem Aranha";
-    venda1.valor = 100;
-    comissao01  +=  especialista1.comissao(venda1.valor);
+    Venda venda[8];
+    venda[0].cliente.nome = "J. Jonah Jameson";
+    venda[0].especialista = especialista1;
+    venda[0].descricao = "Fotos do Homem Aranha";
+    venda[0].valor = 100;
+    comissao01  +=  especialista1.comissao(venda[0].valor);
     numAtendimentos01 += 1;
 
-    Venda venda2;
-    venda2.cliente.nome = "Bruce Benner";
-    venda2.especialista = especialista2;
-    venda2.descricao = "Troca da tela do telefone";
-    venda2.valor = 100;
-    comissao02  +=  especialista2.comissao(venda2.valor);
+    venda[1].cliente.nome = "Bruce Benner";
+    venda[1].especialista = especialista2;
+    venda[1].descricao = "Troca da tela do telefone";
+    venda[1].valor = 100;
+    comissao02  +=  especialista2.comissao(venda[1].valor);
     numAtendimentos02 += 1;
 
-    Venda venda3;
-    venda3.cliente.nome = "Norman Osborn";
-    venda3.especialista = especialista1;
-    venda3.descricao = "Fotos do novo planador";
-    venda3.valor = 150;
-    comissao01  +=  especialista1.comissao(venda3.valor);
+
+    venda[2].cliente.nome = "Norman Osborn";
+    venda[2].especialista = especialista1;
+    venda[2].descricao = "Fotos do novo planador";
+    venda[2].valor = 150;
+    comissao01  +=  especialista1.comissao(venda[2].valor);
     numAtendimentos01 += 1;
 
-    Venda venda4;
-    venda4.cliente.nome = "J. Jonah Jameson";
-    venda4.especialista = especialista2;
-    venda4.descricao = "Recarga de cartucho";
-    venda4.valor = 10;
-    comissao02  +=  especialista2.comissao(venda4.valor);
+  
+    venda[3].cliente.nome = "J. Jonah Jameson";
+    venda[3].especialista = especialista2;
+    venda[3].descricao = "Recarga de cartucho";
+    venda[3].valor = 10;
+    comissao02  +=  especialista2.comissao(venda[3].valor);
     numAtendimentos02 += 1;
 
-    Venda venda5;
-    venda5.cliente.nome = "Bruce Benner";
-    venda5.especialista = especialista3;
-    venda5.descricao = "Reconstrucao de Predio";
-    venda5.valor = 10000;
-    comissao03  +=  especialista3.comissao(venda5.valor);
+
+    venda[4].cliente.nome = "Bruce Benner";
+    venda[4].especialista = especialista3;
+    venda[4].descricao = "Reconstrucao de Predio";
+    venda[4].valor = 10000;
+    comissao03  +=  especialista3.comissao(venda[4].valor);
     numAtendimentos03 += 1;
 
-    Venda venda6;
-    venda6.cliente.nome = "Steve Rogers";
-    venda6.especialista = especialista3;
-    venda6.descricao = "Decoracao de Apartamento no Brooklyn";
-    venda6.valor = 3000;
-    comissao03  +=  especialista3.comissao(venda6.valor);
+ 
+    venda[5].cliente.nome = "Steve Rogers";
+    venda[5].especialista = especialista3;
+    venda[5].descricao = "Decoracao de Apartamento no Brooklyn";
+    venda[5].valor = 3000;
+    comissao03  +=  especialista3.comissao(venda[5].valor);
     numAtendimentos03 += 1;
 
-    Venda venda7;
-    venda7.cliente.nome = "J. Jonah Jameson";
-    venda7.especialista = especialista3;
-    venda7.descricao = "Reforma do Clarim Diario";
-    venda7.valor = 5000;
-    comissao03  +=  especialista3.comissao(venda7.valor);
+ 
+    venda[6].cliente.nome = "J. Jonah Jameson";
+    venda[6].especialista = especialista3;
+    venda[6].descricao = "Reforma do Clarim Diario";
+    venda[6].valor = 5000;
+    comissao03  +=  especialista3.comissao(venda[6].valor);
     numAtendimentos03 += 1;
 
-    Venda venda8;
-    venda8.cliente.nome = "Otto Octavius";
-    venda8.especialista = especialista2;
-    venda8.descricao = "Formatacao do PC";
-    venda8.valor = 80;
-    comissao02  +=  especialista2.comissao(venda8.valor);
+ 
+    venda[7].cliente.nome = "Otto Octavius";
+    venda[7].especialista = especialista2;
+    venda[7].descricao = "Formatacao do PC";
+    venda[7].valor = 80;
+    comissao02  +=  especialista2.comissao(venda[7].valor);
     numAtendimentos02 += 1;
 
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
-    venda1.print();
-    
-
-    venda2.print();
-
-    cout << " Descricao: " << venda2.descricao << endl;
-
-    venda3.print();
-    cout << " Descricao: " << venda3.descricao << endl;
-
-    venda4.print();
-    cout << " Descricao: " << venda4.descricao << endl;
-
-    venda5.print();
-    cout << " Descricao: " << venda5.descricao << endl;
-
-    venda6.print();
-    cout << " Descricao: " << venda6.descricao << endl;
-
-    venda6.print();
-    cout << " Descricao: " << venda6.descricao << endl;
-
-    venda7.print();
-    cout << " Descricao: " << venda7.descricao << endl;
-
-    venda8.print();
-    cout << " Descricao: " << venda8.descricao << endl;
-
-
-
-
-
+    for (int i = 0; i<8; i++){
+    venda[i].print();
+    }
 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     especialista1.print();
