@@ -11,17 +11,17 @@ void Cliente::print(){
 
 }
 
-
+#/--get/set nome
 string Cliente::getNOME(){ 
 	
 	return NOME;
 
 }
-
 void Cliente::setNOME(string NOME_NOVO)
 {
 	this->NOME = NOME_NOVO;
 }
+#---/
 
 
 string Cliente::getENDERECO(){ 
@@ -32,6 +32,7 @@ void Cliente::setENDERECO(string ENDERECO_NOVO)
 {
 	this->endereco = ENDERECO_NOVO;
 }
+
 
 
 string Cliente::getCEP(){ 
