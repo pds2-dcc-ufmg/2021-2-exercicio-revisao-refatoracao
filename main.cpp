@@ -45,42 +45,43 @@ int main()
     Gerente g01 ("Nick Fury", 72, "21121948", 10000);
 
 
-    Venda v01 ("J. Jonah Jameson", e01, "Fotos do Homem Aranha", 100);
+
+    Venda v01 ("J. Jonah Jameson", &e01, "Fotos do Homem Aranha", 100);
     comissao01 += e01.comissao(v01.getValor ());
     numAtendimentos01 += 1;
 
 
-    Venda v02 ("Bruce Benner", e02, "Troca da tela do telefone", 100);
+    Venda v02 ("Bruce Benner", &e02, "Troca da tela do telefone", 100);
     comissao02 += e02.comissao(v02.getValor ());
     numAtendimentos02 += 1;
 
 
-    Venda v03 ("Norman Osborn", e01, "Fotos do novo planador", 150);
+    Venda v03 ("Norman Osborn", &e01, "Fotos do novo planador", 150);
     comissao01 += e01.comissao(v03.getValor ());
     numAtendimentos01 += 1;
 
 
-    Venda v04 ("J. Jonah Jameson", e02, "Recarga de cartucho", 10);
+    Venda v04 ("J. Jonah Jameson", &e02, "Recarga de cartucho", 10);
     comissao02 += e02.comissao(v04.getValor ());
     numAtendimentos02 +=1 ;
 
 
-    Venda v05 ("Bruce Benner", e03, "Reconstrucao de Predio", 10000);
+    Venda v05 ("Bruce Benner", &e03, "Reconstrucao de Predio", 10000);
     comissao03 += e03.comissao(v05.getValor ());
     numAtendimentos03 +=1 ;
 
 
-    Venda v06 ("Steve Rogers", e03, "Decoracao de Apartamento no Brooklyn", 3000);
+    Venda v06 ("Steve Rogers", &e03, "Decoracao de Apartamento no Brooklyn", 3000);
     comissao03 += e03.comissao(v06.getValor ());
     numAtendimentos03 +=1 ;
 
 
-    Venda v07 ("J. Jonah Jameson", e03, "Reforma do Clarim Diario", 5000);
+    Venda v07 ("J. Jonah Jameson", &e03, "Reforma do Clarim Diario", 5000);
     comissao03 += e03.comissao(v07.getValor ());
     numAtendimentos03 +=1 ;
 
 
-    Venda v08 ("Otto Octavius", e02, "Formatacao do PC", 80);
+    Venda v08 ("Otto Octavius", &e02, "Formatacao do PC", 80);
     comissao02 += e02.comissao(v08.getValor ());
     numAtendimentos02 += 1;
 
