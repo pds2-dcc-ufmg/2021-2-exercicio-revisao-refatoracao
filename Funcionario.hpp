@@ -4,19 +4,23 @@
 #include <iostream>
 #include <iomanip>
 
+// Adicionar mais dois cout's para diminuir a interdepÃªndencia do cÃ³digo
+// Colocar as variÃ¡veis como private
+
 using namespace std;
 
 class Funcionario {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
+        double salario_base; 
+        string idade;
         string nome;
-        int rgFunc;
-
+        int rg_func;
+    
+    public:
         void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
+            cout << "[Funcionario]" << endl;
+            cout << "  Idade: " << idade << endl;
+            cout << "  RGFunc: " << rg_func << endl;
         }
 
         void print_oi(){

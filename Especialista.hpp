@@ -4,34 +4,30 @@
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
+// Padronização do espaço entre as linhas
+// Padronização das linebreaks
+// Ajuste do encapsulamento, colocando no lugar certo e alternando entre public e private
+// Como adicionou o namespace std, não precisa colocar o std:: no código
+// Adicionar mais um cout na linha 33 para diminuir a interdepêndencia do código
+
 using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
-
+static double perc = 0.1;
+static double percWanda = 0.1;
 
 class Especialista : public Funcionario {
-
-    public:
-
     public:
         string especialidade;
-
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
+        double comissao(double valor_venda) {
+        double c = valor_venda*perc;
+        return c;
     }
-
-
     void print() {
 
-        std::cout << "[Especialista]" << endl;
+        cout << "[Especialista]" << endl;
         Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+        cout << "  Nome: " << nome << endl;
+        cout << "  SalarioBase: R$ " << fixed << setprecision(2) << salario_base << endl;
 
     }
 };
