@@ -12,13 +12,13 @@ int main()
     Cliente cliente1;
     cliente1.NOME = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
+    cliente1.Cep = "35690000";
     cliente1.print();
 
     Cliente cliente2;
     cliente2.NOME = "Norman Osborn";
     cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
+    cliente2.Cep = "22061955";
     cliente2.print();
 
     Cliente cliente3;
