@@ -16,6 +16,8 @@ class Venda{
     Especialista esp;
     string cliente;
 
+    Venda(string c, Especialista e, string d, double v) 
+        : cliente(c), descricao(d), VALOR(v), esp(Especialista(e.SalarioBase, e.IDADE, e.nome, e.rgFunc, e.especialidade)) {};
 
     void print() {
 
