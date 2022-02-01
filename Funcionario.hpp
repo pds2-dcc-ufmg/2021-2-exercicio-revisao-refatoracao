@@ -1,27 +1,92 @@
+
 #ifndef FUNCIONARIO_HPP
 #define FUNCIONARIO_HPP
 
 #include <iostream>
 #include <iomanip>
-
-using namespace std;
+/**
+ * \class Funcionario
+ *
+ * \brief Esta classe eh um Colaborador de uma empresa.
+ *
+ * \details  Um FuncionÃ¡rio possui ...
+*/
 
 class Funcionario {
+    private: 
+        double SalarioBase; 
+        std::string Idade;
+        std::string Nome;
+        int RgFuncionario;
+        double SalarioTotal;
+
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+        /**
+        * @brief Destrutor da classe
+        *
+        */
+        virtual ~Funcionario(){};
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        /**
+        * @brief Retorna o Salario final, somado Ã s comissÃµes
+        *
+        * @return double Salario final do funcionario
+        */
+        double getSalarioTotal() const;
+
+        /**
+        * @brief Retorna o Salario base, inicial
+        *
+        * @return double Salario inicial do funcionario
+        */
+        double getSalarioBase() const ;
+
+        /**
+        * @brief ajusta o salario do funcionario
+        * 
+        * @param ValorAdicionado valor a ser acrescido no salario inicial
+        */
+        void setSalarioTotal(double ValorAdicionado);
+
+        /**
+        * @brief Retorna a idade do funcionario
+        *
+        * @return std::string Idade do funcionario
+        */
+        std::string getIdade() const;
+
+        /**
+        * @brief Retorna o Nome do funcionario
+        *
+        * @return std::string Nome do funcionario
+        */
+        std::string getNome() const;
+
+        /**
+        * @brief Retorna o Rg do funcionario
+        *
+        * @return int Rg do funcionario
+        */
+        int getRgFuncionario() const;
+
+        
+        /**
+         * @brief Construtor padrao que inicializa todas as variaveis da classe.
+         *
+         * @param Salario Salario em reais.
+         * @param Idade Idade do Funcionario envolvido.
+         * @param Nome Nome do Funcionario envolvido.
+         * @param RgFuncionario O rg do Funcionario envolvido.
+         */
+        Funcionario(double Salario, std::string Idade,
+         std::string Nome, int RgFuncionario);
+
+        /**
+		* @brief  Imprime na tela os dados de um Funcionario cadastrado
+		*
+		*/
+        virtual void Print() const;
 };
 
 #endif

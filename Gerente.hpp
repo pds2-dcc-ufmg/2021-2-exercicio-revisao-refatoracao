@@ -3,33 +3,43 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Funcionario.hpp"
 
-using namespace std;
+static constexpr double VALOR_BONIFICACAO = 15.0;
 
-double ValorBONIFICACAO = 15.0;
+/**
+ * @brief Classe responsavel pelo armazenamento e gerenciamento das informacoes
+ * de um Gerente.
+ *
+ */
+class Gerente : public Funcionario {
 
-class Gerente {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
 
+   /**
+   * @brief Construtor padrao que inicializa todas as variaveis da classe.
+   *
+   * @param Salario Salario em reais.
+   * @param Idade Idade do Gerente envolvido.
+   * @param Nome Nome do Gerente envolvido.
+   * @param RgFuncionario O rg do gerente envolvido.
+   */
+    Gerente(double Salario, std::string Idade,
+        std::string Nome, int RgFuncionario);
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+    /**
+    * @brief Destrutor da classe
+    *
+    */
+    ~Gerente();
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+    /**
+    * @brief  Imprime na tela os dados de um Gerente cadastrado
+    *
+    */
+    void Print() const override;
+
+    double calculaBonificacaoGerente(int NumTotalVendas);
 
 };
 
