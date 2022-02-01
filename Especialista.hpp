@@ -1,39 +1,29 @@
-#ifndef Especialista_HPP
-#define Especialista_HPP
-
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
+#ifndef Especialista_HPP
+#define Especialista_HPP
 
 double perc = 0.1;
 double percWanda = 0.1;
 
-
 class Especialista : public Funcionario {
 
     public:
+        std::string especialidade;
 
-    public:
-        string especialidade;
+        double comissao(double ValorVenda) {
+            double c = ValorVenda*perc;
+            return c;
+        }
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+        void print() {
 
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
-};
+            std::cout << "[Especialista]" << std::endl;
+            Funcionario::print();
+            std::cout << "  Nome: " << nome << std::endl
+            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase << std::endl;
+        }
+}
 
 #endif
