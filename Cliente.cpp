@@ -11,3 +11,12 @@ void Cliente::print(){
 
 }
 
+
+string Cliente::getNOME(){ return NOME;}
+
+void Cliente::setNOME(string NOME_NOVO)
+{
+	this->NOME = NOME_NOVO;
+}
+
+
