@@ -7,7 +7,7 @@
 class Pessoa{
 	
 	public:
-    		void print();
+    		virtual void print() const = 0;
 
 };
 
