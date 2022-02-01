@@ -8,11 +8,15 @@ using namespace std;
 
 class Venda{
     public:
-        double VALOR;
+        double valor;
         string descricao;
-        Especialista esp;
-        string cliente;
+        Especialista *esp;
+        string nomeCliente;
 
         void print();
+        Venda(string nomeCliente, Especialista *esp, string descricao, double valor):
+        nomeCliente(nomeCliente), esp(esp), descricao(descricao), valor(valor){
+            esp->comissao += esp->calculaComissao(valor);
+        };
 };
 #endif

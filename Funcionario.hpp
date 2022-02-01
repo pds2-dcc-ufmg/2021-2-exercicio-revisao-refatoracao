@@ -14,5 +14,7 @@ class Funcionario {
         int rgFunc;
 
         void print();
+        Funcionario(string nome, string idade, double salarioBase,  int rgFunc): 
+        nome(nome), idade(idade), salarioBase(salarioBase), rgFunc(rgFunc){};
 };
 #endif

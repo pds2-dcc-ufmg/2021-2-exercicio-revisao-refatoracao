@@ -3,15 +3,18 @@
 
 #include "Gerente.hpp"
 
+double valorBonificacao = 15.0;
+
 void Gerente::print() {
     cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
             << "  Nome: " << nome << endl
             << "  Idade: " << idade << endl
             << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
+            << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl
+            << "Salario Total: " << salarioBase + bonificacao << endl;
 }
 
-double Gerente::calculaBonificacaoGerente(int numTotalVendas){
-    return numTotalVendas*ValorBonificacao;
+void Gerente::calculaBonificacaoGerente(int numTotalVendas){
+    bonificacao = numTotalVendas*valorBonificacao;
 }

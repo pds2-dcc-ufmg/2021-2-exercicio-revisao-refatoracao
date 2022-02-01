@@ -8,13 +8,13 @@
 
 using namespace std;
 
-double ValorBonificacao = 15.0;
-
 class Gerente : public Funcionario  {
     public:
         double bonificacao;
 
         void print();
-        double calculaBonificacaoGerente(int numTotalVendas);
+        void calculaBonificacaoGerente(int numTotalVendas);
+        Gerente(string nome, string idade, double salarioBase,  int rgFunc):
+        Funcionario(nome, idade, salarioBase, rgFunc), bonificacao(0){};
 };
 #endif

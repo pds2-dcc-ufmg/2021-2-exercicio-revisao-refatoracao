@@ -12,5 +12,7 @@ class Cliente{
 		string cep;
 
 		void print();
+		Cliente(string nome, string endereco, string cep):
+		nome(nome), endereco(endereco), cep(cep){};
 };
 #endif

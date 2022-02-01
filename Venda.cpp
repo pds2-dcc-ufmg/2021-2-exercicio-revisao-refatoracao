@@ -4,9 +4,7 @@
 #include "Venda.hpp"
 
 void Venda::print() {
-    std::cout << "Especialista: ";
-    cout << esp.nome;
-
-    std::cout << " Cliente: ";
-    cout << cliente;
+    std::cout << "Especialista: " << esp->nome 
+              << " Cliente: " << nomeCliente 
+              << " Descricao: " << descricao << endl;
 }
