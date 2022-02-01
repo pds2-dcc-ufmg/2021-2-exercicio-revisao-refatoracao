@@ -4,26 +4,24 @@
 #include <string>
 using namespace std;
 
-class Cliente{
+class Cliente
+{
 
-	public:
+public:
+ string NOME;
+ string endereco;
+ string CEP;
+ string AlturaDosPais;
+ std::string getNome();
+ std::string getEndereco();
+ std::string getCep();
 
-		string NOME;
-		string endereco;
-		string CEP;
-		string AlturaDosPais;
-		std::string getNome();
-		std::string getEndereco();
-		std::string getCep();
+ void imprimeInformacoes();
 
-		void imprimeInformacoes();
-
-
-	private:
-		std::string nome;
-		std::string endereco;
-		std::string CEP;
-
+private:
+ std::string nome;
+ std::string endereco;
+ std::string CEP;
 };
 
 #endif
