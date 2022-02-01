@@ -12,7 +12,7 @@ double percWanda = 0.1;
 
 class Especialista : public Funcionario {
 
-    public:
+    //public: nao utilizado removido
 
     public:
         string especialidade;
