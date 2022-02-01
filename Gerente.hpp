@@ -3,33 +3,24 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Funcionario.hpp"
 
-using namespace std;
 
-double ValorBONIFICACAO = 15.0;
 
-class Gerente {
+class Gerente : public Funcionario {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
+        double SalarioBase; // valor mï¿½nimo recebido pelo funcionï¿½rio
+        std::string IDADE; //reafirmacao dos dados
+        std::string nome;
         int rgFunc;
-        double bonificacao;
+        double bonificacao= 15.0; //bonificacao eh como a comissao pela quantidade de vendas realizados pelos funcioarios chefiados por esse gerente
 
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+        void print(); //override da implementacao da funcao da classe base
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+         double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);//calcula qual o ganho variavel do gerente, a partir do numero total de vendas realizadas e da comissao -bonificacao- recebida por ele
+
+        double calculasalariototal(int numTOTALVendas);//calcula o salario total a partir da soma da bonificacao com o salario base
 
 };
 
