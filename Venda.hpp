@@ -12,32 +12,27 @@ class Venda
 {
 
 public:
-    double VALOR;
+    double valor;
     string descricao;
-    Especialista esp;
-    string cliente;
+    Especialista especialista;
+    Cliente cliente;
 
-    void print()
+    Venda(Cliente cli, Especialista esp, string descricao, double valor) : cliente(cli), especialista(esp)
     {
+        this->descricao = descricao;
+        this->valor = valor;
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
+        esp.calculaComissao(valor);
+        esp.numAtendimentos++;
     }
 
-    /*void print() {
+    void imprimeInformacoes()
+    {
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+        std::cout << "Especialista: " << especialista.nome
+                  << " Cliente: " << cliente.getNome()
+                  << " Descricao: " << descricao << endl;
+    }
 };
 
 #endif

@@ -10,8 +10,7 @@ double valorBonificacao = 15.0;
 class Gerente : public Funcionario
 {
 public:
-    void imprimeInformacoes();
-    double calculaBonificacao(int numTotalVendas);
+    double valor_bonificacao = 15.0;
 
     Gerente(double salarioBase, int idade, string nome, int rg)
     {
@@ -20,6 +19,22 @@ public:
         this->nome = nome;
         this->rg = rg;
     }
+
+    void calculaBonificacao(int numTotalServicos)
+    {
+        this->bonificacao += numTotalServicos * this->valorBonificacao;
+    }
+
+    void imprimeInformacoes()
+    {
+        cout << "[Gerente]" << endl;
+        Funcionario::imprimeInformacoes();
+        cout << "Salario Total: " << salarioBase + bonificacao << endl;
+    }
+
+private:
+    double bonificacao = 0;
+    double valorBonificacao = 15.0;
 };
 
 #endif

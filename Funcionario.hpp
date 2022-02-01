@@ -14,11 +14,14 @@ public:
     string nome;
     int rg;
 
-    void print()
+    void imprimeInformacoes()
     {
+
         cout << "[Funcionario]" << endl
              << "  Idade: " << idade << endl
-             << "  Rg: " << rg << endl;
+             << "  RGFunc: " << rg << endl
+             << "  Nome: " << nome << endl
+             << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
     }
 };
 
