@@ -21,9 +21,9 @@ class Funcionario {
 
 
     void print() {
-        std::cout << "[Funcionario]" << endl;
-        std::cout << "  Idade: " << idade << endl;
-        std::cout << "  RGFunc: " << rg_funcionario << endl;
+        std::cout << "[Funcionario]" << std::endl;
+        std::cout << "  Idade: " << idade << std::endl;
+        std::cout << "  RGFunc: " << rg_funcionario << std::endl;
     }
 
 

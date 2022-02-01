@@ -28,7 +28,7 @@ class Gerente {
             std::cout << "  Nome: " << nome << std::endl;
             std::cout << "  Idade: " << idade << std::endl;
             std::cout << "  RGFunc: " << rg_funcionario << std::endl;
-            std::cout << "  SalarioBase: R$ " << fixed << setprecision(2) << salario_minimo << std::endl;
+            std::cout << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salario_minimo << std::endl;
         }
 
         double calcula_bonif_gerente(int num_total_vendas){
