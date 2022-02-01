@@ -11,7 +11,7 @@ class Gerente : public Funcionario
 public:
     Gerente(string nome, int idade, int rg, double salarioBase, double valorBonificacao) : Funcionario(nome, idade, rg, salarioBase), valorBonificacao(valorBonificacao){};
     void imprimir();
-    void calculaBonificacao(int numVendas);
+    void calcularBonificacao(int qtdeVendas);
 
 private:
     double valorBonificacao;

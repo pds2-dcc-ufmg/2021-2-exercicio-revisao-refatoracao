@@ -9,7 +9,7 @@ using namespace std;
 class Funcionario
 {
 public:
-    Funcionario(string nome, int idade, int rg, double salarioBase) : nome(nome), idade(idade), rg(rg), salarioBase(salarioBase) {};
+    Funcionario(string nome, int idade, int rg, double salarioBase) : nome(nome), idade(idade), rg(rg), salarioBase(salarioBase){};
     string getNome();
     double getSalarioBase();
     void imprimir();

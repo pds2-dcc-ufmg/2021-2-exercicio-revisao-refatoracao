@@ -12,23 +12,18 @@ class Venda
 {
 
 public:
-    Venda(Cliente cliente, double valor, string descricao, Especialista especialista) : cliente(cliente), valor(valor), descricao(descricao), especialista(especialista) {
-        especialista.adicionaVenda(valor);
-        Venda::numVendas += 1;
+    Venda(Cliente cliente, double valor, string descricao, Especialista *especialista) : cliente(cliente), valor(valor), descricao(descricao), especialista(especialista)
+    {
+        especialista->adicionaVenda(valor);
     };
     void imprimir();
     void setValor(double valor);
     void setDescricao(string descricao);
-    static int getNumVendas(){
-        return Venda::numVendas;
-    };
 
 private:
     Cliente cliente;
     double valor;
     string descricao;
-    Especialista especialista;
-    static int numVendas;
+    Especialista *especialista;
 };
-
 #endif

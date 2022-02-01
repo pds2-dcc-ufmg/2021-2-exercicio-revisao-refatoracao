@@ -2,17 +2,11 @@
 #include <string>
 #include "Especialista.hpp"
 
-double Especialista::calcularComissao(double valorVenda)
-{
-    double comissao = valorVenda * porcentagem;
-    return comissao;
-}
-
 void Especialista::imprimir()
 {
     std::cout << "[Especialista]" << endl;
     Funcionario::imprimir();
-    cout << "Num Atendimentos: " << getComissao() << endl;
+    cout << "Num Atendimentos: " << getNumAtendimentos() << endl;
     cout << "Salario Total: " << getSalarioBase() + getComissao() << endl;
 }
 

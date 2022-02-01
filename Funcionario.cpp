@@ -12,8 +12,10 @@ double Funcionario::getSalarioBase(){
 
 void Funcionario::imprimir()
 {
-    cout << "Nome: " << nome << endl
-         << "Idade: " << idade << endl
-         << "RGFunc: " << rg << endl
-         << "SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
+    cout 
+         << "[Funcionario]" << endl
+         << "  Idade: " << idade << endl
+         << "  RGFunc: " << rg << endl
+         << "  Nome: " << nome << endl
+         << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
 }

@@ -5,13 +5,16 @@
 
 void Gerente::imprimir()
 {
-    std::cout << "[Gerente]" << endl;
-    Funcionario::imprimir();
-    calculaBonificacao(Venda::getNumVendas());
-    cout << "Salario Total: " << salarioBase + bonificacao << std::endl;
+    cout << "[Funcionario]" << endl
+         << "[Gerente]" << endl
+         << "  Nome: " << nome << endl
+         << "  Idade: " << idade << endl
+         << "  RGFunc: " << rg << endl
+         << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl
+         << "Salario Total: " << salarioBase + bonificacao << endl;
 }
 
-void Gerente::calculaBonificacao(int numVendas)
+void Gerente::calcularBonificacao(int qtdeVendas)
 {
-    bonificacao = numVendas * valorBonificacao;
+    bonificacao = qtdeVendas * valorBonificacao;
 }
