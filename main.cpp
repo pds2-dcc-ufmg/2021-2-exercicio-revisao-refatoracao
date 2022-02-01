@@ -44,7 +44,7 @@ int main()
     v01.cliente= "J. Jonah Jameson";
     v01.descricao = "Fotos do Homem Aranha";
     v01.VALOR = 100;
-    e01._comissao += e01.comissao(v01.VALOR);
+    e01._valorVenda += v01.VALOR;
     e01._numAtendimentos+=1;
 
 
@@ -52,7 +52,7 @@ int main()
     v02.cliente= "Bruce Benner";
     v02.descricao = "Troca da tela do telefone";
     v02.VALOR = 100;
-    e02._comissao += e02.comissao(v02.VALOR);
+    e02._valorVenda += v02.VALOR;
     e02._numAtendimentos+=1;
 
 
@@ -60,7 +60,7 @@ int main()
     v03.cliente= "Norman Osborn";
     v03.descricao = "Fotos do novo planador";
     v03.VALOR = 150;
-    e01._comissao += e01.comissao(v03.VALOR);
+    e01._valorVenda += v03.VALOR;
     e01._numAtendimentos+=1;
 
 
@@ -68,7 +68,7 @@ int main()
     v04.cliente= "J. Jonah Jameson";
     v04.descricao = "Recarga de cartucho";
     v04.VALOR = 10;
-    e02._comissao += e02.comissao(v04.VALOR);
+    e02._valorVenda += v04.VALOR;
     e02._numAtendimentos+=1;
 
 
@@ -76,7 +76,7 @@ int main()
     v05.cliente= "Bruce Benner";
     v05.descricao = "Reconstrucao de Predio";
     v05.VALOR = 10000;
-    e03._comissao += e03.comissao(v05.VALOR);
+    e03._valorVenda += v05.VALOR;
     e03._numAtendimentos+=1;
 
 
@@ -84,7 +84,7 @@ int main()
     v06.cliente= "Steve Rogers";
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
-    e03._comissao += e03.comissao(v06.VALOR);
+    e03._valorVenda += v06.VALOR;
     e03._numAtendimentos+=1;
 
 
@@ -97,7 +97,7 @@ int main()
     v07.cliente= "J. Jonah Jameson";
     v07.descricao = "Reforma do Clarim Diario";
     v07.VALOR = 5000;
-    e03._comissao += e03.comissao(v07.VALOR);
+    e03._valorVenda += v07.VALOR;
     e03._numAtendimentos+=1;
 
 
@@ -105,7 +105,7 @@ int main()
     v08.cliente= "Otto Octavius";
     v08.descricao = "Formatacao do PC";
     v08.VALOR = 80;
-    e02._comissao += e02.comissao(v08.VALOR);
+    e02._valorVenda += v08.VALOR;
     e02._numAtendimentos+=1;
 
 
@@ -139,11 +139,7 @@ int main()
     v08.print();
     cout << " Descricao: " << v08.descricao << endl;
 
-
-
-
-
-
+    
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
     e02.print();
