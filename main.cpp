@@ -27,35 +27,24 @@ int main()
 
 
 
-    Especialista e01;
+    Especialista e01  = Especialista(3000,"46","Peter Parker",27061975);
     int numAtendimentos01 = 0;
     double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.idade = "46";
-    e01.rgFunc = 27061975;
-    e01.salarioBase = 3000;
     e01.especialidade = "Fotografia";
 
 
 
-    Especialista e02;
+    Especialista e02 = Especialista(1000,"56","Tony Stark",4041965);
     int numAtendimentos02 = 0;
     double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.idade = "56";
-    e02.rgFunc = 4041965;
-    e02.salarioBase = 1000;
     e02.especialidade = "Consertos de equipamentos eletronicos";
 
 
-    Especialista e03;
+    Especialista e03 = Especialista(5000,"32","Wanda Maximoff",16021989);
     int numAtendimentos03 = 0;
     double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.idade = "32";
-    e03.rgFunc = 16021989;
-    e03.salarioBase = 5000;
     e03.especialidade = "Engenharia e Designeeeeer";
+
 
 
     Gerente g01;
@@ -66,54 +55,48 @@ int main()
     g01.SalarioBase = 10000;
 
 
-    Venda v01;
+    Venda v01 = Venda(e01);
     v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
     v01.descricao = "Fotos do Homem Aranha";
     v01.VALOR = 100;
     comissao01 += e01.comissao(v01.VALOR);
     numAtendimentos01+=1;
 
 
-    Venda v02;
+    Venda v02 = Venda(e02);
     v02.cliente= "Bruce Benner";
-    v02.esp = e02;
     v02.descricao = "Troca da tela do telefone";
     v02.VALOR = 100;
     comissao02 += e02.comissao(v02.VALOR);
     numAtendimentos02+=1;
 
 
-    Venda v03;
+    Venda v03 = Venda(e01);
     v03.cliente= "Norman Osborn";
-    v03.esp = e01;
     v03.descricao = "Fotos do novo planador";
     v03.VALOR = 150;
     comissao01 += e01.comissao(v03.VALOR);
     numAtendimentos01+=1;
 
 
-    Venda v04;
+    Venda v04 = Venda(e02);
     v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
     v04.descricao = "Recarga de cartucho";
     v04.VALOR = 10;
     comissao02 += e02.comissao(v04.VALOR);
     numAtendimentos02+=1;
 
 
-    Venda v05;
+    Venda v05 = Venda(e03);
     v05.cliente= "Bruce Benner";
-    v05.esp = e03;
     v05.descricao = "Reconstrucao de Predio";
     v05.VALOR = 10000;
     comissao03 += e03.comissao(v05.VALOR);
     numAtendimentos03+=1;
 
 
-    Venda v06;
+    Venda v06 = Venda(e03);
     v06.cliente= "Steve Rogers";
-    v06.esp = e03;
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
     comissao03 += e03.comissao(v06.VALOR);
@@ -125,18 +108,16 @@ int main()
 
 
 
-    Venda v07;
+    Venda v07 = Venda(e03);
     v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
     v07.descricao = "Reforma do Clarim Diario";
     v07.VALOR = 5000;
     comissao03 += e03.comissao(v07.VALOR);
     numAtendimentos03+=1;
 
 
-    Venda v08;
+    Venda v08 = Venda(e02);
     v08.cliente= "Otto Octavius";
-    v08.esp = e02;
     v08.descricao = "Formatacao do PC";
     v08.VALOR = 80;
     comissao02 += e02.comissao(v08.VALOR);
@@ -181,15 +162,15 @@ int main()
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
     cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.salarioBase+comissao01<<endl;
+    cout << "Salario Total: " << e01._salarioBase+comissao01<<endl;
 
     e02.print();
     cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.salarioBase+comissao02<<endl;
+    cout << "Salario Total: " << e02._salarioBase+comissao02<<endl;
 
     e03.print();
     cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.salarioBase+comissao03<<endl;
+    cout << "Salario Total: " << e03._salarioBase+comissao03<<endl;
 
 
     int NUMTOTALservicos = 0;

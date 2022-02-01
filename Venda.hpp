@@ -11,6 +11,7 @@ using namespace std;
 class Venda{
 
     public:
+    Venda(Especialista espec): esp(espec){};
     double VALOR;
     string descricao;
     Especialista esp;
@@ -20,7 +21,7 @@ class Venda{
     void print() {
 
         std::cout << "Especialista: ";
-        cout << esp.nome;
+        cout << esp._nome;
 
         std::cout << " Cliente: ";
         cout << cliente;

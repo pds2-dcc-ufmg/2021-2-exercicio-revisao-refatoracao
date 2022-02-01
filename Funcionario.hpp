@@ -8,13 +8,13 @@ using namespace std;
 
 class Funcionario {
     public:
-        double salarioBase; // valor m�nimo recebido pelo funcion�rio
-        string idade;
-        string nome;
-        int rgFunc;
-        
+        Funcionario (double salarioBase, string idade, string nome, int rg) : _salarioBase(salarioBase), _idade(idade), _nome(nome), _rg(rg) {};
+        double _salarioBase; // valor m�nimo recebido pelo funcion�rio
+        string _idade;
+        string _nome;
+        int _rg;
+
         void print();
-        void print_oi();
 
 };
 
