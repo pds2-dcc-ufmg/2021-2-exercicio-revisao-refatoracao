@@ -26,7 +26,4 @@ void Venda::Print() const {
 
 
 }
-void Venda::setGerente(Gerente* _Gerente){
-    this->_Gerente=_Gerente;
-
-}
+Venda::~Venda() = default;

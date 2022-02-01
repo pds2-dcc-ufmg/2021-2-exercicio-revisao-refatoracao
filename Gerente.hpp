@@ -26,9 +26,17 @@ class Gerente : public Funcionario {
    */
         Gerente(double Salario, std::string Idade,
          std::string Nome, int RgFuncionario);
+
+        /**
+         * @brief Destrutor da classe
+         *
+         */
         ~Gerente();
 
-
+		/**
+		 * @brief  Imprime na tela os dados de um Gerente cadastrado
+		 *
+		 */
         void Print() const override;
 
         double calculaBonificacaoGerente(int NumTotalVendas);

@@ -53,7 +53,7 @@ void setGerenteDaVenda (std::string GerenteVenda, std::vector <Gerente*> &Gerent
                     }
                 }
                 for (const auto& iterator_2:Vendas){
-                    iterator_2->setGerente(MeuGerente);
+                    iterator_2->_Gerente=MeuGerente;
                 }
                 MeuGerente->setSalarioTotal(MeuGerente->calculaBonificacaoGerente(NumTotalServicos));
 }

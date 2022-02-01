@@ -33,12 +33,26 @@ class Venda{
    * @param Especialista Especialista envolvido na Venda.
    * @param Cliente Cliente envolvido na venda.
    */
-    Venda(double ValorVenda, std::string Descricao, Especialista* Especialista, Cliente* Cliente);    
+    Venda(double ValorVenda, std::string Descricao, Especialista* Especialista, Cliente* Cliente); 
+
+      /**
+   * @brief Retorna a descricao detalhada do produto
+   *
+   * @return std::string Descricao do produto
+   */   
     std::string getDescricao() const;
 
-    void setGerente(Gerente * _Gerente);
-
+    /**
+    * @brief  Imprime na tela os dados de uma Venda cadastrada
+    *
+    */          
     void Print() const;
+
+    /**
+     * @brief Destrutor da classe
+     *
+     */
+    ~Venda();
 };
 
 #endif
