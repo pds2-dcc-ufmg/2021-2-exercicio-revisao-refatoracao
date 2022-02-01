@@ -1,11 +1,10 @@
 #ifndef Especialista_HPP
 #define Especialista_HPP
+#define PERCENTUAL 0.1
 
 #include "Funcionario.hpp"
 
 using namespace std;
-
-double percentual = 0.1;
 
 class Especialista : public Funcionario {
 
