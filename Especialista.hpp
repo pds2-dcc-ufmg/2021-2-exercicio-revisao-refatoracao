@@ -1,37 +1,37 @@
+// Retirei uma variavel desnecessaria e o namespace std, nesse caso descenessario por serem poucas utilizacoes
+// Organizei as impressoes para que fiquei mais legiveis, além de algumas alteracoes nos nomes das variaveis vindas
+// de outros arquivos
+
 #ifndef Especialista_HPP
 #define Especialista_HPP
 
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
-
+double perc_comissao = 0.1;
 
 class Especialista : public Funcionario {
 
-    public:
 
     public:
-        string especialidade;
+        std::string especialidade;
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
+
+    double comissao(double valor_venda) {
+        double c = valor_venda*perc_comissao;
                   return c;
     }
 
 
     void print() {
 
-        std::cout << "[Especialista]" << endl;
+        std::cout << "[Especialista]" << std::endl;
         Funcionario::print();
 
 
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+        std::cout << "  Nome: " << nome << std::endl;
+        std::cout << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salario_minimo << std::endl;
 
     }
 };

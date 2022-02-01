@@ -1,19 +1,21 @@
+// Retirei comentarios descenessarios e o namespace std, nesse caso descenessario por serem poucas utilizacoes
+// Arrumei os nomes das variaveis do tipo string presentes para que fiquem de acordo com as boas praticas
+// Alem de tirar uma variavel nao utilizada no programa
+
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
 #include <string>
-using namespace std;
 
 class Cliente{
 
 	public:
 
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+		std::string nome;
+		std::string endereco;
+		std::string cep;
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print(); // Impressao dos dados de um cliente cadastrado
 
 };
 
