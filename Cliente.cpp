@@ -5,37 +5,37 @@
 void Cliente::print(){
 
 	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
+         << "  Nome: " << nome << endl
 		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
+		 << "  CEP: " << cep << endl;
 
 }
 
 #/---get/set nome
-string Cliente::getNOME(){ 
-	return NOME;
+string Cliente::getNome(){ 
+	return nome;
 }
-void Cliente::setNOME(string NOME_NOVO){
-	this->NOME = NOME_NOVO;
+void Cliente::setNome(string nomeNovo){
+	this->nome = nomeNovo;
 }
 #---/
 
 
 #/---get/set endereço
-string Cliente::getENDERECO(){ 
+string Cliente::getEndereco(){ 
 	return endereco;
 }
-void Cliente::setENDERECO(string ENDERECO_NOVO){
-	this->endereco = ENDERECO_NOVO;
+void Cliente::setENDERECO(string enderecoNovo){
+	this->endereco = enderecoNovo;
 }
 #---/
 
 
 #/---get/set cep
-string Cliente::getCEP(){ 
-	return Cep;
+string Cliente::getCep(){ 
+	return cep;
 }
-void Cliente::setCEP(string CEP_NOVO){
-	this->Cep = CEP_NOVO;
+void Cliente::setCep(string cepNovo){
+	this->cep = cepNovo;
 }
 #---/
