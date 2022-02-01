@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "string": "cpp"
+    },
+    "version": "0.1.0", 
+    "isShellCommand": true, 
+    "taskName": "GenericBuild", 
+    "showOutput": "always", 
+    "command": "sh", 
+    "suppressTaskName": false,
+    "args": ["-c", "clang++ -std=c++14 -Wall -Wextra -pedantic -pthread \"${file}\" && ./a.out"]
+}
