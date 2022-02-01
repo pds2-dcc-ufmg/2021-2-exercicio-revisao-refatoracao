@@ -9,11 +9,17 @@ class Funcionario {
 
     public:
 
-        virtual void print();
+        void print();
 
-        virtual void printOi();
+        void printOi();
 
-        virtual std::string getName();
+        std::string getName();
+
+        double getSalarioBase ();
+
+        int getIdade ();
+
+        unsigned int getRgFunc ();
     
 
     protected:
@@ -23,7 +29,7 @@ class Funcionario {
         double salarioBase; // valor m�nimo recebido pelo funcion�rio
 
         int idade;
-        int rgFunc;
+        unsigned int rgFunc;
 };
 
 #endif

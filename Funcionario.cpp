@@ -15,3 +15,15 @@ void Funcionario::printOi() {
 std::string Funcionario::getName() {
     return this->nome;
 }
+
+double Funcionario::getSalarioBase () {
+    return this->salarioBase;
+}
+
+int Funcionario::getIdade () {
+    return this->idade;
+}
+
+unsigned int Funcionario::getRgFunc () {
+    return this->rgFunc;
+}
