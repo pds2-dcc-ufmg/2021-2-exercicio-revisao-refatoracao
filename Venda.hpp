@@ -11,6 +11,14 @@ class Venda{
 
         virtual void print();
 
+        Venda (std::string cliente, Especialista esp, std::string descricao, int valor);
+
+        void setEspecialista (Especialista esp);
+
+        ~Venda ();
+
+        double getValor ();
+
 
     private:
         double valor;
