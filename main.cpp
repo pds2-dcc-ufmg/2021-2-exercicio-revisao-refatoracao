@@ -9,6 +9,7 @@ using namespace std;
 
 int main()
 {
+
     Cliente cliente1;
     cliente1.NOME = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
