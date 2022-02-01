@@ -26,7 +26,7 @@ double Gerente::getBonificacao () {
 
 Gerente::Gerente (std::string nome, 
                   int idade, 
-                  int rgFunc, 
+                  std::string rgFunc, 
                   int salarioBase) {
 
     this->nome = nome;

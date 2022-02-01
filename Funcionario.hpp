@@ -9,13 +9,16 @@ class Funcionario {
 
     public:
 
+        Funcionario ();
+        ~Funcionario ();
+
         void print();
         void printOi();
 
         std::string getName();
         double getSalarioBase ();
         int getIdade ();
-        unsigned int getRgFunc ();
+        std::string getRgFunc ();
 
         void setName (std::string name);
         void setSalarioBase (double salarioBase);
@@ -30,7 +33,7 @@ class Funcionario {
         double salarioBase; // valor m�nimo recebido pelo funcion�rio
 
         int idade;
-        unsigned int rgFunc;
+        std::string rgFunc;
 };
 
 #endif

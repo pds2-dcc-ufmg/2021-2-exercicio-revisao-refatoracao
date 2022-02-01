@@ -6,14 +6,6 @@ void Venda::print () {
     std::cout << " Cliente: " << this->cliente;
 }
 
-void Venda::setEspecialista (Especialista esp) {
-    this->esp.setEspecialidade (esp.getEspecialidade ());
-    this->esp.setName (esp.getName ());
-    this->esp.setIdade (esp.getIdade ());
-    this->esp.setSalarioBase (esp.getSalarioBase ());
-    this->esp.setRgFunc (esp.getRgFunc ());
-}
-
 double Venda::getValor () {
     return this->valor;
 }
@@ -25,10 +17,11 @@ std::string Venda::getDescricao () {
 Venda::Venda (std::string cliente, 
               Especialista esp, 
               std::string descricao, 
-              int valor) {
+              int valor)
+              : esp(esp), cliente(cliente), descricao(descricao), valor(valor) {
 
-    this->cliente = cliente;
-    this->setEspecialista(esp);
-    this->descricao = descricao;
-    this->valor = valor;
+}
+
+Venda::~Venda () {
+    delete this;
 }

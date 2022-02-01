@@ -1,5 +1,13 @@
 #include "Funcionario.hpp"
 
+Funcionario::Funcionario () {
+
+}
+
+Funcionario::~Funcionario () {
+    delete this;
+}
+
 void Funcionario::print() {
     std::cout << "[Funcionario]" << std::endl
     << "  Idade: " << this->idade << std::endl
@@ -24,7 +32,7 @@ int Funcionario::getIdade () {
     return this->idade;
 }
 
-unsigned int Funcionario::getRgFunc () {
+std::string Funcionario::getRgFunc () {
     return this->rgFunc;
 }
 

@@ -13,7 +13,7 @@ class Gerente {
 
         Gerente (std::string nome,
                  int idade,
-                 int rgFunc,
+                 std::string rgFunc,
                  int salarioBase);
         ~Gerente ();
 
@@ -28,7 +28,7 @@ class Gerente {
         double salarioBase; // valor m�nimo recebido pelo funcion�rio
         double bonificacao;
 
-        int rgFunc;
+        std::string rgFunc;
         int idade;
 
         std::string nome;

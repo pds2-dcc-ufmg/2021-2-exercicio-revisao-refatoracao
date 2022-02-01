@@ -15,7 +15,7 @@ void Especialista::print() {
 
 Especialista::Especialista (std::string nome,
                             int idade,
-                            int rgFunc,
+                            std::string rgFunc,
                             int salarioBase,
                             std::string especialidade) {
 

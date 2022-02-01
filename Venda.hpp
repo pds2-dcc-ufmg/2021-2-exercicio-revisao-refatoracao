@@ -9,23 +9,23 @@ class Venda{
 
     public:
 
-        virtual void print();
+        void print();
 
-        Venda (std::string cliente, Especialista esp, std::string descricao, int valor);
-
-        void setEspecialista (Especialista esp);
-
+        Venda (std::string cliente,
+               Especialista esp,
+               std::string descricao,
+               int valor);
         ~Venda ();
 
         double getValor ();
 
         std::string getDescricao ();
 
+        Especialista esp;
 
     private:
         double valor;
 
-        Especialista esp;
 
         std::string descricao;
         std::string cliente;
