@@ -1,5 +1,5 @@
-#ifndef VENDA_HPP
-#define VENDA_HPP
+#ifndef VENDA_H
+#define VENDA_H
 
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
