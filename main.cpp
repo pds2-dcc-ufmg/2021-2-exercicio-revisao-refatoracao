@@ -9,34 +9,19 @@ using namespace std;
 
 int main()
 {
-    Cliente cliente1;
-    cliente1.nome = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.cep = "35690000";
+    Cliente cliente1 = Cliente("J. Jonah Jameson","Nova York","35690000");
     cliente1.print();
 
-    Cliente cliente2;
-    cliente2.nome = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.cep = "22061955";
+    Cliente cliente2 = Cliente("Norman Osborn","Hartlford","22061955");
     cliente2.print();
 
-    Cliente cliente3;
-    cliente3.nome = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.cep = "24051953";
+    Cliente cliente3 = Cliente("Otto Octavius","Schenectady","24051953");
     cliente3.print();
 
-    Cliente cliente4;
-    cliente4.nome = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.cep = "22111967";
+    Cliente cliente4 = Cliente("Bruce Benner","Dayton","22111967");
     cliente4.print();
 
-    Cliente cliente5;
-    cliente5.nome = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.cep = "13061981";
+    Cliente cliente5 = Cliente("Steve Rogers","Lower East Side","13061981");
     cliente5.print();
 
 
