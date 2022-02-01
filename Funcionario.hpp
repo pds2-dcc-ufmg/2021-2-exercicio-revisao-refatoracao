@@ -13,6 +13,9 @@ class Funcionario {
         string nome;
         int rgFunc;
 
+        Funcionario(double s, string idade, string n, int rg) 
+            : SalarioBase(s), IDADE(idade), nome(n), rgFunc(rg) {};
+
         void print();
 
         void print_oi();
