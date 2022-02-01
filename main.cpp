@@ -146,17 +146,8 @@ int main()
 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.print();
-    cout << "Num Atendimentos: " << e01._numAtendimentos << endl;
-    cout << "Salario Total: " << e01._salarioBase+e01._comissao<<endl;
-
     e02.print();
-    cout << "Num Atendimentos: " << e02._numAtendimentos << endl;
-    cout << "Salario Total: " << e02._salarioBase+e02._comissao<<endl;
-
     e03.print();
-    cout << "Num Atendimentos: " << e03._numAtendimentos << endl;
-    cout << "Salario Total: " << e03._salarioBase+e03._comissao<<endl;
-
 
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = e01._numAtendimentos + e02._numAtendimentos + e03._numAtendimentos;
