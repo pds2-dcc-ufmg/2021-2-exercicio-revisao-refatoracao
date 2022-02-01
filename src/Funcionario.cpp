@@ -69,10 +69,12 @@ void Funcionario::setComissao(double Comissao){
     this->_Comissao = Comissao;
 }
 
+//Soma numero de atendimentos de um funcionario.
 void Funcionario::SomaNumeroDeAtendimentos(int NumeroDeAtendimentos){
     this->_NumeroDeAtendimentos += NumeroDeAtendimentos;
 }
 
+//Soma comissao de um funcionario.
 void Funcionario::SomaComissao(double Comissao){
     this->_Comissao += Comissao;
 }

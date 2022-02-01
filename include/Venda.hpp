@@ -19,11 +19,19 @@ class Venda : public Cliente{
 
     public:
 
+        /**
+		 * @brief Construtor padrao que inicializa todas as variaveis privadas da classe.
+		 */
+        Venda(std::string nome, std::string descricao, double valor, Especialista *especialista);
+        
+        //Métodos Getters para acessar os atributos privados da classe.
         double getValor();
         std::string getDescricao();
         Especialista getEspecialista();
-
-        Venda(std::string nome, std::string descricao, double valor, Especialista *especialista);
+        
+        /**
+		 * @brief Imprime os dados referentes a uma venda cadastrada.
+		 */
         void print();
         
 

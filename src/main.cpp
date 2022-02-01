@@ -7,6 +7,7 @@
 #include "Gerente.hpp"
 
 
+//Funcoes para cabecalho de relarórios
 void CabecalhoRelatorioVendas(){
     std::cout <<" \n \n           Relatorio das Vendas \n" << std::endl;
 }
@@ -15,8 +16,10 @@ void CabecalhoRelatorioFuncionario(){
     std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
 }
 
-int main()
-{
+
+
+int main(){
+
     Cliente cliente1("J. Jonah Jameson", "Nova York","35690000");
     cliente1.print();
 

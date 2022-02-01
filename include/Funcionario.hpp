@@ -17,7 +17,7 @@ class Funcionario{
     public:
 
         /**
-		 * @brief Construtor padrao que inicializa todas as variaveis privadas da classe
+		 * @brief Construtor padrao que inicializa todas as variaveis privadas da classe.
 		 */
         Funcionario(std::string nome = "",
                     std::string idade = "",
@@ -26,6 +26,9 @@ class Funcionario{
                     int NumeroDeAtendimentos = 0,
                     double Comissao = 0);
 
+
+
+        //Métodos Getters e Setters dos atributos privados da classe.
         int getRegistroFuncional();
         double getSalarioBase();
         std::string getNome();
@@ -40,9 +43,14 @@ class Funcionario{
         void setNumeroDeAtendimentos(int NumeroDeAtendimentos);
         void setComissao(double Comissao);
         
+
+        //Métodos para calculo de comissao.
         void SomaNumeroDeAtendimentos(int NumeroDeAtendimentos);
         void SomaComissao(double Comissao);
 
+        /**
+		 * @brief Imprime na tela os dados de um Funcionario cadastrado 
+		 */
         void print();
 
 };

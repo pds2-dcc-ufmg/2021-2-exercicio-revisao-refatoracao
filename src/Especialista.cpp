@@ -7,8 +7,8 @@
 #include "Gerente.hpp"
 
 
-const double PERCENTUAL = 0.1;
-const double PERCENTUAL_WANDA = 0.1;
+const double PERCENTUAL = 0.1; //Constante referente ao percentual de venda padrão para comissões.
+const double PERCENTUAL_WANDA = 0.1; //Constante referente ao percentual de venda que será usado na comissao da Wanda
 
 
 
@@ -43,7 +43,11 @@ void Especialista::print(){
               << getSalarioBase() << std::endl;
 
 
-    TotalReceber = getSalarioBase()+getComissao()*PERCENTUAL;
+    if(this->getNome() == "Wanda Maximoff"){
+        TotalReceber = getSalarioBase()+getComissao()*PERCENTUAL_WANDA;
+    }else{
+        TotalReceber = getSalarioBase()+getComissao()*PERCENTUAL;
+    }
 
     std::cout << "Num Atendimentos: " << getNumeroDeAtendimentos() << std::endl;
     std::cout << "Salario Total: " << TotalReceber << std::endl;

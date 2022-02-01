@@ -12,7 +12,7 @@ class Especialista : public Funcionario{
     public:
 
         /**
-		 * @brief Construtor padrao que inicializa todas as variaveis privadas da classe
+		 * @brief Construtor padrao que inicializa todos os atributos privados da classe.
 		 */
         Especialista(std::string especialidade = "",
                 const std::string nome = "",
@@ -24,6 +24,10 @@ class Especialista : public Funcionario{
 
         double comissao(double ValorVenda);
         std::string getEspecialidade();
+
+        /**
+		 * @brief Imprime na tela os dados de um Especialista cadastrado. 
+		 */
         void print();
 };
 

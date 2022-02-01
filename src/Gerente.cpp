@@ -40,6 +40,7 @@ void Gerente::print(){
         
 }
 
+//Calculo de bonificação do Gerente.
 double Gerente::calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
     this->setComissao(numTOTALVendas*BONIFICACAO);
     return numTOTALVendas*BONIFICACAO;

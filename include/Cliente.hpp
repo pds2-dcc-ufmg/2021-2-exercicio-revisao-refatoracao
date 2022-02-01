@@ -15,10 +15,12 @@ class Cliente{
 
 
 		/**
-		 * @brief Construtor padrao que inicializa todas as variaveis privadas da classe
+		 * @brief Construtor padrao que inicializa todos os atributos privados da classe.
 		 */
 		Cliente(std::string _nome = "", std::string _endereco = "", std::string _cep = "");
 
+
+		//Métodos Getters e Setters dos atributos privados da classe.
 		std::string getNome();
 		std::string getEndereco();
 		std::string getCEP();
