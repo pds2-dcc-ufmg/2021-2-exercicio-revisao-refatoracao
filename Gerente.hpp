@@ -8,9 +8,9 @@
 class Gerente {
     public:
 
-        virtual void print();
+        void print();
 
-        virtual double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
+        double calculaBonificacaoGerente(int numTOTALVendas);
 
         Gerente (std::string nome, int idade, int rgFunc, int salarioBase);
 

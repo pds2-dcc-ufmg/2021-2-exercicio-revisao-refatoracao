@@ -9,9 +9,11 @@ void Gerente::print () {
     << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << this->salarioBase << std::endl;
 }
 
-double Gerente::calcula_BONIFICACAO_GERENTE (int numTOTALVendas){
+double Gerente::calculaBonificacaoGerente (int numTOTALVendas){
 
-    return numTOTALVendas * this->VALOR_BONIFICACAO;
+    this->bonificacao = numTOTALVendas * this->VALOR_BONIFICACAO;
+
+    return this->bonificacao;
 }
 
 Gerente::Gerente (std::string nome, 
