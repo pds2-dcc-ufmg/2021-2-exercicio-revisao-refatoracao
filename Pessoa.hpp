@@ -3,7 +3,7 @@
 
 #include <string>
 
-class Cliente{
+class Pessoa{
 	
 	public:
     void print();
