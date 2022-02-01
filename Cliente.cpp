@@ -4,10 +4,10 @@
 
 void Cliente::print(){
 
+	 // todas as variaveis receberam a mesma formatacao
 	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
+         << "  Nome: " << nome << endl
 		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
-
+		 << "  CEP: " << cep << endl; //espacamentos desnecessarios removidos
 }
 
