@@ -53,42 +53,42 @@ int main()
     
     Venda v01("J. Jonah Jameson", e01, "Fotos do Homem Aranha", 100);
     e01.comissao_ += e01.comissao(v01.VALOR);
-    e01.numAtendimentos+=1;
+    e01.numAtendimentos+= 1;
     venda.push_back(&v01);
 
     Venda v02("Bruce Benner", e02, "Troca da tela do telefone", 100);
     e02.comissao_ += e02.comissao(v02.VALOR);
-    e02.numAtendimentos+=1;
+    e02.numAtendimentos+= 1;
     venda.push_back(&v02);
 
     Venda v03("Norman Osborn",e01, "Fotos do novo planador", 150);
     e01.comissao_ += e01.comissao(v03.VALOR);
-    e01.numAtendimentos+=1;
+    e01.numAtendimentos+= 1;
     venda.push_back(&v03);
 
     Venda v04("J. Jonah Jameson", e02, "Recarga de cartucho", 10);
     e02.comissao_ += e02.comissao(v04.VALOR);
-    e02.numAtendimentos +=1;
+    e02.numAtendimentos += 1;
     venda.push_back(&v04);
 
     Venda v05("Bruce Benner", e03, "Reconstrucao de Predio", 10000);
     e03.comissao_ += e03.comissao(v05.VALOR);
-    e03.numAtendimentos +=1;
+    e03.numAtendimentos += 1;
     venda.push_back(&v05);
 
     Venda v06("Steve Rogers", e03, "Decoracao de Apartamento no Brooklyn", 3000);
     e03.comissao_ += e03.comissao(v06.VALOR);
-    e03.numAtendimentos +=1;
+    e03.numAtendimentos += 1;
     venda.push_back(&v06);
 
     Venda v07("J. Jonah Jameson", e03, "Reforma do Clarim Diario", 5000);
     e03.comissao_ += e03.comissao(v07.VALOR);
-    e03.numAtendimentos +=1;
+    e03.numAtendimentos += 1;
     venda.push_back(&v07);
 
     Venda v08("Otto Octavius", e02, "Formatacao do PC", 80);
     e03.comissao_ += e02.comissao(v08.VALOR);
-    e03.numAtendimentos +=1;
+    e03.numAtendimentos += 1;
     venda.push_back(&v08);
 
 
@@ -97,8 +97,8 @@ int main()
 
     for (int i = 0; i < venda.size(); i++)
     {
-        v[i].print();
-        cout << " Descricao: " << v[i].descricao << endl;
+        venda[i]->print();
+        cout << " Descricao: " << venda[i]->descricao << endl;
     }
 
 
