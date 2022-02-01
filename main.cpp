@@ -32,12 +32,7 @@ int main()
 
 
 
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
+    Gerente g01 (10000, "72", "Nick Fury", 21121948, 0);
 
 
     Venda v01 = Venda(e01);
@@ -147,9 +142,9 @@ int main()
 
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = e01._numAtendimentos + e02._numAtendimentos + e03._numAtendimentos;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    g01._bonificacao = g01.calculaBonificacaoGerente(NUMTOTALservicos);
     g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    cout << "Salario Total: " << g01._salarioBase + g01._bonificacao<<endl;
 
     return 0;
 }
