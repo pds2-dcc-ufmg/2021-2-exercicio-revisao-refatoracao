@@ -13,7 +13,7 @@ class Funcionario {
         string nome;
         int rgFunc;
 
-        void print();
+        virtual void print() = 0;
         Funcionario(string nome, string idade, double salarioBase,  int rgFunc): 
         nome(nome), idade(idade), salarioBase(salarioBase), rgFunc(rgFunc){};
 };

@@ -12,7 +12,7 @@ class Especialista : public Funcionario {
         double comissao;
 
         double calculaComissao(double valorVenda);
-        void print();
+        virtual void print() override;
         Especialista(string nome, string idade, double salarioBase,  int rgFunc, string especialidade):
         Funcionario(nome, idade, salarioBase, rgFunc), especialidade(especialidade), numAtendimentos(0), comissao(0){};
 };

@@ -12,7 +12,7 @@ class Gerente : public Funcionario  {
     public:
         double bonificacao;
 
-        void print();
+        virtual void print() override;
         void calculaBonificacaoGerente(int numTotalVendas);
         Gerente(string nome, string idade, double salarioBase,  int rgFunc):
         Funcionario(nome, idade, salarioBase, rgFunc), bonificacao(0){};
