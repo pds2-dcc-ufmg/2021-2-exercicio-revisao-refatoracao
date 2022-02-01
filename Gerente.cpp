@@ -6,7 +6,8 @@ void Gerente::print() {
     << "  Nome: " << _nome << endl
     << "  Idade: " << _idade << endl
     << "  RGFunc: " << _rg << endl
-    << "  SalarioBase: R$ " << fixed << setprecision(2) << _salarioBase <<endl;
+    << "  SalarioBase: R$ " << fixed << setprecision(2) << _salarioBase <<endl
+    << "Salario Total: " << _salarioBase + _bonificacao<<endl;
 }
 
 double Gerente::calculaBonificacaoGerente(int numTotalVendas){
