@@ -1,5 +1,5 @@
-#ifndef FUNCIONARIO_H
-#define FUNCIONARIO_H
+#ifndef FUNCIONARIO_HPP
+#define FUNCIONARIO_HPP
 
 #include <iostream>
 #include <iomanip>
