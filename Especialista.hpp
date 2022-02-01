@@ -14,16 +14,36 @@ class Especialista : public Funcionario {
 
     
 
-    private:
-        string especialidade;
+     private:
+        string Especialidade;
+        
 
     
     public:
+
+
+
+    Especialista(string nome, string idade, int rgDoFuncionario, double salarioBase, string especialidade)  : Funcionario( nome,  idade,  rgDoFuncionario, salarioBase) {
+      this->Especialidade=especialidade;
+      
+    }
+
+
     
     double Comissao(double ValorVenda) {
         return ValorVenda*PercentualDoGerente;            
     }
+  
 
+  double getSalarioBase () {
+    return this->SalarioBase;
+  }
+
+   string getNome(){
+     return this->Nome;
+   }
+   
+    
 
     void print() {
 
