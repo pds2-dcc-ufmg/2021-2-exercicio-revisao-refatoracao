@@ -15,6 +15,8 @@ class Cliente{
 		std::string getEndereco();
 		std::string getCep();
 
+		~Cliente();
+
 		Cliente(std::string Nome,
 		std::string Endereco,
 		std::string Cep);

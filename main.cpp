@@ -42,5 +42,12 @@ int main()
         ImprimeStatus<Especialista>(Especialistas);
         ImprimeStatus<Gerente>(Gerentes);
 
+        RemoveVector<Especialista>(Especialistas);
+        RemoveVector<Cliente>(Clientes);
+        RemoveVector<Gerente>(Gerentes);
+        RemoveVector<Venda>(Vendas1);
+
+
+
     return 0;
 }

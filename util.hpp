@@ -9,7 +9,15 @@
 #include "Gerente.hpp"
 #include <vector>
 
-void InsereCliente (std::string Nome, std::string Endereco, std::string Cep,  std::vector <Cliente*> &Clientes);
+template <class O>
+void RemoveVector(std::vector<O*> &Removido){
+     for (auto iterator_1 = Removido.begin(); iterator_1 != Removido.end(); iterator_1++){
+                delete (*iterator_1);            
+    }
+    Removido.clear();
+}
+
+void InsereCliente (std::string Nome, std::string Endereco, std::string Cep, std::vector <Cliente*> &Clientes);
 
 void InsereEspecialista(double Salario, std::string Idade, std::string Nome, int RgFuncionario, 
 std::string Especialidade, int NumAtendimentos, double Comissao, std::vector <Especialista*> &Especialistas);

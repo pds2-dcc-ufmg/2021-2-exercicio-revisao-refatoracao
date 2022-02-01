@@ -4,9 +4,8 @@ Gerente::Gerente (double Salario, std::string Idade,
          std::string Nome, int RgFuncionario) : Funcionario(Salario, Idade, Nome, RgFuncionario)
             {}
 
-Gerente::~Gerente(){
-    delete this;
-}
+Gerente::~Gerente() = default;
+
 
 double Gerente::calculaBonificacaoGerente(int NumTotalVendas){
             return NumTotalVendas*VALOR_BONIFICACAO;

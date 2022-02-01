@@ -24,3 +24,4 @@ std::string Cliente::getEndereco(){
 std::string Cliente::getCep(){
 		return this->Cep;
 }
+Cliente::~Cliente() = default;

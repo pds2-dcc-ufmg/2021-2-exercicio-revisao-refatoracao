@@ -19,9 +19,8 @@ void Especialista::Print() const {
         std::cout << "Num Atendimentos: " << this->getNumAtendimentos() << std::endl;      
         std::cout << "Salario Total: " << this->getSalarioTotal() << std::endl; 
     }
-Especialista::~Especialista(){
-        delete this;
-}
+Especialista::~Especialista() = default; 
+
 int Especialista::getNumAtendimentos() const {
     return this->NumAtendimentos;
 }

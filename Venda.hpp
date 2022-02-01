@@ -9,6 +9,11 @@
 
 
 
+/**
+ * @brief Classe responsavel pelo armazenamento e gerenciamento das informacoes
+ * de uma venda.
+ *
+ */
 class Venda{
 
     private:
@@ -20,6 +25,14 @@ class Venda{
     Cliente* _Cliente;
     Gerente* _Gerente;
 
+   /**
+   * @brief Construtor padrao que inicializa todas as variaveis da classe.
+   *
+   * @param ValorVenda Valor da venda em reais.
+   * @param Descricao Tarefa realizada com a venda.
+   * @param Especialista Especialista envolvido na Venda.
+   * @param Cliente Cliente envolvido na venda.
+   */
     Venda(double ValorVenda, std::string Descricao, Especialista* Especialista, Cliente* Cliente);    
     std::string getDescricao() const;
 
