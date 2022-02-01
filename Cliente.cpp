@@ -9,9 +9,8 @@ CLiente::Cliente (std::string nome, std::endereco, std::string cep) {
 }
 
 void Cliente::print (){
-	std::cout << "[Cliente]" << endl
-         << "  Nome: " <<_nome << endl
-		 << "  Endereco: " <<_endereco << endl
-		 << "  CEP: " <<_cep << endl;
+	std::cout << "[Cliente]" << std::endl
+         << "  Nome: " << _nome << std::endl
+		 << "  Endereco: " << _endereco << std::endl
+		 << "  CEP: " << _cep << std::endl;
 }
-
