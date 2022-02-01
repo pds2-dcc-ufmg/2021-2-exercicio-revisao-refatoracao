@@ -1,6 +1,7 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -11,9 +12,15 @@ class Cliente{
 		string NOME;
 		string endereco;
 		string Cep;
-		string AlturaDosPais;
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print() // imprime na tela os dados de um cliente cadastrado
+		{
+        cout << "[Cliente]" << endl
+         << "  Nome: " << NOME << endl
+		 << "  Endereco: " << endereco << endl
+		 << "  CEP: " << Cep << endl;
+
+		}
 
 };
 
