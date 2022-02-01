@@ -1,27 +1,28 @@
-#ifndef FUNCIONARIO_HPP
-#define FUNCIONARIO_HPP
+#ifndef FUNCIONARIO_H
+#define FUNCIONARIO_H
 
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
+class Funcionario{
 
-class Funcionario {
+    protected:
+
+        std::string Nome;
+        int Idade;
+        double SalarioBase = 0; // valor mï¿½nimo recebido pelo funcionï¿½rio
+        int RGFunc;
+
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+        virtual void print();
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        virtual double calculaSalarioTotal();
+        
+        double getSalarioBase();
+
+        std::string getNome();      
+
 };
 
 #endif
