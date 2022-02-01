@@ -4,7 +4,7 @@
 #include "Funcionario.hpp"
 
 double Gerente::getBonificacao(){
-	return _bonificacao;
+	return this->_bonificacao;
 }
 
 void Gerente::setBonificacao(double bonificacao){
@@ -13,11 +13,11 @@ void Gerente::setBonificacao(double bonificacao){
 
 void Gerente::imprimeDadosGerente() {
     std::cout << "[Gerente]" << std::endl
-          << "  Nome: " << getNome() << std::endl
-          << "  Idade: " << getIdade() << std::endl
-          << "  RGFunc: " << getRgFunc() << std::endl
-          << "  SalarioBase: R$ " << std::setprecision(2) << std::fixed << getSalarioMin() << std::endl
-          << "  Salario Total: R$ " << getSalarioMin() + getBonificacao() << std::endl << std::endl;
+              << "  Nome: " << getNome() << std::endl
+              << "  Idade: " << getIdade() << std::endl
+              << "  RGFunc: " << getRgFunc() << std::endl
+              << "  SalarioBase: R$ " << std::setprecision(2) << std::fixed << getSalarioMin() << std::endl
+              << "  Salario Total: R$ " << getSalarioMin() + getBonificacao() << std::endl << std::endl;
 }
 
 double Gerente::calculaBonificacaoGerente(int numTotalVendas){

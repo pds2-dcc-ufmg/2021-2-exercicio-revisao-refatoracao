@@ -11,21 +11,21 @@ void construtorCliente(Cliente* cliente, std::string nome, std::string endereco,
 	cliente->setNome(nome);
 	cliente->setEndereco(endereco);
 	cliente->setCep(cep);
-    cliente->imprimeDadosCliente();
+        cliente->imprimeDadosCliente();
 
 }
 
 void construtorEspecialista(Especialista* especialista, const std::string& nome, 
                             int idade, int rgFunc, double salarioMin, const std::string& especialidade,
                             int numAtendimentos, double comissao){
-    especialista->initDados();
+        especialista->initDados();
 	especialista->setNome(nome);
 	especialista->setIdade(idade);
 	especialista->setRgFunc(rgFunc);
-    especialista->setSalarioMin(salarioMin);
+        especialista->setSalarioMin(salarioMin);
 	especialista->setEspecialidade(especialidade);
-    especialista->setNumAtendimentos(numAtendimentos);
-    especialista->setComissao(comissao);
+        especialista->setNumAtendimentos(numAtendimentos);
+        especialista->setComissao(comissao);
 }
 
 void construtorGerente(Gerente* gerente, double bonificacao, const std::string& nome, 
@@ -43,8 +43,8 @@ void construtorVenda(Venda* venda, Cliente cliente, Especialista esp,
 	venda->setEsp(esp);
 	venda->setDescricao(descricao);
 	venda->setValor(valor);
-    especialista->setComissao(especialista->comissao(venda->getValor()));
-    especialista->setNumAtendimentos(1);
+        especialista->setComissao(especialista->comissao(venda->getValor()));
+        especialista->setNumAtendimentos(1);
 }
 
 int main(){
