@@ -130,15 +130,9 @@ int main()
     v06.cliente= "Steve Rogers";
     v06.esp = e03;
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
+    v06.valor= 3000;
+    comissao03 += e03.comissao(v06.valor);
+    num_atendimentos03 += 1;
 
     Venda v07;
     v07.cliente= "J. Jonah Jameson";
