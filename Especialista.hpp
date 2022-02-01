@@ -5,8 +5,6 @@ double const PORCENTAGEM = 0.1;
 
 #include "Funcionario.hpp"
 
-//int totalDeServicos = 0;
-
 class Especialista : public Funcionario {
     public:
         Especialista();
