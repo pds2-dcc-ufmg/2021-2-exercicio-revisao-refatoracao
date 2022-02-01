@@ -5,11 +5,13 @@
 
 class Cliente{
 
-	public:
+	private:
 
 		std::string nome;
 		std::string endereco;
 		std::string cep;
+
+	public:
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
 

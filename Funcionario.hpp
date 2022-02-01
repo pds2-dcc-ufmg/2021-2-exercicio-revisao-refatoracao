@@ -6,13 +6,14 @@
 
 class Funcionario {
 
-    public:
+    private:
 
         double SalarioBase; // valor mínimo recebido pelo funcionário
-        int idade;
-        string nome;
+        std::string idade;
+        std::string nome;
         int rgFunc;
 
+    public:    
         void print(); // imprime dados do funcionario
 }
 

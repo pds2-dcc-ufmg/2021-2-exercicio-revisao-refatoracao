@@ -7,22 +7,16 @@
 
 class Venda{
 
-    public:
+    private:
         
-        double VALOR;
+        double valor;
         std::string descricao;
-        Especialista esp;
         std::string cliente;
+        Especialista esp;
 
+    public:
 
-        void print() {
-
-            std::cout << "Especialista: ";
-            cout << esp.nome;
-
-            std::cout << " Cliente: ";
-            cout << cliente;
-        }
+        void print(); // imprime na tela os dados da venda
 }
 
 #endif

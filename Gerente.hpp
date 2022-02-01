@@ -4,18 +4,14 @@
 #ifndef GERENTE_HPP
 #define GERENTE_HPP
 
-double ValorBONIFICACAO = 15.0;
+class Gerente: public Funcionário {
 
-class Gerente {
+    private:
+
+        double bonificacao;
+        double ValorBONIFICACAO = 15.0;
 
     public:
-
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        std::string idade;
-        std::string nome;
-        int rgFunc;
-        double bonificacao;
-
 
         void print(); //imprime dados do gerente
 
