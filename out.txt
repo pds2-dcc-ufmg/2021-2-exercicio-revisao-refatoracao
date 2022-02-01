@@ -58,8 +58,13 @@
  
            Relatorio dos Funcionarios 
 
+[Gerente]
+  Idade: 72
+  RGFunc: 21121948
+  Nome: Nick Fury
+  SalarioBase: R$ 10000.00
+  Salario Total: 10000.00
 [Especialista]
-[Funcionario]
   Idade: 46
   RGFunc: 27061975
   Nome: Peter Parker
@@ -67,7 +72,6 @@
   Num Atendimentos: 2
   Salario Total: 3025.00
 [Especialista]
-[Funcionario]
   Idade: 56
   RGFunc: 4041965
   Nome: Tony Stark
@@ -75,17 +79,9 @@
   Num Atendimentos: 3
   Salario Total: 1019.00
 [Especialista]
-[Funcionario]
   Idade: 32
   RGFunc: 16021989
   Nome: Wanda Maximoff
   SalarioBase: R$ 5000.00
   Num Atendimentos: 3
   Salario Total: 6800.00
-[Gerente]
-[Funcionario]
-  Idade: 72
-  RGFunc: 21121948
-  Nome: Nick Fury
-  SalarioBase: R$ 10000.00
-  Salario Total: 10120.00

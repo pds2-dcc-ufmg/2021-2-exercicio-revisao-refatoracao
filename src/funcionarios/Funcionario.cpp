@@ -2,8 +2,7 @@
 
 void Funcionario::print()
 {
-    std::cout << "[Funcionario]" << std::endl
-              << "  Idade: " << idade << std::endl
+    std::cout << "  Idade: " << idade << std::endl
               << "  RGFunc: " << rgFunc << std::endl
               << "  Nome: " << nome << std::endl
               << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salarioBase << std::endl;

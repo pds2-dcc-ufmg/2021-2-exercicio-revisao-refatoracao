@@ -3,13 +3,15 @@
 void Venda::print()
 {
     std::cout << "[Venda]" << std::endl;
-    
-    std::cout << "  Descricao: " << descricao << std::endl;
 
-    std::cout << "  Especialista: " << especialista->getName() << std::endl;
+    std::cout << "  Descricao: "
+              << descricao << std::endl;
 
-    std::cout << "  Cliente: " << cliente << std::endl;
+    std::cout << "  Especialista: "
+              << especialista->getName() << std::endl;
 
+    std::cout << "  Cliente: "
+              << cliente << std::endl;
 }
 
 Venda::Venda(double valor, std::string descricao, Especialista *especialista, std::string cliente)

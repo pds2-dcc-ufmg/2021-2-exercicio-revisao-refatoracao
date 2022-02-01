@@ -65,6 +65,8 @@ int main()
     std::cout << " \n \n           Relatorio dos Funcionarios \n"
               << std::endl;
 
+    gerente->print();
+    
     for (size_t i = 0; i < especialista.size(); i++)
     {
         especialista[i]->print();
@@ -72,7 +74,6 @@ int main()
         delete especialista[i];
     }
 
-    gerente->print();
 
     return 0;
 }
