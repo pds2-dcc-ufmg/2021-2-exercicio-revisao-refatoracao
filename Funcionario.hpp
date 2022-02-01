@@ -10,16 +10,17 @@ class Funcionario {
     public:
 
         void print();
-
         void printOi();
 
         std::string getName();
-
         double getSalarioBase ();
-
         int getIdade ();
-
         unsigned int getRgFunc ();
+
+        void setName (std::string name);
+        void setSalarioBase (double salarioBase);
+        void setIdade (int idade);
+        void setRgFunc (unsigned int rgFunc);
     
 
     protected:

@@ -27,3 +27,19 @@ int Funcionario::getIdade () {
 unsigned int Funcionario::getRgFunc () {
     return this->rgFunc;
 }
+
+void Funcionario::setName (std::string name) {
+    this->nome = nome;
+}
+
+void Funcionario::setSalarioBase (double salarioBase) {
+    this->salarioBase = salarioBase;
+}
+
+void Funcionario::setIdade (int idade) {
+    this->idade = idade;
+}
+
+void Funcionario::setRgFunc (unsigned int rgFunc) {
+    this->rgFunc = rgFunc;
+}

@@ -20,6 +20,8 @@ class Especialista : public Funcionario {
 
         std::string getEspecialidade ();
 
+        void setEspecialidade (std::string especialidade);
+
 
     private:
 

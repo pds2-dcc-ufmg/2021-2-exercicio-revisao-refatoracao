@@ -34,3 +34,7 @@ Especialista::~Especialista () {
 std::string Especialista::getEspecialidade () {
     return this->especialidade;
 }
+
+void Especialista::setEspecialidade (std::string especialidade) {
+    this->especialidade = especialidade;
+}
