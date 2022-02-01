@@ -2,5 +2,5 @@
 
 void Pessoa::print(){
   
-	std::cout << "[Pessoa]" << endl;
+	std::cout << "[Pessoa]" << std::endl;
 }
