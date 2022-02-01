@@ -34,9 +34,9 @@ class Cliente{
 	std::string getCep();
 
 	/**
-	 * @brief Destrutor da classe
-	 *
-	 */
+	* @brief Destrutor da classe
+	*
+	*/
 	~Cliente();
 
 	/**
@@ -51,9 +51,9 @@ class Cliente{
 	std::string Cep);
 
 	/**
-	 * @brief  Imprime na tela os dados de um cliente cadastrado
-	 *
-	 */
+	* @brief  Imprime na tela os dados de um cliente cadastrado
+	*
+	*/
 	void Print();
 
 };

@@ -14,7 +14,6 @@
 
 class Funcionario {
     private: 
-    // valor minimo recebido pelo funcionario
         double SalarioBase; 
         std::string Idade;
         std::string Nome;
@@ -23,10 +22,10 @@ class Funcionario {
 
     public:
 
-     /**
-     * @brief Destrutor da classe
-     *
-     */
+        /**
+        * @brief Destrutor da classe
+        *
+        */
         virtual ~Funcionario(){};
 
         /**
@@ -84,9 +83,9 @@ class Funcionario {
          std::string Nome, int RgFuncionario);
 
         /**
-		 * @brief  Imprime na tela os dados de um Funcionario cadastrado
-		 *
-		 */
+		* @brief  Imprime na tela os dados de um Funcionario cadastrado
+		*
+		*/
         virtual void Print() const;
 };
 

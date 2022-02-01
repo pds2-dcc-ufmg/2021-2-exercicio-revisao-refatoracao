@@ -50,9 +50,9 @@ class Especialista : public Funcionario {
     int getNumAtendimentos() const;
 
     /**
-     * @brief  Imprime na tela os dados de um Especialista cadastrado
-     *
-     */
+    * @brief  Imprime na tela os dados de um Especialista cadastrado
+    *
+    */
     void Print() const override;
 };
 
