@@ -12,12 +12,7 @@ class Funcionario {
         std::string nome;
         int rgFunc;
 
-        void print() {
-            std::cout << "[Funcionario]" << std::endl
-            << "  Idade: " << IDADE << std::endl
-            << "  RGFunc: " << rgFunc << std::endl;
-        }
-
+        void print();
 };
 
 #endif
