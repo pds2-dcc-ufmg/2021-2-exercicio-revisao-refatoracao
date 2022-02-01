@@ -15,7 +15,7 @@ class Cliente {
 		std::string endereco;
 		std::string cep;
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print();
 };
 
 #endif
