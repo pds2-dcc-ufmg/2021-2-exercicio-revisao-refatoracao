@@ -11,21 +11,17 @@ class Funcionario {
         /**
         *@brief Imprime informações do funcionário (nome, idade e rg)
         */
-        virtual void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+        virtual void print();
     
     private:
         /**
         *@brief Valor mínimo recebido pelo funcionário    
         */
-        double SalarioBase;
+        double salarioBase;
         /**
         *@brief Dados do funcionário
         */
-        string IDADE;
+        string idade;
         string nome;
         int rgFunc;
 };
