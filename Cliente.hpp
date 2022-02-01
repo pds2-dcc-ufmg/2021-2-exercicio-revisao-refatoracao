@@ -8,8 +8,8 @@ class Cliente{
 
 	public:
 
-		string NOME;
-		string endereco;
+		string Nome;
+		string Endereco;
 		string Cep;
 		string AlturaDosPais;
 
