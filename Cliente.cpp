@@ -13,6 +13,5 @@ void Cliente::print (){
          << "  Nome: " <<_nome << endl
 		 << "  Endereco: " <<_endereco << endl
 		 << "  CEP: " <<_cep << endl;
-
 }
 
