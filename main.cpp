@@ -23,20 +23,20 @@ int main()
 
     Cliente cliente3;
     cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
+    cliente3.endereco = "Schenectady";
+    cliente3.Cep = "24051953";
     cliente3.print();
 
     Cliente cliente4;
     cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
+    cliente4.endereco = "Dayton";
+    cliente4.Cep = "22111967";
     cliente4.print();
 
     Cliente cliente5;
     cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
+    cliente5.endereco = "Lower East Side";
+    cliente5.Cep = "13061981";
     cliente5.print();
 
 
