@@ -15,13 +15,9 @@ std::string Venda::getDescricao () {
 }
 
 Venda::Venda (std::string cliente, 
-              Especialista esp, 
+              Especialista *esp, 
               std::string descricao, 
-              int valor)
-              : esp(esp), cliente(cliente), descricao(descricao), valor(valor) {
+              double valor)
+              : esp(*esp), cliente(cliente), descricao(descricao), valor(valor) {
 
-}
-
-Venda::~Venda () {
-    delete this;
 }

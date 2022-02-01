@@ -12,20 +12,19 @@ class Venda{
         void print();
 
         Venda (std::string cliente,
-               Especialista esp,
+               Especialista *esp,
                std::string descricao,
-               int valor);
-        ~Venda ();
+               double valor);
 
         double getValor ();
 
         std::string getDescricao ();
 
-        Especialista esp;
 
     private:
         double valor;
 
+        Especialista esp;
 
         std::string descricao;
         std::string cliente;
