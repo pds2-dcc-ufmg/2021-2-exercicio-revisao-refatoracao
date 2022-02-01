@@ -30,109 +30,75 @@ int main()
 
     Especialista e03 = Especialista(5000,"32","Wanda Maximoff", 16021989, "Engenharia e Designeeeeer", 0, 0);
 
-
-
     Gerente g01 (10000, "72", "Nick Fury", 21121948, 0);
 
 
-    Venda v01 = Venda(e01);
-    v01.cliente= "J. Jonah Jameson";
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    e01._valorVenda += v01.VALOR;
+    Venda v01(e01, 100, "Fotos do Homem Aranha", cliente1);
+    e01._valorVenda += v01._valor;
     e01._numAtendimentos+=1;
 
 
-    Venda v02 = Venda(e02);
-    v02.cliente= "Bruce Benner";
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    e02._valorVenda += v02.VALOR;
+    Venda v02 (e02, 100, "Troca da tela do telefone", cliente4);
+    e02._valorVenda += v02._valor;
     e02._numAtendimentos+=1;
 
 
-    Venda v03 = Venda(e01);
-    v03.cliente= "Norman Osborn";
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    e01._valorVenda += v03.VALOR;
+    Venda v03(e01, 150, "Fotos do novo planador", cliente2);
+    e01._valorVenda += v03._valor;
     e01._numAtendimentos+=1;
 
 
-    Venda v04 = Venda(e02);
-    v04.cliente= "J. Jonah Jameson";
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    e02._valorVenda += v04.VALOR;
+    Venda v04(e02, 10, "Recarga de cartucho", cliente1);
+    e02._valorVenda += v04._valor;
     e02._numAtendimentos+=1;
 
 
-    Venda v05 = Venda(e03);
-    v05.cliente= "Bruce Benner";
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    e03._valorVenda += v05.VALOR;
+    Venda v05(e03, 10000, "Reconstrucao de Predio", cliente4);
+    e03._valorVenda += v05._valor;
     e03._numAtendimentos+=1;
 
 
-    Venda v06 = Venda(e03);
-    v06.cliente= "Steve Rogers";
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    e03._valorVenda += v06.VALOR;
+    Venda v06(e03, 3000, "Decoracao de Apartamento no Brooklyn", cliente5);
+    e03._valorVenda += v06._valor;
+    e03._numAtendimentos+=1;
+
+    Venda v07 (e03, 5000, "Reforma do Clarim Diario", cliente1);
+    e03._valorVenda += v07._valor;
     e03._numAtendimentos+=1;
 
 
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
-
-    Venda v07 = Venda(e03);
-    v07.cliente= "J. Jonah Jameson";
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    e03._valorVenda += v07.VALOR;
-    e03._numAtendimentos+=1;
-
-
-    Venda v08 = Venda(e02);
-    v08.cliente= "Otto Octavius";
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    e02._valorVenda += v08.VALOR;
+    Venda v08 (e02, 80, "Formatacao do PC", cliente3);
+    e02._valorVenda += v08._valor;
     e02._numAtendimentos+=1;
-
-
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
     v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
+    cout << " Descricao: " << v01._descricao << endl;
 
     v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
+    cout << " Descricao: " << v02._descricao << endl;
 
     v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
+    cout << " Descricao: " << v03._descricao << endl;
 
     v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
+    cout << " Descricao: " << v04._descricao << endl;
 
     v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
+    cout << " Descricao: " << v05._descricao << endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
+    cout << " Descricao: " << v06._descricao << endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
+    cout << " Descricao: " << v06._descricao << endl;
 
     v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
+    cout << " Descricao: " << v07._descricao << endl;
 
     v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
+    cout << " Descricao: " << v08._descricao << endl;
 
     
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;

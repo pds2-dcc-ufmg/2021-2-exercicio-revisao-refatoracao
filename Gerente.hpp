@@ -5,7 +5,7 @@
 
 using namespace std;
 
-double ValorBONIFICACAO = 15.0;
+static double ValorBONIFICACAO = 15.0;
 
 class Gerente : Funcionario{
     public:
