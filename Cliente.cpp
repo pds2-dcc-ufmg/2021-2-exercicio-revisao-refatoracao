@@ -11,3 +11,9 @@ void Cliente::print(){
 
 }
 
+Cliente::Cliente(string NOME, string endereco, string Cep)
+{
+    this->NOME = NOME;
+    this->endereco = endereco;
+    this->Cep = Cep;
+}
