@@ -5,38 +5,18 @@
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
+#include "Gerente.hpp"
 
 using namespace std;
 
 class Venda{
-
     public:
-    double VALOR;
+    double valorVenda;
     string descricao;
-    Especialista esp;
-    string cliente;
-
-
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+    Especialista* especialista;
+    Cliente* cliente;
+    void print();
+    Venda(Cliente* cliente, Especialista* especialista, std::string descricao, double valorVenda);
 };
 
 #endif
