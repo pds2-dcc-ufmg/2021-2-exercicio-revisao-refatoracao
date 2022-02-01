@@ -16,6 +16,14 @@ double Gerente::calculaBonificacaoGerente (int numTOTALVendas){
     return this->bonificacao;
 }
 
+double Gerente::getSalarioBase () {
+    return this->salarioBase;
+}
+
+double Gerente::getBonificacao () {
+    return this->bonificacao;
+}
+
 Gerente::Gerente (std::string nome, 
                   int idade, 
                   int rgFunc, 

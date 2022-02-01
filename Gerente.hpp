@@ -9,12 +9,16 @@ class Gerente {
     public:
 
         void print();
-
         double calculaBonificacaoGerente(int numTOTALVendas);
 
-        Gerente (std::string nome, int idade, int rgFunc, int salarioBase);
-
+        Gerente (std::string nome,
+                 int idade,
+                 int rgFunc,
+                 int salarioBase);
         ~Gerente ();
+
+        double getSalarioBase ();
+        double getBonificacao ();
 
 
     private:
