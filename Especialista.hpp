@@ -10,6 +10,7 @@ class Especialista : public Funcionario {
 
     public:
     
+        Especialista(double salarioBase, string idade, string nome, int RG, string especialidade);
         double comissao(double ValorVenda);
         void print() const override;
         
