@@ -2,9 +2,6 @@
 #include <string>
 #include "Cliente.hpp"
 //Metodos de Set da Classe Cliente
-void Cliente::SetNome(string Nome){
-	this->Nome = Nome;
-}
 void Cliente::SetEndereco(string Endereco){
 	this->Endereco = Endereco;
 }
@@ -13,9 +10,6 @@ void Cliente::SetCep(string Cep)
 	this->Cep = Cep;
 }
 // Metodos de Set da Classe Cliente
-string Cliente::GetNome(){
-	return Nome;
-}
 string Cliente::GetEndereco(){
 	return Endereco;
 }

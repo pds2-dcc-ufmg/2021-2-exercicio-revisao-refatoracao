@@ -6,12 +6,7 @@ void Funcionario::SetSalarioBase(double SalarioBase){
 void Funcionario::SetIdade(int Idade){
     this->Idade = Idade;
 }
-void Funcionario::SetNome(string Nome){
-    this->Nome = Nome;
-}
-void Funcionario::SetRgFuncionario(int RgFuncionario){
-    this->RgFuncionario = RgFuncionario;
-}
+
 //Implementação dos Metodos de Set da Classe Cliente
 double Funcionario::GetSalarioBase(){
     return SalarioBase;
@@ -19,17 +14,11 @@ double Funcionario::GetSalarioBase(){
 int Funcionario::GetIdade(){
     return Idade;
 }
-string Funcionario::GetNome(){
-    return Nome;
-} 
-int Funcionario::GetRgFuncionario(){
-    return RgFuncionario;
-}
 //Metodo Imprimi os dados dos Funcionarios
 void Funcionario::Print() {
     cout << "[Funcionario]" << endl
     << "  Idade: " << GetIdade() << endl
-    << "  RGFunc: " << GetRgFuncionario() << endl
+    << "  RGFunc: " << GetRg() << endl
     << "  Nome: " << GetNome() << endl
     << "  SalarioBase: R$ " << fixed << setprecision(2) << GetSalarioBase() <<endl;
  }

@@ -47,7 +47,7 @@ int main()
     double comissao01 = 0;
     e01.SetNome("Peter Parker");
     e01.SetIdade(46);
-    e01.SetRgFuncionario(27061975);
+    e01.SetRg(27061975);
     e01.SetSalarioBase(3000);
     e01.SetEspecialidade("Fotografia");
 
@@ -58,7 +58,7 @@ int main()
     double comissao02 = 0;
     e02.SetNome("Tony Stark");
     e02.SetIdade(56);
-    e02.SetRgFuncionario(4041965);
+    e02.SetRg(4041965);
     e02.SetSalarioBase(1000);
     e02.SetEspecialidade("Consertos de equipamentos eletronicos");
 
@@ -68,7 +68,7 @@ int main()
     double comissao03 = 0;
     e03.SetNome("Wanda Maximoff");
     e03.SetIdade(32);
-    e03.SetRgFuncionario(16021989);
+    e03.SetRg(16021989);
     e03.SetSalarioBase(5000);
     e03.SetEspecialidade("Engenharia e Designeeeeer");
 
@@ -77,7 +77,7 @@ int main()
     double bonificacao01 = 0;
     g01.SetNome("Nick Fury");
     g01.SetIdade(72);
-    g01.SetRgFuncionario(21121948);
+    g01.SetRg(21121948);
     g01.SetSalarioBase(10000);
 
 
