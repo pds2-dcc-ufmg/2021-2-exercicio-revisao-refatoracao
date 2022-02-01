@@ -14,13 +14,21 @@ class Gerente : public Funcionario {
         double bonificacao;
     
     public:
+        // Construtor
         Gerente (string argNome, string argIdade, int argRg, double argSalario, double argBonificacao):
         Funcionario(argNome, argIdade, argRg, argSalario), bonificacao(argBonificacao) {}
 
-        void print() override;
+        // Retorna bonificacao
         double getBonificacao();
+
+        // Altera o valor de bonificacao
         void setBonificacao(double argBonificacao);
+
+        // Calcula a bonificação baseada num total de vendas
         double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
+
+        // Imprime informações do gerente
+        void print() override;
 
 };
 

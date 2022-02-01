@@ -12,8 +12,11 @@ class Cliente{
 		string cep;
 
 	public:
+		// Construtor
 		Cliente(string argNome, string argEndereco, string argCep): nome(argNome), endereco(argEndereco), cep(argCep) {}
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		
+		// Imprime as informações do cliente cadastrado
+		void print(); 
 
 };
 
