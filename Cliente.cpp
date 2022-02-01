@@ -2,12 +2,17 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+CLiente::Cliente (std::string nome, std::endereco, std::string cep) {
+	this->_nome = nome;
+	this->_endereco = endereco;
+	this->_cep = cep;
+}
 
+void Cliente::print (){
 	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
+         << "  Nome: " <<_nome << endl
+		 << "  Endereco: " <<_endereco << endl
+		 << "  CEP: " <<_cep << endl;
 
 }
 
