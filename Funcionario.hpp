@@ -9,13 +9,13 @@ using namespace std;
 class Funcionario {
     public:
         /**
-        *@brief 
+        *@brief Imprime informações do funcionário (nome, idade e rg)
         */
-        void print();
-        /**
-        *@brief 
-        */
-        void print_oi();
+        virtual void print() {
+            cout << "[Funcionario]" << endl
+            << "  Idade: " << IDADE << endl
+            << "  RGFunc: " << rgFunc << endl;
+        }
     
     private:
         /**
