@@ -11,7 +11,7 @@ void Cliente::print(){
 
 }
 
-#/--get/set nome
+#/---get/set nome
 string Cliente::getNOME(){ 
 	return NOME;
 }
@@ -21,7 +21,7 @@ void Cliente::setNOME(string NOME_NOVO){
 #---/
 
 
-#/--get/set endereço
+#/---get/set endereço
 string Cliente::getENDERECO(){ 
 	return endereco;
 }
@@ -31,7 +31,7 @@ void Cliente::setENDERECO(string ENDERECO_NOVO){
 #---/
 
 
-#/--get/set cep
+#/---get/set cep
 string Cliente::getCEP(){ 
 	return Cep;
 }
