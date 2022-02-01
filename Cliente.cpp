@@ -1,13 +1,29 @@
 #include <iostream>
+#include <iostream>
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+using namespace std;
+
+string Cliente::getNome()
+{
+	return this->nome;
+}
+string Cliente::getEndereco()
+{
+	return this->endereco;
+}
+string Cliente::getCep()
+{
+	return this->cep;
+}
+
+void Cliente::print()
+{
 
 	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
-
+			  << "  Nome: " << this->getNome() << endl
+			  << "  Endereco: " << this->getEndereco() << endl
+			  << "  CEP: " << this->getCep() << endl;
 }
 
