@@ -12,16 +12,10 @@ class Funcionario {
         string idade;
         string nome;
         int rgFunc;
+        
+        void print();
+        void print_oi();
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << idade << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
 };
 
 #endif
