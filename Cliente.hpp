@@ -6,15 +6,21 @@ using namespace std;
 
 class Cliente{
 
+  private:
+		string nome;
+		string endereco;
+		string cep;
+
 	public:
 
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+    Cliente(string nome, string endereco, string cep){
+      this->nome = nome;
+      this->endereco = endereco;
+      this->cep = cep;
+    }
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+		void print(); 
 };
 
 #endif
+
