@@ -13,7 +13,7 @@ class Especialista : public Funcionario {
         int comissao_;
 
         Especialista(string n, string idade, int rg, double s, string e)
-            : Funcionario(n, idade, rg, s), especialidade(e), numAtendimentos(0), comissao(0) {};
+            : Funcionario(n, idade, rg, s), especialidade(e), numAtendimentos(0), comissao_(0) {};
 
         double comissao(double ValorVenda);
         
