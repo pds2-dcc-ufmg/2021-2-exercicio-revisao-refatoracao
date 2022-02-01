@@ -12,6 +12,9 @@ class Cliente{
 		string endereco;
 		string Cep;
 	public:
+		string getNOME();
+		void setNOME(string NOME_NOVO);
+	
 		void print(); // imprime na tela os dados de um cliente cadastrado
 
 };
