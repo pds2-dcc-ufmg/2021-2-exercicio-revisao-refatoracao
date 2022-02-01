@@ -2,9 +2,9 @@
 
 void Venda::print() {
 
-    std::cout << "Especialista: ";
-    cout << _especialista._nome;
+    cout << "Especialista: " << _especialista._nome;
 
-    std::cout << " Cliente: ";
-    cout << _cliente._nome;
+    cout << " Cliente: " << _cliente._nome;
+
+    cout << " Descricao: " << _descricao << endl;
 }

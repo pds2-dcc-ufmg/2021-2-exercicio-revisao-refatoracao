@@ -5,6 +5,7 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
+
 using namespace std;
 
 int main()
@@ -74,31 +75,22 @@ int main()
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
     v01.print();
-    cout << " Descricao: " << v01._descricao << endl;
 
     v02.print();
-    cout << " Descricao: " << v02._descricao << endl;
 
     v03.print();
-    cout << " Descricao: " << v03._descricao << endl;
 
     v04.print();
-    cout << " Descricao: " << v04._descricao << endl;
 
     v05.print();
-    cout << " Descricao: " << v05._descricao << endl;
 
     v06.print();
-    cout << " Descricao: " << v06._descricao << endl;
 
     v06.print();
-    cout << " Descricao: " << v06._descricao << endl;
 
     v07.print();
-    cout << " Descricao: " << v07._descricao << endl;
 
     v08.print();
-    cout << " Descricao: " << v08._descricao << endl;
 
     
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
