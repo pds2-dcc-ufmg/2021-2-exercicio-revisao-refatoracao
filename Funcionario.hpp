@@ -9,12 +9,16 @@ using namespace std;
 class Funcionario : public Pessoa {
     public:
     
-        Funcionario(double SalarioBase, string idade, string nome, int RG);
+        Funcionario(double salarioBase, string idade, string nome, int RG);
         void print() const override;
+        double get_salario() const;
+        string get_idade() const;
+        string get_nome() const;
+        int get_RG() const;
     
     private:
     
-        double SalarioBase;
+        double salarioBase;
         string idade;
         string nome;
         int RG;
