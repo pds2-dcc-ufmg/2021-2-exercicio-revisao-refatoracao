@@ -12,9 +12,10 @@ class Cliente{
 		string endereco;
 		string Cep;
 		string AlturaDosPais;
+		Cliente (string nome,string endereco,string cep);
+		Cliente();
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+		void print(); 
 };
 
 #endif
