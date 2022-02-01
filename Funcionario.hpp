@@ -13,7 +13,7 @@ class Funcionario {
         string nome;
         int rgFunc;
 
-        Funcionario(double s, string idade, string n, int rg) 
+        Funcionario(string n, string idade, int rg, double s) 
             : SalarioBase(s), IDADE(idade), nome(n), rgFunc(rg) {};
 
         void print();

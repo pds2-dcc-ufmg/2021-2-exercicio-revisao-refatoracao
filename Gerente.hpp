@@ -11,8 +11,8 @@ class Gerente : public Funcionario {
     public:
         double bonificacao;
         
-        Gerente(double s, string idade, string n, int rg, double b) 
-            : Funcionario(s, idade, n, rg), bonificacao(b) {};
+        Gerente(string n, string idade, int rg, double s, double b) 
+            : Funcionario(n, idade, rg, s), bonificacao(b) {};
 
         void print();
 

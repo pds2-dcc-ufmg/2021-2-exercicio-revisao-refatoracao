@@ -9,9 +9,11 @@ using namespace std;
 class Especialista : public Funcionario {
     public:
         string especialidade;
+        int numAtendimentos;
+        int comissao_;
 
-        Especialista(double s, string idade, string n, int rg, string e)
-            : Funcionario(s, idade, n, rg), especialidade(e){};
+        Especialista(string n, string idade, int rg, double s, string e)
+            : Funcionario(n, idade, rg, s), especialidade(e), numAtendimentos(0), comissao(0) {};
 
         double comissao(double ValorVenda);
         
