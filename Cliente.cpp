@@ -16,7 +16,3 @@ Cliente::Cliente (std::string nome, std::string endereco, std::string cep) {
     this->endereco = endereco;
     this->cep = cep;
 }
-
-Cliente::~Cliente () {
-    delete this;
-}
