@@ -30,3 +30,7 @@ Especialista::Especialista (std::string nome,
 Especialista::~Especialista () {
     delete this;
 }
+
+std::string Especialista::getEspecialidade () {
+    return this->especialidade;
+}

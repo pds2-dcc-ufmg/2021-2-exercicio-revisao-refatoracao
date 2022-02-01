@@ -8,13 +8,17 @@ class Especialista : public Funcionario {
 
     public:
 
+        Especialista ();
+        
         Especialista (std::string nome, int idade, int rgFunc, int salarioBase, std::string especialidade);
 
         ~Especialista ();
 
-        virtual double comissao(double ValorVenda);
+        double comissao(double ValorVenda);
 
-        virtual void print();
+        void print();
+
+        std::string getEspecialidade ();
 
 
     private:
