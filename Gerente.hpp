@@ -1,5 +1,5 @@
-#ifndef GERENTE_HPP
-#define GERENTE_HPP
+#ifndef GERENTE_H
+#define GERENTE_H
 
 #include <iostream>
 #include <iomanip>
