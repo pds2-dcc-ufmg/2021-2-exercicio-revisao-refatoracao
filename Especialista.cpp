@@ -14,10 +14,7 @@ double Especialista::comissao(double ValorVenda){
 
 void Funcionario::print() const{
   
-  cout << "[Especialista]" << endl
-   << "[Funcionario]" << endl
-   << "  Idade: " << idade << endl
-   << "  RGFunc: " << RG << endl
-   << "  Nome: " << nome << endl
-   << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
+  cout << "[Funcionario]" << endl 
+   << "[Especialista]" << endl
+   print_dados();
 }
