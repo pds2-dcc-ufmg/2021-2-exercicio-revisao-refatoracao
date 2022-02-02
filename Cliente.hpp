@@ -1,15 +1,9 @@
-#include <string>
-
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
+#include <string>
+
 class Cliente{
-
-	private:
-
-		std::string nome;
-		std::string endereco;
-		std::string cep;
 
 	public:
 		void setNome(std::string nome);
@@ -20,7 +14,12 @@ class Cliente{
 		std::string getCep();
 		
 		void print(); // imprime na tela os dados de um cliente cadastrado
+	private:
 
-}
+		std::string nome;
+		std::string endereco;
+		std::string cep;
+
+};
 
 #endif

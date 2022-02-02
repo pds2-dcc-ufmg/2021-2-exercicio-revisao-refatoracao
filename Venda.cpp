@@ -14,24 +14,29 @@ void Venda::setCliente(std::string cliente){
    this->cliente = cliente;
 }
 
+void Venda::setEsp(Especialista esp){
+   this->esp = esp;
+}
+
 double Venda::getValor(){
-   return valor;
+   return this->valor;
 }
 
 std::string Venda::getDescricao(){
-   return descricao;
+   return this->descricao;
 }
 
 std::string Venda::getCliente(){
-   return cliente;
+   return this->cliente;
 }
-
+Especialista Venda::getEsp(){
+   return this->esp;
+}
 
 void Venda::print() {
 
-            std::cout << "Cliente: " << getCliente() << std::endl;
-            std::cout << "Especialista: " << esp.getNome() << std::endl;
-            std::cout << "Descricao: " << getDescricao() << std::endl;
-            std::cout << "Valor: " << getValor() << std::endl;
+            std::cout << "Especialista: " << esp.getNome()
+                      << "   Cliente: " << getCliente()
+                      << "   Descricao: " << getDescricao() << std::endl;
 
 }

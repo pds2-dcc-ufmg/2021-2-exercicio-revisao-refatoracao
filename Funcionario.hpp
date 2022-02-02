@@ -6,28 +6,26 @@
 
 class Funcionario {
 
-    private:
-
-        std::string nome;
-        std::string idade;
-        int rgFunc;
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        std::string especialidade;
-
-
     public:
+
         void setNome(std::string nome);
         void setIdade(std::string idade);
         void setRgFunc(int rgFunc);
         void setSalarioBase(double SalarioBase);
-        void setEspecialidade(std::string especialidade);
         std::string getNome();
         std::string getIdade();
         int getRgFunc();
         double getSalarioBase();
-        std::string getEspecialidade();
 
-        void print(); // imprime dados do funcionario
-}
+        void printFunc(); // imprime dados do funcionario
+        
+    protected:
+
+        std::string nome;
+        std::string idade;
+        int rgFunc;
+        double SalarioBase; // valor mï¿½nimo recebido pelo funcionï¿½rio
+
+};
 
 #endif

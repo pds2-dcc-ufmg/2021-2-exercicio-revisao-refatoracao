@@ -18,33 +18,24 @@ void Funcionario::setSalarioBase(double SalarioBase){
    this->SalarioBase = SalarioBase;
 }
 
-void Funcionario::setEspecialidade(std::string especialidade){
-   this->especialidade = especialidade;
-}
-
 std::string Funcionario::getNome(){
-   return nome;
+   return this->nome;
 }
 
 std::string Funcionario::getIdade(){
-   return idade;
+   return this->idade;
 }
 
 int Funcionario::getRgFunc(){
-   return rgFunc;
+   return this->rgFunc;
 }
 
 double Funcionario::getSalarioBase(){
-   return SalarioBase;
+   return this->SalarioBase;
 }
 
-std::string Funcionario::getEspecialidade(){
-   return especialidade;
-}
-
-void Funcionario::print() {
+void Funcionario::printFunc() {
     
     std::cout << "[Funcionario]\n" << "Nome: " << getNome() << "\nIdade: " << getIdade() << "\nRGFunc: " << getRgFunc() << std::endl;
-    std::cout << "\nSalarioBase: R$ " << fixed << setprecision(2) << getSalarioBase() << std::endl;
-    std::cout << "\nEspecialidade: " << getEspecialidade() << std::endl;
+    std::cout << "SalarioBase: R$ " << std::setprecision(2) << std::fixed << getSalarioBase() << std::endl;
 }

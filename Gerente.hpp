@@ -1,28 +1,27 @@
-#include <iostream>
-#include <iomanip>
-
 #ifndef GERENTE_HPP
 #define GERENTE_HPP
 
-class Gerente: public Funcionário {
+#include <iostream>
+#include <iomanip>
+#include "Funcionario.hpp"
+#include "Cliente.hpp"
 
-    private:
-
-        double bonificacao;
-        double ValorBONIFICACAO = 15.0;
+class Gerente: public Funcionario {
 
     public:
 
         void setBonificacao(double bonificacao);
-        void setValorBONIFICACAO(double ValorBONIFICACAO);
         double getBonificacao();
-        double getValorBONIFICACAO();
 
         void print(); //imprime dados do gerente
 
-        double calcula_BONIFICACAO_GERENTE(numTOTALVendas);
+        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
+        
+    private:
 
-}
+        double bonificacao;
+
+};
 
 #endif
 

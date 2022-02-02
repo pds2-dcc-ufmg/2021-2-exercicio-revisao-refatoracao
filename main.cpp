@@ -85,7 +85,7 @@ int main()
     v01.setEsp(e01);
     v01.setDescricao("Fotos do Homem Aranha");
     v01.setValor(100);
-    comissao01 += e01.comissao(v01.valor);
+    comissao01 += e01.comissao(v01.getValor());
     numAtendimentos01 += 1;
 
 
@@ -94,7 +94,7 @@ int main()
     v02.setEsp(e02);
     v02.setDescricao("Troca da tela do telefone");
     v02.setValor(100);
-    comissao02 += e02.comissao(v02.valor);
+    comissao02 += e02.comissao(v02.getValor());
     numAtendimentos02 += 1;
 
 
@@ -103,7 +103,7 @@ int main()
     v03.setEsp(e01);
     v03.setDescricao("Fotos do novo planador");
     v03.setValor(150);
-    comissao01 += e01.comissao(v03.valor);
+    comissao01 += e01.comissao(v03.getValor());
     numAtendimentos01 += 1;
 
 
@@ -112,7 +112,7 @@ int main()
     v04.setEsp(e02);
     v04.setDescricao("Recarga de cartucho");
     v04.setValor(10);
-    comissao02 += e02.comissao(v04.valor);
+    comissao02 += e02.comissao(v04.getValor());
     numAtendimentos02 += 1;
 
 
@@ -121,7 +121,7 @@ int main()
     v05.setEsp(e03);
     v05.setDescricao("Reconstrucao de Predio");
     v05.setValor(10000);
-    comissao03 += e03.comissao(v05.valor);
+    comissao03 += e03.comissao(v05.getValor());
     numAtendimentos03 += 1;
 
 
@@ -130,7 +130,7 @@ int main()
     v06.setEsp(e03);
     v06.setDescricao("Decoracao de Apartamento no Brooklyn");
     v06.setValor(3000);
-    comissao03 += e03.comissao(v06.valor);
+    comissao03 += e03.comissao(v06.getValor());
     numAtendimentos03 += 1;
 
 
@@ -139,7 +139,7 @@ int main()
     v07.setEsp(e03);
     v07.setDescricao("Reforma do Clarim Diario");
     v07.setValor(5000);
-    comissao03 += e03.comissao(v07.valor);
+    comissao03 += e03.comissao(v07.getValor());
     numAtendimentos03 += 1;
 
 
@@ -148,61 +148,40 @@ int main()
     v08.setEsp(e02);
     v08.setDescricao("Formatacao do PC");
     v08.setValor(80);
-    comissao02 += e02.comissao(v08.valor);
+    comissao02 += e02.comissao(v08.getValor());
     numAtendimentos02 += 1;
 
 
-
-    std::cout <<"Relatorio das Vendas\n" << std::endl;
+    std::cout <<"\nRelatorio das Vendas\n" << std::endl;
 
     v01.print();
-    std::cout << " Descricao: " << v01.getDescricao() << std::endl;
-
     v02.print();
-    std::cout << " Descricao: " << v02.getDescricao() << std::endl;
-
     v03.print();
-    std::cout << " Descricao: " << v03.getDescricao() << std::endl;
-
     v04.print();
-    std::cout << " Descricao: " << v04.getDescricao() << std::endl;
-
     v05.print();
-    std::cout << " Descricao: " << v05.getDescricao() << std::endl;
-
     v06.print();
-    std::cout << " Descricao: " << v06.getDescricao() << std::endl;
-
     v07.print();
-    std::cout << " Descricao: " << v07.getDescricao() << std::endl;
-
     v08.print();
-    std::cout << " Descricao: " << v08.getDescricao() << std::endl;
 
-
-
-
-
-
-    std::cout <<"Relatorio dos Funcionarios\n" << std::endl;
+    std::cout <<"\nRelatorio dos Funcionarios\n" << std::endl;
     e01.print();
     std::cout << "Num Atendimentos: " << numAtendimentos01 << std::endl;
-    std::cout << "Salario Total: " << e01.getSalarioBase() + comissao01 << std::endl;
+    std::cout << "Salario Total R$: " << e01.getSalarioBase() + comissao01 << std::endl << std::endl;
 
     e02.print();
     std::cout << "Num Atendimentos: " << numAtendimentos02 << std::endl;
-    std::cout << "Salario Total: " << e02.getSalarioBase() + comissao02 << std::endl;
+    std::cout << "Salario Total R$: " << e02.getSalarioBase() + comissao02 << std::endl << std::endl;
 
     e03.print();
     std::cout << "Num Atendimentos: " << numAtendimentos03 << std::endl;
-    std::cout << "Salario Total: " << e03.getSalarioBase() + comissao03 << std::endl;
+    std::cout << "Salario Total R$: " << e03.getSalarioBase() + comissao03 << std::endl << std::endl;
 
 
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.getBonificacao() = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    g01.setBonificacao(g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos));
     g01.print();
-    std::cout << "Salario Total: " << g01.getSalarioBase() + g01.getBonificacao() << std::endl;
+    std::cout << "Salario Total R$: " << g01.getSalarioBase() + g01.getBonificacao() << std::endl << std::endl;
 
     return 0;
 }

@@ -2,20 +2,14 @@
 #include <string>
 #include "Especialista.hpp"
 
-void Especialista::setPerc(double perc){
-   this->perc = perc;
+double perc = 0.1;
+
+void Especialista::setEspecialidade(std::string especialidade){
+   this->especialidade = especialidade;
 }
 
-void Especialista::setPercWanda(double percWanda){
-   this->percWanda = percWanda;
-}
-
-double Especialista::getPerc(){
-   return perc;
-}
-
-double Especialista::getPercWanda(){
-   return percWanda;
+std::string Especialista::getEspecialidade(){
+   return this->especialidade;
 }
 
 double Especialista::comissao(double ValorVenda) {
@@ -24,8 +18,9 @@ double Especialista::comissao(double ValorVenda) {
 
 }
 
-void print() {
+void Especialista::print() {
 
     std::cout << "[Especialista]" << std::endl;
-    Funcionario::print();
+    Funcionario::printFunc();
+
 }

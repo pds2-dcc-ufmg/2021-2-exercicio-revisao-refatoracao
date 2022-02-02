@@ -13,19 +13,19 @@ void Cliente::setCep(std::string cep){
 }
 
 std::string Cliente::getNome(){
-   return nome;
+   return this->nome;
 }
 
 std::string Cliente::getEndereco(){
-   return endereco;
+   return this->endereco;
 }
 
 std::string Cliente::getCep(){
-   return cep;
+   return this->cep;
 }
 
 void Cliente::print(){
 
-	std::cout << "[Cliente]\n" << "Nome: " << getNome() << "\nEndereco: " << getEndereco() << "\nCEP: " << getCep() << std::endl;
+	std::cout << "[Cliente]\n" << "Nome: " << getNome() << "\nEndereco: " << getEndereco() << "\nCEP: " << getCep() << std::endl << std::endl;
 
 }

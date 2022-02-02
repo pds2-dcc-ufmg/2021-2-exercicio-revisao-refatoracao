@@ -1,25 +1,21 @@
+#ifndef ESPECIALISTA_HPP
+#define ESPECIALISTA_HPP
+
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
-#ifndef Especialista_HPP
-#define Especialista_HPP
-
 class Especialista : public Funcionario {
-
-    private:
-
-        double perc = 0.1;
-        double percWanda = 0.1;
 
     public:
 
-        void setPerc(double perc);
-        void setPercWanda(double percWanda);
-        double getPerc();
-        double getPercWanda();
+        void setEspecialidade(std::string especialidade);
+        std::string getEspecialidade();
 
-        double comissao(ValorVenda);
+        double comissao(double ValorVenda);
 
         void print();
 
+    private: 
+        std::string especialidade;
+};
 #endif
