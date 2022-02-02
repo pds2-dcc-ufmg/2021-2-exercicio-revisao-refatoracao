@@ -3,35 +3,20 @@
 
 #include <iostream>
 #include <iomanip>
-
-using namespace std;
-
-double ValorBONIFICACAO = 15.0;
+#include <string>
 
 class Gerente {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
+        Gerente(std::string nome, std::string idade, int rg_func, double salario_base);
+        const double valor_bonificacao = 15.0;
+        double salario_base; 
         double bonificacao;
+        std::string idade;
+        std::string nome;
+        int rg_func;
 
-
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
-
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
-
+        void print();
+        double calcula_bonificacao_gerente(int num_total_vendas);
 };
 
 #endif
-
