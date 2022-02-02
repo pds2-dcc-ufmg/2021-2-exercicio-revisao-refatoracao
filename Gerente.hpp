@@ -8,7 +8,6 @@
 
 using namespace std;
 
-
 class Gerente : public Funcionario {
     public:
 
