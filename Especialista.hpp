@@ -6,9 +6,6 @@
 
 using namespace std;
 
-
-
-
 class Especialista : public Funcionario {
 
     private:
@@ -17,17 +14,15 @@ class Especialista : public Funcionario {
     public:
         string especialidade;
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
+        double comissao(double ValorVenda) {
+            double c = ValorVenda*perc;
                   return c;
-    }
-
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-    }
+        }
+    
+        void print() {
+            std::cout << "[Especialista]" << endl;
+            Funcionario::print();
+        }
 };
 
 #endif
