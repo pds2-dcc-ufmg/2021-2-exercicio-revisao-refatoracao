@@ -15,6 +15,6 @@ double Especialista::comissao(double ValorVenda){
 void Especialista::print() const{
   
   cout << "[Funcionario]" << endl 
-   << "[Especialista]" << endl
+   << "[Especialista]" << endl;
    print_dados();
 }
