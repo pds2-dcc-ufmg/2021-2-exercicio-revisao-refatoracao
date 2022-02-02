@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Venda.hpp"
+using namespace std;
 
 double Venda::getValor(){ 
     return this->valor;
@@ -32,9 +33,9 @@ void Venda::setEsp(Especialista espNovo){
 
 void Venda::print() {
 
-    std::cout << "Especialista: ";
-    std::cout << esp.getNome();
+    cout << "Especialista: ";
+    cout << esp.getNome();
 
-    std::cout << " Cliente: ";
-    std::cout << this->cliente;
+    cout << " Cliente: ";
+    cout << this->cliente;
 }
