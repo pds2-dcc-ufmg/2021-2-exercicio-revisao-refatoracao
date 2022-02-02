@@ -165,7 +165,6 @@ int main()
 
     for(auto it=v.begin(); it!=v.end(); it++){
         it->print();
-        cout<< " Descricao: "<<it->descricao<< endl;
     }
 
 
