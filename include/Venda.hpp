@@ -7,14 +7,14 @@
 #include "Especialista.hpp"
 
 class Venda{
-    public:
+    protected:
         double _valor;
         std::string _descricao;
         Especialista* _esp;
         std::string _cliente;
 
+    public:
         Venda(std::string cliente, Especialista* esp, std::string descricao, double valor);
-
         void imprimir_dados();
 };
 

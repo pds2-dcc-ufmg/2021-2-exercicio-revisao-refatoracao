@@ -5,12 +5,12 @@
 #include "Pessoa.hpp"
 
 class Cliente : public Pessoa{
-	public:
+	protected:
         std::string _endereco;
         std::string _cep;
 
+    public:
         Cliente(std::string nome, std::string endereco, std::string cep);
-
 		void imprimir_dados() override;
 };
 

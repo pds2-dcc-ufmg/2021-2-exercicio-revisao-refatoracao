@@ -52,7 +52,7 @@ int main()
     for (auto especialista : especialistas)
     {
         especialista->imprimir_dados();
-        num_total_servicos += especialista->_num_atendimentos;
+        num_total_servicos += especialista->get_num_atendimentos();
     }
 
     g01->calcular_bonificacao(num_total_servicos);

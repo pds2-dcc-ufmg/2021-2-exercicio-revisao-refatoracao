@@ -4,9 +4,10 @@
 #include <string>
 
 class Pessoa{
-	public:
+	protected:
         std::string _nome;
 
+    public:
 		virtual void imprimir_dados(){}; 
 };
 

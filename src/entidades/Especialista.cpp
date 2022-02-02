@@ -23,3 +23,18 @@ void Especialista::calcular_salario_total()
 {
     this->_salario_total = this->_salario_base + this->_comissao;
 }
+
+std::string Especialista::get_nome()
+{
+    return this->_nome;
+}
+
+int Especialista::get_num_atendimentos()
+{
+    return this->_num_atendimentos;
+}
+
+void Especialista::inc_num_atendimentos()
+{
+    this->_num_atendimentos++;
+}
