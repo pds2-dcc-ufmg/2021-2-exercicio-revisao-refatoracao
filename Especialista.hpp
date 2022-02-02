@@ -12,7 +12,8 @@ class Especialista : public Funcionario {
             string especialidade;
     
     public:
-            double comissao(double ValorVenda);
+            double calculaComissao(double ValorVenda);
+            double getComissao();
             void setComissao(double valorComissaoNovo);
             string getEspecialidade();
             void setEspecialidade(string especialidadeNovo);
