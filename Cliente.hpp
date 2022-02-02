@@ -12,11 +12,11 @@ class Cliente{
 
 		Cliente(string nome, string endereco, string cep);
 		
-		string getNome();
+		string auxNome();
 
-		string getEndereco();
+		string auxEndereco();
 
-		string getCep();
+		string auxCep();
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
 	
