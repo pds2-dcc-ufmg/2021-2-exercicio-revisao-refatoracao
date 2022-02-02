@@ -29,7 +29,7 @@ int main()
     especialistas.push_back(Especialista(1000,"56","Tony Stark", 4041965, "Consertos de equipamentos eletronicos"));
     especialistas.push_back(Especialista(5000,"32","Wanda Maximoff", 16021989, "Engenharia e Designeeeeer"));
 
-    Gerente gerente (10000, "72", "Nick Fury", 21121948, 0);
+    Gerente gerente (10000, "72", "Nick Fury", 21121948);
 
     std::vector<Venda> vendas;
     

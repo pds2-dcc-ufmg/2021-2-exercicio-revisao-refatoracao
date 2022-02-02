@@ -5,12 +5,17 @@
 
 using namespace std;
 
-static double ValorBONIFICACAO = 15.0;
 
 class Gerente : Funcionario{
+    private:
+    const double valorBonificacao = 15.0;
+
     public:
-        Gerente(double salarioBase, string idade, string nome, int rg, double bonificacao) : 
-            Funcionario(salarioBase, idade, nome, rg), _bonificacao(bonificacao){};
+        Gerente(double salarioBase, string idade, string nome, int rg) : 
+            Funcionario(salarioBase, idade, nome, rg){
+
+                _bonificacao=0;
+            };
         double _bonificacao;
 
         void print();

@@ -11,5 +11,5 @@ void Gerente::print() {
 }
 
 double Gerente::calculaBonificacaoGerente(int numTotalVendas){
-    return numTotalVendas*ValorBONIFICACAO;
+    return numTotalVendas*valorBonificacao;
 }
