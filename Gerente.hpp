@@ -8,7 +8,7 @@
 using namespace std;
 
 class Gerente: public Funcionario {
-    private :
+    private:
         double bonificacao;
         double valorBonificacao;
     public:
