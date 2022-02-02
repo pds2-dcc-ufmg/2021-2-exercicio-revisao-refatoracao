@@ -21,7 +21,7 @@ class Especialista : public Funcionario {
 
         std::cout << "[Especialista]" << std::endl;
         Funcionario::print();
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+        std::cout << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase << std::endl;
 
     }
 };
