@@ -14,7 +14,7 @@ void Venda::print(){
 void Cliente::print(){
 
 	std::cout << "[Cliente]" <<endl
-    << "  Nome: " << NOME <<endl
+        << "  Nome: " << NOME <<endl
 	<< "  Endereco: " << endereco <<endl
 	<< "  CEP: " << Cep <<std::endl;
 
