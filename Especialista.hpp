@@ -15,9 +15,12 @@ class Especialista : public Funcionario {
         int _numAtendimentos;
         double _valorEmVendas;
 
-    Especialista(double salarioBase, string idade, string nome, int rg, string especialidade, int numAtendimentos, double valorVenda):
+    Especialista(double salarioBase, string idade, string nome, int rg, string especialidade):
                 Funcionario(salarioBase, idade, nome, rg),
-                _especialidade(especialidade), _numAtendimentos(numAtendimentos), _valorEmVendas(valorVenda){};
+                _especialidade(especialidade){
+                    _numAtendimentos = 0;
+                    _valorEmVendas = 0;
+                };
     void efetuaVenda(double valor);
     void print();
     private:
