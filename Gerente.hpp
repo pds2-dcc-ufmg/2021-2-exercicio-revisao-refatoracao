@@ -5,8 +5,6 @@
 #include <iomanip>
 #include "Funcionario.hpp"
 
-using namespace std;
-
 class Gerente: public Funcionario {
     private:
         double bonificacao;
