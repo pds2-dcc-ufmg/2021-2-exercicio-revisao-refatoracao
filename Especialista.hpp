@@ -20,11 +20,19 @@ class Especialista : public Funcionario {
             << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
         }
         /**
+        *@brief Calcula o valor da renda extra a ser recebida
         *@param valorVenda Valor da Venda
         */
         double calculaExtra(double valorVenda) override {
             return valorVenda*percComissao;
         } 
+        /**
+        *@brief Define o valor da renda extra a ser recebida
+        *@param valorVenda Valor da Venda
+        */   
+        void setRendaExtra(double valorVenda) {
+            rendaExtra =  calculaExtra(valorVenda);   
+        }
 
     private:
         percComissao = 0.1;
