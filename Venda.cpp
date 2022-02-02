@@ -2,7 +2,7 @@
 
 void Venda::print() {
 
-    cout << "Especialista: " << _especialista._nome;
+    cout << "Especialista: " << _especialista->_nome;
 
     cout << " Cliente: " << _cliente._nome;
 
