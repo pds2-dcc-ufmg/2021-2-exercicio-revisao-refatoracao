@@ -20,6 +20,13 @@ class Funcionario {
         *@brief Define o valor da renda extra do funcionario
         */
         virtual double setRendaExtra();
+        /**
+        *@brief Define o salário base do funcionário
+        *@param salarioMin Salário base do funcionário
+        */
+        void setSalarioBase(double salarioMin) {
+            salarioBase = salarioMin;
+        }
     
     private:
         /**
