@@ -18,5 +18,6 @@ void Especialista::setEspecialidade(string especialidadeNovo){
 void Especialista::print() {
         std::cout << "[Especialista]" << endl;
                   Funcionario::print();
+        std::cout << "  Especialidade: " << this->especialidade << endl;
 }
 
