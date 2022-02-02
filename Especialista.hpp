@@ -21,8 +21,9 @@ class Especialista : public Funcionario {
         }
     
         void Especialista(string nome, string idade, int rgFuncionario, double salarioBase, string especialidade){
-            this-> _especialidade = especialidade;
+            
             this-> Funcionario(nome, idade, rgFuncionario, salarioBase);
+            this-> _especialidade = especialidade;
         }
     
         void print() {
