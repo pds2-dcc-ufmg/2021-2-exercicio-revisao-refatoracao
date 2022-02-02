@@ -6,12 +6,13 @@
 
 using namespace std;
 
-double ValorBONIFICACAO = 15.0;
+
 
 class Gerente : public Funcionario{
 
     private:
-            double bonificacao;
+        double bonificacao;
+        static double ValorBONIFICACAO = 15.0;
     
     public:
     
