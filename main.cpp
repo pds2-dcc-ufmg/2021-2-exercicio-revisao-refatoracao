@@ -49,7 +49,6 @@ int main()
     e01.IDADE = "46";
     e01.rgFunc = 27061975;
     e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
 
 
 
@@ -60,7 +59,6 @@ int main()
     e02.IDADE = "56";
     e02.rgFunc = 4041965;
     e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
 
 
     Especialista e03;
@@ -70,7 +68,6 @@ int main()
     e03.IDADE = "32";
     e03.rgFunc = 16021989;
     e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
 
 
     Gerente g01;
