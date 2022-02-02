@@ -7,7 +7,8 @@ void Gerente::imprimeFuncionario() {
          << "  Idade: " << idade << endl
          << "  RGFunc: " << rgFunc << endl
          << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl
-         << "  Bonificação: " << bonificacao << endl;
+         << "Salario Total: " << fixed << setprecision(2) << salarioBase + bonificacao << endl;
+
 }
 
 void Gerente::calculaBonificacaoGerente(int numTotalVendas) {

@@ -41,6 +41,7 @@ int main()
 
 
 
+
     Especialista e01;
     int numAtendimentos01 = 0;
     double comissao01 = 0;
@@ -50,6 +51,8 @@ int main()
     e01.salarioBase = 3000;
     e01.especialidade = "Fotografia";
 
+
+
     Especialista e02;
     int numAtendimentos02 = 0;
     double comissao02 = 0;
@@ -58,6 +61,7 @@ int main()
     e02.rgFunc = 4041965;
     e02.salarioBase = 1000;
     e02.especialidade = "Consertos de equipamentos eletronicos";
+
 
     Especialista e03;
     int numAtendimentos03 = 0;
@@ -85,6 +89,7 @@ int main()
     comissao01 += e01.calculaComissao(v01.valor);
     numAtendimentos01+=1;
 
+
     Venda v02;
     v02.cliente.nome = "Bruce Benner";
     v02.esp = e02;
@@ -92,6 +97,7 @@ int main()
     v02.valor = 100;
     comissao02 += e02.calculaComissao(v02.valor);
     numAtendimentos02+=1;
+
 
     Venda v03;
     v03.cliente.nome = "Norman Osborn";
@@ -101,6 +107,7 @@ int main()
     comissao01 += e01.calculaComissao(v03.valor);
     numAtendimentos01+=1;
 
+
     Venda v04;
     v04.cliente.nome = "J. Jonah Jameson";
     v04.esp = e02;
@@ -108,6 +115,7 @@ int main()
     v04.valor = 10;
     comissao02 += e02.calculaComissao(v04.valor);
     numAtendimentos02+=1;
+
 
     Venda v05;
     v05.cliente.nome = "Bruce Benner";
@@ -117,6 +125,7 @@ int main()
     comissao03 += e03.calculaComissao(v05.valor);
     numAtendimentos03+=1;
 
+
     Venda v06;
     v06.cliente.nome = "Steve Rogers";
     v06.esp = e03;
@@ -125,6 +134,12 @@ int main()
     comissao03 += e03.calculaComissao(v06.valor);
     numAtendimentos03+=1;
 
+
+    v06.descricao = "Decoracao de Apartamento no Brooklyn";
+    v06.valor = 3000;
+
+
+
     Venda v07;
     v07.cliente.nome = "J. Jonah Jameson";
     v07.esp = e03;
@@ -132,6 +147,7 @@ int main()
     v07.valor = 5000;
     comissao03 += e03.calculaComissao(v07.valor);
     numAtendimentos03+=1;
+
 
     Venda v08;
     v08.cliente.nome = "Otto Octavius";
@@ -146,22 +162,34 @@ int main()
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
     v01.imprimeVenda();
+    cout << " Descricao: " << v01.descricao << endl;
 
     v02.imprimeVenda();
+    cout << " Descricao: " << v02.descricao << endl;
 
     v03.imprimeVenda();
+    cout << " Descricao: " << v03.descricao << endl;
 
     v04.imprimeVenda();
+    cout << " Descricao: " << v04.descricao << endl;
 
     v05.imprimeVenda();
+    cout << " Descricao: " << v05.descricao << endl;
 
     v06.imprimeVenda();
+    cout << " Descricao: " << v06.descricao << endl;
 
     v06.imprimeVenda();
+    cout << " Descricao: " << v06.descricao << endl;
 
     v07.imprimeVenda();
+    cout << " Descricao: " << v07.descricao << endl;
 
     v08.imprimeVenda();
+    cout << " Descricao: " << v08.descricao << endl;
+
+
+
 
 
 
@@ -183,7 +211,6 @@ int main()
     numTotalServicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
     g01.calculaBonificacaoGerente(numTotalServicos);
     g01.imprimeFuncionario();
-    cout << "Salario Total: " << g01.salarioBase + g01.bonificacao<<endl;
 
     return 0;
 }

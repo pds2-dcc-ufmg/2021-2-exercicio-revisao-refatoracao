@@ -14,3 +14,4 @@ void Especialista::imprimeFuncionario(){
          << "  Nome: " << nome << endl
          << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
 }
+
