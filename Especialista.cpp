@@ -8,10 +8,17 @@ double Especialista::comissao(double valorVenda){
         return c;
 }
 
-string getEspecialidade(){
-  return this->especialidade;
+string Especialista::getEspecialidade(){
+        return this->especialidade;
 }
-void setEspecialidade(string especialidadeNovo){
-  this->especialidade = especialidadeNovo;
+void Especialista::setEspecialidade(string especialidadeNovo){
+        this->especialidade = especialidadeNovo;
+}
+
+void Especialista::print() {
+        std::cout << "[Especialista]" << endl;
+                  Funcionario::print();
+                  << "  Nome: " << nome << endl
+                  << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
 }
 
