@@ -12,7 +12,7 @@ double Especialista::comissao(double ValorVenda){
   return PERCENTUAL * ValorVenda;
 }
 
-void Funcionario::print() const{
+void Especialista::print() const{
   
   cout << "[Funcionario]" << endl 
    << "[Especialista]" << endl
