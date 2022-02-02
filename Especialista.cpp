@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Especialista.hpp"
+using namespace std;
 
 double Especialista::comissao(double ValorVenda) {
     double c = ValorVenda*perc;
@@ -8,7 +9,7 @@ double Especialista::comissao(double ValorVenda) {
 }
     
 void Especialista::print() {
-    std::cout << "[Especialista]" << endl;
+    cout << "[Especialista]" << endl;
     Funcionario::print();
 }
         
