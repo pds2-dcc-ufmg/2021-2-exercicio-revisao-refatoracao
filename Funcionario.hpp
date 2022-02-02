@@ -13,7 +13,7 @@ class Funcionario {
         string nome; // nome do funcionário
         int rg_func; // número de identificação(RG) do funcionário
 
-        void print(); // imprime na tela os dados de um cliente cadastrado
+        void print(); // imprime na tela os dados de um funcionário
 };
 
 #endif
