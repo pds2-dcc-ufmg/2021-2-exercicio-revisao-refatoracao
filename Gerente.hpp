@@ -10,13 +10,13 @@ class Gerente : public Funcionario {
     
     public:
     
+        double ValorBonificacao = 15.0;
+    
         void Gerente(string nome, string idade, int rgFuncionario, double salarioBase, string bonificacao){
             
             this-> Funcionario(nome, idade, rgFuncionario, salarioBase);
             this-> _bonificacao = bonificacao;
         }
-    
-        double ValorBonificacao = 15.0;
      
         double getBonificacao(){
             return this->_bonificacao;
