@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 #include "Cliente.hpp"
+using namespace std;
 
 void Cliente::print(){
-	std::cout << "[Cliente]" << endl;
-        std::cout << "  Nome: " << this->nome << endl;
-	std::cout << "  Endereco: " << this->endereco << endl;
-	std::cout << "  CEP: " << this->cep << endl;
+	cout << "[Cliente]" << endl;
+        cout << "  Nome: " << this->nome << endl;
+	cout << "  Endereco: " << this->endereco << endl;
+	cout << "  CEP: " << this->cep << endl;
 }
 
 
