@@ -4,19 +4,16 @@
 #include <string>
 using namespace std;
 
-class Cliente{
-
-	private:
-
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+class Cliente : public Pessoa{
 	
 	public:
+		Cliente(string nome, string endereço, string cep);
+		void print() const override;
 	
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+	private:
+		string nome;
+		string endereco;
+		string cep;
 };
 
 #endif
