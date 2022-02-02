@@ -69,6 +69,12 @@ class Funcionario {
         double getPercComissao(){
             return percComissao;
         }
+        /**
+        *@brief Retorna o ganho extra
+        */
+        double getRendaExtra(){
+            return rendaExtra;
+        }
     
     private:
         /**
