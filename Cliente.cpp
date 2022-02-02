@@ -3,12 +3,8 @@
 
 #include "Cliente.hpp"
 
-Cliente::Cliente(std::string nome, std::string endereco, std::string cep)
-{
-	this->nome = nome;
-	this->endereco = endereco;
-	this->cep = cep;
-}
+Cliente::Cliente(std::string nome1, std::string endereco1, std::string cep1)
+        : nome(nome1), endereco(endereco1), cep(cep1) { }
 
 void Cliente::print()
 {

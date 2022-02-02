@@ -12,7 +12,7 @@ public:
     std::string nome;
     std::string rgFunc;
 
-    void print();
+    virtual void print();
 };
 
 #endif

@@ -11,10 +11,10 @@ public:
     int numAtendimentos;
     double comissao;
 
-    Especialista(std::string nome, int idade, std::string rgFunc, double salarioBase, std::string especialidade);
+    Especialista(std::string nome, int idade, std::string rgFunc, double salarioBase, std::string especialidade1);
 
     double calcularComissao(double ValorVenda);
-    void print();
+    void print() override;
 };
 
 #endif

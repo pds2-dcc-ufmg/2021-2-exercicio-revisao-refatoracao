@@ -3,15 +3,13 @@
 
 #include "Especialista.hpp"
 
-Especialista::Especialista(std::string nome, int idade, std::string rgFunc, double salarioBase, std::string especialidade)
+Especialista::Especialista(std::string nome, int idade, std::string rgFunc, double salarioBase, std::string especialidade1)
+        : especialidade(especialidade1), numAtendimentos(0), comissao(0)
 {
     this->nome = nome;
     this->idade = idade;
     this->rgFunc = rgFunc;
     this->salarioBase = salarioBase;
-    this->especialidade = especialidade;
-    this->numAtendimentos = 0;
-    this->comissao = 0;
 }
 
 double Especialista::calcularComissao(double valorVenda)
@@ -24,7 +22,7 @@ void Especialista::print()
     std::cout << "[Especialista]" << std::endl;
     Funcionario::print();
     std::cout << "Nome: " << nome << std::endl
-              << "SalarioBase: R$ " << std::fixed << setprecision(2) << salarioBase << std::endl
+              << "SalarioBase: R$ " << std::fixed << std::setprecision(2) << salarioBase << std::endl
               << "Num Atendimentos: " << numAtendimentos << std::endl
               << "Salario Total: " << salarioBase + comissao << std::endl;
 }

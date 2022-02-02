@@ -2,8 +2,7 @@
 #include <string>
 #include "Funcionario.hpp"
 
-void Funcionario::print()
-{
+void Funcionario::print() {
     std::cout << "[Funcionario]" << std::endl
               << "Idade: " << idade << std::endl
               << "RGFunc: " << rgFunc << std::endl;

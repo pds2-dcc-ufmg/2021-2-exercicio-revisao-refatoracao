@@ -1,14 +1,11 @@
 #include <iostream>
 #include <string>
 #include "Venda.hpp"
+#include "Cliente.hpp"
+#include "Especialista.hpp"
 
-Venda::Venda(Cliente *cliente, Especialista *esp, std::string descricao, double valor)
-{
-    this->cliente = cliente;
-    this->esp = esp;
-    this->descricao = descricao;
-    this->valor = valor;
-}
+Venda::Venda(Cliente cliente1, Especialista esp1, std::string descricao1, double valor1)
+        : cliente(cliente1), esp(esp1), descricao(descricao1), valor(valor1) { }
 
 void Venda::print()
 {

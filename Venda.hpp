@@ -13,7 +13,7 @@ public:
     Especialista esp;
     Cliente cliente;
 
-    Venda(Cliente *cliente, Especialista *esp, std::string descricao, double valor);
+    Venda(Cliente cliente1, Especialista esp1, std::string descricao1, double valor1);
 
     void print();
 };
