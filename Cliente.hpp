@@ -21,9 +21,7 @@ class Cliente{
         /**
         *@brief Retorna o nome do cliente
         */
-	string getNome(){
-	    return nome;
-	}
+	string getNome();
 	
      private:
 	/**
