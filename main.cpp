@@ -19,11 +19,11 @@ int main()
      Cliente cliente5 = Cliente("Steve Rogers", "Lower East Side", "13061981");
      cliente5.print();
 
-     Especialista e01 = Especialista("Peter Parker", "46", 27061975, 3000, "Fotografia");
-     Especialista e02 = Especialista("Tony Stark", "56", 4041965, 1000, "Consertos de equipamentos eletronicos");
-     Especialista e03 = Especialista("Wanda Maximoff", "32", 16021989, 5000, "Engenharia e Designeeeeer");
+     Especialista e01 = Especialista("Peter Parker", 46, "27061975", 3000, "Fotografia");
+     Especialista e02 = Especialista("Tony Stark", 56, "4041965", 1000, "Consertos de equipamentos eletronicos");
+     Especialista e03 = Especialista("Wanda Maximoff", 32, "16021989", 5000, "Engenharia e Designeeeeer");
 
-     Gerente g01 = Gerente("Nick Fury", "72", 21121948, 10000);
+     Gerente g01 = Gerente("Nick Fury", 72, "21121948", 10000);
 
      Venda v01 = Venda(cliente1, e01, "Fotos do Homem Aranha", 100);
      e01.comissao += e01.calcularComissao(v01.valor);

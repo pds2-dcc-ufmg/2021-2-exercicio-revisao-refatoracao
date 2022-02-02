@@ -8,9 +8,9 @@ class Funcionario
 {
 public:
     double salarioBase;
-    std::string idade;
+    int idade;
     std::string nome;
-    int rgFunc;
+    std::string rgFunc;
 
     void print();
 };

@@ -11,7 +11,7 @@ class Gerente : public Funcionario
 public:
     double bonificacao;
 
-    Gerente(std::string nome, std::string idade, int rgFunc, double salarioBase);
+    Gerente(std::string nome, int idade, std::string rgFunc, double salarioBase);
 
     void print();
     double calculaBonificacaoGerente(int numTotalVendas);

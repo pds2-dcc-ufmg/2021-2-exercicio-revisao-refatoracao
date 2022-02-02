@@ -3,7 +3,7 @@
 
 #include "Especialista.hpp"
 
-Especialista::Especialista(std::string nome, std::string idade, int rgFunc, double salarioBase, std::string especialidade)
+Especialista::Especialista(std::string nome, int idade, std::string rgFunc, double salarioBase, std::string especialidade)
 {
     this->nome = nome;
     this->idade = idade;

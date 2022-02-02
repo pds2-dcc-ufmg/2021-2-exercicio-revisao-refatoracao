@@ -2,7 +2,7 @@
 #include <string>
 #include "Gerente.hpp"
 
-Gerente::Gerente(std::string nome, std::string idade, int rgFunc, double salarioBase)
+Gerente::Gerente(std::string nome, int idade, std::string rgFunc, double salarioBase)
 {
     this->nome = nome;
     this->idade = idade;
