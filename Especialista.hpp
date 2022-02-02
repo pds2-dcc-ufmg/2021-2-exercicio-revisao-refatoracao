@@ -8,24 +8,24 @@ using namespace std;
 
 class Especialista : public Funcionario {
     private:
-    double perc;
-    string especialidade;
+            double perc;
+            string especialidade;
     
     public:
-    double comissao(double ValorVenda);
-    
-    string getEspecialidade();
-    void setEspecialidade(string especialidadeNovo);
+            double comissao(double ValorVenda);
 
-    void print() {
+            string getEspecialidade();
+            void setEspecialidade(string especialidadeNovo);
 
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+            void print() {
+
+                std::cout << "[Especialista]" << endl;
+                Funcionario::print();
 
 
 
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+                std::cout << "  Nome: " << nome << endl
+                << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
 
     }
 };
