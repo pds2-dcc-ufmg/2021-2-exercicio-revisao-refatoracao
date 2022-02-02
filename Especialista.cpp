@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Especialista.hpp"
+using namespace std;
 
 void Especialista::Especialista(){
         this->perc = 0.1;
@@ -26,8 +27,8 @@ void Especialista::setEspecialidade(string especialidadeNovo){
 }
 
 void Especialista::print() {
-        std::cout << "[Especialista]" << endl;
+        cout << "[Especialista]" << endl;
         Funcionario::print();
-        std::cout << "  Especialidade: " << this->especialidade << endl;
+        cout << "  Especialidade: " << this->especialidade << endl;
 }
 
