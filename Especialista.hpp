@@ -10,7 +10,7 @@ class Especialista : public Funcionario {
     
     public:
     
-        string getEsp(){
+        string auxEsp(){
             return this->_especialidade;
         }    
     
@@ -29,8 +29,8 @@ class Especialista : public Funcionario {
         void print() {
             std::cout << "[Especialista]" << endl;
             Funcionario::print();
-            std::cout << "  Nome: " << this->getNome() << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << this->getSalarioBase() <<endl;
+            std::cout << "  Nome: " << this->auxNome() << endl
+            << "  SalarioBase: R$ " << fixed << setprecision(2) << this->auxSalarioBase() <<endl;
         }
     
     private:
