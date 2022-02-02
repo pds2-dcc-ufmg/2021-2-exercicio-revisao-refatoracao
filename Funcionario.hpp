@@ -6,22 +6,25 @@
 
 using namespace std;
 
-class Funcionario {
+class Funcionario{
     public:
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-        string IDADE;
+        double salario_base; // valor minimo recebido pelo funcionario
+        string idade;
         string nome;
-        int rgFunc;
+        int rg_func;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
+        void print(){
+            cout << "[Funcionario]" << endl;
+            cout << "  Idade: " << idade << endl;
+            cout << "  RGFunc: " << rg_func << endl;
         }
 };
 
 #endif
+
+/**
+----Alterações:----
+1.Padronização(ou formatação) dos nomes das variáveis
+2.Identação melhor das linhas do código
+3.Remoção da função "void print_oi()", pois não tinha uso útil ao programa, era desnecessária
+**/
