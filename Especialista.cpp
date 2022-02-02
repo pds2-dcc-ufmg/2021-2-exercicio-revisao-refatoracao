@@ -3,8 +3,8 @@
 #include "Especialista.hpp"
 using namespace std;
 
-double Especialista::comissao(double ValorVenda) {
-    double c = ValorVenda*perc;
+double Especialista::comissao(double valor_vnd) {
+    double c = valor_vnd*perc;
     return c;
 }
     
