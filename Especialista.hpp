@@ -4,36 +4,17 @@
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 
-using namespace std;
+class Especialista : public Funcionario
+{
+public:
+    std::string especialidade;
+    int numAtendimentos;
+    double comissao;
 
-double perc = 0.1;
-double percWanda = 0.1;
+    Especialista(std::string nome, int idade, std::string rgFunc, double salarioBase, std::string especialidade1);
 
-
-class Especialista : public Funcionario {
-
-    public:
-
-    public:
-        string especialidade;
-
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
-
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+    double calcularComissao(double ValorVenda);
+    void print() override;
 };
 
 #endif
