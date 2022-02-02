@@ -11,7 +11,7 @@ class Gerente: public Funcionario {
         /**
         *@brief Imprime informações do gerente (nome, idade, rg e salario base)
         */
-        void print() {
+        void print() override {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
             << "  Nome: " << nome << endl
@@ -20,20 +20,21 @@ class Gerente: public Funcionario {
             << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
         }
         /**
+        *@brief Calcula o valor da renda extra a ser recebida
         *@param numTotalVendas Número total de vendas efetuadas
         */
-        double calculaExtra(int numTotalVendas){
-            return numTotalVendas*kValorBonificacao;
+        double calculaExtra(int numTotalVendas) override {
+            return numTotalVendas*percComissao;
         }
-        void setRendaExtra() {
-            rendaExtra =  numTotalVendas*percComissao;   
+        /**
+        *@brief Define o valor da renda extra a ser recebida
+        *@param numTotalVendas Número total de vendas efetuadas
+        */
+        void setRendaExtra(int numTotalVendas) {
+            rendaExtra =  calculaExtra(numTotalVendas);   
         }
     
     private:
-        /**
-        *@brief Valor mínimo recebido pelo funcionário
-        */
-        double salarioBase;
         percComissao = 15.0;
 };
 
