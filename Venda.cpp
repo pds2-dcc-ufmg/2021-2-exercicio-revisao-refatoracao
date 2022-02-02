@@ -1,6 +1,6 @@
 #include "Venda.hpp"
 
-Venda::Venda(double VALOR, string descricao, Especialista esp, string cliente) {
+Venda::Venda(double VALOR, string descricao, Especialista esp, Cliente cliente) {
     this->VALOR = VALOR;
     this->descricao = descricao;
     this->esp = esp;
@@ -13,6 +13,6 @@ void Venda::print() {
     cout << esp.nome;
 
     std::cout << " Cliente: ";
-    cout << cliente;
+    cout << cliente.NOME;
 
 }

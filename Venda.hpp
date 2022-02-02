@@ -1,4 +1,3 @@
-
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
@@ -14,14 +13,14 @@ class Venda{
 
     Venda(){}
     
-    Venda(double VALOR, string descricao, Especialista esp, string cliente);
+    Venda(double VALOR, string descricao, Especialista esp, Cliente cliente);
 
     void print();
     
     double VALOR;
     string descricao;
     Especialista esp;
-    string cliente;
+    Cliente cliente;
 
 };
 #endif

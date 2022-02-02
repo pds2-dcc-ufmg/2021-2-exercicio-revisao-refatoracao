@@ -79,7 +79,7 @@ int main()
 
 
     Venda v01;
-    v01.cliente= "J. Jonah Jameson";
+    v01.cliente = cliente1;
     v01.esp = e01;
     v01.descricao = "Fotos do Homem Aranha";
     v01.VALOR = 100;
@@ -88,7 +88,7 @@ int main()
 
 
     Venda v02;
-    v02.cliente= "Bruce Benner";
+    v02.cliente = cliente4;
     v02.esp = e02;
     v02.descricao = "Troca da tela do telefone";
     v02.VALOR = 100;
@@ -97,7 +97,7 @@ int main()
 
 
     Venda v03;
-    v03.cliente= "Norman Osborn";
+    v03.cliente = cliente2;
     v03.esp = e01;
     v03.descricao = "Fotos do novo planador";
     v03.VALOR = 150;
@@ -106,7 +106,7 @@ int main()
 
 
     Venda v04;
-    v04.cliente= "J. Jonah Jameson";
+    v04.cliente = cliente1;
     v04.esp = e02;
     v04.descricao = "Recarga de cartucho";
     v04.VALOR = 10;
@@ -115,7 +115,7 @@ int main()
 
 
     Venda v05;
-    v05.cliente= "Bruce Benner";
+    v05.cliente = cliente4;
     v05.esp = e03;
     v05.descricao = "Reconstrucao de Predio";
     v05.VALOR = 10000;
@@ -124,7 +124,7 @@ int main()
 
 
     Venda v06;
-    v06.cliente= "Steve Rogers";
+    v06.cliente = cliente5;
     v06.esp = e03;
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
@@ -138,7 +138,7 @@ int main()
 
 
     Venda v07;
-    v07.cliente= "J. Jonah Jameson";
+    v07.cliente= cliente1;
     v07.esp = e03;
     v07.descricao = "Reforma do Clarim Diario";
     v07.VALOR = 5000;
@@ -147,7 +147,7 @@ int main()
 
 
     Venda v08;
-    v08.cliente= "Otto Octavius";
+    v08.cliente= cliente3;
     v08.esp = e02;
     v08.descricao = "Formatacao do PC";
     v08.VALOR = 80;
