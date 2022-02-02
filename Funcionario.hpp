@@ -13,13 +13,7 @@ class Funcionario {
         string nome;
         int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: " << SalarioBase << endl;
-        }
+        void print();
 };
 
 #endif
