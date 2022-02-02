@@ -8,15 +8,13 @@ using namespace std;
 
 double ValorBONIFICACAO = 15.0;
 
-class Gerente {
+class Gerente : public Funcionario{
+
+    private:
+            double bonificacao;
+    
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
-
-
+    
         void print() {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
