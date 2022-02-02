@@ -4,8 +4,7 @@
 using namespace std;
 
 double Especialista::comissao(double valor_vnd) {
-    double c = valor_vnd*perc;
-    return c;
+    return valor_vnd*perc;
 }
     
 void Especialista::print() {
