@@ -6,12 +6,14 @@
 
 using namespace std;
 
-double perc = 0.1;
+
 
 
 class Especialista : public Funcionario {
 
-
+    private:
+        static double perc = 0.1;
+    
     public:
         string especialidade;
 
