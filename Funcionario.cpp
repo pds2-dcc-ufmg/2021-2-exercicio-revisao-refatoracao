@@ -1,13 +1,14 @@
 #include <iostream>
 #include <string>
 #include "Funcionario.hpp"
+using namespace std;
 
 void Funcionario::print(){
-    std::cout << "[Funcionario]" << endl;
-    std::cout << "  Nome: " << this->nome << endl;
-    std::cout << "  Salario Base: R$ " << this->salarioBase << endl;
-    std::cout << "  Idade: " << this->idade << endl
-    std::cout << "  RGFunc: " << this->rgFunc << endl;
+    cout << "[Funcionario]" << endl;
+    cout << "  Nome: " << this->nome << endl;
+    cout << "  Salario Base: R$ " << this->salarioBase << endl;
+    cout << "  Idade: " << this->idade << endl
+    cout << "  RGFunc: " << this->rgFunc << endl;
 }
 double Funcionario::getSalarioBase(){ 
     return this->salarioBase;
