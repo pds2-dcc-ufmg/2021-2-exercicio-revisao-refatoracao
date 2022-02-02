@@ -6,9 +6,10 @@
 
 using namespace std;
 
-static double perc = 0.1;
 
 class Especialista : public Funcionario {
+    
+    const double percentual = 0.1;
 
     public:
         string _especialidade;

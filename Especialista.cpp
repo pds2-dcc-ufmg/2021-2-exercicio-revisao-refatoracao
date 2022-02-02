@@ -1,7 +1,7 @@
 #include "Especialista.hpp"
 
 double Especialista::calculaComissao(double ValorVenda) {
-        double comissao = ValorVenda*perc;
+        double comissao = ValorVenda*percentual;
         return comissao;
 }
 
