@@ -9,11 +9,10 @@ void Cliente::print(){
     << "  CEP: " << Cep << endl;
 }
 
-void Cliente::setDados(string nome, string endereco, string cep, string rg){
+void Cliente::setDados(string nome, string endereco, string cep){
     this->nome = nome;
     this->endereco = endereco;
     this->cep = cep;
-    this->rg = rg;
 }
 
 string Cliente::getNome(){
