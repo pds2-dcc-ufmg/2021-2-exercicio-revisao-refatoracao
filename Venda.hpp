@@ -11,32 +11,12 @@ using namespace std;
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+    double valor; // valor recebido na venda
+    string descricao; // descrição do produto vendido
+    Especialista esp; // o especialista que vendeu
+    string cliente; // o cliente/comprador
 
-
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+    void print(); // imprime na tela todos os dados de uma venda efetuada
 };
 
 #endif
