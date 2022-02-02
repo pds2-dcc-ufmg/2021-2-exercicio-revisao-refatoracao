@@ -8,6 +8,6 @@ void Gerente::print() {
     Funcionario::print();
 }
 
-double Gerente::calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-    return numTOTALVendas*ValorBONIFICACAO;
+double Gerente::calcula_bon_ger(int num_tot_vnd){
+    return num_tot_vnd*valor_bon;
 }
