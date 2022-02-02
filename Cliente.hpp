@@ -17,7 +17,7 @@ class Cliente{
 	*@param cep CEP do Cliente
 	*@param rg RG do Cliente
         */	
-	void setDados(string nome, string endereco, string cep, string rg);
+	void setDados(string nome, string endereco, string cep);
         /**
         *@brief Retorna o nome do cliente
         */
@@ -30,7 +30,6 @@ class Cliente{
 	string nome;
 	string endereco;
 	string cep;
-	string rg;
 };
 
 #endif
