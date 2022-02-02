@@ -141,54 +141,54 @@ int main()
     comissao02 += e02.comissao(v08.VALOR);
     numAtendimentos02+=1;
 
-    std::cout <<" \n \n           Relatorio das Vendas \n" << endl;
+    std::cout <<" \n \n           Relatorio das Vendas \n" << std::endl;
 
     v01.print();
-    std::cout << " Descricao: " << v01.descricao << endl;
+    std::cout << " Descricao: " << v01.descricao << std::endl;
 
     v02.print();
-    std::cout << " Descricao: " << v02.descricao << endl;
+    std::cout << " Descricao: " << v02.descricao << std::endl;
 
     v03.print();
-    std::cout << " Descricao: " << v03.descricao << endl;
+    std::cout << " Descricao: " << v03.descricao << std::endl;
 
     v04.print();
-    std::cout << " Descricao: " << v04.descricao << endl;
+    std::cout << " Descricao: " << v04.descricao << std::endl;
 
     v05.print();
-    std::cout << " Descricao: " << v05.descricao << endl;
+    std::cout << " Descricao: " << v05.descricao << std::endl;
 
     v06.print();
-    std::cout << " Descricao: " << v06.descricao << endl;
+    std::cout << " Descricao: " << v06.descricao << std::endl;
 
     v06.print();
-    std::cout << " Descricao: " << v06.descricao << endl;
+    std::cout << " Descricao: " << v06.descricao << std::endl;
 
     v07.print();
-    std::cout << " Descricao: " << v07.descricao << endl;
+    std::cout << " Descricao: " << v07.descricao << std::endl;
 
     v08.print();
-    std::cout << " Descricao: " << v08.descricao << endl;
+    std::cout << " Descricao: " << v08.descricao << std::endl;
 
-    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
+    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
     e01.print();
-    std::cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    std::cout << "Salario Total: " << e01.salario_base+comissao01<<endl;
+    std::cout << "Num Atendimentos: " << numAtendimentos01 << std::endl;
+    std::cout << "Salario Total: " << e01.salario_base+comissao01<<std::endl;
 
     e02.print();
-    std::cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    std::cout << "Salario Total: " << e02.salario_base+comissao02<<endl;
+    std::cout << "Num Atendimentos: " << numAtendimentos02 << std::endl;
+    std::cout << "Salario Total: " << e02.salario_base+comissao02<<std::endl;
 
     e03.print();
-    std::cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    std::cout << "Salario Total: " << e03.salario_base+comissao03<<endl;
+    std::cout << "Num Atendimentos: " << numAtendimentos03 << std::endl;
+    std::cout << "Salario Total: " << e03.salario_base+comissao03<<std::endl;
 
 
     int NUMTOTALservicos = 0;
     NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
     g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
     g01.print();
-    std::cout << "Salario Total: " << g01.salario_base + g01.bonificacao<<endl;
+    std::cout << "Salario Total: " << g01.salario_base + g01.bonificacao<<std::endl;
 
     return 0;
 }

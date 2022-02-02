@@ -2,7 +2,6 @@
 #define FUNCIONARIO_HPP
 
 #include <iostream>
-#include <iomanip>
 
 class Funcionario {
     
