@@ -1,14 +1,15 @@
 #include <iostream>
+#include <list>
 
-#include "Cliente.hpp"
 #include "Funcionario.hpp"
-#include "Especialista.hpp"
 #include "Venda.hpp"
-#include "Gerente.hpp"
+
 using namespace std;
 
 int main()
 {
+    list<Venda> v;
+
     Cliente cliente1;
     cliente1.NOME = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
@@ -40,178 +41,152 @@ int main()
     cliente5.print();
 
 
-
-
     Especialista e01;
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
+    double numAtendimentos01 = 0;
     e01.nome = "Peter Parker";
-    e01.IDADE = "46";
+    e01.idade = "46";
     e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
+    e01.set_Salario_Base(3000);
     e01.especialidade = "Fotografia";
 
 
 
     Especialista e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
+    double numAtendimentos02 = 0;
     e02.nome = "Tony Stark";
-    e02.IDADE = "56";
+    e02.idade = "56";
     e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
+    e02.set_Salario_Base(1000);
     e02.especialidade = "Consertos de equipamentos eletronicos";
 
 
     Especialista e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
+    double numAtendimentos03 = 0;
     e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
+    e03.idade = "32";
     e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
+    e03.set_Salario_Base(5000);
     e03.especialidade = "Engenharia e Designeeeeer";
 
 
     Gerente g01;
-    double bonificacao01 = 0;
     g01.nome = "Nick Fury";
-    g01.IDADE = "72";
+    g01.idade = "72";
     g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
+    g01.set_Salario_Base(10000);
 
 
     Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
+    v01.cliente= cliente1.NOME;
+    v01.esp=e01;
     v01.descricao = "Fotos do Homem Aranha";
     v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
+    e01.set_comissao(e01.salario_extra(v01.VALOR));
+    v.push_back(v01);
     numAtendimentos01+=1;
 
 
     Venda v02;
-    v02.cliente= "Bruce Benner";
+    v02.cliente= cliente4.NOME;
     v02.esp = e02;
     v02.descricao = "Troca da tela do telefone";
     v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
+    e02.set_comissao(e02.salario_extra(v02.VALOR));
+    v.push_back(v02);
     numAtendimentos02+=1;
 
 
     Venda v03;
-    v03.cliente= "Norman Osborn";
+    v03.cliente= cliente2.NOME;
     v03.esp = e01;
     v03.descricao = "Fotos do novo planador";
     v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
+    e01.set_comissao(e03.salario_extra(v03.VALOR));
+    v.push_back(v03);
     numAtendimentos01+=1;
 
 
     Venda v04;
-    v04.cliente= "J. Jonah Jameson";
+    v04.cliente= cliente1.NOME;
     v04.esp = e02;
     v04.descricao = "Recarga de cartucho";
     v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
+    e02.set_comissao(e02.salario_extra(v04.VALOR));
+    v.push_back(v04);
     numAtendimentos02+=1;
 
 
     Venda v05;
-    v05.cliente= "Bruce Benner";
+    v05.cliente= cliente4.NOME;
     v05.esp = e03;
     v05.descricao = "Reconstrucao de Predio";
     v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
+    e03.set_comissao(e03.salario_extra(v05.VALOR));
+    v.push_back(v05);
     numAtendimentos03+=1;
 
 
     Venda v06;
-    v06.cliente= "Steve Rogers";
+    v06.cliente= cliente5.NOME;
     v06.esp = e03;
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
+    e03.set_comissao(e03.salario_extra(v06.VALOR));
+    v.push_back(v06);
     numAtendimentos03+=1;
-
-
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
 
 
 
     Venda v07;
-    v07.cliente= "J. Jonah Jameson";
+    v07.cliente= cliente1.NOME;
     v07.esp = e03;
     v07.descricao = "Reforma do Clarim Diario";
     v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
+    e03.set_comissao(e03.salario_extra(v07.VALOR));
+    v.push_back(v07);
     numAtendimentos03+=1;
 
 
     Venda v08;
-    v08.cliente= "Otto Octavius";
+    v08.cliente= cliente3.NOME;
     v08.esp = e02;
     v08.descricao = "Formatacao do PC";
     v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
+    e02.set_comissao(e02.salario_extra(v08.VALOR));
+    v.push_back(v08);
     numAtendimentos02+=1;
+    
 
 
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
-
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
-
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
-
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
-
-    v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
-
-    v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
-
-
-
-
+    for(auto it=v.begin(); it!=v.end(); it++){
+        it->print();
+        cout<< " Descricao: "<<it->descricao<< endl;
+    }
 
 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
+
     e01.print();
     cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
+    cout << "Salario Total: " << e01.get_Salario_Total()<<endl;
 
     e02.print();
     cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
+    cout << "Salario Total: " << e02.get_Salario_Total()<<endl;
 
     e03.print();
     cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
+    cout << "Salario Total: " << e03.get_Salario_Total()<<endl;
 
 
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    g01.set_bonificacao(g01.salario_extra(v.size()));
     g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    cout << "Salario Total: " << g01.get_Salario_Total()<<endl;
 
     return 0;
 }

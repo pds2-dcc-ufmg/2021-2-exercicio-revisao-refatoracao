@@ -7,21 +7,63 @@
 using namespace std;
 
 class Funcionario {
+
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
+
+        string idade;
         string nome;
         int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+        virtual void print();
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+        virtual double salario_extra(double x);
+
+        double get_Salario_Base();
+
+        void set_Salario_Base(double salario_novo);
+
+        virtual double get_Salario_Total();
+
+
+    private :
+
+       double SalarioBase; // valor mï¿½nimo recebido pelo funcionï¿½rio
+       double Salario_Total; 
+};
+
+class Gerente : public Funcionario{
+    public:
+    
+        double bonificacao;
+
+        void print () override ;
+
+        double salario_extra(double x) override;
+
+        double get_Salario_Total() override;
+
+        void set_bonificacao(double bonus);
+
+};
+
+
+class Especialista : public Funcionario {
+
+    public:
+        double comissao;
+        string especialidade;
+
+
+    double salario_extra(double x) override;
+
+    double get_Salario_Total() override;
+
+    void set_comissao(double valor_comissao);
+
+
+    void print() override;
+
+
 };
 
 #endif

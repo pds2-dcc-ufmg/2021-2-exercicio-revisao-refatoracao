@@ -3,40 +3,33 @@
 #define VENDA_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
-#include "Especialista.hpp"
 
 using namespace std;
 
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+
+        double VALOR;
+        string descricao;
+        Especialista esp;
+        string cliente;
 
 
-    void print() {
+    void print();
+};
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
+class Cliente{
 
-        std::cout << " Cliente: ";
-        cout << cliente;
+	public:
 
-        //std::cout << " : ";
-        //cout << cliente;
-    }
+		string NOME;
+		string endereco;
+		string Cep;
 
-    /*void print() {
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
+		void print(); // imprime na tela os dados de um cliente cadastrado
 
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
 };
 
 #endif
