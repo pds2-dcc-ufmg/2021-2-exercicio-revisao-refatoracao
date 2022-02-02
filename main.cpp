@@ -5,6 +5,7 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
+#include <vector>
 
 using namespace std;
 
@@ -34,43 +35,34 @@ int main()
     Gerente g01 (10000, "72", "Nick Fury", 21121948, 0);
 
 
-    Venda v01(e01, 100, "Fotos do Homem Aranha", cliente1);
-    e01._valorVenda += v01._valor;
-    e01._numAtendimentos+=1;
+    Venda v01 (e01, 100, "Fotos do Homem Aranha", cliente1);
+    e01.efetuaVenda(v01._valor);
 
 
     Venda v02 (e02, 100, "Troca da tela do telefone", cliente4);
-    e02._valorVenda += v02._valor;
-    e02._numAtendimentos+=1;
-
+    e02.efetuaVenda(v02._valor);
 
     Venda v03(e01, 150, "Fotos do novo planador", cliente2);
-    e01._valorVenda += v03._valor;
-    e01._numAtendimentos+=1;
+    e01.efetuaVenda(v03._valor);
 
 
     Venda v04(e02, 10, "Recarga de cartucho", cliente1);
-    e02._valorVenda += v04._valor;
-    e02._numAtendimentos+=1;
+    e02.efetuaVenda(v04._valor);
 
 
     Venda v05(e03, 10000, "Reconstrucao de Predio", cliente4);
-    e03._valorVenda += v05._valor;
-    e03._numAtendimentos+=1;
+    e03.efetuaVenda(v05._valor);
 
 
     Venda v06(e03, 3000, "Decoracao de Apartamento no Brooklyn", cliente5);
-    e03._valorVenda += v06._valor;
-    e03._numAtendimentos+=1;
+    e03.efetuaVenda(v06._valor);
 
     Venda v07 (e03, 5000, "Reforma do Clarim Diario", cliente1);
-    e03._valorVenda += v07._valor;
-    e03._numAtendimentos+=1;
+    e03.efetuaVenda(v07._valor);
 
 
     Venda v08 (e02, 80, "Formatacao do PC", cliente3);
-    e02._valorVenda += v08._valor;
-    e02._numAtendimentos+=1;
+    e02.efetuaVenda(v08._valor);
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
@@ -98,9 +90,9 @@ int main()
     e02.print();
     e03.print();
 
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = e01._numAtendimentos + e02._numAtendimentos + e03._numAtendimentos;
-    g01._bonificacao = g01.calculaBonificacaoGerente(NUMTOTALservicos);
+    int numTotalServicos = 0;
+    numTotalServicos = e01._numAtendimentos + e02._numAtendimentos + e03._numAtendimentos;
+    g01._bonificacao = g01.calculaBonificacaoGerente(numTotalServicos);
     g01.print();
 
     return 0;

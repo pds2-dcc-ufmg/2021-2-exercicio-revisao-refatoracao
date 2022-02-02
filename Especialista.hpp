@@ -13,12 +13,12 @@ class Especialista : public Funcionario {
     public:
         string _especialidade;
         int _numAtendimentos;
-        double _valorVenda;
+        double _valorEmVendas;
 
     Especialista(double salarioBase, string idade, string nome, int rg, string especialidade, int numAtendimentos, double valorVenda):
                 Funcionario(salarioBase, idade, nome, rg),
-                _especialidade(especialidade), _numAtendimentos(numAtendimentos), _valorVenda(valorVenda){};
-    
+                _especialidade(especialidade), _numAtendimentos(numAtendimentos), _valorEmVendas(valorVenda){};
+    void efetuaVenda(double valor);
     void print();
     private:
         double calculaComissao(double ValorVenda);
