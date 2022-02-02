@@ -12,12 +12,10 @@ class Especialista : public Funcionario {
     string especialidade;
     
     public:
+    double comissao(double ValorVenda);
     
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
-
+    string getEspecialidade();
+    void setEspecialidade(string especialidadeNovo);
 
     void print() {
 
