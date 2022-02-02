@@ -5,11 +5,12 @@
 
 class Cliente{
 
-	public:
+	private:
 
 		string Nome, Endereco, Cep, AlturaDosPais;
 		
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		// imprime na tela os dados de um cliente cadastrado
+		void print()  
 };
 
 #endif
