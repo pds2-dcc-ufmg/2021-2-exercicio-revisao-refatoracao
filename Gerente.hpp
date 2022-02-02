@@ -10,8 +10,8 @@ double ValorBONIFICACAO = 15.0;
 
 class Gerente {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
+        double SalarioBase; // valor mï¿½nimo recebido pelo funcionï¿½rio
+        string idade;
         string nome;
         int rgFunc;
         double bonificacao;
@@ -21,7 +21,7 @@ class Gerente {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
             << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
+            << "  Idade: " << idade << endl
             << "  RGFunc: " << rgFunc << endl
             << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
         }
@@ -30,8 +30,6 @@ class Gerente {
             double x;
             return numTOTALVendas*ValorBONIFICACAO;
         }
-
 };
-
-#endif
-
+        
+    #endif
