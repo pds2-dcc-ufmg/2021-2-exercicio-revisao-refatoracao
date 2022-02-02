@@ -2,7 +2,6 @@
 #define Especialista_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
 
 using namespace std;
 
