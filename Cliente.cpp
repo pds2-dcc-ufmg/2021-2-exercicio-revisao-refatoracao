@@ -11,7 +11,7 @@ void Cliente::print(){
 
 
 string Cliente::getNome(){ 
-	return nome;
+	return this->nome;
 }
 void Cliente::setNome(string nomeNovo){
 	this->nome = nomeNovo;
@@ -19,7 +19,7 @@ void Cliente::setNome(string nomeNovo){
 
 
 string Cliente::getEndereco(){ 
-	return endereco;
+	return this->endereco;
 }
 void Cliente::setEndereco(string enderecoNovo){
 	this->endereco = enderecoNovo;
@@ -27,7 +27,7 @@ void Cliente::setEndereco(string enderecoNovo){
 
 
 string Cliente::getCep(){ 
-	return cep;
+	return this->cep;
 }
 void Cliente::setCep(string cepNovo){
 	this->cep = cepNovo;
