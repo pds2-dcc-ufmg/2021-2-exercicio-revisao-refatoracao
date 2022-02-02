@@ -4,7 +4,6 @@
 
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
-//#include "Especialista.hpp"
 
 class Venda{
 
@@ -16,7 +15,7 @@ class Venda{
 
 
     void print();
-    
+
 };
 
 #endif
