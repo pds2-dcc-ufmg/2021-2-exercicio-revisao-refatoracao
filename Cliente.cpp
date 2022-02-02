@@ -3,10 +3,10 @@
 #include "Cliente.hpp"
 
 void Cliente::print(){
-	std::cout << "[Cliente]" << endl
-        	  << "  Nome: " << nome << endl
-		  << "  Endereco: " << endereco << endl
-		  << "  CEP: " << cep << endl;
+	std::cout << "[Cliente]" << endl;
+        std::cout << "  Nome: " << this->nome << endl;
+	std::cout << "  Endereco: " << this->endereco << endl;
+	std::cout << "  CEP: " << this->cep << endl;
 }
 
 
