@@ -6,18 +6,15 @@
 
 using namespace std;
 
-
-
 class Gerente : public Funcionario{
 
     private:
-        double bonificacao;
-        static double ValorBONIFICACAO = 15.0;
+        double bon;
+        static double Valor_bon = 15.0;
     
     public:
         void print();
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
-
+        double calcula_bon_ger(int num_tot_vnd);
 };
 
 #endif
