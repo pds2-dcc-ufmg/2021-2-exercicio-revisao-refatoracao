@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
     Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
+    cliente1.nome = "J. Jonah Jameson";
     cliente1.endereco ="Nova York";
 	cliente1.Cep = "35690000";
     cliente1.print();
