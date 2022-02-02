@@ -10,10 +10,15 @@ const double perc = 0.1;
 class Especialista : public Funcionario {
     
     public:
-        std::string especialidade;
-
     double comissao(double ValorVenda);
+    
     void print();
+    
+    void set_especialidade(std::string _especialidade);
+	std::string get_especialidade();
+		
+    private:
+    std::string especialidade;
 };
 
 #endif
