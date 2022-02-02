@@ -1,27 +1,27 @@
-#ifndef FUNCIONARIO_HPP
-#define FUNCIONARIO_HPP
+#include "Funcionario.hpp"
+#include "Especialista.hpp"
+#include "Cliente.hpp"
 
-#include <iostream>
-#include <iomanip>
+Especialista::Especialista(){
+    perc = 0.1;
+    percWanda = 0.1;
+}
+void Especialista::setEspecialidade(std::string especialidade){
+	this->especialidade = especialidade;
+}
+std::string Especialista::getEspecialidade(){
+	return this->especialidade;
+}
+double Especialista::comissao(double valorVenda) {
+    double c = valorVenda*perc;
+    return c;
+}
+void Especialista::print() {
 
-using namespace std;
+    std::cout << "[Especialista]" << std::endl;
+    Funcionario::print();
 
-class Funcionario {
-    public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
+    std::cout << "  Nome: " << nome << std::endl
+    << "  SalarioBase: R$ " << std::fixed << std::setprecision(2) << salarioBase << std::endl;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
-};
-
-#endif
+}
