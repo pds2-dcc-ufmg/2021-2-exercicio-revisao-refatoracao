@@ -1,13 +1,17 @@
-#include <iostream>
-#include <string>
-#include "Cliente.hpp"
+#ifndef CLIENTE_H
+#define CLIENTE_H
 
-void Cliente::print(){
 
-	std::cout << "[Cliente]" << endl
-         << "  Nome: " << NOME << endl
-		 << "  Endereco: " << endereco << endl
-		 << "  CEP: " << Cep << endl;
+class Cliente{
+    
+    public:
 
-}
+	std::string nome;
+	std::string endereco;
+	std::string cep;
 
+	void imprimeDadosCliente(); 
+
+};
+
+#endif
