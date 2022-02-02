@@ -9,7 +9,6 @@ using namespace std;
 class Especialista : public Funcionario {
     private:
     double perc;
-    double percWanda;
     string especialidade;
     
     public:
