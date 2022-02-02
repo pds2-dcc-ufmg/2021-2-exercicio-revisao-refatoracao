@@ -6,34 +6,44 @@
 
 using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
-
-
-class Especialista : public Funcionario {
-
+class Especialista : public Funcionario {    
     public:
+        /**
+        *@brief Imprime informações do especialista (nome, idade, rg e salario base)
+        */
+        void print() override {
+            cout << "[Funcionario]" << endl
+            << "[Especialista]" << endl
+            << "  Nome: " << nome << endl
+            << "  Idade: " << idade << endl
+            << "  RGFunc: " << rgFunc << endl
+            << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
+        };
+        /**
+        *@brief Calcula o valor da renda extra a ser recebida
+        *@param valorVenda Valor da Venda
+        */
+        double calculaExtra(double valorVenda) override {
+            return valorVenda*percComissao;
+        };
+        /**
+        *@brief Define o valor da renda extra a ser recebida
+        *@param valorVenda Valor da Venda
+        */   
+        void setRendaExtra(double valorVenda) {
+            rendaExtra =  calculaExtra(valorVenda);   
+        };
+        /**
+        *@brief Define a especialidade do funcionário
+        *@param especialidadeFuncionario Especialidade do funcionário
+        */   
+        void setEspecialidade(string especialidadeFuncionario){
+            especialidade = especialidadeFuncionario;
+        };
 
-    public:
+    private:
+        percComissao = 0.1;
         string especialidade;
-
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
-
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
 };
 
 #endif
