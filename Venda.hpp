@@ -11,32 +11,45 @@ using namespace std;
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
 
 
     void print() {
-
         std::cout << "Especialista: ";
-        cout << esp.nome;
-
+        cout << this->auxEspecialista().auxNome();
         std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
+        cout << this->auxCliente;
+    }
+    
+    void getVenda(double valor, string descricao, Especialista esp, string cliente){
+            this->double _valor = valor;
+            this->string _descricao = descricao;
+            this->Especialista _esp = esp;
+            this->string _cliente = cliente;
+    }
+    
+    double auxValor() {
+        return this->_valor;
     }
 
-    /*void print() {
+    string auxDescricao() {
+        return this->_descricao;
+    }
+    
+    Especialista auxEspecialista() {
+        return this-> _esp;
+    }
+    
+    string auxCliente(){
+        return this-> _cliente;
+    }
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+    
+    private:
+        
+        double _valor;
+        string _descricao;
+        Especialista _esp;
+        string _cliente;
 };
 
 #endif
