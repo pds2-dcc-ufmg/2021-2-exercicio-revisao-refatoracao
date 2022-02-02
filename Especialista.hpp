@@ -14,15 +14,9 @@ class Especialista : public Funcionario {
     public:
         string especialidade;
 
-        double comissao(double ValorVenda) {
-            double c = ValorVenda*perc;
-                  return c;
-        }
+        double comissao(double ValorVenda);
     
-        void print() {
-            std::cout << "[Especialista]" << endl;
-            Funcionario::print();
-        }
+        void print();
 };
 
 #endif
