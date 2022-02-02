@@ -18,6 +18,12 @@ class Cliente{
 	*@param rg RG do Cliente
         */	
 	void setDados(string nome, string endereco, string cep, string rg);
+        /**
+        *@brief Retorna o nome do cliente
+        */
+	string getNome(){
+	    return nome;
+	}
 	
      private:
 	/**
