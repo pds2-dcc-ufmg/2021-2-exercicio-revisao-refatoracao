@@ -24,8 +24,8 @@ class Funcionario {
         string getNome();
         void setNome(string nomeNovo);
 
-        int getRgFunc();
-        void setRgFunc( int rgFuncNovo);
+        string getRgFunc();
+        void setRgFunc(string rgFuncNovo);
 };
 
 #endif
