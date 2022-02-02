@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Gerente.hpp"
+using namespace std;
 
 double Gerente::Gerente(){
     this->bonificacao = 15.0;
@@ -13,7 +14,7 @@ void Gerente::setBonificacao(double bonificacaoNovo){
     this->bonificacao = bonificacaoNovo;
 }
 void Gerente::print() {
-    std::cout << "[Gerente]" << endl;
+    cout << "[Gerente]" << endl;
     Funcionario::print();
 }
 
