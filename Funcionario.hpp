@@ -8,20 +8,40 @@ using namespace std;
 
 class Funcionario {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
+    
+        double getSalarioBase(){
+	        return this->_salarioBase;
+        }   
 
+        string getIdade(){
+	        return this->_idade;
+        }
+
+        string getNome(){
+	        return this->_nome;
+        }
+        int getRgFunc(){
+	        return this->_rgFuncionario;
+        }
+        
+        void Funcionario(string nome, string idade, int rgFuncionario, double salarioBase){       
+            this->string _nome = nome;
+            this->string _idade = idade;
+            this->int _rgFuncionario = rgFuncionario;
+            this->double _salarioBase = salarioBase;
+        }
+        
         void print() {
             cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
+            << "  Idade: " << this->getIdade() << endl
+            << "  RGFunc: " << this->getRgFunc() << endl;
         }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+    
+    private:
+        double _salarioBase; // valor mÃ­nimo recebido pelo funcionÃ¡rio
+        string _idade;
+        string _nome;
+        int _rgFuncionario;
 };
 
 #endif
