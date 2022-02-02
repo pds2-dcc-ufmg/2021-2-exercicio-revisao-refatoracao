@@ -13,14 +13,19 @@ class Funcionario {
         string nome;
         string rgFunc;
     public:
-        void print() {
-            cout << "[Funcionario]" << endl
-             cout << "[Funcionario]" << endl
-            << "  Nome: " << this->nome << endl
-            << "  Salario Base: R$ " << this->salarioBase << endl;
-            << "  Idade: " << this->idade << endl
-            << "  RGFunc: " << this->rgFunc << endl;
-        }
+        void print();
+    
+        double getSalarioBase();
+        void setSalarioBase(double salarioBaseNovo);
+    
+        string getIdade();
+        void setIdade(string idadeNovo);
+
+        string getNome();
+        void setNome(string nomeNovo);
+
+        int getRgFunc();
+        void setRgFunc( int rgFuncNovo);
 };
 
 #endif
