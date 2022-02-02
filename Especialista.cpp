@@ -6,7 +6,7 @@ void Especialista::Especialista(){
         this->perc = 0.1;
 }
 double Especialista::comissao(double valorVenda){
-        double c = valorVenda*perc;
+        double c = valorVenda*this->perc;
         return c;
 }
 
