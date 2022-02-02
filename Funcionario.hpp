@@ -1,27 +1,24 @@
 #ifndef FUNCIONARIO_HPP
 #define FUNCIONARIO_HPP
-
+//Bibliotecas
 #include <iostream>
 #include <iomanip>
+#include "Pessoa.hpp"
 
 using namespace std;
 
-class Funcionario {
+class Funcionario : public Pessoa{
     public:
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-        string IDADE;
-        string nome;
-        int rgFunc;
-
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+    //Implementação dos Metodos de Set da Classe Cliente
+	void SetSalarioBase(double SalarioBase);
+    //Implementação dos Metodos de Set da Classe Cliente
+	double GetSalarioBase();
+	// imprime na tela os dados de um cliente cadastrado
+	void Print() override;
+    protected:
+    // Parametros da Classe
+    double SalarioBase;
+    string Nome;
 };
 
 #endif

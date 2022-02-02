@@ -1,20 +1,24 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
-
+//Bibliotecas 
 #include <string>
+#include "Pessoa.hpp"
 using namespace std;
 
-class Cliente{
+class Cliente: public Pessoa{
 
 	public:
-
-		string NOME;
-		string endereco;
+	//Implementação dos Metodos de Set da Classe Cliente
+	void SetEndereco(string Endereco);
+	void SetCep(string Cep);
+	//Implementação dos Metodos de Set da Classe Cliente
+	string GetEndereco();
+	string GetCep(); 
+	// imprime na tela os dados de um cliente cadastrado
+	void Print() override; 
+	private:
+		string Endereco;
 		string Cep;
-		string AlturaDosPais;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
 };
 
 #endif
