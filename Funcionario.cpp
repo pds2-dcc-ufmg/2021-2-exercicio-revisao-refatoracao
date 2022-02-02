@@ -23,8 +23,13 @@ int Funcionario::get_RG() const{
   return this->RG;
 }
 
+void Funcionario::print_dados(){
+  cout << "  Nome: " << this->get_nome() << endl
+    << "  Idade: " << this->get_idade() << endl
+    << "  RGFunc: " << this->get_RG() << endl
+    << "  SalarioBase: R$ " << fixed << setprecision(2) << this->salarioBase() << endl;
+}
+
 void Funcionario::print() const{
-  cout << "[Funcionario]" << endl
-    << "  Idade: " << idade << endl
-    << "  RGFunc: " << RG << endl; 
+  print_dados();
 }
