@@ -1,3 +1,4 @@
+//Bibliotecas 
 #include "Venda.hpp"
  //Implementação dos Metodos de Set da Classe Cliente
 void Venda::SetValor(double Valor){
@@ -25,6 +26,7 @@ Especialista Venda::GetEspecialista(){
 string Venda::SetCliente(){
     return Cliente;
 }
+//Impressão da descrição de Venda
 void Venda::Print() {
 
     std::cout << "Especialista: ";

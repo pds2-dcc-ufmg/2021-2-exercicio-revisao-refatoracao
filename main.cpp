@@ -1,5 +1,5 @@
+//Bibliotecas 
 #include <iostream>
-
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
 #include "Especialista.hpp"
@@ -9,6 +9,7 @@ using namespace std;
 
 int main()
 {
+//Declaração de Clientes
     Cliente cliente1;
     cliente1.SetNome("Jonah Jameson");
     cliente1.SetEndereco("Nova York");
@@ -38,10 +39,7 @@ int main()
     cliente5.SetEndereco("Lower East Side");
 	cliente5.SetCep("13061981");
     cliente5.Print();
-
-
-
-
+//Declaração  dos Funcionarios 
     Especialista e01;
     int numAtendimentos01 = 0;
     double comissao01 = 0;
@@ -50,8 +48,6 @@ int main()
     e01.SetRg(27061975);
     e01.SetSalarioBase(3000);
     e01.SetEspecialidade("Fotografia");
-
-
 
     Especialista e02;
     int numAtendimentos02 = 0;
@@ -62,7 +58,6 @@ int main()
     e02.SetSalarioBase(1000);
     e02.SetEspecialidade("Consertos de equipamentos eletronicos");
 
-
     Especialista e03;
     int numAtendimentos03 = 0;
     double comissao03 = 0;
@@ -72,15 +67,13 @@ int main()
     e03.SetSalarioBase(5000);
     e03.SetEspecialidade("Engenharia e Designeeeeer");
 
-
     Gerente g01;
     double bonificacao01 = 0;
     g01.SetNome("Nick Fury");
     g01.SetIdade(72);
     g01.SetRg(21121948);
     g01.SetSalarioBase(10000);
-
-
+//Declaração de Vendas
     Venda v01;
     v01.SetCliente("J. Jonah Jameson");
     v01.SetEspecialista(e01);
@@ -88,7 +81,6 @@ int main()
     v01.SetValor(100);
     comissao01 += e01.comissao(v01.GetValor());
     numAtendimentos01+=1;
-
 
     Venda v02;
     v02.SetCliente("Bruce Benner");
@@ -98,7 +90,6 @@ int main()
     comissao02 += e02.comissao(v02.GetValor());
     numAtendimentos02+=1;
 
-
     Venda v03;
     v03.SetCliente("Norman Osborn");
     v03.SetEspecialista(e01);
@@ -106,7 +97,6 @@ int main()
     v03.SetValor(150);
     comissao01 += e01.comissao(v03.GetValor());
     numAtendimentos01+=1;
-
 
     Venda v04;
     v04.SetCliente("J. Jonah Jameson");
@@ -116,7 +106,6 @@ int main()
     comissao02 += e02.comissao(v04.GetValor());
     numAtendimentos02+=1;
 
-
     Venda v05;
     v05.SetCliente("Bruce Benner");
     v05.SetEspecialista(e03);
@@ -124,7 +113,6 @@ int main()
     v05.SetValor(10000);
     comissao03 += e03.comissao(v05.GetValor());
     numAtendimentos03+=1;
-
 
     Venda v06;
     v06.SetCliente("Steve Rogers");
@@ -134,8 +122,6 @@ int main()
     comissao03 += e03.comissao(v06.GetValor());
     numAtendimentos03+=1;
 
-
-
     Venda v07;
     v07.SetCliente("J. Jonah Jameson");
     v07.SetEspecialista(e03);
@@ -144,7 +130,6 @@ int main()
     comissao03 += e03.comissao(v07.GetValor());
     numAtendimentos03+=1;
 
-
     Venda v08;
     v08.SetCliente("Otto Octavius");
     v08.SetEspecialista(e02);
@@ -152,11 +137,8 @@ int main()
     v08.SetValor(80);
     comissao02 += e02.comissao(v08.GetValor());
     numAtendimentos02+=1;
-
-
-
-    cout <<" \n \n           Relatorio das Vendas \n" << endl;
-
+//Impressão do Relatorio de Vendas
+    cout <<" \n \n  Relatorio das Vendas \n" << endl;
     v01.Print();
     v02.Print();
     v03.Print();
@@ -166,8 +148,7 @@ int main()
     v06.Print();
     v07.Print();
     v08.Print();
-
-
+//Impressão do Relatorio dos Funcionarios 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
     e01.Print();
     cout << "Num Atendimentos: " << numAtendimentos01 << endl;
@@ -181,12 +162,10 @@ int main()
     cout << "Num Atendimentos: " << numAtendimentos03 << endl;
     cout << "Salario Total: " << e03.GetSalarioBase()+comissao03<<endl;
 
-
     int NumTotalServicos = 0;
     NumTotalServicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
     g01.CalculaBonificacaoGerente(NumTotalServicos);
     g01.Print();
     cout << "Salario Total: " << g01.GetSalarioBase() + g01.GetBonificacao()<<endl;
-
     return 0;
 }

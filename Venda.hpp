@@ -1,7 +1,6 @@
-
 #ifndef VENDA_HPP
 #define VENDA_HPP
-
+//Bibliotecas 
 #include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
@@ -21,12 +20,13 @@ class Venda{
 	string GetDescricao();
 	Especialista GetEspecialista(); 
     string SetCliente();
+    //Metodo de Impressão da Classe
     void Print();
     private:
+    //Parametros de Classe
     double Valor;
     string Descricao;
     Especialista Esp;
     string Cliente;
 };
-
 #endif

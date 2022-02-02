@@ -1,6 +1,6 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
-
+//Bibliotecas 
 #include <string>
 #include "Pessoa.hpp"
 using namespace std;
@@ -17,7 +17,6 @@ class Cliente: public Pessoa{
 	// imprime na tela os dados de um cliente cadastrado
 	void Print() override; 
 	private:
-		string Nome;
 		string Endereco;
 		string Cep;
 };

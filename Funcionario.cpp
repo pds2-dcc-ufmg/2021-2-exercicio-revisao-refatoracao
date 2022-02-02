@@ -1,18 +1,12 @@
+//Blibliotecas
 #include "Funcionario.hpp"
-//Implementação dos Metodos de Set da Classe Cliente
+//Implementação dos Metodo Set para Salario Base
 void Funcionario::SetSalarioBase(double SalarioBase){
     this->SalarioBase =  SalarioBase;
 }
-void Funcionario::SetIdade(int Idade){
-    this->Idade = Idade;
-}
-
-//Implementação dos Metodos de Set da Classe Cliente
+//Implementação dos Metodos de Get para Salario Base
 double Funcionario::GetSalarioBase(){
     return SalarioBase;
-}
-int Funcionario::GetIdade(){
-    return Idade;
 }
 //Metodo Imprimi os dados dos Funcionarios
 void Funcionario::Print() {
