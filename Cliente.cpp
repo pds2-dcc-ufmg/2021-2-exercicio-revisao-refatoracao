@@ -26,8 +26,8 @@ std::string Cliente::getEndereco(){
 
 
 void Cliente::print(){
-	std::cout << "[Cliente]" << std::endl
-		<< "  Nome: " << this->_nome << std::endl
-		<< "  Endereco: " << this->_endereco << std::endl
-		<< "  CEP: " << this->_cep << std::endl;
+	std::cout << "[Cliente]" << endl
+         	 << "  Nome: " << this->getNome() << endl
+		 << "  Endereco: " << this->getEndereco() << endl
+		 << "  CEP: " << this->getCep() << endl;
 }
