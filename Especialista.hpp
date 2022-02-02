@@ -16,18 +16,8 @@ class Especialista : public Funcionario {
 
             string getEspecialidade();
             void setEspecialidade(string especialidadeNovo);
-
-            void print() {
-
-                std::cout << "[Especialista]" << endl;
-                Funcionario::print();
-
-
-
-                std::cout << "  Nome: " << nome << endl
-                << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+    
+            void print();
 };
 
 #endif
