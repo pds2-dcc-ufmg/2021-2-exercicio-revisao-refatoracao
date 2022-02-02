@@ -10,8 +10,12 @@ double Especialista::comissao(double valorVenda){
         return c;
 }
 
+double Especialista::getComissao(){
+        return this->valorComissao;
+}
+
 void Especialista::setComissao(double valorComissaoNovo){
-        this->valoComissao = valorComissaoNovo;
+        this->valorComissao = valorComissaoNovo;
 }
 
 string Especialista::getEspecialidade(){
