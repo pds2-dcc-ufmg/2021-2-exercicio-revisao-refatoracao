@@ -18,17 +18,17 @@ class Gerente : public Funcionario {
             this-> _bonificacao = bonificacao;
         }
      
-        double getBonificacao(){
+        double auxBonificacao(){
             return this->_bonificacao;
         }
 
         void print() {
             cout << "[Funcionario]" << endl
                 << "[Gerente]" << endl
-                << "  Nome: " << this->getNome() << endl
-                << "  Idade: " << this->getIdade() << endl
-                << "  RGFunc: " << this->getRgFunc() << endl
-                << "  SalarioBase: R$ " << fixed << setprecision(2) << this->getSalarioBase() << endl;
+                << "  Nome: " << this->auxNome() << endl
+                << "  Idade: " << this->auxIdade() << endl
+                << "  RGFunc: " << this->auxRgFunc() << endl
+                << "  SalarioBase: R$ " << fixed << setprecision(2) << this->auxSalarioBase() << endl;
         }
 
         double calcBonificacao(int numTotalVendas){
@@ -42,4 +42,6 @@ class Gerente : public Funcionario {
 };
 
 #endif
+
+
 
