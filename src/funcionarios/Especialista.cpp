@@ -1,18 +1,18 @@
 #include "Especialista.hpp"
 
-Especialista::Especialista(std::string nome, std::string rgFunc, int idade, double salarioBase, std::string especialidade)
+Especialista::Especialista(std::string nome, std::string rgFuncionario, int idade, double salarioBase, std::string especialidade)
 {
     this->nome = nome;
-    this->rgFunc = rgFunc;
+    this->rgFuncionario = rgFuncionario;
     this->idade = idade;
     this->salarioBase = salarioBase;
     this->especialidade = especialidade;
     this->salarioFinal = salarioBase;
 }
 
-void Especialista::realizaAtendimento(double ValorVenda)
+void Especialista::realizaAtendimento(double valorVenda)
 {
-    this->salarioFinal += ValorVenda * TAXA_COMISSAO;
+    this->salarioFinal += valorVenda * TAXA_COMISSAO;
     numAtendimentos++;
 }
 

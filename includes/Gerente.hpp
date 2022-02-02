@@ -11,8 +11,8 @@ class Gerente : public Funcionario
 
 public:
     void print();
-    void calculaSalario(int numTOTALVendas);
-    Gerente(std::string nome, std::string rgFunc, int idade, double salarioBase);
+    void calculaSalario(int numTotalVendas);
+    Gerente(std::string nome, std::string rgFuncionario, int idade, double salarioBase);
 
 private:
     double VALOR_BONIFICACAO = 15.0;

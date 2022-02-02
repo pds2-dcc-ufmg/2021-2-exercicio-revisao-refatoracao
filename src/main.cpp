@@ -27,6 +27,7 @@ int main()
     std::vector<Cliente> cliente;
     std::vector<Especialista *> especialista;
     std::vector<Venda> venda;
+    Gerente *gerente = new Gerente("Nick Fury", "21121948", 72, 10000);
 
     cliente.push_back(Cliente("J. Jonah Jameson", "Nova York", "35690000"));
     cliente.push_back(Cliente("Norman Osborn", "Hartlford", "22061955"));
@@ -34,16 +35,11 @@ int main()
     cliente.push_back(Cliente("Bruce Benner", "Dayton", "22111967"));
     cliente.push_back(Cliente("Steve Rogers", "Lower East Side", "13061981"));
 
-    for (size_t i = 0; i < cliente.size(); i++)
-    {
-        cliente[i].print();
-    }
 
     especialista.push_back(new Especialista("Peter Parker", "27061975", 46, 3000, "Fotografia"));
     especialista.push_back(new Especialista("Tony Stark", "4041965", 56, 1000, "Consertos de equipamentos eletronicos"));
     especialista.push_back(new Especialista("Wanda Maximoff", "16021989", 32, 5000, "Engenharia e Designeeeeer"));
 
-    Gerente *gerente = new Gerente("Nick Fury", "21121948", 72, 10000);
 
     venda.push_back(Venda(100, "Fotos do Homem Aranha", especialista[Parker], cliente[JJJ].getNome()));
     venda.push_back(Venda(100, "Troca da tela do telefone", especialista[Stark], cliente[Bruce].getNome()));
@@ -54,6 +50,10 @@ int main()
     venda.push_back(Venda(5000, "Reforma do Clarim Diario", especialista[Maximoff], cliente[JJJ].getNome()));
     venda.push_back(Venda(80, "Formatacao do PC", especialista[Stark], cliente[Otto].getNome()));
 
+    for (size_t i = 0; i < cliente.size(); i++)
+    {
+        cliente[i].print();
+    }
     std::cout << " \n \n           Relatorio das Vendas \n"
               << std::endl;
 
@@ -74,6 +74,7 @@ int main()
         delete especialista[i];
     }
 
+    delete gerente;
 
     return 0;
 }

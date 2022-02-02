@@ -8,7 +8,6 @@ class Funcionario
 {
 public:
     virtual void print();
-    void print_oi();
     Funcionario(){};
     std::string getName();
 
@@ -19,7 +18,7 @@ protected:
     double salarioFinal; // valor que será recebido pelo funcionario
     int idade;
     std::string nome;
-    std::string rgFunc; // documento de identidade do funcionario
+    std::string rgFuncionario; // documento de identidade do funcionario
 };
 
 #endif

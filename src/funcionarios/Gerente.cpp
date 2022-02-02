@@ -1,8 +1,8 @@
 #include "Gerente.hpp"
 
-Gerente::Gerente(std::string nome, std::string rgFunc, int idade, double salarioBase) {
+Gerente::Gerente(std::string nome, std::string rgFuncionario, int idade, double salarioBase) {
     this->nome = nome;
-    this->rgFunc = rgFunc;
+    this->rgFuncionario = rgFuncionario;
     this->idade = idade;
     this->salarioBase = salarioBase;
     this->salarioFinal = salarioBase;

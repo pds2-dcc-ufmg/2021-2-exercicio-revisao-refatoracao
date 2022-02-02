@@ -12,7 +12,6 @@ public:
 	Cliente(std::string nome, std::string endereco, std::string cep);
 	std::string getNome();
 
-
 private:
 	std::string nome;
 	std::string endereco;
