@@ -15,15 +15,8 @@ class Gerente : public Funcionario{
         static double ValorBONIFICACAO = 15.0;
     
     public:
-    
-        void print() {
-            cout << "[Gerente]" << endl;
-           Funcionario::print();
-        }
-
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+        void print();
+        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
 
 };
 
