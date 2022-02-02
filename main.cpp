@@ -97,7 +97,7 @@ int main()
     v03._descricao = "Fotos do novo planador";
     v03._valor = 150;
     comissao01 += e01.calcular_comissao(v03._valor);
-    _num_atendimentos03+=1;
+    _num_atendimentos01+=1;
 
     Venda v04;
     v04._cliente= "J. Jonah Jameson";
