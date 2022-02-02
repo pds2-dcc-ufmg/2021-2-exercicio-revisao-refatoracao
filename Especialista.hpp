@@ -3,8 +3,6 @@
 
 #include "Funcionario.hpp"
 
-using namespace std;
-
 class Especialista : public Funcionario {
     private:
             double valorComissao;
