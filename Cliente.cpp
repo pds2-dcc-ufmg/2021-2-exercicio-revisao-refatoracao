@@ -16,3 +16,7 @@ void Cliente::setDados(string nome, string endereco, string cep, string rg){
     this->rg = rg;
 }
 
+string Cliente::getNome(){
+    return this->nome;
+}
+
