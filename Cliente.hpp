@@ -6,9 +6,9 @@ using namespace std;
 class Cliente{
 
     public:
-	string nome;
-	string endereco;
-	string cep;
+	string nome; // nome do cliente
+	string endereco; // endereço do cliente
+	string cep; // cep do cliente
 	
 	void print(); // imprime na tela os dados de um cliente cadastrado
 };
