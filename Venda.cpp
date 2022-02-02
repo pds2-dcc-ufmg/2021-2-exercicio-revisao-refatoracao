@@ -5,7 +5,7 @@
 // Imprime informaçoes sobre a venda 
 void Venda::print(){
 
-    std::cout << "Especialista: "<< esp.nome << " Cliente: "<< cliente<<std::endl;
+    std::cout << "Especialista: "<< esp.nome << " Cliente: "<< cliente << " Descricao: " << descricao << std::endl;
 
 }
 
