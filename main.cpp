@@ -11,20 +11,17 @@ using namespace std;
 
 int main()
 {
-    Cliente cliente1 = Cliente("J. Jonah Jameson","Nova York","35690000");
-    cliente1.print();
+    std::vector<Cliente> clientes;
 
-    Cliente cliente2 = Cliente("Norman Osborn","Hartlford","22061955");
-    cliente2.print();
+    clientes.push_back(Cliente("J. Jonah Jameson","Nova York","35690000"));
+    clientes.push_back(Cliente("Norman Osborn","Hartlford","22061955"));
+    clientes.push_back(Cliente("Otto Octavius","Schenectady","24051953"));
+    clientes.push_back(Cliente("Bruce Benner","Dayton","22111967"));
+    clientes.push_back(Cliente("Steve Rogers","Lower East Side","13061981"));
 
-    Cliente cliente3 = Cliente("Otto Octavius","Schenectady","24051953");
-    cliente3.print();
-
-    Cliente cliente4 = Cliente("Bruce Benner","Dayton","22111967");
-    cliente4.print();
-
-    Cliente cliente5 = Cliente("Steve Rogers","Lower East Side","13061981");
-    cliente5.print();
+    for (auto it : clientes){
+        it.print();
+    }
 
     Especialista e01  = Especialista(3000,"46","Peter Parker", 27061975, "Fotografia", 0, 0);
 
@@ -35,33 +32,33 @@ int main()
     Gerente g01 (10000, "72", "Nick Fury", 21121948, 0);
 
 
-    Venda v01 (e01, 100, "Fotos do Homem Aranha", cliente1);
+    Venda v01 (e01, 100, "Fotos do Homem Aranha", clientes[0]);
     e01.efetuaVenda(v01._valor);
 
 
-    Venda v02 (e02, 100, "Troca da tela do telefone", cliente4);
+    Venda v02 (e02, 100, "Troca da tela do telefone", clientes[3]);
     e02.efetuaVenda(v02._valor);
 
-    Venda v03(e01, 150, "Fotos do novo planador", cliente2);
+    Venda v03(e01, 150, "Fotos do novo planador", clientes[1]);
     e01.efetuaVenda(v03._valor);
 
 
-    Venda v04(e02, 10, "Recarga de cartucho", cliente1);
+    Venda v04(e02, 10, "Recarga de cartucho", clientes[0]);
     e02.efetuaVenda(v04._valor);
 
 
-    Venda v05(e03, 10000, "Reconstrucao de Predio", cliente4);
+    Venda v05(e03, 10000, "Reconstrucao de Predio", clientes[3]);
     e03.efetuaVenda(v05._valor);
 
 
-    Venda v06(e03, 3000, "Decoracao de Apartamento no Brooklyn", cliente5);
+    Venda v06(e03, 3000, "Decoracao de Apartamento no Brooklyn", clientes[4]);
     e03.efetuaVenda(v06._valor);
 
-    Venda v07 (e03, 5000, "Reforma do Clarim Diario", cliente1);
+    Venda v07 (e03, 5000, "Reforma do Clarim Diario", clientes[0]);
     e03.efetuaVenda(v07._valor);
 
 
-    Venda v08 (e02, 80, "Formatacao do PC", cliente3);
+    Venda v08 (e02, 80, "Formatacao do PC", clientes[2]);
     e02.efetuaVenda(v08._valor);
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
