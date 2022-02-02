@@ -12,22 +12,22 @@ Cliente::Cliente(std::string nome, std::string endereco, std::string cep) {
 } 
 
 
-std::string Cliente::getNome(){
+std::string Cliente::auxNome(){
 	return this->_nome;
 }
 
-std::string Cliente::getCep(){
+std::string Cliente::auxCep(){
 	return this->_cep;
 }
 
-std::string Cliente::getEndereco(){
+std::string Cliente::auxEndereco(){
 	return this->_endereco;
 }
 
 
 void Cliente::print(){
 	std::cout << "[Cliente]" << endl
-         	 << "  Nome: " << this->getNome() << endl
-		 << "  Endereco: " << this->getEndereco() << endl
-		 << "  CEP: " << this->getCep() << endl;
+         	 << "  Nome: " << this->auxNome() << endl
+		 << "  Endereco: " << this->auxEndereco() << endl
+		 << "  CEP: " << this->auxCep() << endl;
 }
