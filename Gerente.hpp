@@ -11,7 +11,7 @@ class Gerente : public Funcionario {
     public:
         Gerente(double salarioBase, string idade, string nome, int RG, string bonificacao);
         void print() const override;
-        double calculoBonificacao(int numTOTALVendas);
+        double calculoBonificacao(int numVendas);
     
     private:
         double bonificacao;
