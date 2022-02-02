@@ -27,6 +27,42 @@ class Funcionario {
         void setSalarioBase(double salarioMin) {
             salarioBase = salarioMin;
         }
+        /**
+        *@brief Retorna o nome do funcionário
+        */
+        string getNome(){
+            return nome;
+        }
+        /**
+        *@brief Retorna a idade do funcionário
+        */
+        int getIdade(){
+            return idade;
+        }
+        /**
+        *@brief Retorna o rg do funcionário
+        */
+        int getRg(){
+            return rg;
+        }
+        /**
+        *@brief Define o nome do funcionário
+        */
+        void setNome(string nomeFuncionario){
+            nome = nomeFuncionario;
+        }
+        /**
+        *@brief Define a idade do funcionário
+        */
+        void setIdade(int idadeFuncionario){
+            return idade = idadeFuncionario;
+        }
+        /**
+        *@brief Define o rg do funcionário
+        */
+        void setRg(int rgFuncionario){
+            rg = rgFuncionario;
+        }
     
     private:
         /**
@@ -44,9 +80,9 @@ class Funcionario {
         /**       
         *@brief Dados do funcionário
         */
-        string idade;
+        int idade;
         string nome;
-        int rgFunc;
+        int rg;
 };
 
 #endif
