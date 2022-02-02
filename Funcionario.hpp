@@ -63,6 +63,12 @@ class Funcionario {
         void setRg(int rgFuncionario){
             rg = rgFuncionario;
         }
+        /**
+        *@brief Retorna o percentual de comissão/bonificação
+        */
+        double getPercComissao(){
+            return percComissao;
+        }
     
     private:
         /**
