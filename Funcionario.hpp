@@ -13,15 +13,9 @@ class Funcionario {
         string Nome;
         int RG_Func;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << Idade << endl
-            << "  RGFunc: " << RG_Func << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+    Funcionario (){};
+    Funcionario (double SalarioBase_, string Idade_, string Nome_, int RG_Func_){}
+    void print();
 };
 
 #endif
