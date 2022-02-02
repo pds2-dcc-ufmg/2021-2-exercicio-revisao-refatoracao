@@ -1,4 +1,3 @@
-
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
@@ -10,33 +9,13 @@ using namespace std;
 
 class Venda{
 
-    public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+  public:
+    double _valor;
+    string _descricao;
+    Especialista _esp;
+    string _cliente;
 
-
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+    void print();
 };
 
 #endif
