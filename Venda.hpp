@@ -6,37 +6,23 @@
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-using namespace std;
 
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+
+        double _valor;
+        void print(); 
+
+        Venda(double valor, std::string descricao, Especialista esp, Cliente cliente);
 
 
-    void print() {
+    private:
+        std::string _descricao;
+        Cliente _cliente;
+        Especialista _esp;
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
 
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
 };
 
 #endif
