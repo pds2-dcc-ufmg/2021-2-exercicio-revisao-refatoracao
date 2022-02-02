@@ -11,7 +11,7 @@ Gerente::Gerente(double salarioBase, string idade, string nome, int RG, string b
 void Gerente::print() const{
   
   cout << "[Funcionario]" << endl 
-   << "[Gerente]" << endl
+   << "[Gerente]" << endl;
    print_dados();
 }
 
