@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Gerente.hpp"
+using namespace std;
 
 void Gerente::print() {
     cout << "[Gerente]" << endl;
