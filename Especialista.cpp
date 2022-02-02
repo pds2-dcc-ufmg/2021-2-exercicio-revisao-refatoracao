@@ -18,7 +18,5 @@ void Especialista::setEspecialidade(string especialidadeNovo){
 void Especialista::print() {
         std::cout << "[Especialista]" << endl;
                   Funcionario::print();
-                  << "  Nome: " << nome << endl
-                  << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
 }
 
