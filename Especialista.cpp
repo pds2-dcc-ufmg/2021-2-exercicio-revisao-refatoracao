@@ -2,7 +2,9 @@
 #include <string>
 #include "Especialista.hpp"
 
-
+void Especialista::Especialista(){
+        this->perc = 0.1;
+}
 double Especialista::comissao(double valorVenda){
         double c = valorVenda*perc;
         return c;
