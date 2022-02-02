@@ -1,7 +1,7 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
-#include <string>
+#include "Pessoa.hpp"
 using namespace std;
 
 class Cliente : public Pessoa{
