@@ -4,6 +4,7 @@ void Venda::imprimeVenda()
 {
 
     cout << "Especialista: " << esp.nome
-    << " Cliente: " << cliente.nome;
+         << " Cliente: " << cliente.nome
+         << " Descricao: " << descricao << endl;
 
 }

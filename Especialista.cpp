@@ -9,9 +9,8 @@ void Especialista::imprimeFuncionario(){
 
     cout << "[Especialista]" << endl
          << "[Funcionario]" << endl
-         << "  Nome: " << nome << endl
          << "  Idade: " << idade << endl
          << "  RGFunc: " << rgFunc << endl
-         << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl
-         << "  Especialidade: " << especialidade << endl;
+         << "  Nome: " << nome << endl
+         << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
 }
