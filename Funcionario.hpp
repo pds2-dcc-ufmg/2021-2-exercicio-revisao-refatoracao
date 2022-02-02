@@ -9,18 +9,18 @@ using namespace std;
 class Funcionario {
     public:
     
-        double getSalarioBase(){
+        double auxSalarioBase(){
 	        return this->_salarioBase;
         }   
 
-        string getIdade(){
+        string auxIdade(){
 	        return this->_idade;
         }
 
-        string getNome(){
+        string auxNome(){
 	        return this->_nome;
         }
-        int getRgFunc(){
+        int auxRgFunc(){
 	        return this->_rgFuncionario;
         }
         
@@ -33,8 +33,8 @@ class Funcionario {
         
         void print() {
             cout << "[Funcionario]" << endl
-            << "  Idade: " << this->getIdade() << endl
-            << "  RGFunc: " << this->getRgFunc() << endl;
+            << "  Idade: " << this->auxIdade() << endl
+            << "  RGFunc: " << this->auxRgFunc() << endl;
         }
     
     private:
