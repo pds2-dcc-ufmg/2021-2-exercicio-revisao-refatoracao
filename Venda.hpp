@@ -1,38 +1,35 @@
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
+#include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
-#include "Funcionario.hpp"
-
-#include<string>
-#include<iostream>
 
 using namespace std;
 
 class Venda{
+public:
+    Venda();
+    double _valor;
+    string _descricao;
+    Especialista _especialista;
+    string _cliente;
 
-  public:
-    Venda(Cliente cli, Especialista* esp, string descricao, double valor) : cliente(cli), especialista(esp) {
+    Venda(double valor, string descricao, Especialista especialista, string cliente);
 
-      this->descricao = descricao;
-      this->valor = valor;
+    double getValor();
+    void setValor(double);
 
-      esp->calcular_comissao(valor);
-      esp->num_atendimentos++;
-    }   
+    Especialista getEspecialista();
+    void setEspecialista(Especialista);
 
-    double valor;
-    string descricao;
-    Especialista* especialista;
-    Cliente cliente;
+    string getDescricao();
+    void setDescricao(string);
 
-    void print() {
+    string getCliente();
+    void setCliente(string);
 
-      cout << " Especialista: "  << especialista->nome
-           << " Cliente: "  << cliente.nome 
-           << " Descricao: "  << descricao << endl;
-    }
+    void print();
 };
 
 #endif
