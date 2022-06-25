@@ -7,7 +7,7 @@ SRC_DIR = ./src
 ENTIDADES_DIR = ./src/entidades
 INCLUDE_DIR = ./include
 
-${TARGET}: ${BUILD_DIR}/Cliente.o ${BUILD_DIR}/Funcionario.o ${BUILD_DIR}/Especialista.o ${BUILD_DIR}/Gerente.o ${BUILD_DIR}/Venda.o ${BUILD_DIR}/main.o
+${BUILD_DIR}/Cliente.o ${BUILD_DIR}/Funcionario.o ${BUILD_DIR}/Especialista.o ${BUILD_DIR}/Gerente.o ${BUILD_DIR}/Venda.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${TARGET} ${BUILD_DIR}/*.o
 
 ${BUILD_DIR}/Venda.o: ${INCLUDE_DIR}/Venda.hpp ${INCLUDE_DIR}/Especialista.hpp ${SRC_DIR}/entities/Venda.cpp
