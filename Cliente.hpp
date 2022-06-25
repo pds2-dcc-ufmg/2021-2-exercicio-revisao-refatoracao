@@ -7,7 +7,7 @@ using namespace std;
 class Cliente{
 public:
 	void print();
-    void setNome(string);
+        void setNome(string);
 	string getNome();
 	void setEndereco(string);
 	string getEndereco();
