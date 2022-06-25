@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <iomanip>
 
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
@@ -9,61 +9,182 @@
 
 using namespace std;
 
-int main()
-{
-  vector<Especialista*> especialistas;
+int main(){
+     Cliente cliente1;
+     cliente1.setNome("J. Jonah Jameson");
+     cliente1.setEndereco("Nova York");
+     cliente1.setCep("35690000");
+     cliente1.print();
 
-  Gerente g01 = {"Nick Fury", 72, 21121948, 10000};
+     Cliente cliente2;
+     cliente2.setNome("Norman Osborn");
+     cliente2.setEndereco("Hartlford");
+     cliente2.setCep("22061955");
+     cliente2.print();
 
-  Cliente cliente1 = {"J. Jonah Jameson", "Nova York", "35690000"};
-  Cliente cliente2 = {"Norman Osborn", "Hartlford", "22061955"};
-  Cliente cliente3 = {"Otto Octavius", "Schenectady", "24051953"};
-  Cliente cliente4 = {"Bruce Benner", "Dayton", "22111967"};
-  Cliente cliente5 = {"Steve Rogers", "Lower East Side", "13061981"};
+     Cliente cliente3;
+     cliente3.setNome("Otto Octavius");
+     cliente3.setEndereco("Schenectady");
+     cliente3.setCep("24051953");
+     cliente3.print();
 
-  Especialista e01 = {"Peter Parker", 46, 27061975, 3000, "Fotografia"};
-  especialistas.push_back(&e01);
+     Cliente cliente4;
+     cliente4.setNome("Bruce Benner");
+     cliente4.setEndereco("Dayton");
+     cliente4.setCep("22111967");
+     cliente4.print();
 
-  Especialista e02 = {"Tony Stark", 56, 4041965, 1000, "Consertos de equipamentos eletronicos"};
-  especialistas.push_back(&e02);
+     Cliente cliente5;
+     cliente5.setNome("Steve Rogers");
+     cliente5.setEndereco("Lower East Side");
+     cliente5.setCep("13061981");
+     cliente5.print();
 
-  Especialista e03 = {"Wanda Maximoff", 32, 16021989, 5000, "Engenharia e Designer"};
-  especialistas.push_back(&e03);
+     Especialista e01;
+     int num_atendimentos01 = 0;
+     double comissao01 = 0;
+     e01.setNome("Peter Parker");
+     e01.setIdade(46);
+     e01.setRgFunc(27061975);
+     e01.setSalarioBase(3000);
+     e01.especialidade = "Fotografia";
 
-  Venda v01 = {cliente1, &e01, "Fotos do Homem Aranha", 100};
-  Venda v02 = {cliente4, &e02, "Troca da tela do telefone", 100};
-  Venda v03 = {cliente2, &e01, "Fotos do novo planador", 150};
-  Venda v04 = {cliente1, &e02, "Recarga de cartucho", 10};
-  Venda v05 = {cliente4, &e03, "Reconstrucao de Predio", 10000};
-  Venda v06 = {cliente5, &e03, "Decoracao de Apartamento no Brooklyn", 3000};
-  Venda v07 = {cliente1, &e03, "Reforma do Clarim Diario", 5000};
-  Venda v08 = {cliente3, &e02, "Formatacao do PC", 80};
+     Especialista e02;
+     int num_atendimentos02 = 0;
+     double comissao02 = 0;
+     e02.setNome("Tony Stark");
+     e02.setIdade(56);
+     e02.setRgFunc(4041965);
+     e02.setSalarioBase(1000);
+     e02.especialidade = "Consertos de equipamentos eletronicos";
 
-  cliente1.print();
-  cliente2.print();
-  cliente3.print();
-  cliente4.print();
-  cliente5.print();
+     Especialista e03;
+     int num_atendimentos03 = 0;
+     double comissao03 = 0;
+     e03.setNome("Wanda Maximoff");
+     e03.setIdade(32);
+     e03.setRgFunc(16021989);
+     e03.setSalarioBase(5000);
+     e03.especialidade = "Engenharia e Designeeeeer";
 
-  cout <<" \n \n           Relatorio das Vendas \n" << endl;
+     Gerente g01;
+     double bonificacao01 = 0;
+     g01.setNome("Nick Fury");
+     g01.setIdade(72);
+     g01.setRgFunc(21121948);
+     g01.setSalarioBase(10000);
 
-  v01.print();
-  v02.print();
-  v03.print();
-  v04.print();
-  v05.print();
-  v06.print();
-  v06.print();
-  v07.print();
-  v08.print();
+     Venda v01;
+     v01.setCliente("J. Jonah Jameson");
+     v01.setEspecialista(e01);
+     v01.setDescricao("Fotos do Homem Aranha");
+     v01.setValor(100);
+     comissao01 += e01.comissao(v01.getValor());
+     num_atendimentos01 += 1;
 
-  cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-  e01.print();
-  e02.print();
-  e03.print();
+     Venda v02;
+     v02.setCliente("Bruce Benner");
+     v02.setEspecialista(e02);
+     v02.setDescricao("Troca da tela do telefone");
+     v02.setValor(100);
+     comissao02 += e02.comissao(v02.getValor());
+     num_atendimentos02 += 1;
 
-  g01.calcular_bonificacao(especialistas);
-  g01.print();
+     Venda v03;
+     v03.setCliente("Norman Osborn");
+     v03.setEspecialista(e01);
+     v03.setDescricao("Fotos do novo planador");
+     v03.setValor(150);
+     comissao01 += e01.comissao(v03.getValor());
+     num_atendimentos01 += 1;
 
-  return 0;
+     Venda v04;
+     v04.setCliente("J. Jonah Jameson");
+     v04.setEspecialista(e02);
+     v04.setDescricao("Recarga de cartucho");
+     v04.setValor(10);
+     comissao02 += e02.comissao(v04.getValor());
+     num_atendimentos02 += 1;
+
+     Venda v05;
+     v05.setCliente("Bruce Benner");
+     v05.setEspecialista(e03);
+     v05.setDescricao("Reconstrucao de Predio");
+     v05.setValor(10000);
+     comissao03 += e03.comissao(v05.getValor());
+     num_atendimentos03 += 1;
+
+     Venda v06;
+     v06.setCliente("Steve Rogers");
+     v06.setEspecialista(e03);
+     v06.setDescricao("Decoracao de Apartamento no Brooklyn");
+     v06.setValor(3000);
+     comissao03 += e03.comissao(v06.getValor());
+     num_atendimentos03 += 1;
+
+     Venda v07;
+     v07.setCliente("J. Jonah Jameson");
+     v07.setEspecialista(e03);
+     v07.setDescricao("Reforma do Clarim Diario");
+     v07.setValor(5000);
+     comissao03 += e03.comissao(v07.getValor());
+     num_atendimentos03 += 1;
+
+     Venda v08;
+     v08.setCliente("Otto Octavius");
+     v08.setEspecialista(e02);
+     v08.setDescricao("Formatacao do PC");
+     v08.setValor(80);
+     comissao02 += e02.comissao(v08.getValor());
+     num_atendimentos02 += 1;
+
+     cout << " \n \n           Relatorio das Vendas \n" << endl;
+
+     v01.print();
+     cout << " Descricao: " << v01.getDescricao() << endl;
+
+     v02.print();
+     cout << " Descricao: " << v02.getDescricao() << endl;
+
+     v03.print();
+     cout << " Descricao: " << v03.getDescricao() << endl;
+
+     v04.print();
+     cout << " Descricao: " << v04.getDescricao() << endl;
+
+     v05.print();
+     cout << " Descricao: " << v05.getDescricao() << endl;
+
+     v06.print();
+     cout << " Descricao: " << v06.getDescricao() << endl;
+
+     v06.print();
+     cout << " Descricao: " << v06.getDescricao() << endl;
+
+     v07.print();
+     cout << " Descricao: " << v07.getDescricao() << endl;
+
+     v08.print();
+     cout << " Descricao: " << v08.getDescricao() << endl;
+
+     cout << " \n \n           Relatorio dos Funcionarios \n" << endl;
+     e01.print();
+     cout << "Num Atendimentos: " << num_atendimentos01 << endl;
+     cout << "Salario Total: " << e01.getSalarioBase() + comissao01 << endl;
+
+     e02.print();
+     cout << "Num Atendimentos: " << num_atendimentos02 << endl;
+     cout << "Salario Total: " << e02.getSalarioBase() + comissao02 << endl;
+
+     e03.print();
+     cout << "Num Atendimentos: " << num_atendimentos03 << endl;
+     cout << "Salario Total: " << e03.getSalarioBase() + comissao03 << endl;
+
+     int num_total_servicos = 0;
+     num_total_servicos = num_atendimentos01 + num_atendimentos02 + num_atendimentos03;
+     g01.print();
+     cout << "Salario Total: " << g01.getSalarioBase() + g01.CalcularBonificacao(num_total_servicos) << endl;
+
+     return 0;
 }
+
