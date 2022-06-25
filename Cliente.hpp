@@ -2,20 +2,22 @@
 #define CLIENTE_H
 
 #include <string>
-#include <iostream>
-
 using namespace std;
 
 class Cliente{
-    
-    public:
+public:
+	void print();
+    void setNome(string);
+	string getNome();
+	void setEndereco(string);
+	string getEndereco();
+	void setCep(string);
+	string getCep();
 
-    Cliente(string nome, string endereco, string cep);
-
-    string cep, nome, endereco;
-
-    void print();
-
+private:
+	string _nome;
+	string _endereco;
+	string _cep;
 };
 
 #endif
