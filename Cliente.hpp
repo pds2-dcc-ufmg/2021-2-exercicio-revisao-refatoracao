@@ -6,15 +6,14 @@
 
 using namespace std;
 
-class Cliente
-{
-public:
-	string nome;
-	string endereco;
-	string cep;
-	string alturaDosPais;
+class Cliente {
+ public:
+  string nome;
+  string endereco;
+  string cep;
+  string alturaDosPais;
 
-	void print();
+  void print();
 };
 
 #endif
