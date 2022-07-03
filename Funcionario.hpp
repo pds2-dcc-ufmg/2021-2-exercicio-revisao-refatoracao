@@ -1,27 +1,21 @@
 #ifndef FUNCIONARIO_HPP
 #define FUNCIONARIO_HPP
 
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
 using namespace std;
 
 class Funcionario {
-    public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
+ public:
+  double salarioBase; 
+  string idade;
+  string nome;
+  int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
+  void print();
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+  void print_tchau();
 };
 
 #endif
