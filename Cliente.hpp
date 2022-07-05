@@ -7,14 +7,17 @@ using namespace std;
 class Cliente{
 
 	public:
-
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
-
+		Cliente(string _nome,
+				string _endereco,
+				string _cep) : nome_ (_nome),
+										 endereco_(_endereco),
+										 cep_(_cep) {};
 		void print(); // imprime na tela os dados de um cliente cadastrado
-
+		string getNome() {return nome_;};
+	private:
+		string nome_;
+		string endereco_;
+		string cep_;
 };
 
 #endif
