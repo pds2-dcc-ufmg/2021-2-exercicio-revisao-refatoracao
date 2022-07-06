@@ -17,6 +17,8 @@ class Venda{
         Especialista esp;
         string cliente;
 
+        Venda(double _valor, string _descricao, Especialista _esp, string _cliente): 
+            valor(_valor), descricao(_descricao), esp(_esp), cliente(_cliente){}
 
         void print() {
 

@@ -12,6 +12,11 @@ class Especialista : public Funcionario {
     public:
         string especialidade;
 
+		Especialista(string _nome, string _idade, double _rgFunc, double _salarioBase, string _especialidade): 
+        Funcionario(_nome, _idade, _rgFunc, _salarioBase){
+            especialidade = _especialidade;
+        }
+
     double comissao(double valorVenda) {
         return valorVenda * PERCENTUAL_COMISSAO;
     }

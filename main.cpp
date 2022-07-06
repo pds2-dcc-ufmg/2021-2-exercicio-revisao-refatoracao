@@ -9,138 +9,67 @@ using namespace std;
 
 int main()
 {
-    Cliente cliente1;
-    cliente1.nome = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.cep = "35690000";
+    Cliente cliente1 = Cliente("J. Jonah Jameson", "Nova York", "35690000");
     cliente1.print();
 
-    Cliente cliente2;
-    cliente2.nome = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.cep = "22061955";
+    Cliente cliente2 = Cliente("Norman Osborn", "Hartlford", "22061955");
     cliente2.print();
 
-    Cliente cliente3;
-    cliente3.nome = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.cep = "24051953";
+    Cliente cliente3 = Cliente("Otto Octavius", "Schenectady", "24051953");
     cliente3.print();
 
-    Cliente cliente4;
-    cliente4.nome = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.cep = "22111967";
+    Cliente cliente4 = Cliente("Bruce Benner", "Dayton", "22111967");
     cliente4.print();
 
-    Cliente cliente5;
-    cliente5.nome = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.cep = "13061981";
+    Cliente cliente5 = Cliente("Steve Rogers", "Lower East Side", "13061981");
     cliente5.print();
 
-
-
-
-    Especialista e01;
+    Especialista e01 = Especialista("Peter Parker", "46", 27061975, 3000, "Fotografia");
     int numAtendimentos01 = 0;
     double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.idade = "46";
-    e01.rgFunc = 27061975;
-    e01.salarioBase = 3000;
-    e01.especialidade = "Fotografia";
 
-
-
-    Especialista e02;
+    Especialista e02 = Especialista("Tony Starkr", "56", 4041965, 1000, "Consertos de equipamentos eletronicos");
     int numAtendimentos02 = 0;
     double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.idade = "56";
-    e02.rgFunc = 4041965;
-    e02.salarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
 
-
-    Especialista e03;
+    Especialista e03 = Especialista("Wanda Maximoff", "32", 16021989, 5000, "Engenharia e Designeeeeer");
     int numAtendimentos03 = 0;
     double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.idade = "32";
-    e03.rgFunc = 16021989;
-    e03.salarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
 
-
-    Gerente g01;
+    Gerente g01 = Gerente("Nick Fury", "72", 21121948, 10000);
     double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.idade = "72";
-    g01.rgFunc = 21121948;
-    g01.salarioBase = 10000;
 
-
-    Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.valor = 100;
+    Venda v01 = Venda(100, "Fotos do Homem Aranha", e01, "J. Jonah Jameson");
     comissao01 += e01.comissao(v01.valor);
     numAtendimentos01+=1;
 
 
-    Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.valor = 100;
+    Venda v02 = Venda(100, "Troca da tela do telefone", e02, "Bruce Benner");;
     comissao02 += e02.comissao(v02.valor);
     numAtendimentos02+=1;
 
 
-    Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.valor = 150;
+    Venda v03 = Venda(150, "Fotos do novo planador", e01, "Norman Osborn");;
     comissao01 += e01.comissao(v03.valor);
     numAtendimentos01+=1;
 
 
-    Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.valor = 10;
+    Venda v04 = Venda(10, "Recarga de cartucho", e02, "J. Jonah Jameson");;
     comissao02 += e02.comissao(v04.valor);
     numAtendimentos02+=1;
 
 
-    Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.valor = 10000;
+    Venda v05 = Venda(10000, "Reconstrucao de Predio", e03, "Bruce Benner");;
     comissao03 += e03.comissao(v05.valor);
     numAtendimentos03+=1;
 
 
-    Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.valor = 3000;
+    Venda v06 = Venda(3000, "Decoracao de Apartamento no Brooklyn", e03, "Steve Rogers");;
     comissao03 += e03.comissao(v06.valor);
     numAtendimentos03+=1;
 
 
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.valor = 3000;
-
-
-
-    Venda v07;
+    Venda v07 = Venda(100, "Fotos do Homem Aranha", e01, "J. Jonah Jameson");;
     v07.cliente= "J. Jonah Jameson";
     v07.esp = e03;
     v07.descricao = "Reforma do Clarim Diario";
@@ -149,7 +78,7 @@ int main()
     numAtendimentos03+=1;
 
 
-    Venda v08;
+    Venda v08 = Venda(100, "Fotos do Homem Aranha", e01, "J. Jonah Jameson");;
     v08.cliente= "Otto Octavius";
     v08.esp = e02;
     v08.descricao = "Formatacao do PC";

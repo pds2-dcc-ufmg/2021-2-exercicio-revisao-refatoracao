@@ -10,7 +10,11 @@ class Cliente{
 		string nome;
 		string endereco;
 		string cep;
-		string alturaDosPais;
+
+		Cliente(string _nome, string _endereco, string _cep):
+		nome(_nome), endereco(_endereco), cep(_cep)
+		{}
+
 
 		void Cliente::print(){
 

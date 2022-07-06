@@ -16,6 +16,9 @@ class Gerente {
         int rgFunc;
         double bonificacao;
 
+        Gerente(string _nome, string _idade, double _rgFunc, double _salarioBase):
+		nome(_nome), idade(_idade), rgFunc(_rgFunc), salarioBase(_salarioBase)
+		{}
 
         void print() {
             cout << "[Funcionario]" << endl
