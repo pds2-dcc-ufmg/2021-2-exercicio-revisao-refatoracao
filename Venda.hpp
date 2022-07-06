@@ -11,32 +11,26 @@ using namespace std;
 class Venda{
 
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
 
+        double valor;
+        string descricao;
+        Especialista esp;
+        string cliente;
 
-    void print() {
+        Venda(double _valor, string _descricao, Especialista _esp, string _cliente): 
+            valor(_valor), descricao(_descricao), esp(_esp), cliente(_cliente){}
 
-        std::cout << "Especialista: ";
-        cout << esp.nome;
+        void imprimeVenda() {
 
-        std::cout << " Cliente: ";
-        cout << cliente;
+            cout << "Especialista: ";
+            cout << esp.nome;
 
-        //std::cout << " : ";
-        //cout << cliente;
-    }
+            cout << " Cliente: ";
+            cout << cliente; 
 
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+            cout << " Descricao: ";
+            cout << descricao << endl;
+        }
 };
 
 #endif
