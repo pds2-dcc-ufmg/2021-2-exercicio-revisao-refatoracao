@@ -10,19 +10,19 @@ using namespace std;
 int main()
 {
     Cliente cliente1 = Cliente("J. Jonah Jameson", "Nova York", "35690000");
-    cliente1.print();
+    cliente1.imprimeDados();
 
     Cliente cliente2 = Cliente("Norman Osborn", "Hartlford", "22061955");
-    cliente2.print();
+    cliente2.imprimeDados();
 
     Cliente cliente3 = Cliente("Otto Octavius", "Schenectady", "24051953");
-    cliente3.print();
+    cliente3.imprimeDados();
 
     Cliente cliente4 = Cliente("Bruce Benner", "Dayton", "22111967");
-    cliente4.print();
+    cliente4.imprimeDados();
 
     Cliente cliente5 = Cliente("Steve Rogers", "Lower East Side", "13061981");
-    cliente5.print();
+    cliente5.imprimeDados();
 
     Especialista e01 = Especialista("Peter Parker", "46", 27061975, 3000, "Fotografia");
 
@@ -31,7 +31,6 @@ int main()
     Especialista e03 = Especialista("Wanda Maximoff", "32", 16021989, 5000, "Engenharia e Designeeeeer");
 
     Gerente g01 = Gerente("Nick Fury", "72", 21121948, 10000);
-    double bonificacao01 = 0;
 
     Venda v01 = Venda(100, "Fotos do Homem Aranha", e01, "J. Jonah Jameson");
     e01.atualizaComissao(v01.valor);
@@ -66,35 +65,24 @@ int main()
     e02.atualizaAtendimentos();
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
-
-    v01.print();
-    v02.print();
-    v03.print();
-    v04.print();
-    v05.print();
-    v06.print();
-    v07.print();
-    v08.print();
+    v01.imprimeVenda();
+    v02.imprimeVenda();
+    v03.imprimeVenda();
+    v04.imprimeVenda();
+    v05.imprimeVenda();
+    v06.imprimeVenda();
+    v07.imprimeVenda();
+    v08.imprimeVenda();
 
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-    e01.print();
-    cout << "Num Atendimentos: " << e01.numAtendimentos << endl;
-    cout << "Salario Total: " << e01.salarioBase+e01.comissao<<endl;
-
-    e02.print();
-    cout << "Num Atendimentos: " << e02.numAtendimentos << endl;
-    cout << "Salario Total: " << e02.salarioBase+e02.comissao<<endl;
-
-    e03.print();
-    cout << "Num Atendimentos: " << e03.numAtendimentos << endl;
-    cout << "Salario Total: " << e03.salarioBase+e03.comissao<<endl;
-
+    e01.imprimeDados();
+    e02.imprimeDados();
+    e03.imprimeDados();
 
     int totalServicos = 0;
     totalServicos = e01.numAtendimentos + e02.numAtendimentos + e03.numAtendimentos;
-    g01.bonificacao = g01.calculaBonificacao(totalServicos);
-    g01.print();
-    cout << "Salario Total: " << g01.salarioBase + g01.bonificacao<<endl;
+    g01.calculaBonificacao(totalServicos);
+    g01.imprimeDados();
 
     return 0;
 }

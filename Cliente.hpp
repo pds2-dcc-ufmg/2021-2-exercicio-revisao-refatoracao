@@ -16,8 +16,8 @@ class Cliente{
 		{}
 
 
-		void print(){
-			std::cout << "[Cliente]" << endl
+		void imprimeDados(){
+			cout << "[Cliente]" << endl
 				<< "  Nome: " << nome << endl
 				<< "  Endereco: " << endereco << endl
 				<< "  CEP: " << cep << endl;

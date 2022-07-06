@@ -18,19 +18,22 @@ class Gerente {
 
         Gerente(string _nome, string _idade, double _rgFunc, double _salarioBase):
 		nome(_nome), idade(_idade), rgFunc(_rgFunc), salarioBase(_salarioBase)
-		{}
+		{
+            bonificacao = 0;
+        }
 
-        void print() {
+        void imprimeDados() {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
             << "  Nome: " << nome << endl
             << "  Idade: " << idade << endl
             << "  RGFunc: " << rgFunc << endl
             << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
+            cout << "  Salario Total: " << salarioBase + bonificacao << endl;
         }
 
-        double calculaBonificacao(int totalVendas){
-            return totalVendas * VALOR_BONIFICACAO;
+        void calculaBonificacao(int totalVendas){
+            bonificacao = totalVendas * VALOR_BONIFICACAO;
         }
 
 };

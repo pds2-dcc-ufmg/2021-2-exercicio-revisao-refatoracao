@@ -20,13 +20,13 @@ class Venda{
         Venda(double _valor, string _descricao, Especialista _esp, string _cliente): 
             valor(_valor), descricao(_descricao), esp(_esp), cliente(_cliente){}
 
-        void print() {
+        void imprimeVenda() {
 
             cout << "Especialista: ";
             cout << esp.nome;
 
             cout << " Cliente: ";
-            cout << cliente;
+            cout << cliente; 
 
             cout << " Descricao: ";
             cout << descricao << endl;

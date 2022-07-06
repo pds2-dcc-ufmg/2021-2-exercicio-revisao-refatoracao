@@ -17,7 +17,7 @@ class Funcionario {
 		nome(_nome), idade(_idade), rgFunc(_rgFunc), salarioBase(_salarioBase)
 		{}
 
-        void print() {
+        void imprimeDados() {
             cout << "[Funcionario]" << endl
             << "  Idade: " << idade << endl
             << "  RGFunc: " << rgFunc << endl;
