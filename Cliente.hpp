@@ -1,7 +1,7 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
-#include <string>
+#include <iostream>
 using namespace std;
 
 class Cliente{
@@ -16,8 +16,7 @@ class Cliente{
 		{}
 
 
-		void Cliente::print(){
-
+		void print(){
 			std::cout << "[Cliente]" << endl
 				<< "  Nome: " << nome << endl
 				<< "  Endereco: " << endereco << endl

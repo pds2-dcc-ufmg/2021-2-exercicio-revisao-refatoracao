@@ -11,14 +11,21 @@ double PERCENTUAL_COMISSAO = 0.1;
 class Especialista : public Funcionario {
     public:
         string especialidade;
+        int numAtendimentos, comissao;
 
 		Especialista(string _nome, string _idade, double _rgFunc, double _salarioBase, string _especialidade): 
         Funcionario(_nome, _idade, _rgFunc, _salarioBase){
             especialidade = _especialidade;
+            numAtendimentos = 0;
+            comissao = 0;
         }
 
-    double comissao(double valorVenda) {
-        return valorVenda * PERCENTUAL_COMISSAO;
+    void atualizaComissao(double valorVenda) {
+        comissao += (valorVenda * PERCENTUAL_COMISSAO);
+    }
+
+    void atualizaAtendimentos() {
+        numAtendimentos++;
     }
 
     void print() {

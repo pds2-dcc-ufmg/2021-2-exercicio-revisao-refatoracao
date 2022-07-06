@@ -22,11 +22,14 @@ class Venda{
 
         void print() {
 
-            std::cout << "Especialista: ";
+            cout << "Especialista: ";
             cout << esp.nome;
 
-            std::cout << " Cliente: ";
+            cout << " Cliente: ";
             cout << cliente;
+
+            cout << " Descricao: ";
+            cout << descricao << endl;
         }
 };
 
