@@ -12,7 +12,14 @@ class Cliente{
 		string cep;
 		string alturaDosPais;
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void Cliente::print(){
+
+			std::cout << "[Cliente]" << endl
+				<< "  Nome: " << nome << endl
+				<< "  Endereco: " << endereco << endl
+				<< "  CEP: " << cep << endl;
+
+		}
 };
 
 #endif
