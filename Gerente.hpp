@@ -6,7 +6,7 @@
 
 using namespace std;
 
-double ValorBONIFICACAO = 15.0;
+double VALOR_BONIFICACAO = 15.0;
 
 class Gerente {
     public:
@@ -26,9 +26,8 @@ class Gerente {
             << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
         }
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
+        double calculaBonificacao(int totalVendas){
+            return totalVendas * VALOR_BONIFICACAO;
         }
 
 };

@@ -5,7 +5,6 @@
 using namespace std;
 
 class Cliente{
-
 	public:
 
 		string nome;
@@ -14,7 +13,6 @@ class Cliente{
 		string alturaDosPais;
 
 		void print(); // imprime na tela os dados de um cliente cadastrado
-
 };
 
 #endif
