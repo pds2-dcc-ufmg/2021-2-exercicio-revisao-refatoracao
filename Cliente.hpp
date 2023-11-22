@@ -12,7 +12,7 @@ private:
 
 public:
 	Cliente (std::string nome, int cep, std::string endereco);
-	void imprimeDados(); // imprime na tela os dados de um cliente cadastrado
+	void imprimeDadosCliente(); // imprime na tela os dados de um cliente cadastrado
 };
 
 #endif
