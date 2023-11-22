@@ -8,7 +8,7 @@ Cliente::Cliente (std::string nome, int cep, std::string endereco) : _nome(nome)
 	}
 }
 
-void Cliente::imprimeDados() {
+void Cliente::imprimeDadosCliente() {
 	std::cout << "[Cliente]" << std::endl;
 	std::cout << "Nome: " << _nome << std::endl;
 	std::cout << "CEP: " << _cep << std::endl;
