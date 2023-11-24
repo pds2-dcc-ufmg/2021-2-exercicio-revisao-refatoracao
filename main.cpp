@@ -82,79 +82,79 @@ int main()
 
 
 	Venda v01;
-	v01.cliente= "J. Jonah Jameson";
-	v01.esp = e01;
-	v01.descricao = "Fotos do Homem Aranha";
-	v01.VALOR = 100;
-	comissao01 += e01.comissao(v01.VALOR);
+	v01._cliente= "J. Jonah Jameson";
+	v01._esp = e01;
+	v01._descricao = "Fotos do Homem Aranha";
+	v01._valor = 100;
+	comissao01 += e01.comissao(v01._valor);
 	numAtendimentos01+=1;
 
 
 	Venda v02;
-	v02.cliente= "Bruce Benner";
-	v02.esp = e02;
-	v02.descricao = "Troca da tela do telefone";
-	v02.VALOR = 100;
-	comissao02 += e02.comissao(v02.VALOR);
+	v02._cliente= "Bruce Benner";
+	v02._esp = e02;
+	v02._descricao = "Troca da tela do telefone";
+	v02._valor = 100;
+	comissao02 += e02.comissao(v02._valor);
 	numAtendimentos02+=1;
 
 
 	Venda v03;
-	v03.cliente= "Norman Osborn";
-	v03.esp = e01;
-	v03.descricao = "Fotos do novo planador";
-	v03.VALOR = 150;
-	comissao01 += e01.comissao(v03.VALOR);
+	v03._cliente= "Norman Osborn";
+	v03._esp = e01;
+	v03._descricao = "Fotos do novo planador";
+	v03._valor = 150;
+	comissao01 += e01.comissao(v03._valor);
 	numAtendimentos01+=1;
 
 
 	Venda v04;
-	v04.cliente= "J. Jonah Jameson";
-	v04.esp = e02;
-	v04.descricao = "Recarga de cartucho";
-	v04.VALOR = 10;
-	comissao02 += e02.comissao(v04.VALOR);
+	v04._cliente= "J. Jonah Jameson";
+	v04._esp = e02;
+	v04._descricao = "Recarga de cartucho";
+	v04._valor = 10;
+	comissao02 += e02.comissao(v04._valor);
 	numAtendimentos02+=1;
 
 
 	Venda v05;
-	v05.cliente= "Bruce Benner";
-	v05.esp = e03;
-	v05.descricao = "Reconstrucao de Predio";
-	v05.VALOR = 10000;
-	comissao03 += e03.comissao(v05.VALOR);
+	v05._cliente= "Bruce Benner";
+	v05._esp = e03;
+	v05._descricao = "Reconstrucao de Predio";
+	v05._valor = 10000;
+	comissao03 += e03.comissao(v05._valor);
 	numAtendimentos03+=1;
 
 
 	Venda v06;
-	v06.cliente= "Steve Rogers";
-	v06.esp = e03;
-	v06.descricao = "Decoracao de Apartamento no Brooklyn";
-	v06.VALOR = 3000;
-	comissao03 += e03.comissao(v06.VALOR);
+	v06._cliente= "Steve Rogers";
+	v06._esp = e03;
+	v06._descricao = "Decoracao de Apartamento no Brooklyn";
+	v06._valor = 3000;
+	comissao03 += e03.comissao(v06._valor);
 	numAtendimentos03+=1;
 
 
-	v06.descricao = "Decoracao de Apartamento no Brooklyn";
-	v06.VALOR = 3000;
+	v06._descricao = "Decoracao de Apartamento no Brooklyn";
+	v06._valor = 3000;
 
 
 
 	Venda v07;
-	v07.cliente= "J. Jonah Jameson";
-	v07.esp = e03;
-	v07.descricao = "Reforma do Clarim Diario";
-	v07.VALOR = 5000;
-	comissao03 += e03.comissao(v07.VALOR);
+	v07._cliente= "J. Jonah Jameson";
+	v07._esp = e03;
+	v07._descricao = "Reforma do Clarim Diario";
+	v07._valor = 5000;
+	comissao03 += e03.comissao(v07._valor);
 	numAtendimentos03+=1;
 
 
 	Venda v08;
-	v08.cliente= "Otto Octavius";
-	v08.esp = e02;
-	v08.descricao = "Formatacao do PC";
-	v08.VALOR = 80;
-	comissao02 += e02.comissao(v08.VALOR);
+	v08._cliente= "Otto Octavius";
+	v08._esp = e02;
+	v08._descricao = "Formatacao do PC";
+	v08._valor = 80;
+	comissao02 += e02.comissao(v08._valor);
 	numAtendimentos02+=1;
 
 
@@ -162,31 +162,31 @@ int main()
 	cout <<" \n \n           Relatorio das Vendas \n" << endl;
 
 	v01.print();
-	cout << " Descricao: " << v01.descricao << endl;
+	cout << " Descricao: " << v01._descricao << endl;
 
 	v02.print();
-	cout << " Descricao: " << v02.descricao << endl;
+	cout << " Descricao: " << v02._descricao << endl;
 
 	v03.print();
-	cout << " Descricao: " << v03.descricao << endl;
+	cout << " Descricao: " << v03._descricao << endl;
 
 	v04.print();
-	cout << " Descricao: " << v04.descricao << endl;
+	cout << " Descricao: " << v04._descricao << endl;
 
 	v05.print();
-	cout << " Descricao: " << v05.descricao << endl;
+	cout << " Descricao: " << v05._descricao << endl;
 
 	v06.print();
-	cout << " Descricao: " << v06.descricao << endl;
+	cout << " Descricao: " << v06._descricao << endl;
 
 	v06.print();
-	cout << " Descricao: " << v06.descricao << endl;
+	cout << " Descricao: " << v06._descricao << endl;
 
 	v07.print();
-	cout << " Descricao: " << v07.descricao << endl;
+	cout << " Descricao: " << v07._descricao << endl;
 
 	v08.print();
-	cout << " Descricao: " << v08.descricao << endl;
+	cout << " Descricao: " << v08._descricao << endl;
 
 
 
