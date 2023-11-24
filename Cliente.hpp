@@ -6,14 +6,13 @@ using namespace std;
 
 class Cliente{
 
-	public:
+public:
+	string _nome;
+	string _endereco;
+	string _cep;
+	string _altura_dos_pais;
 
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
+	void print(); // imprime na tela os dados de um cliente cadastrado
 
 };
 
