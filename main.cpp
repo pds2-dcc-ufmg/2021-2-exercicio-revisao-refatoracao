@@ -20,43 +20,22 @@ int main()
 
 	for (Cliente& cliente: clientes) cliente.print();
 
+	vector<Especialista> especialistas;
 
-	Especialista e01;
-	int numAtendimentos01 = 0;
-	double comissao01 = 0;
-	e01.nome = "Peter Parker";
-	e01.idade = "46";
-	e01.rg_func = 27061975;
-	e01.salario_base = 3000;
-	e01.especialidade = "Fotografia";
-
-
-	Especialista e02;
-	int numAtendimentos02 = 0;
-	double comissao02 = 0;
-	e02.nome = "Tony Stark";
-	e02.idade = "56";
-	e02.rg_func = 4041965;
-	e02.salario_base = 1000;
-	e02.especialidade = "Consertos de equipamentos eletronicos";
-
-
-	Especialista e03;
-	int numAtendimentos03 = 0;
-	double comissao03 = 0;
-	e03.nome = "Wanda Maximoff";
-	e03.idade = "32";
-	e03.rg_func = 16021989;
-	e03.salario_base = 5000;
-	e03.especialidade = "Engenharia e Designeeeeer";
+	especialistas.push_back(Especialista("Fotografia", 0, 0, 3000, 
+																			"Peter Parker", "46", 27061975));
+	especialistas.push_back(Especialista("Consertos de equipamentos eletronicos", 0, 0, 1000, 
+																			"Tony Stark", "56", 4041965));
+	especialistas.push_back(Especialista("Engenharia e Designeeeeer", 0, 0, 5000, 
+																			"Wanda Maximoff", "32", 16021989));
 
 
 	Gerente g01;
 	g01.bonificacao = 0;
-	g01.nome = "Nick Fury";
-	g01.idade = "72";
-	g01.rg_func = 21121948;
-	g01.salario_base = 10000;
+	g01._nome = "Nick Fury";
+	g01._idade = "72";
+	g01._rg_func = 21121948;
+	g01._salario_base = 10000;
 
 
 	Venda v01;
@@ -64,7 +43,7 @@ int main()
 	v01.esp = e01;
 	v01.descricao = "Fotos do Homem Aranha";
 	v01.valor = 100;
-	comissao01 += e01.comissao(v01.valor);
+	comissao01 += e01._comissao(v01.valor);
 	numAtendimentos01+=1;
 
 
@@ -73,7 +52,7 @@ int main()
 	v02.esp = e02;
 	v02.descricao = "Troca da tela do telefone";
 	v02.valor = 100;
-	comissao02 += e02.comissao(v02.valor);
+	comissao02 += e02._comissao(v02.valor);
 	numAtendimentos02+=1;
 
 
@@ -82,7 +61,7 @@ int main()
 	v03.esp = e01;
 	v03.descricao = "Fotos do novo planador";
 	v03.valor = 150;
-	comissao01 += e01.comissao(v03.valor);
+	comissao01 += e01._comissao(v03.valor);
 	numAtendimentos01+=1;
 
 
@@ -91,7 +70,7 @@ int main()
 	v04.esp = e02;
 	v04.descricao = "Recarga de cartucho";
 	v04.valor = 10;
-	comissao02 += e02.comissao(v04.valor);
+	comissao02 += e02._comissao(v04.valor);
 	numAtendimentos02+=1;
 
 
@@ -100,7 +79,7 @@ int main()
 	v05.esp = e03;
 	v05.descricao = "Reconstrucao de Predio";
 	v05.valor = 10000;
-	comissao03 += e03.comissao(v05.valor);
+	comissao03 += e03._comissao(v05.valor);
 	numAtendimentos03+=1;
 
 
@@ -109,7 +88,7 @@ int main()
 	v06.esp = e03;
 	v06.descricao = "Decoracao de Apartamento no Brooklyn";
 	v06.valor = 3000;
-	comissao03 += e03.comissao(v06.valor);
+	comissao03 += e03._comissao(v06.valor);
 	numAtendimentos03+=1;
 
 
@@ -118,7 +97,7 @@ int main()
 	v07.esp = e03;
 	v07.descricao = "Reforma do Clarim Diario";
 	v07.valor = 5000;
-	comissao03 += e03.comissao(v07.valor);
+	comissao03 += e03._comissao(v07.valor);
 	numAtendimentos03+=1;
 
 
@@ -127,7 +106,7 @@ int main()
 	v08.esp = e02;
 	v08.descricao = "Formatacao do PC";
 	v08.valor = 80;
-	comissao02 += e02.comissao(v08.valor);
+	comissao02 += e02._comissao(v08.valor);
 	numAtendimentos02+=1;
 
 
@@ -169,22 +148,22 @@ int main()
 	cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
 	e01.print();
 	cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-	cout << "Salario Total: " << e01.salario_base+comissao01<<endl;
+	cout << "Salario Total: " << e01._salario_base+comissao01<<endl;
 
 	e02.print();
 	cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-	cout << "Salario Total: " << e02.salario_base+comissao02<<endl;
+	cout << "Salario Total: " << e02._salario_base+comissao02<<endl;
 
 	e03.print();
 	cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-	cout << "Salario Total: " << e03.salario_base+comissao03<<endl;
+	cout << "Salario Total: " << e03._salario_base+comissao03<<endl;
 
 
 	int num_total_servicos = 0;
 	num_total_servicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
 	g01.bonificacao = g01.calcula_bonificacao_gerente(num_total_servicos);
 	g01.print();
-	cout << "Salario Total: " << g01.salario_base + g01.bonificacao<<endl;
+	cout << "Salario Total: " << g01._salario_base + g01.bonificacao<<endl;
 
 	return 0;
 }

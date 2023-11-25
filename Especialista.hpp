@@ -9,20 +9,31 @@ using namespace std;
 const double PERC = 0.1;
 
 class Especialista : public Funcionario {
+private:
+	string _especialidade;
+	int _num_atendimentos;
+	double _comissao;
+
 public:
-	string especialidade;
-	int num_atendimentos;
-	double comissao;
+	Especialista(string especialidade,
+							int num_atendimentos,
+							double comissao, 
+							double salario_base, 
+							string idade, 
+							string nome, 
+							int rg_func):
+		_especialidade(especialidade),
+		_num_atendimentos(num_atendimentos),
+		_comissao(comissao),
+		Funcionario(salario_base, idade, nome, rg_func) {}
 
 	void print() {
-
 		std::cout << "[Especialista]" << endl;
 		Funcionario::print();
 
-		std::cout << "  Nome: " << nome << endl
+		std::cout << "  Nome: " << _nome << endl
 			<< "  SalarioBase: R$ " << fixed << setprecision(2) 
-			<< salario_base << endl;
-
+			<< _salario_base << endl;
 	}
 };
 

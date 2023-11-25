@@ -12,7 +12,6 @@ private:
 	string _cep;
 
 public:
-
 	Cliente(string nome, string endereco, string cep):
 		_nome(nome), _endereco(endereco), _cep(cep) {}
 
