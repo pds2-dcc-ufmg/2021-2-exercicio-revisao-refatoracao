@@ -23,9 +23,9 @@ public:
 		std::cout << "[Especialista]" << endl;
 		Funcionario::print();
 
-		std::cout << "  Nome: " << _nome << endl
+		std::cout << "  Nome: " << nome << endl
 			<< "  SalarioBase: R$ " << fixed << setprecision(2) 
-			<< _salario_base <<endl;
+			<< salario_base <<endl;
 
 	}
 };

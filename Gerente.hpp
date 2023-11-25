@@ -17,11 +17,11 @@ public:
 	void print() {
 		cout << "[Funcionario]" << endl
 			<< "[Gerente]" << endl
-			<< "  Nome: " << _nome << endl
-			<< "  Idade: " << _idade << endl
-			<< "  RGFunc: " << _rg_func << endl
+			<< "  Nome: " << nome << endl
+			<< "  Idade: " << idade << endl
+			<< "  RGFunc: " << rg_func << endl
 			<< "  SalarioBase: R$ " << fixed << setprecision(2) 
-			<< _salario_base << endl;
+			<< salario_base << endl;
 	}
 
 	double calcula_bonificacao_gerente(int num_total_vendas){
