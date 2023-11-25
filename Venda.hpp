@@ -20,7 +20,7 @@ public:
 	void print() {
 
 		std::cout << "Especialista: ";
-		cout << esp.nome;
+		cout << esp._nome;
 
 		std::cout << " Cliente: ";
 		cout << cliente;

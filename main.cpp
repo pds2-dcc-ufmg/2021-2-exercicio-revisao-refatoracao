@@ -31,7 +31,7 @@ int main()
 
 
 	Gerente g01;
-	g01.bonificacao = 0;
+	g01._bonificacao = 0;
 	g01._nome = "Nick Fury";
 	g01._idade = "72";
 	g01._rg_func = 21121948;
@@ -161,9 +161,9 @@ int main()
 
 	int num_total_servicos = 0;
 	num_total_servicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-	g01.bonificacao = g01.calcula_bonificacao_gerente(num_total_servicos);
+	g01._bonificacao = g01.calcula_bonificacao_gerente(num_total_servicos);
 	g01.print();
-	cout << "Salario Total: " << g01._salario_base + g01.bonificacao<<endl;
+	cout << "Salario Total: " << g01._salario_base + g01._bonificacao<<endl;
 
 	return 0;
 }

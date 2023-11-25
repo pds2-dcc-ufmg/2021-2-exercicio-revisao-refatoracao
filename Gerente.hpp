@@ -11,8 +11,10 @@ using namespace std;
 const double VALOR_BONIFICACAO = 15.0;
 
 class Gerente: public Funcionario {
+private:
+	double _bonificacao;
+
 public:
-	double bonificacao;
 
 	void print() {
 		cout << "[Funcionario]" << endl
