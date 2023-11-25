@@ -12,7 +12,7 @@ const double VALOR_BONIFICACAO = 15.0;
 
 class Gerente: public Funcionario {
 public:
-	double _bonificacao;
+	double bonificacao;
 
 	void print() {
 		cout << "[Funcionario]" << endl

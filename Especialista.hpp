@@ -11,12 +11,8 @@ const double PERC = 0.1;
 class Especialista : public Funcionario {
 public:
 	string especialidade;
-
-	double comissao(double ValorVenda) {
-		double c = ValorVenda*PERC;
-		return c;
-	}
-
+	int num_atendimentos;
+	double comissao;
 
 	void print() {
 
@@ -25,7 +21,7 @@ public:
 
 		std::cout << "  Nome: " << nome << endl
 			<< "  SalarioBase: R$ " << fixed << setprecision(2) 
-			<< salario_base <<endl;
+			<< salario_base << endl;
 
 	}
 };

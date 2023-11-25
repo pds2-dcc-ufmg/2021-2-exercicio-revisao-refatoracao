@@ -10,39 +10,15 @@ using namespace std;
 
 int main()
 {
-	std::vector<Cliente*> clientes;
+	vector<Cliente> clientes;
 
-	Cliente cliente1;
-	cliente1.nome = "J. Jonah Jameson";
-	cliente1.endereco ="Nova York";
-	cliente1.cep = "35690000";
-	clientes.push_back(&cliente1);
+	clientes.push_back(Cliente("J. Jonah Jameson", "Nova York", "35690000"));
+	clientes.push_back(Cliente("Norman Osborn", "Hartlford", "22061955"));
+	clientes.push_back(Cliente("Otto Octavius", "Schenectady", "24051953"));
+	clientes.push_back(Cliente("Bruce Benner", "Dayton", "22111967"));
+	clientes.push_back(Cliente("Steve Rogers", "Lower East Side", "13061981"));
 
-	Cliente cliente2;
-	cliente2.nome = "Norman Osborn";
-	cliente2.endereco ="Hartlford";
-	cliente2.cep = "22061955";
-	clientes.push_back(&cliente2);
-
-	Cliente cliente3;
-	cliente3.nome = "Otto Octavius";
-	cliente3.endereco ="Schenectady";
-	cliente3.cep = "24051953";
-	clientes.push_back(&cliente3);
-
-	Cliente cliente4;
-	cliente4.nome = "Bruce Benner";
-	cliente4.endereco ="Dayton";
-	cliente4.cep = "22111967";
-	clientes.push_back(&cliente4);
-
-	Cliente cliente5;
-	cliente5.nome = "Steve Rogers";
-	cliente5.endereco ="Lower East Side";
-	cliente5.cep = "13061981";
-	clientes.push_back(&cliente5);
-
-	for (Cliente*& cliente: clientes) cliente->print();
+	for (Cliente& cliente: clientes) cliente.print();
 
 
 	Especialista e01;
@@ -76,7 +52,7 @@ int main()
 
 
 	Gerente g01;
-	double bonificacao01 = 0;
+	g01.bonificacao = 0;
 	g01.nome = "Nick Fury";
 	g01.idade = "72";
 	g01.rg_func = 21121948;
@@ -135,11 +111,6 @@ int main()
 	v06.valor = 3000;
 	comissao03 += e03.comissao(v06.valor);
 	numAtendimentos03+=1;
-
-
-	v06.descricao = "Decoracao de Apartamento no Brooklyn";
-	v06.valor = 3000;
-
 
 
 	Venda v07;
@@ -211,9 +182,9 @@ int main()
 
 	int num_total_servicos = 0;
 	num_total_servicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-	g01._bonificacao = g01.calcula_bonificacao_gerente(num_total_servicos);
+	g01.bonificacao = g01.calcula_bonificacao_gerente(num_total_servicos);
 	g01.print();
-	cout << "Salario Total: " << g01.salario_base + g01._bonificacao<<endl;
+	cout << "Salario Total: " << g01.salario_base + g01.bonificacao<<endl;
 
 	return 0;
 }
