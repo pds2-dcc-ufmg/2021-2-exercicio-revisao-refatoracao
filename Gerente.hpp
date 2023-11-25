@@ -4,18 +4,15 @@
 #include <iostream>
 #include <iomanip>
 
+#include "Funcionario.hpp"
+
 using namespace std;
 
 const double VALOR_BONIFICACAO = 15.0;
 
-class Gerente {
+class Gerente: public Funcionario {
 public:
-	double _salario_base; // valor mínimo recebido pelo funcionário
-	string _idade;
-	string _nome;
-	int _rg_func;
 	double _bonificacao;
-
 
 	void print() {
 		cout << "[Funcionario]" << endl
