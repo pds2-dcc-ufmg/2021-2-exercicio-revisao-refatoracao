@@ -18,10 +18,6 @@ public:
 			<< "  Idade: " << _idade << endl
 			<< "  RGFunc: " << _rg_func << endl;
 	}
-
-	void print_tchau(){
-		cout << "Tchau" << endl;
-	}
 };
 
 #endif

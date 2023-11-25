@@ -7,7 +7,6 @@
 using namespace std;
 
 const double PERC = 0.1;
-const double PERC_WANDA = 0.1;
 
 class Especialista : public Funcionario {
 public:
