@@ -1,15 +1,9 @@
-#ifndef CLIENTE_HPP
-#define CLIENTE_HPP
+#include "Cliente.hpp"
+#include <iostream>
 
-#include <string>
-
-class Cliente {
-public:
-    std::string nome;
-    std::string endereco;
-    std::string cep;
-
-    void print() const;
-};
-
-#endif
+void Cliente::print() const {
+    std::cout << "[Cliente]" << std::endl
+              << "  Nome: " << nome << std::endl
+              << "  Endereco: " << endereco << std::endl
+              << "  CEP: " << cep << std::endl;
+}
