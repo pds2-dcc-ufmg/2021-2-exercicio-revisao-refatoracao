@@ -1,3 +1,14 @@
+/* Brief:
+  *Retirei variável desenecessárias 
+   * Mudei os tributos para private
+   * Os tributos foram padronizados para minusculos
+   * Criei um construtor para cada classe
+   * Criei um arquivo cpp e hpp para cada classe
+   * retirei funções que não estavam sendo usadas
+   * O percentual de especialista e bonificação de gerente 
+devem ser inicializados no construtor, pois na instrução do programa diz que esses valores podem variar para cada funcionário. 
+*/
+
 #include <iostream>
 
 #include "Cliente.hpp"
@@ -5,213 +16,118 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
+
 using namespace std;
 
 int main()
-{
-    Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
-    cliente1.print();
+{  
+  
+  Cliente cliente1("J. Jonah Jameson", "Nova York", "35690000");
+  cliente1.print();
 
-    Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
+  Cliente cliente2("Norman Osborn", "Hartlford", "22061955");
+  cliente2.print();
 
-    Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
+  Cliente cliente3("Otto Octavius", "Schenectady", "24051953");
+  cliente3.print();
 
-    Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
+  Cliente cliente4("Bruce Benner", "Dayton", "22111967");
+  cliente4.print();
 
-    Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
+  Cliente cliente5("Steve Rogers", "Lower East Side", "13061981");
+  cliente5.print();
 
+  
+  Especialista especialista1("Peter Parker", "46", 27061975, 3000, "Fotografia", 0.1, 0);
+  especialista1.print();
+  
+    Especialista especialista2("Tony Stark", "56", 4041965, 1000, 
+    "Consertos de equipamentos eletronicos", 0.1, 0);
+    especialista2.print();
 
+    Especialista especialista3("Wanda Maximoff", "32", 16021989, 5000, "Engenharia e Designeeeeer", 0.1, 0);
+    especialista3.print();
 
+  
+    Gerente gerente1("Nick Fury", "72", 21121948, 10000, 10);
+    gerente1.print(); 
 
-    Especialista e01;
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
-
-
-
-    Especialista e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
-
-
-    Especialista e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
-
-
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
-
-
-    Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v02;
-    v02.cliente= "Bruce Benner";
-    v02.esp = e02;
-    v02.descricao = "Troca da tela do telefone";
-    v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v03;
-    v03.cliente= "Norman Osborn";
-    v03.esp = e01;
-    v03.descricao = "Fotos do novo planador";
-    v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
-    numAtendimentos01+=1;
-
-
-    Venda v04;
-    v04.cliente= "J. Jonah Jameson";
-    v04.esp = e02;
-    v04.descricao = "Recarga de cartucho";
-    v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
-    numAtendimentos02+=1;
-
-
-    Venda v05;
-    v05.cliente= "Bruce Benner";
-    v05.esp = e03;
-    v05.descricao = "Reconstrucao de Predio";
-    v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v06;
-    v06.cliente= "Steve Rogers";
-    v06.esp = e03;
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
-    numAtendimentos03+=1;
-
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
-
-    Venda v07;
-    v07.cliente= "J. Jonah Jameson";
-    v07.esp = e03;
-    v07.descricao = "Reforma do Clarim Diario";
-    v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
-    numAtendimentos03+=1;
-
-
-    Venda v08;
-    v08.cliente= "Otto Octavius";
-    v08.esp = e02;
-    v08.descricao = "Formatacao do PC";
-    v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
-    numAtendimentos02+=1;
-
-
-
+  
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
+  
+    Venda venda1(100, "Fotos do Homem Aranha", especialista1, "J. Jonah Jameson");
+    venda1.print();
+    especialista1.incrementarAtendimento();
+    especialista1.acumulaVenda(100); 
 
-    v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
+    Venda venda2(100, "Troca da tela do telefone",              especialista2, "Bruce Benner");
+    venda2.print();
+    especialista2 .incrementarAtendimento();
+    especialista2.acumulaVenda(100);
 
-    v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
+    Venda venda3(150, "Fotos do novo planador",           
+    especialista1, "Norman Osborn");
+    venda3.print();
+    especialista1.incrementarAtendimento();
+    especialista1.acumulaVenda(150);
+  
+      Venda venda4(10, "Recarga de cartucho", 
+     especialista2, "J. Jonah Jameson");
+      venda4.print();
+      especialista2.incrementarAtendimento();
+      especialista2.acumulaVenda(10);
 
-    v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
+    Venda venda5(10000, "Reconstrucao de Predio", 
+    especialista3, "Bruce Benner");
+    venda5.print();
+    especialista3.incrementarAtendimento();
+    especialista3.acumulaVenda(10000);
 
-    v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
-
-    v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
-
-    v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
-
-    v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
-
-
-
+    Venda venda6(3000, "Decoracao de Apartamento no  Brooklyn", especialista3, "Steve Rogers");
+    venda6.print();
+    especialista3.incrementarAtendimento();
+    especialista3.acumulaVenda(3000);
 
 
+    Venda venda7(5000, "Reforma do Clarim Diario", especialista3, "J. Jonah Jameson");
+  venda7.print();
+  especialista3.incrementarAtendimento();
+  especialista3.acumulaVenda(5000);
 
+    Venda venda8(80, "Formatacao do PC", especialista2, 
+  "Otto Octavius");
+  venda8.print();
+  especialista2.incrementarAtendimento();
+  especialista2.acumulaVenda(80);
+
+  
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-    e01.print();
-    cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
+    especialista1.print();
+    cout << "Num Atendimentos: " << especialista1.getNumAtendimentos()<< endl;
+    cout << "Salario Total: " <<       
+    especialista1.getSalarioBase() +     
+    especialista1.getTotalvendas() << endl << "\n";
 
-    e02.print();
-    cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
+    especialista2.print();
+    cout << "Num Atendimentos: " << especialista2.getNumAtendimentos() << endl;
+    cout << "Salario Total: " <<   
+     especialista2.getSalarioBase() +     
+     especialista2.getTotalvendas() << endl << "\n";
 
-    e03.print();
-    cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
+    especialista3.print();
+    cout << "Num Atendimentos: " << especialista3.getNumAtendimentos() << endl;
+    cout << "Salario Total: " <<   
+     especialista3.getSalarioBase() +   
+     especialista3.getTotalvendas() << endl << "\n";
 
 
     int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
-    g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    NUMTOTALservicos =     especialista1.getNumAtendimentos() + especialista2.getNumAtendimentos() + especialista3.getNumAtendimentos();
+  
+    gerente1.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    gerente1.print();
+    cout << "Salario Total: " << gerente1.getSalarioBase() + gerente1.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos) << endl;
 
+  
     return 0;
 }
