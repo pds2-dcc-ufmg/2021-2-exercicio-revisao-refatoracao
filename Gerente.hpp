@@ -27,6 +27,9 @@ public:
     double getBonificacao(){
         return bonificacao;
     }
+    double getSalarioBase(){
+        return salarioBase;
+    }
     void setBonificacao(double newBonificacao){
         bonificacao = newBonificacao;
     }
