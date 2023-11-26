@@ -4,17 +4,18 @@
 #include <string>
 using namespace std;
 
-class Cliente{
+class Cliente
+{
 
-	public:
+public:
+    string nome;
+    string endereco;
+    string cep;
+    // padronizando os nomes para o mesmo estilo
 
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
+    void print(); // imprime na tela os dados de um cliente cadastrado
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+    Cliente(string _nome, string _endereco, string _cep) : nome(_nome), endereco(_endereco), cep(_cep){};
 };
 
 #endif

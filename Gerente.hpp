@@ -6,32 +6,32 @@
 
 using namespace std;
 
-double ValorBONIFICACAO = 15.0;
+double VALORBONIFICACAO = 15.0;
 
-class Gerente {
-    public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
-        string IDADE;
-        string nome;
-        int rgFunc;
-        double bonificacao;
+class Gerente : public Funcionario
+{
 
+public:
+    Gerente(string _nome, string _idade, int _rgFunc, double _salarioBase)
+        : Funcionario(_nome, _idade, _rgFunc, _salarioBase) {}    
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-        }
+    double bonificacao;
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
-            return numTOTALVendas*ValorBONIFICACAO;
-        }
+    void print()
+    {
+        cout << "[Funcionario]" << endl
+             << "[Gerente]" << endl
+             << "  Nome: " << nome << endl
+             << "  Idade: " << idade << endl
+             << "  RGFunc: " << rgFunc << endl
+             << "  salarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
+    }
 
+    double calcula_BONIFICACAO_GERENTE(int numTOTALVendas)
+    {
+
+        return numTOTALVendas * VALORBONIFICACAO;
+    }
 };
 
 #endif
-

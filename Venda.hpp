@@ -8,35 +8,27 @@
 
 using namespace std;
 
-class Venda{
+class Venda
+{
 
-    public:
+public:
     double VALOR;
     string descricao;
     Especialista esp;
     string cliente;
 
+    Venda(const string &_cliente, const Especialista &_esp, string _descricao, double _VALOR )
+        : VALOR(_VALOR), descricao(_descricao), esp(_esp), cliente(_cliente) {};
 
-    void print() {
+    void print()
+    {
 
         std::cout << "Especialista: ";
         cout << esp.nome;
 
         std::cout << " Cliente: ";
         cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
     }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
 };
 
 #endif
