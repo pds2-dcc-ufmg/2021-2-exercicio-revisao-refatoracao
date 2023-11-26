@@ -6,33 +6,21 @@
 
 using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
-
-
+double percentualDeComissao = 0.1;
 class Especialista : public Funcionario {
 
-    public:
-
-    public:
-        string especialidade;
-
+public:
+    string especialidade;
     double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
+        double valorDeComissao = ValorVenda * percentualDeComissao;
+        return valorDeComissao;
     }
 
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
+void print() {
+    std::cout << "[Especialista]" << endl;
+    Funcionario::print();
+    std::cout << "  Nome: " << nome << endl;
+    std::cout << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
     }
 };
 
