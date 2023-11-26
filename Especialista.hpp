@@ -19,8 +19,8 @@ public:
 							int num_atendimentos,
 							double comissao, 
 							double salario_base, 
-							string idade, 
 							string nome, 
+							string idade, 
 							int rg_func):
 		_especialidade(especialidade),
 		_num_atendimentos(num_atendimentos),

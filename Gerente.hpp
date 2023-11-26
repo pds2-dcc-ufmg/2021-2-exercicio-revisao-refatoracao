@@ -21,7 +21,7 @@ public:
 				 string idade,
 				 int rg_func):
 		_bonificacao(bonificacao),
-		Funcionario(salario_base, nome, idade, rg_func) {}
+		Funcionario(salario_base, idade, nome, rg_func) {}
 
 	void print() {
 		cout << "[Funcionario]" << endl
