@@ -8,28 +8,27 @@ using namespace std;
 
 double VALORBONIFICACAO = 15.0;
 
-class Gerente : public Funcionario {
-    
-    public:
+class Gerente : public Funcionario
+{
 
-        double bonificacao;
+public:
+    double bonificacao;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "[Gerente]" << endl
-            << "  Nome: " << nome << endl
-            << "  Idade: " << idade << endl
-            << "  RGFunc: " << rgFunc << endl
-            << "  salarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
-        }
+    void print()
+    {
+        cout << "[Funcionario]" << endl
+             << "[Gerente]" << endl
+             << "  Nome: " << nome << endl
+             << "  Idade: " << idade << endl
+             << "  RGFunc: " << rgFunc << endl
+             << "  salarioBase: R$ " << fixed << setprecision(2) << salarioBase << endl;
+    }
 
-        double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
+    double calcula_BONIFICACAO_GERENTE(int numTOTALVendas)
+    {
 
-            return numTOTALVendas*VALORBONIFICACAO;
-        }
-
+        return numTOTALVendas * VALORBONIFICACAO;
+    }
 };
 
 #endif
-
-
