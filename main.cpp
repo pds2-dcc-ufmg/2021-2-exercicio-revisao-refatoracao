@@ -20,6 +20,7 @@ int main()
 
 	for (Cliente& cliente: clientes) cliente.print();
 
+
 	vector<Especialista> especialistas;
 
 	especialistas.push_back(Especialista("Fotografia", 0, 0, 3000, 
@@ -30,134 +31,38 @@ int main()
 																			"Wanda Maximoff", "32", 16021989));
 
 
-	Gerente g01;
-	g01._bonificacao = 0;
-	g01._nome = "Nick Fury";
-	g01._idade = "72";
-	g01._rg_func = 21121948;
-	g01._salario_base = 10000;
+	Gerente g01(0, 10000, "Nick Fury", "72", 21121948);
 
 
-	Venda v01;
-	v01.cliente= "J. Jonah Jameson";
-	v01.esp = e01;
-	v01.descricao = "Fotos do Homem Aranha";
-	v01.valor = 100;
-	comissao01 += e01._comissao(v01.valor);
-	numAtendimentos01+=1;
+	vector<Venda> vendas;
 
-
-	Venda v02;
-	v02.cliente= "Bruce Benner";
-	v02.esp = e02;
-	v02.descricao = "Troca da tela do telefone";
-	v02.valor = 100;
-	comissao02 += e02._comissao(v02.valor);
-	numAtendimentos02+=1;
-
-
-	Venda v03;
-	v03.cliente= "Norman Osborn";
-	v03.esp = e01;
-	v03.descricao = "Fotos do novo planador";
-	v03.valor = 150;
-	comissao01 += e01._comissao(v03.valor);
-	numAtendimentos01+=1;
-
-
-	Venda v04;
-	v04.cliente= "J. Jonah Jameson";
-	v04.esp = e02;
-	v04.descricao = "Recarga de cartucho";
-	v04.valor = 10;
-	comissao02 += e02._comissao(v04.valor);
-	numAtendimentos02+=1;
-
-
-	Venda v05;
-	v05.cliente= "Bruce Benner";
-	v05.esp = e03;
-	v05.descricao = "Reconstrucao de Predio";
-	v05.valor = 10000;
-	comissao03 += e03._comissao(v05.valor);
-	numAtendimentos03+=1;
-
-
-	Venda v06;
-	v06.cliente= "Steve Rogers";
-	v06.esp = e03;
-	v06.descricao = "Decoracao de Apartamento no Brooklyn";
-	v06.valor = 3000;
-	comissao03 += e03._comissao(v06.valor);
-	numAtendimentos03+=1;
-
-
-	Venda v07;
-	v07.cliente= "J. Jonah Jameson";
-	v07.esp = e03;
-	v07.descricao = "Reforma do Clarim Diario";
-	v07.valor = 5000;
-	comissao03 += e03._comissao(v07.valor);
-	numAtendimentos03+=1;
-
-
-	Venda v08;
-	v08.cliente= "Otto Octavius";
-	v08.esp = e02;
-	v08.descricao = "Formatacao do PC";
-	v08.valor = 80;
-	comissao02 += e02._comissao(v08.valor);
-	numAtendimentos02+=1;
-
+	vendas.push_back(Venda(100, "Fotos do Homem Aranha", 
+												&especialistas[0], &clientes[0]));
+	vendas.push_back(Venda(100, "Troca da tela do telefone", 
+												&especialistas[1], &clientes[3]));
+	vendas.push_back(Venda(150, "Fotos do novo planador", 
+												&especialistas[0], &clientes[1]));
+	vendas.push_back(Venda(10, "Recarga de cartucho", 
+												&especialistas[1], &clientes[0]));
+	vendas.push_back(Venda(10000, "Reconstrucao de Predio", 
+												&especialistas[2], &clientes[3]));
+	vendas.push_back(Venda(3000, "Decoracao de Apartamento no Brooklyn", 
+												&especialistas[2], &clientes[4]));
+	vendas.push_back(Venda(5000, "Reforma do Clarim Diario", 
+												&especialistas[2], &clientes[0]));
+	vendas.push_back(Venda(80, "Formatacao do PC", 
+												&especialistas[1], &clientes[2]));
 
 
 	cout <<" \n \n           Relatorio das Vendas \n" << endl;
-
-	v01.print();
-	cout << " Descricao: " << v01.descricao << endl;
-
-	v02.print();
-	cout << " Descricao: " << v02.descricao << endl;
-
-	v03.print();
-	cout << " Descricao: " << v03.descricao << endl;
-
-	v04.print();
-	cout << " Descricao: " << v04.descricao << endl;
-
-	v05.print();
-	cout << " Descricao: " << v05.descricao << endl;
-
-	v06.print();
-	cout << " Descricao: " << v06.descricao << endl;
-
-	v06.print();
-	cout << " Descricao: " << v06.descricao << endl;
-
-	v07.print();
-	cout << " Descricao: " << v07.descricao << endl;
-
-	v08.print();
-	cout << " Descricao: " << v08.descricao << endl;
-
-
-
-
-
+	for (Venda& venda: vendas) {
+		venda.print();
+	}
 
 	cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-	e01.print();
-	cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-	cout << "Salario Total: " << e01._salario_base+comissao01<<endl;
-
-	e02.print();
-	cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-	cout << "Salario Total: " << e02._salario_base+comissao02<<endl;
-
-	e03.print();
-	cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-	cout << "Salario Total: " << e03._salario_base+comissao03<<endl;
-
+	for (Especialista& esp: especialistas) {
+		esp.print();
+	}
 
 	int num_total_servicos = 0;
 	num_total_servicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;

@@ -28,13 +28,18 @@ public:
 		Funcionario(salario_base, idade, nome, rg_func) {}
 
 	void print() {
-		std::cout << "[Especialista]" << endl;
+		cout << "[Especialista]" << endl;
 		Funcionario::print();
 
-		std::cout << "  Nome: " << _nome << endl
+		cout << "  Nome: " << _nome << endl
 			<< "  SalarioBase: R$ " << fixed << setprecision(2) 
 			<< _salario_base << endl;
+
+		cout << "Num Atendimentos: " << _num_atendimentos << endl;
+		cout << "Salario Total: " << _salario_base + _comissao <<endl;
 	}
+
+	//TODO: Funções de aumentar numero de atendimentos e comissao (venda())
 };
 
 #endif

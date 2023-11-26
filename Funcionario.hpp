@@ -25,6 +25,8 @@ public:
 			<< "  Idade: " << _idade << endl
 			<< "  RGFunc: " << _rg_func << endl;
 	}
+
+	//TODO: colocar get_nome()
 };
 
 #endif

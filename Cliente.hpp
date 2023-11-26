@@ -17,6 +17,7 @@ public:
 
 	void print(); // imprime na tela os dados de um cliente cadastrado
 
+	//TODO: colocar get_nome()
 };
 
 #endif

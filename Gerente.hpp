@@ -15,6 +15,13 @@ private:
 	double _bonificacao;
 
 public:
+	Gerente(double bonificacao,
+				 double salario_base,
+				 string nome,
+				 string idade,
+				 int rg_func):
+		_bonificacao(bonificacao),
+		Funcionario(salario_base, nome, idade, rg_func) {}
 
 	void print() {
 		cout << "[Funcionario]" << endl
@@ -27,7 +34,6 @@ public:
 	}
 
 	double calcula_bonificacao_gerente(int num_total_vendas){
-		double x;
 		return num_total_vendas*VALOR_BONIFICACAO;
 	}
 
