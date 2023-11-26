@@ -5,73 +5,41 @@
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
-using namespace std;
+#include "Cliente.cpp"
 
 int main()
 {
-    Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
-    cliente1.print();
+    Cliente* cliente1 = new Cliente( "J. Jonah Jameson", "Nova York", "35690000" );
+    cliente1->print();
+    delete cliente1;
 
-    Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
+    Cliente* cliente2 = new Cliente( "Norman Osborn", "Hartlford", "22061955" );
+    cliente2->print();
+    delete cliente2;
 
-    Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
+    Cliente* cliente3 = new Cliente( "Otto Octavius", "Schenectady", "24051953" );
+    cliente3->print();
+    delete cliente3;
 
-    Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
+    Cliente* cliente4 = new Cliente( "Bruce Benner", "Dayton", "22111967" );
+    cliente4->print();
+    delete cliente4;
 
-    Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
+    Cliente* cliente5 = new Cliente( "Steve Rogers", "Lower East Side", "13061981" );
+    cliente5->print();
+    delete cliente5;
 
-
-
-
-    Especialista e01;
+    Especialista* e01 = new Especialista( 3000, "46", "Peter Parker", 27061975, "Fotografia" );
     int numAtendimentos01 = 0;
     double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
 
-
-
-    Especialista e02;
+    Especialista* e02 = new Especialista( 1000, "56", "Tony Stark", 4041965, "Consertos de equipamentos eletronicos" );
     int numAtendimentos02 = 0;
     double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
 
-
-    Especialista e03;
+    Especialista* e03 = new Especialista( 5000, "32", "Wanda Maximoff", 16021989, "Engenharia e Designeeeeer" );
     int numAtendimentos03 = 0;
     double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
-
 
     Gerente g01;
     double bonificacao01 = 0;
@@ -86,7 +54,7 @@ int main()
     v01.esp = e01;
     v01.descricao = "Fotos do Homem Aranha";
     v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
+    comissao01 += e01->comissao(v01.VALOR);
     numAtendimentos01+=1;
 
 
@@ -95,7 +63,7 @@ int main()
     v02.esp = e02;
     v02.descricao = "Troca da tela do telefone";
     v02.VALOR = 100;
-    comissao02 += e02.comissao(v02.VALOR);
+    comissao02 += e02->comissao(v02.VALOR);
     numAtendimentos02+=1;
 
 
@@ -104,7 +72,7 @@ int main()
     v03.esp = e01;
     v03.descricao = "Fotos do novo planador";
     v03.VALOR = 150;
-    comissao01 += e01.comissao(v03.VALOR);
+    comissao01 += e01->comissao(v03.VALOR);
     numAtendimentos01+=1;
 
 
@@ -113,7 +81,7 @@ int main()
     v04.esp = e02;
     v04.descricao = "Recarga de cartucho";
     v04.VALOR = 10;
-    comissao02 += e02.comissao(v04.VALOR);
+    comissao02 += e02->comissao(v04.VALOR);
     numAtendimentos02+=1;
 
 
@@ -122,7 +90,7 @@ int main()
     v05.esp = e03;
     v05.descricao = "Reconstrucao de Predio";
     v05.VALOR = 10000;
-    comissao03 += e03.comissao(v05.VALOR);
+    comissao03 += e03->comissao(v05.VALOR);
     numAtendimentos03+=1;
 
 
@@ -131,7 +99,7 @@ int main()
     v06.esp = e03;
     v06.descricao = "Decoracao de Apartamento no Brooklyn";
     v06.VALOR = 3000;
-    comissao03 += e03.comissao(v06.VALOR);
+    comissao03 += e03->comissao(v06.VALOR);
     numAtendimentos03+=1;
 
 
@@ -139,13 +107,12 @@ int main()
     v06.VALOR = 3000;
 
 
-
     Venda v07;
     v07.cliente= "J. Jonah Jameson";
     v07.esp = e03;
     v07.descricao = "Reforma do Clarim Diario";
     v07.VALOR = 5000;
-    comissao03 += e03.comissao(v07.VALOR);
+    comissao03 += e03->comissao(v07.VALOR);
     numAtendimentos03+=1;
 
 
@@ -154,64 +121,61 @@ int main()
     v08.esp = e02;
     v08.descricao = "Formatacao do PC";
     v08.VALOR = 80;
-    comissao02 += e02.comissao(v08.VALOR);
+    comissao02 += e02->comissao(v08.VALOR);
     numAtendimentos02+=1;
 
 
-
-    cout <<" \n \n           Relatorio das Vendas \n" << endl;
+    std::cout <<" \n \n           Relatorio das Vendas \n" << std::endl;
 
     v01.print();
-    cout << " Descricao: " << v01.descricao << endl;
+    std::cout << " Descricao: " << v01.descricao << std::endl;
 
     v02.print();
-    cout << " Descricao: " << v02.descricao << endl;
+    std::cout << " Descricao: " << v02.descricao << std::endl;
 
     v03.print();
-    cout << " Descricao: " << v03.descricao << endl;
+    std::cout << " Descricao: " << v03.descricao << std::endl;
 
     v04.print();
-    cout << " Descricao: " << v04.descricao << endl;
+    std::cout << " Descricao: " << v04.descricao << std::endl;
 
     v05.print();
-    cout << " Descricao: " << v05.descricao << endl;
+    std::cout << " Descricao: " << v05.descricao << std::endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
+    std::cout << " Descricao: " << v06.descricao << std::endl;
 
     v06.print();
-    cout << " Descricao: " << v06.descricao << endl;
+    std::cout << " Descricao: " << v06.descricao << std::endl;
 
     v07.print();
-    cout << " Descricao: " << v07.descricao << endl;
+    std::cout << " Descricao: " << v07.descricao << std::endl;
 
     v08.print();
-    cout << " Descricao: " << v08.descricao << endl;
+    std::cout << " Descricao: " << v08.descricao << std::endl;
 
+    std::cout <<" \n \n           Relatorio dos Funcionarios \n" << std::endl;
+    e01->print();
+    std::cout << "Num Atendimentos: " << numAtendimentos01 << std::endl;
+    std::cout << "Salario Total: " << e01->getSalarioBase() + comissao01 << std::endl;
 
+    e02->print();
+    std::cout << "Num Atendimentos: " << numAtendimentos02 << std::endl;
+    std::cout << "Salario Total: " << e02->getSalarioBase() + comissao02 << std::endl;
 
+    e03->print();
+    std::cout << "Num Atendimentos: " << numAtendimentos03 << std::endl;
+    std::cout << "Salario Total: " << e03->getSalarioBase() + comissao03 << std::endl;
 
-
-
-    cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-    e01.print();
-    cout << "Num Atendimentos: " << numAtendimentos01 << endl;
-    cout << "Salario Total: " << e01.SalarioBase+comissao01<<endl;
-
-    e02.print();
-    cout << "Num Atendimentos: " << numAtendimentos02 << endl;
-    cout << "Salario Total: " << e02.SalarioBase+comissao02<<endl;
-
-    e03.print();
-    cout << "Num Atendimentos: " << numAtendimentos03 << endl;
-    cout << "Salario Total: " << e03.SalarioBase+comissao03<<endl;
-
-
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calcula_BONIFICACAO_GERENTE(NUMTOTALservicos);
+    int NumTotalservicos = 0;
+    NumTotalservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
+    g01.bonificacao = g01.calculaBonificacao(NumTotalservicos);
     g01.print();
-    cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<<endl;
+    std::cout << "Salario Total: " << g01.SalarioBase + g01.bonificacao<< std::endl;
+
+    delete e01;
+    delete e02;
+    delete e03;
 
     return 0;
 }
