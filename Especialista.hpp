@@ -39,7 +39,12 @@ public:
 		cout << "Salario Total: " << _salario_base + _comissao <<endl;
 	}
 
-	//TODO: Funções de aumentar numero de atendimentos e comissao (venda())
+	void venda(double valor_venda) {
+		_num_atendimentos++;
+		_comissao += PERC*valor_venda;
+	}
+
+	int get_num_atendimentos() { return _num_atendimentos; }
 };
 
 #endif

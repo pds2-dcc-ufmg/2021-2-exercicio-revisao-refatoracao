@@ -26,7 +26,7 @@ public:
 			<< "  RGFunc: " << _rg_func << endl;
 	}
 
-	//TODO: colocar get_nome()
+	string get_nome() { return _nome; }
 };
 
 #endif
