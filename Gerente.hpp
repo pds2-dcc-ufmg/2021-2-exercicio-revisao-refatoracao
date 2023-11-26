@@ -29,12 +29,12 @@ public:
 			<< "  Nome: " << _nome << endl
 			<< "  Idade: " << _idade << endl
 			<< "  RGFunc: " << _rg_func << endl
-			<< "  SalarioBase: R$ " << fixed << setprecision(2) 
-			<< _salario_base << endl;
+			<< "  SalarioBase: R$ " << fixed << setprecision(2) << _salario_base << endl
+			<< "Salario Total: " << _salario_base + _bonificacao << endl;
 	}
 
-	double calcula_bonificacao_gerente(int num_total_vendas){
-		return num_total_vendas*VALOR_BONIFICACAO;
+	void calcula_bonificacao_gerente(int num_total_vendas){
+		_bonificacao =  num_total_vendas*VALOR_BONIFICACAO;
 	}
 
 };

@@ -59,16 +59,16 @@ int main()
 		venda.print();
 	}
 
+	int num_total_servicos = 0;
+
 	cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
 	for (Especialista& esp: especialistas) {
 		esp.print();
+		num_total_servicos += esp.get_num_atendimentos();
 	}
 
-	int num_total_servicos = 0;
-	num_total_servicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-	g01._bonificacao = g01.calcula_bonificacao_gerente(num_total_servicos);
+	g01.calcula_bonificacao_gerente(num_total_servicos);
 	g01.print();
-	cout << "Salario Total: " << g01._salario_base + g01._bonificacao<<endl;
 
 	return 0;
 }
