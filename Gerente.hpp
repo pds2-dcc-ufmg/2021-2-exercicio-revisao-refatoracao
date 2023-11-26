@@ -12,6 +12,9 @@ class Gerente : public Funcionario
 {
 
 public:
+    Gerente(string _nome, string _idade, int _rgFunc, double _salarioBase)
+        : Funcionario(_nome, _idade, _rgFunc, _salarioBase) {}    
+
     double bonificacao;
 
     void print()

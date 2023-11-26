@@ -17,6 +17,9 @@ public:
     Especialista esp;
     string cliente;
 
+    Venda(const string &_cliente, const Especialista &_esp, string _descricao, double _VALOR )
+        : VALOR(_VALOR), descricao(_descricao), esp(_esp), cliente(_cliente) {};
+
     void print()
     {
 

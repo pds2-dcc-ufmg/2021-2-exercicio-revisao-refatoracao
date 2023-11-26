@@ -10,10 +10,13 @@ class Funcionario
 {
 
 public:
-    double salarioBase; // valor minimo recebido pelo funcionario
-    string idade;
+
     string nome;
+    string idade;
     int rgFunc;
+    double salarioBase; // valor minimo recebido pelo funcionario
+    
+    Funcionario(string _nome, string _idade, int _rgFunc, double _salarioBase) : nome(_nome), idade(_idade), rgFunc(_rgFunc), salarioBase(_salarioBase)  {};
 
     void print()
     {
