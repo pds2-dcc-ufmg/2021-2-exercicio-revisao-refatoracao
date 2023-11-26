@@ -14,11 +14,7 @@ protected:
 
 public:
     Funcionario (std::string& nome, int idade, int rgFuncionario, double salarioBase);
-    void imprimeDadosFuncionario() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-    }
+    void imprimeDadosFuncionario();
 };
 
 #endif
