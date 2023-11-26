@@ -19,9 +19,6 @@ class Funcionario {
             << "  RGFunc: " << rgFunc << endl;
         }
 
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
 };
 
 #endif
