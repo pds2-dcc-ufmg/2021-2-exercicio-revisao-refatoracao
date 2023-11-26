@@ -6,14 +6,27 @@ using namespace std;
 
 class Cliente{
 
-	public:
+	private: 
 
 		string NOME;
 		string endereco;
 		string Cep;
-		string AlturaDosPais;
 
-		void print(); // imprime na tela os dados de um cliente cadastrado
+	public:
+
+		void dados(string Name, string Address, string Cep_){
+			NOME = Name;
+			endereco = Address;
+			Cep = Cep_;
+		}
+
+
+		void print() const {
+		std::cout << "[Cliente]" << endl
+         << "  Nome: " << NOME << endl
+		 << "  Endereco: " << endereco << endl
+		 << "  CEP: " << Cep << endl;
+		}
 
 };
 
