@@ -5,15 +5,19 @@
 using namespace std;
 
 class Cliente{
-
-	public:
-
+	private: 
 		string NOME;
 		string endereco;
 		string Cep;
-		string AlturaDosPais;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		//string AlturaDosPais; variavel desnecessária
+		
+	public:
+		void setdata(string name, string adress, string cep){
+			NOME = name;
+			endereco = adress;
+			Cep = cep;
+		} //criando metodo construtor
+		void print() const; // imprime na tela os dados de um cliente cadastrado
 
 };
 
