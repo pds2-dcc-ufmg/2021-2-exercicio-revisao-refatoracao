@@ -7,12 +7,9 @@
 using namespace std;
 
 double perc = 0.1;
-double percWanda = 0.1;
 
 
 class Especialista : public Funcionario {
-
-    public:
 
     public:
         string especialidade;
