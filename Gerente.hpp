@@ -8,12 +8,10 @@ using namespace std;
 
 double VALORBONIFICACAO = 15.0;
 
-class Gerente {
+class Gerente : public Funcionario {
+    
     public:
-        double salarioBase; // valor minimo recebido pelo funcionario
-        string idade;
-        string nome;
-        int rgFunc;
+
         double bonificacao;
 
         void print() {
@@ -26,7 +24,7 @@ class Gerente {
         }
 
         double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            
+
             return numTOTALVendas*VALORBONIFICACAO;
         }
 
