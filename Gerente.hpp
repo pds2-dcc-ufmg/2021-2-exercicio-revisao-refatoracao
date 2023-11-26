@@ -27,7 +27,6 @@ class Gerente {
         }
 
         double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-            double x;
             return numTOTALVendas*ValorBONIFICACAO;
         }
 
