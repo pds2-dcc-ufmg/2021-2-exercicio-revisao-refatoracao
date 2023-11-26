@@ -50,7 +50,7 @@ int main()
     e01.idade = "46";
     e01.rgFunc = 27061975;
     e01.salarioBase = 3000;
-    e01.especialidade = "Fotografia";
+   
 
 
 
@@ -61,7 +61,6 @@ int main()
     e02.idade = "56";
     e02.rgFunc = 4041965;
     e02.salarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
 
 
     Especialista e03;
@@ -71,7 +70,6 @@ int main()
     e03.idade = "32";
     e03.rgFunc = 16021989;
     e03.salarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
 
 
     Gerente g01;
@@ -134,9 +132,6 @@ int main()
     comissao03 += e03.comissao(v06.VALOR);
     numAtendimentos03+=1;
 
-
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
 
 
 
