@@ -9,6 +9,8 @@ using namespace std;
 double PERC = 0.1;
 
 class Especialista : public Funcionario {
+     
+    public: 
 
     double comissao(double ValorVenda) {
         double c = ValorVenda*PERC;
