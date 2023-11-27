@@ -7,7 +7,7 @@
 
 class Funcionario {
 protected:
-    string _nome;
+    std::string _nome;
     int _idade;
     int _rgFuncionario;
     double _salarioBase; // valor mínimo recebido pelo funcionário
