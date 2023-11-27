@@ -7,9 +7,10 @@ double percentual = 0.1;
 
 class Especialista : public Funcionario {
 private:
-    std::string especialidade;
+    std::string _especialidade;
 
 public:
+    Especialista(std::string especialidade);
     double comissao(double valorVenda);
     void imprimeDadosEspecialista();
 };
