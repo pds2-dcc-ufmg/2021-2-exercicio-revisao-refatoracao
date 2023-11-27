@@ -6,16 +6,20 @@
 #include <iostream>
 #include <iomanip>
 
-double perc = 0.1;
-double percWanda = 0.1;
-
 class Especialista : public Funcionario {
 public:
+
+    static double perc;
+
+
     std::string especialidade;
 
     double comissao(double ValorVenda);
 
     void print();
 };
+
+double Especialista::perc = 0.1;
+
 
 #endif

@@ -10,7 +10,7 @@ double ValorBONIFICACAO = 15.0;
 
 class Gerente {
     public:
-        double SalarioBase; // valor mínimo recebido pelo funcionário
+        double salarioBase; // valor mï¿½nimo recebido pelo funcionï¿½rio
         string IDADE;
         string nome;
         int rgFunc;
@@ -23,7 +23,7 @@ class Gerente {
             << "  Nome: " << nome << endl
             << "  Idade: " << IDADE << endl
             << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+            << "  SalarioBase: R$ " << fixed << setprecision(2) << salarioBase <<endl;
         }
 
         double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
