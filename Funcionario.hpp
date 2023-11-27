@@ -14,7 +14,7 @@ protected:
 
 public:
     Funcionario (std::string& nome, int idade, int rgFuncionario, double salarioBase);
-    void imprimeDadosFuncionario();
+    virtual void imprimeDadosFuncionario();
 };
 
 #endif
