@@ -10,7 +10,7 @@ private:
     std::string _especialidade;
 
 public:
-    Especialista(std::string especialidade);
+    Especialista(std::string& nome, int idade, int rgFuncionario, double salarioBase, std::string especialidade);
     double comissao(double valorVenda);
     void imprimeDadosEspecialista();
 };
