@@ -2,21 +2,16 @@
 #define Especialista_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
-
-using namespace std;
 
 double perc = 0.1;
 double percWanda = 0.1;
 
 
 class Especialista : public Funcionario {
+private:
+    std::string especialidade;
 
-    public:
-
-    public:
-        string especialidade;
-
+public:
     double comissao(double ValorVenda) {
         double c = ValorVenda*perc;
                   return c;
