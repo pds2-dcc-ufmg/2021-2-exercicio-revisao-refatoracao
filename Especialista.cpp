@@ -16,5 +16,5 @@ Especialista::imprimeDadosEspecialista() {
   std::cout << "Especialidade: " << _especialidade << std::endl;
   std::cout << "Idade: " << _idade << std::endl;
   std::cout << "RG: " << _rgFuncionario << std::endl;
-  std::cout << "Salário: " << salario << std::endl;
+  std::cout << "Salário: " << fixed << setprecision(2) << salario << std::endl;
 }
