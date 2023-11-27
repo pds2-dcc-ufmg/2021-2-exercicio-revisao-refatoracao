@@ -11,7 +11,7 @@ private:
 
 public:
     Especialista(std::string& nome, int idade, int rgFuncionario, double salarioBase, std::string especialidade);
-    double comissao(double valorVenda);
+    double calcularComissao(double valorVenda);
     void imprimeDadosEspecialista();
 };
 
