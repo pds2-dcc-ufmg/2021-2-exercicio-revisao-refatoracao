@@ -6,6 +6,9 @@
 #include <iostream>
 #include <iomanip>
 
+double perc = 0.1;
+double percWanda = 0.1;
+
 class Especialista : public Funcionario {
 public:
     std::string especialidade;
