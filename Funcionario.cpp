@@ -1,7 +1,7 @@
 #include "Funcionario.hpp"
 
 Funcionario::Funcionario (std::string& nome, int idade, int rgFuncionario, double salarioBase) :
-_nome(nome), _idade(idade), _rgFuncionario(rgFuncionario), _salarioBase(salarioBase) {}
+_nome(nome), _idade(idade), _rgFuncionario(rgFuncionario), _salarioBase(salarioBase);
 
 virtual void Funcionario::imprimeDadosFuncionario() {
     std::cout << "[Funcionário]" << std::endl;
