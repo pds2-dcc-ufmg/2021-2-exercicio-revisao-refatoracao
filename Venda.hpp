@@ -9,7 +9,7 @@
 
 class Venda {
 public:
-    double VALOR;
+    double valor;
     std::string descricao;
     Especialista esp;
     std::string cliente;
