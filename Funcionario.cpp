@@ -8,5 +8,5 @@ virtual void Funcionario::imprimeDadosFuncionario() {
     std::cout << "Nome: " << _nome << std::endl;
     std::cout << "Idade: " << _idade << std::endl;
     std::cout << "RG: " << _rgFuncionario << std::endl;
-    std::cout << "Salário: " << _salarioBase << std::endl;
+    std::cout << "Salário: " << fixed << setprecision(2) << _salarioBase << std::endl;
 }
