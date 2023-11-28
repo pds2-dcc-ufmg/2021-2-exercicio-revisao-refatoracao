@@ -135,11 +135,6 @@ int main()
     numAtendimentos03+=1;
 
 
-    v06.descricao = "Decoracao de Apartamento no Brooklyn";
-    v06.VALOR = 3000;
-
-
-
     Venda v07;
     v07.cliente= "J. Jonah Jameson";
     v07.esp = e03;
