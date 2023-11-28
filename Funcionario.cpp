@@ -5,3 +5,7 @@ void Funcionario::print() {
               << "  Idade: " << idade << std::endl
               << "  RGFunc: " << rgFunc << std::endl;
 }
+
+double Funcionario::getSalarioTotal() {
+    return salarioBase;
+}

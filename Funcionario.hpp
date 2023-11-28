@@ -6,12 +6,13 @@
 
 class Funcionario {
 public:
-    double salarioBase; 
+    double salarioBase; // valor mínimo recebido pelo funcionário
     std::string idade;
     std::string nome;
     int rgFunc;
 
-    void print();
+    virtual void print(); // tornando a função virtual para suportar polimorfismo
+    virtual double getSalarioTotal(); // adicionando um método para obter o salário total
 };
 
 #endif

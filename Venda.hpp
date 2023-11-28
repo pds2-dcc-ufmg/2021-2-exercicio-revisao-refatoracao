@@ -15,6 +15,7 @@ public:
     std::string cliente;
 
     void print();
+    
 };
 
 #endif
