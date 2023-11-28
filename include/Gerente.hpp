@@ -4,13 +4,12 @@
 #include <iostream>
 #include <iomanip>
 
-class Gerente {
+#include "Funcionario.hpp"
+
+class Gerente : public Funcionario {
 
   public:
-    double SalarioBase; // valor mínimo recebido pelo funcionário
-    std::string IDADE;
-    std::string nome;
-    int rgFunc;
+    
     double bonificacao;
 
     void print();
