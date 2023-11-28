@@ -13,7 +13,7 @@ class Funcionario {
         string _nome;
         int _rgFunc;
     public:
-        Funcionario(double SalarioBase, string IDADE, string nome, int rgFunc):
+        Funcionario(string nome, string IDADE, int rgFunc, double SalarioBase):
         _SalarioBase(SalarioBase), _IDADE(IDADE), _nome(nome), _rgFunc(rgFunc) {}
         void print() {
             cout << "[Funcionario]" << endl
