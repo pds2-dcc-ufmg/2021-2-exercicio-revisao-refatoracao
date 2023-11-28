@@ -3,8 +3,6 @@
 
 #include "Funcionario.hpp"
 
-double percentual = 0.1;
-
 class Especialista : public Funcionario {
 private:
     std::string _especialidade;
