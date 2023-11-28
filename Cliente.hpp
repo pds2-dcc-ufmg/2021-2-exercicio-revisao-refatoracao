@@ -11,7 +11,7 @@ class Cliente{
 	        string _Cep;
 	        string _AlturaDosPais;
 	public:
-		Handler(string Nome, string endereco, string Cep, string AlturaDosPais): 
+		Cliente(string Nome, string endereco, string Cep, string AlturaDosPais): 
                 _NOME(NOME), _endereco(endereco), _Cep(Cep), _AlturaDosPais(AlturaDosPais) {}
 		void print(); // imprime na tela os dados de um cliente cadastrado
 
