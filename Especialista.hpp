@@ -1,39 +1,17 @@
-#ifndef Especialista_HPP
-#define Especialista_HPP
+#ifndef ESPECIALISTA_HPP
+#define ESPECIALISTA_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
-
-using namespace std;
-
-double perc = 0.1;
-double percWanda = 0.1;
-
 
 class Especialista : public Funcionario {
+public:
+    std::string especialidade;
 
-    public:
-
-    public:
-        string especialidade;
-
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
-
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+    virtual double comissao(double ValorVenda); // tornando a função virtual para suportar polimorfismo
+    virtual void print() override; // sobrescrevendo a função print da classe base
+    virtual double getSalarioTotal() override; // sobrescrevendo a função getSalarioTotal da classe base
+    int getNumAtendimentos(); // adicionando um método para obter o número de atendimentos
 };
+
 
 #endif

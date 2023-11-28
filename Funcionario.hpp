@@ -4,24 +4,15 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
-
 class Funcionario {
-    public:
-        double SalarioBase; // valor m�nimo recebido pelo funcion�rio
-        string IDADE;
-        string nome;
-        int rgFunc;
+public:
+    double salarioBase; // valor mínimo recebido pelo funcionário
+    std::string idade;
+    std::string nome;
+    int rgFunc;
 
-        void print() {
-            cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
-        }
-
-        void print_oi(){
-            cout << "Tchau" << endl;
-        }
+    virtual void print(); // tornando a função virtual para suportar polimorfismo
+    virtual double getSalarioTotal(); // adicionando um método para obter o salário total
 };
 
 #endif
