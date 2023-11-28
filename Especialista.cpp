@@ -1,4 +1,4 @@
-#include "Especialista.cpp"
+#include "Especialista.hpp"
 
 Especialista::Especialista(std::string& nome, int idade, int rgFuncionario, double salarioBase, std::string especialidade) :
 _nome(nome), _idade(idade), _rgFuncionario(rgFuncionario), _salarioBase(salarioBase), _especialidade(especialidade);
