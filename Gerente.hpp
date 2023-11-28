@@ -19,7 +19,8 @@ class Gerente: public Funcionario {
             << "  Nome: " << nome << endl
             << "  Idade: " << IDADE << endl
             << "  RGFunc: " << rgFunc << endl
-            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
+            << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase << endl
+            << "Salario Total: " << _SalarioBase + _bonificacao << endl;
         }
 
         double calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
