@@ -21,7 +21,9 @@ class Especialista : public Funcionario {
         double c = ValorVenda*perc;
                   return c;
     }
-
+    void print_nome() {
+        cout << nome << endl;
+    }
 
     void print() {
 
