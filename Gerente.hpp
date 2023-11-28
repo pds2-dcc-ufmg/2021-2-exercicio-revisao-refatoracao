@@ -7,7 +7,7 @@ class Gerente : public Funcionario {
 private:
     double bonificacao;
 public:
-    Gerente(std::string& nome, int idade, int rgFuncionario, double salarioBase, double bonificacao);
+    Gerente(std::string& nome, int idade, int rgFuncionario, double salarioBase);
     void imprimeDadosGerente();
     void calcularBonificacaoGerente(int numTotalVendas);
 };
