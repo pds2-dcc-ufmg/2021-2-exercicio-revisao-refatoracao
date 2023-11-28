@@ -14,8 +14,8 @@ class Especialista : public Funcionario {
     private:
         string _especialidade;
     public:
-        Especialista(string Nome, string endereco, string Cep, string AlturaDosPais, string especialidade):
-        Cliente(Nome, endereco, Cep, AlturaDosPais), _especialidade(especialidade) {}
+        Especialista(double SalarioBase, string IDADE, string nome, int rgFunc, string especialidade):
+        Funcionario(SalarioBase, IDADE, nome, rgFunc), _especialidade(especialidade) {}
 
     double comissao(double ValorVenda) {
         double c = ValorVenda*perc;
