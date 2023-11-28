@@ -13,7 +13,6 @@ void Gerente::print() {
 
 double ValorBONIFICACAO = 15.0;
 
-double Gerente::calcula_BONIFICACAO_GERENTE(int numTOTALVendas){
-	double x;
+double Gerente::calcula_BONIFICACAO_GERENTE(int numTOTALVendas){	
         return numTOTALVendas * ValorBONIFICACAO;
 }
