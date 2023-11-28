@@ -1,93 +1,91 @@
 #include <iostream>
+#include <string>
 
 #include "Cliente.hpp"
 #include "Funcionario.hpp"
 #include "Especialista.hpp"
 #include "Venda.hpp"
 #include "Gerente.hpp"
-using namespace std;
 
 int main()
 {
-    Cliente cliente1;
-    cliente1.NOME = "J. Jonah Jameson";
-    cliente1.endereco ="Nova York";
-	cliente1.Cep = "35690000";
-    cliente1.print();
+    Cliente jonahJ;
+    jonahJ._nome = "J. Jonah Jameson";
+    jonahJ._endereco ="Nova York";
+    jonahJ._cep = "35690000";
+    jonahJ.imprimeDadosCliente();
 
-    Cliente cliente2;
-    cliente2.NOME = "Norman Osborn";
-    cliente2.endereco ="Hartlford";
-	cliente2.Cep = "22061955";
-    cliente2.print();
+    Cliente normanO;
+    normanO._nome = "Norman Osborn";
+    normanO._endereco ="Hartlford";
+    normanO._cep = "22061955";
+    normanO.imprimeDadosCliente();
 
-    Cliente cliente3;
-    cliente3.NOME = "Otto Octavius";
-    cliente3.endereco ="Schenectady";
-	cliente3.Cep = "24051953";
-    cliente3.print();
+    Cliente ottoO;
+    ottoO._nome = "Otto Octavius";
+    ottoO._endereco ="Schenectady";
+    ottoO._cep = "24051953";
+    ottoO.imprimeDadosCliente();
 
-    Cliente cliente4;
-    cliente4.NOME = "Bruce Benner";
-    cliente4.endereco ="Dayton";
-	cliente4.Cep = "22111967";
-    cliente4.print();
+    Cliente bruceB;
+    bruceB._nome = "Bruce Benner";
+    bruceB._endereco ="Dayton";
+    bruceB._cep = "22111967";
+    bruceB.imprimeDadosCliente();
 
-    Cliente cliente5;
-    cliente5.NOME = "Steve Rogers";
-    cliente5.endereco ="Lower East Side";
-	cliente5.Cep = "13061981";
-    cliente5.print();
-
-
+    Cliente steveR;
+    steveR._nome = "Steve Rogers";
+    steveR._endereco ="Lower East Side";
+    steveR._cep = "13061981";
+    steveR.imprimeDadosCliente();
 
 
-    Especialista e01;
-    int numAtendimentos01 = 0;
-    double comissao01 = 0;
-    e01.nome = "Peter Parker";
-    e01.IDADE = "46";
-    e01.rgFunc = 27061975;
-    e01.SalarioBase = 3000;
-    e01.especialidade = "Fotografia";
+    Especialista peterP;
+    int numAtendimentosPeter = 0;
+    double comissaoPeter = 0;
+    peterP._nome = "Peter Parker";
+    peterP._idade = "46";
+    peterP._rgFuncionario = 27061975;
+    peterP._salarioBase = 3000;
+    peterP._especialidade = "Fotografia";
 
 
 
-    Especialista e02;
-    int numAtendimentos02 = 0;
-    double comissao02 = 0;
-    e02.nome = "Tony Stark";
-    e02.IDADE = "56";
-    e02.rgFunc = 4041965;
-    e02.SalarioBase = 1000;
-    e02.especialidade = "Consertos de equipamentos eletronicos";
+    Especialista tonyS;
+    int numAtendimentosTony = 0;
+    double comissaoTony = 0;
+    tonyS._nome = "Tony Stark";
+    tonyS._idade = "56";
+    tonyS._rgFuncionario = 4041965;
+    tonyS._salarioBase = 1000;
+    tonyS._especialidade = "Consertos de equipamentos eletrônicos";
 
 
-    Especialista e03;
-    int numAtendimentos03 = 0;
-    double comissao03 = 0;
-    e03.nome = "Wanda Maximoff";
-    e03.IDADE = "32";
-    e03.rgFunc = 16021989;
-    e03.SalarioBase = 5000;
-    e03.especialidade = "Engenharia e Designeeeeer";
+    Especialista wandaM;
+    int numAtendimentosWanda = 0;
+    double comissaoWanda = 0;
+    wandaM._nome = "Wanda Maximoff";
+    wandaM._idade = "32";
+    wandaM._rgFuncionario = 16021989;
+    wandaM._salarioBase = 5000;
+    wandaM._especialidade = "Engenharia e Designer";
 
 
-    Gerente g01;
-    double bonificacao01 = 0;
-    g01.nome = "Nick Fury";
-    g01.IDADE = "72";
-    g01.rgFunc = 21121948;
-    g01.SalarioBase = 10000;
+    Gerente nickF;
+    double bonificacaoNick = 0;
+    nickF._nome = "Nick Fury";
+    nickF._idade = "72";
+    nickF._rgFuncionario = 21121948;
+    nickF._salarioBase = 10000;
 
 
     Venda v01;
-    v01.cliente= "J. Jonah Jameson";
-    v01.esp = e01;
-    v01.descricao = "Fotos do Homem Aranha";
-    v01.VALOR = 100;
-    comissao01 += e01.comissao(v01.VALOR);
-    numAtendimentos01+=1;
+    v01._cliente = jonahJ;
+    v01._especialista = peterP;
+    v01._descricao = "Fotos do Homem Aranha";
+    v01._valor = 100;
+    comissaoPeter += peterP.calcularComissao(v01._valor);
+    numAtendimentosPeter += 1;
 
 
     Venda v02;
