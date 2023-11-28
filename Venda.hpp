@@ -2,41 +2,19 @@
 #ifndef VENDA_HPP
 #define VENDA_HPP
 
-#include "Funcionario.hpp"
 #include "Cliente.hpp"
 #include "Especialista.hpp"
 
-using namespace std;
+class Venda {
+private:
+    double _valor;
+    std::string _descricao;
+    Especialista _especialista;
+    Cliente _cliente;
 
-class Venda{
-
-    public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
-
-
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+public:
+    Venda(double valor, std::string descricao, Especialista especialista, Cliente cliente);
+    void imprimeVenda();
 };
 
 #endif
