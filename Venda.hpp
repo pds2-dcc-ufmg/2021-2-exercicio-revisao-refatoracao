@@ -9,18 +9,19 @@
 using namespace std;
 
 class Venda{
-
+    private:
+    double _VALOR;
+    string _descricao;
+    Especialista _esp;
+    string _cliente;
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
-
-
+    Venda(double VALOR, string descricao, Especialista esp, string cliente): 
+    _VALOR(VALOR), _descricao(descricao), _esp(esp), _cliente(cliente) {}
+    
     void print() {
 
         std::cout << "Especialista: ";
-        cout << esp.nome;
+        cout << esp.print_nome();
 
         std::cout << " Cliente: ";
         cout << cliente;
