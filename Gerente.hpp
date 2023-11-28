@@ -12,8 +12,8 @@ class Gerente: public Funcionario {
     private:
         double _bonificacao;
     public:
-        Gerente(string nome, string IDADE, int rgFunc, double SalarioBase, double bonificacao)
-        Funcionario(nome, IDADE, rgFunc, SalarioBase), _bonificacao(bonificacao) {}
+        Gerente(string nome, string IDADE, int rgFunc, double SalarioBase)
+        Funcionario(nome, IDADE, rgFunc, SalarioBase) {}
         void print() {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
