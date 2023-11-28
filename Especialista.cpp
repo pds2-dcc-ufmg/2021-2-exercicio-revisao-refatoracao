@@ -4,6 +4,7 @@ Especialista::Especialista(std::string& nome, int idade, int rgFuncionario, doub
 _nome(nome), _idade(idade), _rgFuncionario(rgFuncionario), _salarioBase(salarioBase), _especialidade(especialidade);
 
 Especialista::calcularComissao(double valorVenda) {
+  double percentual = 0.1;
   double comissao = valorVenda * percentual;
   return comissao;
 }
