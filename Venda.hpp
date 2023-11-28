@@ -23,11 +23,9 @@ class Venda{
     
     void print() {
 
-        std::cout << "Especialista: ";
-        cout << esp.print_nome();
-
-        std::cout << " Cliente: ";
-        cout << cliente;
+        cout << "Especialista: " << esp.print_nome()
+             << " Cliente: " << _cliente
+             << " Descricao: " << _descricao << endl;
 
         //std::cout << " : ";
         //cout << cliente;
