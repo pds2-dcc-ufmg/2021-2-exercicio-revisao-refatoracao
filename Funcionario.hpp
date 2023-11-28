@@ -17,8 +17,8 @@ class Funcionario {
         _SalarioBase(SalarioBase), _IDADE(IDADE), _nome(nome), _rgFunc(rgFunc) {}
         void print() {
             cout << "[Funcionario]" << endl
-            << "  Idade: " << IDADE << endl
-            << "  RGFunc: " << rgFunc << endl;
+            << "  Idade: " << _IDADE << endl
+            << "  RGFunc: " << _rgFunc << endl;
         }
 
         void print_oi(){
