@@ -15,8 +15,11 @@ class Venda{
     Especialista _esp;
     string _cliente;
     public:
-    Venda(double VALOR, string descricao, Especialista esp, string cliente): 
-    _VALOR(VALOR), _descricao(descricao), _esp(esp), _cliente(cliente) {}
+    Venda(string cliente, Especialista esp, string descricao, double VALOR): 
+    _VALOR(VALOR), _descricao(descricao), _esp(esp), _cliente(cliente) 
+    {
+        _esp.comissao(_VALOR);
+    }
     
     void print() {
 
