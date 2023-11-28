@@ -1,20 +1,18 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
+#include <iostream>
 #include <string>
-using namespace std;
 
-class Cliente{
+class Cliente {
+private:
+	std::string _nome;
+	int _cep;
+	std::string _endereco;
 
-	public:
-
-		string NOME;
-		string endereco;
-		string Cep;
-		string AlturaDosPais;
-
-		void print(); // imprime na tela os dados de um cliente cadastrado
-
+public:
+	Cliente (std::string nome, int cep, std::string endereco);
+	void imprimeDadosCliente(); // imprime na tela os dados de um cliente cadastrado
 };
 
 #endif

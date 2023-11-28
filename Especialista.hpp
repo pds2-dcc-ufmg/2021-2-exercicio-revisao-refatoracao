@@ -2,38 +2,15 @@
 #define Especialista_HPP
 
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
-
-using namespace std;
-
-double perc = 0.1;
-double percWanda = 0.1;
-
 
 class Especialista : public Funcionario {
-
-    public:
-
-    public:
-        string especialidade;
-
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
-
-
-    void print() {
-
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
-
-
-
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+private:
+    std::string _especialidade;
+    double salario;
+public:
+    Especialista(std::string& nome, int idade, int rgFuncionario, double salarioBase, std::string especialidade);
+    double calcularComissao(double valorVenda);
+    void imprimeDadosEspecialista();
 };
 
 #endif
