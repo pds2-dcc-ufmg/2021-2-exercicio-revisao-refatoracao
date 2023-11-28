@@ -8,8 +8,7 @@
 #include "Gerente.hpp"
 using namespace std;
 
-int main()
-{
+int main(){
     Cliente cliente1("J. Jonah Jameson", "Nova York", "35690000");
     cliente1.print();
 
@@ -65,7 +64,7 @@ int main()
     
 
     cout <<" \n \n           Relatorio das Vendas \n" << endl;
-    for(especialista v : Vendas){
+    for(Venda v : Vendas){
 	    v.print();
     } 
     //v01.print();
@@ -89,7 +88,7 @@ int main()
 
     int NUMTOTALservicos = 0;
     cout <<" \n \n           Relatorio dos Funcionarios \n" << endl;
-    for(especialista e : Especialistas){
+    for(Especialista e : Especialistas){
 	    e.print();
 	    NUMTOTALservicos+=e.numAtendimentos();
     } 
