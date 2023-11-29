@@ -12,7 +12,7 @@ class Cliente{
 	        string _AlturaDosPais;
 	public:
 		Cliente(string NOME, string endereco, string Cep): 
-                _NOME(NOME), _endereco(endereco), _Cep(Cep) {}
+                _NOME(NOME), _endereco(endereco), _Cep(Cep) {};
 		void print(){}; // imprime na tela os dados de um cliente cadastrado
 };
 
