@@ -14,7 +14,6 @@ class Especialista : public Funcionario {
 
     public:
 
-    public:
         string especialidade;
 
     double comissao(double ValorVenda) {
