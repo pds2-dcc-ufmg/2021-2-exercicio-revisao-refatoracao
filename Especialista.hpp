@@ -1,39 +1,46 @@
 #ifndef Especialista_HPP
 #define Especialista_HPP
 
+#include <istream>
+
 #include "Funcionario.hpp"
-#include "Cliente.hpp"
 
 using namespace std;
 
-double perc = 0.1;
-double percWanda = 0.1;
-
-
 class Especialista : public Funcionario {
+    private:
+        string _especialidade;
+
+        int _numAtendimentos = 0;
+        double _comissao = 0;
 
     public:
+        // Colocar no .cpp
+        Especialista() {}
 
-    public:
-        string especialidade;
+        Especialista(string nome, string idade, int rgFunc, double salarioBase, string especialidade):
+            Funcionario(nome, idade, rgFunc, salarioBase),
+            _especialidade(especialidade) {}
 
-    double comissao(double ValorVenda) {
-        double c = ValorVenda*perc;
-                  return c;
-    }
+        Especialista(Especialista& especialista):
+            Especialista(especialista._nome,
+                         especialista._idade,
+                         especialista._rgFunc,
+                         especialista._salarioBase,
+                         especialista._especialidade){}
 
+        // Adiciona uma nova comissa
+        void comissao(double valorVenda);
 
-    void print() {
+        void novoAtendimento();
 
-        std::cout << "[Especialista]" << endl;
-        Funcionario::print();
+        int getNumAtendimentos() const;
 
+        double salarioTotal() const override;
 
+        void print() const;
 
-        std::cout << "  Nome: " << nome << endl
-        << "  SalarioBase: R$ " << fixed << setprecision(2) << SalarioBase <<endl;
-
-    }
+        friend istream& operator>>(istream& in, Especialista& especialista);
 };
 
 #endif
