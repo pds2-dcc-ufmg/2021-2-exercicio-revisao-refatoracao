@@ -12,7 +12,7 @@ class Gerente: public Funcionario {
         double ValorBONIFICACAO = 15.0;
     public:
         Gerente(string nome, string IDADE, int rgFunc, double SalarioBase):
-        Funcionario(nome, IDADE, rgFunc, SalarioBase), _bonificacao(0) {}
+        Funcionario(nome, IDADE, rgFunc, SalarioBase), _bonificacao(0) {};
         void print() {
             cout << "[Funcionario]" << endl
             << "[Gerente]" << endl
