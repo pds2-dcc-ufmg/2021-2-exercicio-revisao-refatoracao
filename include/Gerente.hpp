@@ -14,7 +14,7 @@ class Gerente : public Funcionario {
 
     void print();
 
-    double calcula_BONIFICACAO_GERENTE(int numTOTALVendas);
+    double calculaBonificacaoGerente(int numTotalVendas);
 
 };
 
