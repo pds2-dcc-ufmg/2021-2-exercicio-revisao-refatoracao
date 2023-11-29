@@ -11,7 +11,7 @@ class Funcionario {
 	double salarioBase; // valor mínimo recebido pelo funcionário
         std::string idade;
         std::string nome;
-        int rgFunc;
+        int rgFuncionario;
 
         void print();
 
