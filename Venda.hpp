@@ -19,7 +19,7 @@ class Venda{
     _VALOR(VALOR), _descricao(descricao), _esp(esp), _cliente(cliente) 
     {
         _esp.comissao(_VALOR);
-    }
+    };
     
     void print() {
 
