@@ -10,33 +10,22 @@ using namespace std;
 
 class Venda{
 
+    
     public:
-    double VALOR;
-    string descricao;
-    Especialista esp;
-    string cliente;
+        Venda(std::string descricao, double valor, Cliente cliente, Especialista especialista);
+        
 
-
-    void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-
-        //std::cout << " : ";
-        //cout << cliente;
-    }
-
-    /*void print() {
-
-        std::cout << "Especialista: ";
-        cout << esp.nome;
-
-        std::cout << " Cliente: ";
-        cout << cliente;
-    }*/
+        double get_valor()const;
+        void print()const;
+        std::string get_descricao() const;
+        
+    private:
+        
+        string _descricao;
+        double _valor;
+        Cliente _cliente;
+        Especialista _especialista;
+   
 };
 
 #endif
