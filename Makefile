@@ -13,6 +13,7 @@ all: ./${TARGET}
 	${CXX} ${LDFLAGS} ${BUILD_DIR}/* -o ./${TARGET}
 
 ${BUILD_DIR}/%.o: ${SRC_DIR}/%.cpp
+	mkdir ${BUILD_DIR}
 	${CXX} ${CXXFLAGS} -c $< -o $@
 
 ${BUILD_DIR}/%.o: ${SRC_DIR}/entidades/%.cpp
