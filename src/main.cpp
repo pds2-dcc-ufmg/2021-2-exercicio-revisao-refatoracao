@@ -192,9 +192,9 @@ int main()
     cout << "Salario Total: " << e03.salarioBase+comissao03<<endl;
 
 
-    int NUMTOTALservicos = 0;
-    NUMTOTALservicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
-    g01.bonificacao = g01.calculaBonificacaoGerente(NUMTOTALservicos);
+    int NumTotalServicos = 0;
+    NumTotalServicos = numAtendimentos01 + numAtendimentos02 + numAtendimentos03;
+    g01.bonificacao = g01.calculaBonificacaoGerente(NumTotalServicos);
     g01.print();
     cout << "Salario Total: " << g01.salarioBase + g01.bonificacao<<endl;
 
